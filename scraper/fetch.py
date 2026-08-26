@@ -1400,6 +1400,50 @@ class LandmarkScraper:
         self.notes.append("disclaimer could not be accepted")
         return False
 
+    async def _reveal_section(self, page, section: str) -> int:
+        """
+        Force the requested search panel to show, and report how many inputs
+        became visible.
+
+        Clicking Accept normally runs the site's own JS to un-hide the chosen
+        panel. When that click has to be simulated, the panel can stay hidden
+        even though the modal is gone. The dump gave us the lever: the hidden
+        field goToSection carries the section name, which is also the id of the
+        panel element -- so the panel can be shown directly.
+        """
+        try:
+            return await page.evaluate(
+                """(section) => {
+                    const show = (el) => {
+                        if (!el) return;
+                        el.style.display = '';
+                        el.style.visibility = 'visible';
+                        el.classList.remove('hidden', 'hide');
+                        el.removeAttribute('hidden');
+                    };
+                    // The panel itself, plus anything wrapping it.
+                    let el = document.getElementById(section);
+                    if (!el) {
+                        el = document.querySelector('[id*="' + section + '"], .' + section);
+                    }
+                    let node = el;
+                    while (node && node !== document.body) { show(node); node = node.parentElement; }
+
+                    // Any leftover modal furniture that would still block clicks.
+                    document.querySelectorAll('.modal-backdrop').forEach(m => m.remove());
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+
+                    let visible = 0;
+                    document.querySelectorAll('input').forEach(e => {
+                        if (e.offsetParent !== null) visible++;
+                    });
+                    return visible;
+                }""", section)
+        except Exception as exc:  # noqa: BLE001
+            log.debug("  reveal failed: %s", exc)
+            return 0
+
     # ---------------------------------------------- step 2: probe the date boxes
     async def _probe_date_inputs(self, page, start_s: str, end_s: str) -> Optional[Tuple[str, str]]:
         """
@@ -1787,12 +1831,17 @@ class LandmarkScraper:
                                 all.forEach(e => { if (e.offsetParent !== null) vis++; });
                                 return {total: all.length, visible: vis};
                             }""")
-                        self.notes.append(
-                            f"{section}: {counts['total']} inputs in DOM, "
-                            f"{counts['visible']} visible")
-                        log.info("  form not visible here (%d inputs, %d visible)",
+                        log.info("  form not visible yet (%d inputs, %d visible) "
+                                 "-- revealing the panel directly",
                                  counts["total"], counts["visible"])
-                        continue
+                        revealed = await self._reveal_section(page, section)
+                        if revealed:
+                            log.info("  panel revealed: %d inputs now visible", revealed)
+                        else:
+                            self.notes.append(
+                                f"{section}: {counts['total']} inputs in DOM, "
+                                f"{counts['visible']} visible, reveal failed")
+                            continue
 
                     probe = await self._probe_date_inputs(page, start_s, end_s)
                     if not probe:
