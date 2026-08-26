@@ -262,6 +262,15 @@ SOURCE_REPORT: Dict[str, Dict[str, Any]] = {}
 
 
 def record_source_result(name: str, ok: bool, count: int = 0, error: str = "") -> None:
+    """
+    A source that ran without raising but returned nothing has NOT worked, and
+    reporting it as "working" hides the only failure that matters. Anything
+    that yields zero records is recorded as a problem unless it was
+    deliberately skipped.
+    """
+    if ok and count == 0 and "skip" not in error.lower() and name not in ("browser",):
+        ok = False
+        error = error or "ran but found no records"
     SOURCE_REPORT[name] = {"ok": ok, "count": count, "error": error[:400]}
 
 
@@ -1199,13 +1208,28 @@ class LandmarkScraper:
 
     LEARNED_PATH = DATA_DIR / "landmark_learned_selectors.json"
 
-    # Search entry points to try, in order of preference. Titles are read off
-    # the live DeKalb portal.
+    # LandmarkWeb's search icons are javascript:void(0) anchors -- clicking them
+    # from Playwright reliably does nothing and leaves you on the home page.
+    # Every deployment of this vendor product also serves the search form at a
+    # real URL, so we navigate there directly. The section name varies, so each
+    # candidate is tried and verified by whether date fields actually appear.
+    SEARCH_SECTIONS = [
+        "searchCriteriaRecordDate",
+        "searchCriteriaFilingDate",
+        "searchCriteriaDateRange",
+        "searchCriteriaDocument",
+        "searchCriteriaName",
+    ]
+
+    @staticmethod
+    def search_url(section: str) -> str:
+        return (f"{CLERK_URL.rstrip('/')}/search/index"
+                f"?theme=.blue&section={section}&quickSearchSelection=")
+
+    # Kept as a fallback only.
     SEARCH_STRATEGIES = [
-        ("filing_date", ["a[title='Filing Date Search']", "a[title*='Filing Date' i]",
-                         "a[title*='Record Date' i]", "img[alt*='Record Date' i]"]),
-        ("document", ["a[title='Document Search']", "a[title*='Document Search' i]",
-                      "img[alt*='Document Search' i]"]),
+        ("filing_date", ["a[title='Filing Date Search']", "a[title*='Filing Date' i]"]),
+        ("document", ["a[title='Document Search']"]),
     ]
 
     def __init__(self, start: datetime, end: datetime) -> None:
@@ -1332,12 +1356,17 @@ class LandmarkScraper:
                     const els = Array.from(document.querySelectorAll(
                         "input[type=text], input[type=date], input[type=tel], input:not([type])"));
                     els.forEach((e, i) => {
-                        if (e.offsetParent === null || e.disabled || e.readOnly) return;
+                        // Do NOT skip readOnly: calendar-driven date fields are
+                        // read-only by design and are exactly what we're after.
+                        if (e.offsetParent === null || e.disabled) return;
                         if (!e.id && !e.name) { e.setAttribute('data-probe-id', 'probe' + i); }
                         const before = e.value;
                         try {
                             e.focus();
+                            const wasRO = e.readOnly;
+                            if (wasRO) e.readOnly = false;
                             e.value = probe;
+                            if (wasRO) e.readOnly = true;
                             e.dispatchEvent(new Event('input', {bubbles: true}));
                             e.dispatchEvent(new Event('change', {bubbles: true}));
                         } catch (err) { return; }
@@ -1396,12 +1425,26 @@ class LandmarkScraper:
 
     @staticmethod
     async def _set_value(page, selector: str, value: str) -> bool:
+        """Type into the field; fall back to setting it directly when the field
+        is read-only (calendar pickers) and refuses keystrokes."""
         try:
             loc = page.locator(selector).first
-            await loc.click(timeout=4000)
-            await loc.fill("")
-            await loc.type(value, delay=35)
-            await loc.dispatch_event("change")
+            try:
+                await loc.click(timeout=3000)
+                await loc.fill(value, timeout=3000)
+            except Exception:  # noqa: BLE001 - read-only fields reject fill()
+                await page.evaluate(
+                    """([sel, val]) => {
+                        const e = document.querySelector(sel);
+                        if (!e) return;
+                        const ro = e.readOnly; if (ro) e.readOnly = false;
+                        e.value = val;
+                        e.dispatchEvent(new Event('input',  {bubbles:true}));
+                        e.dispatchEvent(new Event('change', {bubbles:true}));
+                        e.dispatchEvent(new Event('blur',   {bubbles:true}));
+                        if (ro) e.readOnly = ro;
+                    }""", [selector, value])
+            await page.wait_for_timeout(150)
             got = await loc.input_value()
             return bool(got and got.strip())
         except Exception:  # noqa: BLE001
@@ -1570,12 +1613,31 @@ class LandmarkScraper:
         except Exception:  # noqa: BLE001
             controls = []
 
+        # Every input in the document, visible or not. The previous dump only
+        # captured visible controls, which is precisely why it came back empty
+        # and told us nothing about whether the form had loaded at all.
+        try:
+            all_inputs = await page.evaluate(
+                """() => Array.from(document.querySelectorAll('input,select,textarea'))
+                    .slice(0, 300).map(e => ({
+                        tag: e.tagName, id: e.id || null, name: e.getAttribute('name'),
+                        type: e.getAttribute('type'), cls: e.className || null,
+                        placeholder: e.getAttribute('placeholder'),
+                        readOnly: !!e.readOnly, disabled: !!e.disabled,
+                        visible: e.offsetParent !== null,
+                        value: (e.value || '').slice(0, 40)}))"""
+            )
+        except Exception:  # noqa: BLE001
+            all_inputs = []
+
         safe_write_json(DISCOVERY_PATH, {
             "captured_at": utcnow().isoformat(),
             "url": page.url,
             "reason": reason,
             "xhr_urls_seen": sorted(set(self.xhr_urls))[:80],
             "visible_controls": controls,
+            "all_inputs_including_hidden": all_inputs,
+            "input_count": len(all_inputs),
             "notes": self.notes,
         })
 
@@ -1636,48 +1698,77 @@ class LandmarkScraper:
                 await self._accept_disclaimer(page)
                 await page.wait_for_timeout(1000)
 
-                for strategy_name, selectors in self.SEARCH_STRATEGIES:
-                    if self.learned.get("strategy") == strategy_name:
-                        pass  # preferred order already; kept for readability
-                    log.info("LandmarkWeb: trying the %s search", strategy_name.replace("_", " "))
-                    opened = await self._click_any(page, selectors, "opened search form",
-                                                   timeout=10000)
-                    if not opened:
-                        self.notes.append(f"could not open {strategy_name} search")
+                # --- Route A: go straight to the search form's own URL -----
+                for section in self.SEARCH_SECTIONS:
+                    url = self.search_url(section)
+                    log.info("LandmarkWeb: opening the %s form", section)
+                    try:
+                        await page.goto(url, wait_until="domcontentloaded")
+                        await page.wait_for_timeout(2200)
+                    except Exception as exc:  # noqa: BLE001
+                        self.notes.append(f"{section}: navigation failed ({exc})")
                         continue
-                    await page.wait_for_timeout(2000)
+
+                    await self._accept_disclaimer(page)
+
+                    # Verify a form actually rendered before probing it.
+                    try:
+                        await page.wait_for_selector("input:visible", timeout=12000)
+                    except Exception:  # noqa: BLE001
+                        n = await page.evaluate(
+                            "() => document.querySelectorAll('input').length")
+                        self.notes.append(f"{section}: no visible inputs ({n} in DOM)")
+                        log.info("  no search form here (%d inputs in the page)", n)
+                        continue
 
                     probe = await self._probe_date_inputs(page, start_s, end_s)
                     if not probe:
-                        self.notes.append(f"no date boxes found on {strategy_name} form")
-                        await page.goto(CLERK_URL, wait_until="domcontentloaded")
-                        await page.wait_for_timeout(2000)
-                        await self._accept_disclaimer(page)
+                        self.notes.append(f"{section}: form present but no date fields")
                         continue
 
                     frm_sel, to_sel = probe
                     ok_from = await self._set_value(page, frm_sel, start_s)
                     ok_to = await self._set_value(page, to_sel, end_s)
                     if not (ok_from and ok_to):
-                        self.notes.append(f"date boxes on {strategy_name} form rejected input")
+                        self.notes.append(f"{section}: date fields rejected input")
                         continue
                     log.info("  date range set: %s .. %s", start_s, end_s)
 
                     if await self._submit_and_verify(page, to_sel):
-                        self.learned.update({"strategy": strategy_name, "opened": opened,
+                        self.learned.update({"strategy": section, "url": url,
                                              "date_from": frm_sel, "date_to": to_sel,
                                              "learned_at": utcnow().isoformat()})
                         safe_write_json(self.LEARNED_PATH, self.learned)
                         log.info("  search succeeded; configuration saved for next run")
                         succeeded = True
                         break
+                    failure_reason = ("The search form was filled in but the site "
+                                      "returned no results.")
+                    self.notes.append(f"{section}: submitted but no results appeared")
 
-                    failure_reason = ("The search form was filled in but the site returned "
-                                      "no results table.")
-                    self.notes.append(f"{strategy_name} submitted but produced no results")
+                # --- Route B: fall back to clicking the icons on the home page
+                if not succeeded:
+                    log.info("LandmarkWeb: direct URLs did not work; trying the icons")
                     await page.goto(CLERK_URL, wait_until="domcontentloaded")
                     await page.wait_for_timeout(2000)
                     await self._accept_disclaimer(page)
+                    for strategy_name, selectors in self.SEARCH_STRATEGIES:
+                        opened = await self._click_any(page, selectors,
+                                                       "clicked search icon", timeout=8000)
+                        if not opened:
+                            continue
+                        await page.wait_for_timeout(2500)
+                        probe = await self._probe_date_inputs(page, start_s, end_s)
+                        if not probe:
+                            self.notes.append(f"icon {strategy_name}: no date fields after click")
+                            continue
+                        frm_sel, to_sel = probe
+                        if not (await self._set_value(page, frm_sel, start_s)
+                                and await self._set_value(page, to_sel, end_s)):
+                            continue
+                        if await self._submit_and_verify(page, to_sel):
+                            succeeded = True
+                            break
 
                 if succeeded:
                     dom_rows = await self._page_through_results(page)
@@ -1964,6 +2055,7 @@ class LegalNoticeScraper:
     def __init__(self, start: datetime, end: datetime) -> None:
         self.start = start
         self.end = end
+        self.county_filtered = False
 
     @staticmethod
     async def _check_county(page, county: str) -> bool:
@@ -1998,8 +2090,12 @@ class LegalNoticeScraper:
                 viewport={"width": 1440, "height": 960},
                 user_agent=USER_AGENT, locale="en-US", timezone_id="America/New_York",
             )
-            ctx.set_default_timeout(NAV_TIMEOUT_MS)
+            # Short timeouts here on purpose: the previous run spent four
+            # minutes waiting 60s at a time for elements that were never going
+            # to appear. A missing control should fail in seconds.
+            ctx.set_default_timeout(12000)
             page = await ctx.new_page()
+            page.set_default_navigation_timeout(NAV_TIMEOUT_MS)
 
             try:
                 log.info("Legal notices: opening %s", LEGAL_NOTICE_SEARCH_URL)
@@ -2014,11 +2110,12 @@ class LegalNoticeScraper:
                     except Exception:  # noqa: BLE001
                         continue
 
-                if await self._check_county(page, "DeKalb"):
+                self.county_filtered = await self._check_county(page, "DeKalb")
+                if self.county_filtered:
                     log.info("  DeKalb county filter applied")
                 else:
-                    log.warning("  could not tick the DeKalb checkbox; results will be statewide "
-                                "and filtered client-side")
+                    log.warning("  could not tick the DeKalb checkbox; adding DeKalb to the "
+                                "search text instead and filtering results client-side")
 
                 # Date range
                 for sel, val in ((["input[id*='txtDateFrom' i]", "input[id*='dpFrom' i]",
@@ -2049,6 +2146,10 @@ class LegalNoticeScraper:
         return results
 
     async def _search_term(self, page, term: str) -> List[Dict[str, Any]]:
+        # Without the county checkbox the search runs statewide, so put the
+        # county in the query itself to keep the result set relevant.
+        if not self.county_filtered:
+            term = f"{term} DeKalb"
         log.info("  searching notices for %r", term)
         filled = False
         for sel in ("input[id*='txtSearch' i]", "input[type='search']",
@@ -2359,6 +2460,14 @@ async def _fetch_tax_listing_browser(url: str) -> str:
         ctx.set_default_timeout(NAV_TIMEOUT_MS)
         page = await ctx.new_page()
         try:
+            # This public-access app hands out a session on the root page and
+            # bounces deep links that arrive without one.
+            root = url.split("/forms/")[0]
+            try:
+                await page.goto(root, wait_until="domcontentloaded")
+                await page.wait_for_timeout(2500)
+            except Exception as exc:  # noqa: BLE001
+                log.debug("tax root visit failed: %s", exc)
             await page.goto(url, wait_until="domcontentloaded")
             await page.wait_for_timeout(4000)
             try:
