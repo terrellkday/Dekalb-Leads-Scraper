@@ -2231,208 +2231,354 @@ def parse_notice_body(text: str, category_hint: str = "") -> Dict[str, Any]:
 
 class LegalNoticeScraper:
     """
-    georgiapublicnotice.com is ASP.NET WebForms driven entirely by __doPostBack,
-    with the session id baked into the URL path. That rules out plain requests --
-    Playwright it is.
+    georgiapublicnotice.com -- the Georgia Press Association notice database.
+
+    The interaction was rebuilt from screenshots of the real site, which
+    corrected three wrong guesses:
+
+      1. You do not type a phrase. You pick FORECLOSURES from the "POPULAR
+         SEARCHES" dropdown, which puts the single word "Foreclosures" in the
+         search box.
+      2. The county filter is NOT a checkbox. It is a list of rows that take a
+         checkmark when clicked, and the whole COUNTY panel starts collapsed
+         behind a "+" toggle that has to be opened first.
+      3. The date range is a set of radio buttons -- "In the last N days" --
+         rather than a pair of date fields.
+
+    CAPTCHA: individual notice detail pages can present one. This scraper never
+    attempts to solve, evade, or work around it. It reads only the search
+    results list, which is not gated, and takes the borrower's name from the
+    snippet. The property and mailing address then come from the county parcel
+    roll we already hold -- which is more reliable than the notice text anyway.
     """
+
+    CATEGORIES = [("Foreclosures", "FC"), ("Tax Sales", "TAX"), ("Probate Notices", "PRO")]
 
     def __init__(self, start: datetime, end: datetime) -> None:
         self.start = start
         self.end = end
         self.county_filtered = False
+        self.notes: List[str] = []
+
+    # ------------------------------------------------------------- UI helpers
+    @staticmethod
+    async def _expand_panel(page, label: str) -> bool:
+        """Open a collapsed filter panel (COUNTY, DATE RANGE ...)."""
+        try:
+            opened = await page.evaluate(
+                """(label) => {
+                    const rows = Array.from(document.querySelectorAll('div,td,th,a,span'));
+                    for (const r of rows) {
+                        const t = (r.innerText || '').trim().toUpperCase();
+                        if (!t.startsWith(label)) continue;
+                        // The +/- toggle is the nearest clickable in this row.
+                        const host = r.closest('div,tr') || r;
+                        const tog = host.querySelector(
+                            'a,img,input[type=button],input[type=image],span.ui-icon,button');
+                        if (tog) { tog.click(); return true; }
+                        r.click();
+                        return true;
+                    }
+                    return false;
+                }""", label.upper())
+            if opened:
+                await page.wait_for_timeout(900)
+            return bool(opened)
+        except Exception as exc:  # noqa: BLE001
+            log.debug("  expand %s failed: %s", label, exc)
+            return False
+
+    async def _select_county(self, page, county: str) -> bool:
+        """
+        Tick the county. The rows are not checkboxes, so a real checkbox is used
+        when one exists and the row itself is clicked otherwise.
+        """
+        await self._expand_panel(page, "COUNTY")
+        try:
+            hit = await page.evaluate(
+                """(county) => {
+                    const want = county.toUpperCase();
+                    // A genuine checkbox, if the markup happens to have one.
+                    for (const cb of document.querySelectorAll('input[type=checkbox]')) {
+                        const lbl = (cb.parentElement?.innerText || cb.value || '').trim().toUpperCase();
+                        if (lbl === want) { if (!cb.checked) cb.click(); return 'checkbox'; }
+                    }
+                    // Otherwise the row itself is the control.
+                    const rows = Array.from(document.querySelectorAll('li,div,td,a,span'));
+                    for (const r of rows) {
+                        const t = (r.innerText || '').trim().toUpperCase();
+                        if (t !== want) continue;
+                        if (r.offsetParent === null) continue;
+                        r.click();
+                        return 'row';
+                    }
+                    return null;
+                }""", county)
+            if hit:
+                await page.wait_for_timeout(1200)
+                log.info("  %s county selected (via %s)", county, hit)
+                return True
+        except Exception as exc:  # noqa: BLE001
+            log.debug("  county select failed: %s", exc)
+        self.notes.append(f"could not select county {county}")
+        return False
+
+    async def _set_last_days(self, page, days: int) -> bool:
+        """Choose the 'In the last N days' radio and set N."""
+        await self._expand_panel(page, "DATE RANGE")
+        try:
+            ok = await page.evaluate(
+                """(days) => {
+                    const radios = Array.from(document.querySelectorAll('input[type=radio]'));
+                    for (const r of radios) {
+                        const row = r.closest('div,tr,td,label') || r.parentElement;
+                        const t = (row?.innerText || '').toLowerCase();
+                        if (t.includes('in the last') && t.includes('day')) {
+                            r.click();
+                            const box = row.querySelector('input[type=text]');
+                            if (box) {
+                                box.value = String(days);
+                                box.dispatchEvent(new Event('input',  {bubbles:true}));
+                                box.dispatchEvent(new Event('change', {bubbles:true}));
+                            }
+                            return true;
+                        }
+                    }
+                    return false;
+                }""", days)
+            if ok:
+                await page.wait_for_timeout(700)
+                log.info("  date range set to the last %d days", days)
+                return True
+        except Exception as exc:  # noqa: BLE001
+            log.debug("  date range failed: %s", exc)
+        self.notes.append("could not set the date range")
+        return False
 
     @staticmethod
-    async def _check_county(page, county: str) -> bool:
-        for attempt in (
-            f"input[type='checkbox'][value='{county}']",
-            f"label:has-text('{county}') input[type='checkbox']",
-            f"li:has-text('{county}') input[type='checkbox']",
-        ):
+    async def _choose_category(page, label: str) -> bool:
+        """Pick a category from the POPULAR SEARCHES dropdown."""
+        try:
+            ok = await page.evaluate(
+                """(label) => {
+                    const want = label.toUpperCase();
+                    for (const sel of document.querySelectorAll('select')) {
+                        for (const opt of sel.options) {
+                            if ((opt.text || '').trim().toUpperCase() === want) {
+                                sel.value = opt.value;
+                                sel.dispatchEvent(new Event('change', {bubbles: true}));
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                }""", label)
+            if ok:
+                await page.wait_for_timeout(1500)
+            return bool(ok)
+        except Exception:  # noqa: BLE001
+            return False
+
+    @staticmethod
+    async def _submit(page) -> bool:
+        """Press the magnifying-glass search button beside RESET."""
+        for sel in ("input[type=image]", "#btnSearch",
+                    "input[type=submit][value='']", "a[id*='Search' i]",
+                    "input[id*='btnSearch' i]", "input[type=submit]"):
             try:
-                loc = page.locator(attempt).first
-                if await loc.count():
-                    await loc.check(timeout=6000)
+                loc = page.locator(sel).first
+                if await loc.count() and await loc.is_visible():
+                    await loc.click(timeout=6000)
                     return True
             except Exception:  # noqa: BLE001
                 continue
         try:
-            await page.get_by_label(county, exact=True).first.check(timeout=6000)
-            return True
+            return bool(await page.evaluate(
+                """() => {
+                    const els = Array.from(document.querySelectorAll(
+                        'a,input[type=image],input[type=submit],button'));
+                    for (const e of els) {
+                        const s = ((e.id||'') + (e.className||'') + (e.getAttribute('src')||'')
+                                   ).toLowerCase();
+                        if (s.includes('search') || s.includes('magnif') || s.includes('glass')) {
+                            e.click(); return true;
+                        }
+                    }
+                    return false;
+                }"""))
         except Exception:  # noqa: BLE001
             return False
 
+    # --------------------------------------------------------------- parsing
+    @staticmethod
+    def _parse_results(html: str, cat: str) -> List[Dict[str, Any]]:
+        """
+        Read the results list. Each entry carries a publication, a date and a
+        snippet, and the snippet reliably contains the grantor (borrower) name,
+        which is the field the parcel match needs.
+        """
+        soup = BeautifulSoup(html, "lxml")
+        out: List[Dict[str, Any]] = []
+        seen = set()
+
+        for link in soup.find_all("a", href=True):
+            href = link["href"]
+            if "Details.aspx" not in href and "ID=" not in href:
+                continue
+            block = link.find_parent(["tr", "div", "table"])
+            if not block:
+                continue
+            # Walk out until the block holds a real chunk of notice text.
+            text = clean_text(block.get_text(" "))
+            hops = 0
+            while len(text) < 200 and block.parent is not None and hops < 4:
+                block = block.parent
+                text = clean_text(block.get_text(" "))
+                hops += 1
+            if len(text) < 120:
+                continue
+
+            # Anchor on [?&]ID= : a bare "ID=" also matches inside the SID
+            # session token (SID=0cvv...), which would give every notice the
+            # same id and collapse them all into one record.
+            m = re.search(r"[?&]ID=(\d+)", href)
+            notice_id = m.group(1) if m else sha_key(text[:200])
+            if notice_id in seen:
+                continue
+            seen.add(notice_id)
+
+            url = href if href.startswith("http") else \
+                "https://www.georgiapublicnotice.com/" + href.lstrip("/")
+            out.append({"notice_id": notice_id, "url": url, "text": text, "cat": cat})
+        return out
+
+    GRANTOR_RE = re.compile(
+        r"(?:executed|given|granted)\s+by\s+([A-Z][A-Za-z'\.\-]+(?:\s+[A-Z][A-Za-z'\.\-]+){0,3})",
+        re.I)
+
+    def _to_lead(self, item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        text, cat = item["text"], item["cat"]
+        parsed = parse_notice_body(text, "")
+        owner = parsed["owner"]
+        if not owner:
+            m = self.GRANTOR_RE.search(text)
+            if m:
+                owner = clean_text(m.group(1))
+        if not owner:
+            return None
+
+        pub_date = None
+        dm = re.search(r"(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+"
+                       r"([A-Z][a-z]+ \d{1,2}, 20\d{2})", text)
+        if dm:
+            pub_date = parse_date(dm.group(1))
+
+        return {
+            "doc_num": f"GPN-{item['notice_id']}",
+            "doc_type": "Notice of Sale Under Power" if cat == "FC" else f"Legal Notice ({cat})",
+            "filed": fmt_date(pub_date or utcnow().replace(tzinfo=None)),
+            "cat": cat,
+            "cat_label": CAT_LABELS.get(cat, cat),
+            "owner": owner,
+            "grantee": parsed["lender"],
+            "amount": parsed["amount"],
+            "legal": text[:600],
+            "parcel_id": "",
+            "prop_address": parsed["prop_address"],
+            "prop_zip": parsed["prop_zip"],
+            "clerk_url": item["url"],
+            "source": "Georgia Public Notice (legal organ advertisement)",
+            "foreclosure_sale_date": fmt_date(parsed["sale_date"]) or None,
+            "notice_number": item["notice_id"],
+            "status": "active",
+            "is_release": False,
+            "_notice_dedupe": item["notice_id"],
+        }
+
+    # ------------------------------------------------------------------ main
     async def run(self) -> List[Dict[str, Any]]:
         from playwright.async_api import async_playwright
 
         results: List[Dict[str, Any]] = []
-        start_s = self.start.strftime("%m/%d/%Y")
-        end_s = self.end.strftime("%m/%d/%Y")
-
         async with async_playwright() as pw:
             browser = await pw.chromium.launch(headless=HEADLESS, args=["--no-sandbox"])
             ctx = await browser.new_context(
-                viewport={"width": 1440, "height": 960},
-                user_agent=USER_AGENT, locale="en-US", timezone_id="America/New_York",
-            )
-            # Short timeouts here on purpose: the previous run spent four
-            # minutes waiting 60s at a time for elements that were never going
-            # to appear. A missing control should fail in seconds.
-            ctx.set_default_timeout(12000)
+                viewport={"width": 1500, "height": 1000},
+                user_agent=USER_AGENT, locale="en-US", timezone_id="America/New_York")
+            ctx.set_default_timeout(15000)
             page = await ctx.new_page()
             page.set_default_navigation_timeout(NAV_TIMEOUT_MS)
 
             try:
-                log.info("Legal notices: opening %s", LEGAL_NOTICE_SEARCH_URL)
-                await page.goto(LEGAL_NOTICE_SEARCH_URL, wait_until="domcontentloaded")
-                await page.wait_for_timeout(2500)
-
-                for opener in ("a:has-text('Advanced Search')", "text=Advanced Search"):
+                for label, cat in self.CATEGORIES:
                     try:
-                        await page.locator(opener).first.click(timeout=5000)
-                        await page.wait_for_timeout(1200)
-                        break
-                    except Exception:  # noqa: BLE001
-                        continue
-
-                self.county_filtered = await self._check_county(page, "DeKalb")
-                if self.county_filtered:
-                    log.info("  DeKalb county filter applied")
-                else:
-                    log.warning("  could not tick the DeKalb checkbox; adding DeKalb to the "
-                                "search text instead and filtering results client-side")
-
-                # Date range
-                for sel, val in ((["input[id*='txtDateFrom' i]", "input[id*='dpFrom' i]",
-                                   "input[name*='From' i]"], start_s),
-                                 (["input[id*='txtDateTo' i]", "input[id*='dpTo' i]",
-                                   "input[name*='To' i]"], end_s)):
-                    for s in sel:
-                        try:
-                            el = page.locator(s).first
-                            if await el.count():
-                                await el.fill(val)
-                                break
-                        except Exception:  # noqa: BLE001
-                            continue
-
-                for term in FORECLOSURE_MARKERS[:2] + ["ESTATE OF", "TAX SALE"]:
-                    try:
-                        rows = await self._search_term(page, term)
+                        rows = await self._run_category(page, label, cat)
                         results.extend(rows)
-                        await page.wait_for_timeout(int(POLITE_DELAY * 1000))
                     except Exception as exc:  # noqa: BLE001
-                        log.warning("  notice search for %r failed: %s", term, exc)
-
+                        log.warning("  %s search failed: %s", label, exc)
+                        self.notes.append(f"{label}: {exc}")
+                    await page.wait_for_timeout(int(POLITE_DELAY * 1000))
             finally:
                 await ctx.close()
                 await browser.close()
-
         return results
 
-    async def _search_term(self, page, term: str) -> List[Dict[str, Any]]:
-        # Without the county checkbox the search runs statewide, so put the
-        # county in the query itself to keep the result set relevant.
-        if not self.county_filtered:
-            term = f"{term} DeKalb"
-        log.info("  searching notices for %r", term)
-        filled = False
-        for sel in ("input[id*='txtSearch' i]", "input[type='search']",
-                    "input[id*='Keyword' i]", "input[name*='search' i]"):
-            try:
-                el = page.locator(sel).first
-                if await el.count():
-                    await el.fill(term)
-                    filled = True
-                    break
-            except Exception:  # noqa: BLE001
-                continue
-        if not filled:
-            log.warning("  no search box found on notice site")
+    async def _run_category(self, page, label: str, cat: str) -> List[Dict[str, Any]]:
+        log.info("Legal notices: %s in %s County, last %d days",
+                 label, COUNTY, LOOKBACK_DAYS)
+        await page.goto(LEGAL_NOTICE_SEARCH_URL, wait_until="domcontentloaded")
+        await page.wait_for_timeout(2500)
+
+        if not await self._choose_category(page, label):
+            self.notes.append(f"could not pick {label} from the dropdown")
+            log.warning("  could not pick %s from the category dropdown", label)
             return []
 
-        for sel in ("input[type='submit'][value*='Search' i]", "button:has-text('Search')",
-                    "a:has-text('Search')", "#btnSearch"):
-            try:
-                el = page.locator(sel).first
-                if await el.count():
-                    await el.click()
-                    break
-            except Exception:  # noqa: BLE001
-                continue
+        self.county_filtered = await self._select_county(page, COUNTY)
+        await self._set_last_days(page, max(LOOKBACK_DAYS, 30))
+
+        if not await self._submit(page):
+            self.notes.append("could not press the search button")
+            log.warning("  could not press the search button")
+            return []
 
         try:
-            await page.wait_for_load_state("networkidle", timeout=20000)
+            await page.wait_for_load_state("networkidle", timeout=25000)
         except Exception:  # noqa: BLE001
-            await page.wait_for_timeout(4000)
+            await page.wait_for_timeout(6000)
 
         out: List[Dict[str, Any]] = []
-        try:
+        for page_no in range(1, 11):        # up to 10 result pages per category
             html = await page.content()
-            soup = BeautifulSoup(html, "lxml")
-            blocks = soup.select("div.notice, tr.notice, div[id*='Result'] li, "
-                                 "div[id*='Result'] div.item, table tr")
-            seen_texts = set()
-            for blk in blocks[:MAX_NOTICE_DETAILS]:
-                text = clean_text(blk.get_text(" "))
-                if len(text) < 120:
-                    continue
-                upper = text.upper()
-                if "DEKALB" not in upper:
-                    continue
-                sig = sha_key(text[:300])
-                if sig in seen_texts:
-                    continue
-                seen_texts.add(sig)
+            items = self._parse_results(html, cat)
+            log.info("  page %d: %d notices", page_no, len(items))
+            if not items:
+                break
+            for item in items:
+                try:
+                    lead = self._to_lead(item)
+                    if lead:
+                        out.append(lead)
+                except Exception as exc:  # noqa: BLE001
+                    log.debug("  bad notice skipped: %s", exc)
 
-                link = ""
-                a = blk.find("a", href=True) if hasattr(blk, "find") else None
-                if a:
-                    href = a["href"]
-                    link = href if href.startswith("http") else \
-                        "https://www.georgiapublicnotice.com/" + href.lstrip("/")
-
-                parsed = parse_notice_body(text)
-                if parsed["cat"] == "UNK":
+            advanced = False
+            for sel in ("a[title*='Next' i]", "a:has-text('>')",
+                        "input[type=image][alt*='Next' i]", "a[id*='Next' i]"):
+                try:
+                    nxt = page.locator(sel).first
+                    if await nxt.count() and await nxt.is_visible():
+                        await nxt.click()
+                        await page.wait_for_timeout(int(POLITE_DELAY * 1000) + 1500)
+                        advanced = True
+                        break
+                except Exception:  # noqa: BLE001
                     continue
-                out.append(self._to_lead(parsed, text, link))
-        except Exception as exc:  # noqa: BLE001
-            log.warning("  could not parse notice results: %s", exc)
+            if not advanced:
+                break
 
-        log.info("  -> %d DeKalb notices for %r", len(out), term)
+        log.info("  %s: %d usable notices", label, len(out))
         return out
-
-    def _to_lead(self, parsed: Dict[str, Any], raw_text: str, url: str) -> Dict[str, Any]:
-        cat = parsed["cat"]
-        notice_no = parsed["notice_number"]
-        dedupe_id = notice_no or sha_key(
-            normalize_name(parsed["owner"]),
-            normalize_address(parsed["prop_address"]),
-            cat,
-            fmt_date(parsed["sale_date"]),
-        )
-        return {
-            "doc_num": f"NOTICE-{dedupe_id}",
-            "doc_type": "Legal Notice / Sale Under Power" if cat == "FC" else f"Legal Notice ({cat})",
-            "filed": fmt_date(utcnow().replace(tzinfo=None)),
-            "cat": cat,
-            "cat_label": CAT_LABELS.get(cat, cat),
-            "owner": parsed["owner"],
-            "grantee": parsed["lender"],
-            "amount": parsed["amount"],
-            "legal": parsed["legal"],
-            "parcel_id": "",
-            "prop_address": parsed["prop_address"],
-            "prop_zip": parsed["prop_zip"],
-            "clerk_url": url or LEGAL_NOTICE_SEARCH_URL,
-            "source": "Georgia Public Notice (legal organ advertisement)",
-            "foreclosure_sale_date": fmt_date(parsed["sale_date"]) or None,
-            "notice_number": notice_no,
-            "deed_book": parsed["deed_book"],
-            "deed_page": parsed["deed_page"],
-            "status": "active",
-            "is_release": False,
-            "_notice_dedupe": dedupe_id,
-        }
 
 
 @retry(label="champion-pdf-index")
