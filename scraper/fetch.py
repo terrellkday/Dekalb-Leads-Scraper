@@ -1553,66 +1553,124 @@ class LandmarkScraper:
             return False
 
     # ------------------------------------------- step 3: submit, then verify it
-    async def _results_present(self, page) -> bool:
-        """Did the search actually produce something? XHR rows or a data table."""
-        if self.captured:
-            return True
+    async def _count_result_rows(self, page) -> int:
+        """Rows in the biggest table that actually looks like a result grid."""
         try:
-            n = await page.evaluate(
+            return await page.evaluate(
                 """() => {
                     let best = 0;
                     document.querySelectorAll('table').forEach(t => {
-                        const rows = t.querySelectorAll('tbody tr');
                         let real = 0;
-                        rows.forEach(r => { if (r.querySelectorAll('td').length >= 3) real++; });
+                        t.querySelectorAll('tbody tr').forEach(r => {
+                            if (r.querySelectorAll('td').length >= 3) real++;
+                        });
                         if (real > best) best = real;
                     });
                     return best;
-                }"""
-            )
-            return bool(n and n > 0)
+                }""")
         except Exception:  # noqa: BLE001
-            return False
+            return 0
 
     async def _submit_and_verify(self, page, date_to_sel: Optional[str]) -> bool:
-        """Try each submit route and confirm results appeared before moving on."""
+        """
+        Press the search button on the *form*, then prove a search really ran.
+
+        Two lessons are baked in here. First, a bare text match like
+        a:has-text('Search') also matches the "Search" item in the site's top
+        navigation bar -- clicking that navigates away instead of searching, and
+        the page it lands on has a small table that looks enough like results to
+        fool a naive check. So candidates are scoped to the form and nav
+        elements are excluded.
+
+        Second, the fields are named beginDate-RecordDate / endDate-RecordDate,
+        so the submit control almost certainly carries the same -RecordDate
+        suffix. That suffix is derived from the date field we already found
+        rather than guessed, which keeps working if the section name changes.
+        """
+        # Derive the section suffix, e.g. "#beginDate-RecordDate" -> "-RecordDate"
+        suffix = ""
+        if date_to_sel and "-" in date_to_sel:
+            suffix = "-" + date_to_sel.split("-", 1)[1].strip("#")
+
         routes: List[Tuple[str, Any]] = []
         if self.learned.get("submit"):
             routes.append(("learned", self.learned["submit"]))
+        if suffix:
+            routes += [("suffix", f"#submit{suffix}"),
+                       ("suffix", f"#search{suffix}"),
+                       ("suffix", f"#btnSearch{suffix}"),
+                       ("suffix", f"button[id$='{suffix}']"),
+                       ("suffix", f"input[type=submit][id$='{suffix}']"),
+                       ("suffix", f"a[id$='{suffix}']")]
         routes += [
             ("css", "#searchButton"),
             ("css", "#btnSearch"),
             ("css", "button#submit-Search"),
+            # Scoped to a form, so the navigation bar cannot match.
+            ("css", "form button:has-text('Search')"),
+            ("css", "form input[type=submit][value*='Search' i]"),
             ("css", "input[type=submit][value*='Search' i]"),
-            ("css", "button:has-text('Search')"),
-            ("css", "a:has-text('Search')"),
-            ("css", "input[value='Search']"),
+            ("css", "button[type=submit]"),
         ]
         if date_to_sel:
             routes.append(("enter", date_to_sel))
 
+        baseline = await self._count_result_rows(page)
+        start_url = page.url
+
         for kind, target in routes:
             try:
-                before = len(self.captured)
+                before_xhr = len(self.captured)
                 if kind == "enter":
                     await page.locator(target).first.press("Enter")
                     log.info("  submitted by pressing Enter in the date box")
                 else:
+                    # Never click something inside the site navigation.
+                    try:
+                        in_nav = await page.evaluate(
+                            """(sel) => {
+                                const e = document.querySelector(sel);
+                                if (!e) return null;
+                                return !!e.closest('nav, .navbar, .nav, header, #menu');
+                            }""", target)
+                    except Exception:  # noqa: BLE001
+                        in_nav = None
+                    if in_nav:
+                        log.debug("  skipping %s (it is in the navigation bar)", target)
+                        continue
                     if not await self._try_click(page, target, timeout=4000):
                         continue
                     log.info("  submitted search  [%s]", target)
 
                 try:
-                    await page.wait_for_load_state("networkidle", timeout=18000)
+                    await page.wait_for_load_state("networkidle", timeout=25000)
                 except Exception:  # noqa: BLE001
-                    await page.wait_for_timeout(5000)
-                await page.wait_for_timeout(1500)
+                    await page.wait_for_timeout(6000)
+                await page.wait_for_timeout(2000)
 
-                if len(self.captured) > before or await self._results_present(page):
-                    if kind != "enter":
+                got_xhr = len(self.captured) > before_xhr
+                rows = await self._count_result_rows(page)
+                navigated_away = (page.url != start_url
+                                  and "search" not in page.url.lower())
+
+                if navigated_away:
+                    log.info("  ... that click left the search page; going back")
+                    try:
+                        await page.go_back(wait_until="domcontentloaded")
+                        await page.wait_for_timeout(1500)
+                    except Exception:  # noqa: BLE001
+                        pass
+                    continue
+
+                # Require a real jump in row count, not merely "a table exists".
+                if got_xhr or rows > max(baseline, 2):
+                    log.info("  search returned %d result rows", rows)
+                    if kind not in ("enter",):
                         self.learned["submit"] = target
                     return True
-                log.info("  ... that route returned nothing; trying another")
+
+                log.info("  ... that route produced %d rows (baseline %d); trying another",
+                         rows, baseline)
             except Exception as exc:  # noqa: BLE001
                 log.debug("submit route %s failed: %s", target, exc)
         return False
@@ -1666,6 +1724,10 @@ class LandmarkScraper:
                 if batch:
                     dom_rows.extend(batch)
                     log.info("  page %d: %d rows from DOM", page_no, len(batch))
+                    # Show the first row so a suspiciously small result set can
+                    # be identified as page furniture at a glance.
+                    if page_no == 1 and len(batch) <= 3:
+                        log.info("  sample row: %s", str(batch[0])[:240])
 
             advanced = False
             for sel in next_candidates:
