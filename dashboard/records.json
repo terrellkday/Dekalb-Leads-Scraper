@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T13:42:00.715153+00:00",
+  "fetched_at": "2026-08-26T14:09:28.749334+00:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
     "start": "2026-07-27",
@@ -19,17 +19,17 @@
       "error": ""
     },
     "landmarkweb": {
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "error": ""
+      "error": "ran but found no records"
     },
     "legal_notices": {
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "error": ""
+      "error": "ran but found no records"
     },
     "champion_pdfs": {
-      "ok": true,
+      "ok": false,
       "count": 0,
       "error": "no pdfs linked"
     },
