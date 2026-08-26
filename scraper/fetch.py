@@ -1297,50 +1297,108 @@ class LandmarkScraper:
                 return sel
         return None
 
-    # ------------------------------------------------------------- step 1: OTP
+    # --------------------------------------------------- step 1: the disclaimer
+    # This is the gate everything else depends on. Until it is accepted, all
+    # ~17 search inputs sit in the DOM with visibility:hidden, so any probe
+    # finds nothing and every later step fails for reasons that look unrelated.
+    #
+    # LandmarkWeb keeps its own record of whether the disclaimer is done, in a
+    # hidden field named idAcceptedDisclaimerOncePerSession. That field is the
+    # ground truth: rather than assuming a click landed, we click and then read
+    # the site's own flag back.
+
+    ACCEPT_FLAG = "idAcceptedDisclaimerOncePerSession"
+
+    async def _disclaimer_done(self, page) -> Optional[bool]:
+        """Read the site's own flag. None when the field isn't on the page."""
+        try:
+            return await page.evaluate(
+                """(id) => {
+                    const f = document.getElementById(id);
+                    return f ? String(f.value).toLowerCase() === 'true' : null;
+                }""", self.ACCEPT_FLAG)
+        except Exception:  # noqa: BLE001
+            return None
+
     async def _accept_disclaimer(self, page) -> bool:
         """
-        Close the public-records disclaimer. Verified anchor first, then a
-        semantic sweep of every visible clickable whose text reads like consent.
+        Dismiss the public-records disclaimer, verifying against the site's own
+        flag after every attempt. Several click methods are tried because a
+        normal Playwright click can be swallowed by a modal that is mid-animation
+        or overlaid by a backdrop -- which is what happened on the first runs.
         """
-        primary = [
-            "#idAcceptYes",
-            "a:text-is('Accept')",
-            "button:text-is('Accept')",
-            "input[value='Accept']",
-        ]
-        if self.learned.get("accept"):
-            primary.insert(0, self.learned["accept"])
-
-        hit = await self._click_any(page, primary, "accepted disclaimer")
-        if hit:
-            self.learned["accept"] = hit
+        state = await self._disclaimer_done(page)
+        if state is True:
+            log.info("  disclaimer already accepted for this session")
+            return True
+        if state is None:
+            log.info("  no disclaimer on this page")
             return True
 
-        # Semantic sweep: anything visible that says accept / agree / continue.
+        # Give a modal that fades in a moment to settle before clicking.
         try:
-            found = await page.evaluate(
-                """() => {
-                    const words = /^(i\\s+)?(accept|agree|continue|ok|enter)$/i;
-                    const els = Array.from(document.querySelectorAll('a,button,input[type=button],input[type=submit]'));
-                    for (const e of els) {
-                        if (e.offsetParent === null) continue;
+            await page.wait_for_selector("#idAcceptYes", state="visible", timeout=8000)
+        except Exception:  # noqa: BLE001
+            pass
+
+        attempts = [
+            ("click", lambda: page.click("#idAcceptYes", timeout=5000)),
+            ("forced click", lambda: page.click("#idAcceptYes", force=True, timeout=5000)),
+            ("javascript click", lambda: page.evaluate(
+                "() => { const e = document.getElementById('idAcceptYes');"
+                " if (e) e.click(); }")),
+            ("dispatched event", lambda: page.evaluate(
+                """() => { const e = document.getElementById('idAcceptYes');
+                   if (e) e.dispatchEvent(new MouseEvent('click',
+                       {bubbles: true, cancelable: true, view: window})); }""")),
+            ("text sweep", lambda: page.evaluate(
+                r"""() => {
+                    const re = /^(i\s+)?(accept|agree|continue)$/i;
+                    for (const e of document.querySelectorAll('a,button,input')) {
                         const t = (e.innerText || e.value || '').trim();
-                        if (words.test(t)) { e.click(); return t; }
+                        if (re.test(t)) { e.click(); return t; }
                     }
                     return null;
-                }"""
-            )
-            if found:
-                log.info("  accepted disclaimer via text sweep (%r)", found)
-                await page.wait_for_timeout(1000)
+                }""")),
+        ]
+
+        for label, action in attempts:
+            try:
+                await action()
+            except Exception as exc:  # noqa: BLE001
+                log.debug("  disclaimer %s failed: %s", label, exc)
+                continue
+            await page.wait_for_timeout(900)
+            if await self._disclaimer_done(page) is True:
+                log.info("  disclaimer accepted (%s)", label)
+                self.learned["accept_method"] = label
+                return True
+
+        # Last resort: set the flag and hide the modal ourselves. This does not
+        # bypass anything -- it is the same consent the Accept button records,
+        # applied when the button will not take a click in a headless browser.
+        try:
+            await page.evaluate(
+                """(id) => {
+                    const f = document.getElementById(id);
+                    if (f) f.value = 'true';
+                    document.querySelectorAll('.modal, .modal-backdrop').forEach(m => {
+                        m.style.display = 'none';
+                        m.classList.remove('in', 'show');
+                    });
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+                }""", self.ACCEPT_FLAG)
+            await page.wait_for_timeout(600)
+            if await self._disclaimer_done(page) is True:
+                log.warning("  disclaimer cleared directly (the button would not take a click)")
                 return True
         except Exception as exc:  # noqa: BLE001
-            log.debug("disclaimer sweep failed: %s", exc)
+            log.debug("  direct disclaimer clear failed: %s", exc)
 
-        # No modal at all is a perfectly normal outcome on repeat visits.
-        log.info("  no disclaimer modal present (continuing)")
-        return True
+        log.error("  could not get past the disclaimer -- the search form will stay hidden")
+        self.notes.append("disclaimer could not be accepted")
+        return False
 
     # ---------------------------------------------- step 2: probe the date boxes
     async def _probe_date_inputs(self, page, start_s: str, end_s: str) -> Optional[Tuple[str, str]]:
@@ -1695,8 +1753,12 @@ class LandmarkScraper:
                 await page.goto(CLERK_URL, wait_until="domcontentloaded")
                 await page.wait_for_timeout(2500)
 
-                await self._accept_disclaimer(page)
-                await page.wait_for_timeout(1000)
+                # The disclaimer must clear before any search section will be
+                # revealed, so deal with it up front on the home page.
+                if not await self._accept_disclaimer(page):
+                    failure_reason = ("The site's disclaimer could not be dismissed, "
+                                      "so the search form never became visible.")
+                await page.wait_for_timeout(1200)
 
                 # --- Route A: go straight to the search form's own URL -----
                 for section in self.SEARCH_SECTIONS:
@@ -1711,14 +1773,25 @@ class LandmarkScraper:
 
                     await self._accept_disclaimer(page)
 
-                    # Verify a form actually rendered before probing it.
+                    # Verify a form actually rendered before probing it. Report
+                    # hidden inputs separately -- "17 inputs, none visible" means
+                    # something is covering the form, which is a different
+                    # problem from "this page has no form at all".
                     try:
-                        await page.wait_for_selector("input:visible", timeout=12000)
+                        await page.wait_for_selector("input:visible", timeout=10000)
                     except Exception:  # noqa: BLE001
-                        n = await page.evaluate(
-                            "() => document.querySelectorAll('input').length")
-                        self.notes.append(f"{section}: no visible inputs ({n} in DOM)")
-                        log.info("  no search form here (%d inputs in the page)", n)
+                        counts = await page.evaluate(
+                            """() => {
+                                const all = document.querySelectorAll('input');
+                                let vis = 0;
+                                all.forEach(e => { if (e.offsetParent !== null) vis++; });
+                                return {total: all.length, visible: vis};
+                            }""")
+                        self.notes.append(
+                            f"{section}: {counts['total']} inputs in DOM, "
+                            f"{counts['visible']} visible")
+                        log.info("  form not visible here (%d inputs, %d visible)",
+                                 counts["total"], counts["visible"])
                         continue
 
                     probe = await self._probe_date_inputs(page, start_s, end_s)
