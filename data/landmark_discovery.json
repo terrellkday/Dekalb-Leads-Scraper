@@ -1,11 +1,15 @@
 {
-  "captured_at": "2026-08-26T13:28:39.576703+00:00",
+  "captured_at": "2026-08-26T14:05:38.799143+00:00",
   "url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
   "reason": "The search form could not be operated.",
   "xhr_urls_seen": [
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2009%3A27%3A14%20GMT-0400%20(Eastern%20Daylight%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2009%3A27%3A44%20GMT-0400%20(Eastern%20Daylight%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2009%3A28%3A13%20GMT-0400%20(Eastern%20Daylight%20Time)"
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2010%3A01%3A21%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2010%3A01%3A54%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2010%3A02%3A32%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2010%3A03%3A11%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2010%3A03%3A49%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2010%3A04%3A28%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2010%3A05%3A01%20GMT-0400%20(Eastern%20Daylight%20Time)"
   ],
   "visible_controls": [
     {
@@ -79,6 +83,33 @@
       "title": null,
       "cls": null,
       "text": "Log On"
+    },
+    {
+      "tag": "BUTTON",
+      "id": null,
+      "name": null,
+      "type": "button",
+      "title": null,
+      "cls": "close",
+      "text": "×"
+    },
+    {
+      "tag": "A",
+      "id": "idAcceptYes",
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": "btn btn-primary",
+      "text": "Accept"
+    },
+    {
+      "tag": "A",
+      "id": "idAcceptNo",
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": "btn",
+      "text": "No"
     },
     {
       "tag": "A",
@@ -171,8 +202,279 @@
       "text": "»"
     }
   ],
+  "all_inputs_including_hidden": [
+    {
+      "tag": "INPUT",
+      "id": "DefaultRequiredValueBackgroundColor",
+      "name": "DefaultRequiredValueBackgroundColor",
+      "type": "hidden",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": "LightBlue"
+    },
+    {
+      "tag": "INPUT",
+      "id": "idAcceptedDisclaimerOncePerSession",
+      "name": null,
+      "type": "hidden",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": "false"
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "text",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "password",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "id": null,
+      "name": null,
+      "type": "password",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": ""
+    },
+    {
+      "tag": "SELECT",
+      "id": null,
+      "name": null,
+      "type": null,
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": "25"
+    },
+    {
+      "tag": "SELECT",
+      "id": null,
+      "name": null,
+      "type": null,
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": "50"
+    },
+    {
+      "tag": "SELECT",
+      "id": null,
+      "name": null,
+      "type": null,
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": "False"
+    },
+    {
+      "tag": "SELECT",
+      "id": null,
+      "name": null,
+      "type": null,
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": "True"
+    },
+    {
+      "tag": "INPUT",
+      "id": "goToSection",
+      "name": null,
+      "type": "hidden",
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": false,
+      "value": "searchCriteriaRecordDate"
+    },
+    {
+      "tag": "SELECT",
+      "id": "quickFind",
+      "name": null,
+      "type": null,
+      "cls": null,
+      "placeholder": null,
+      "readOnly": false,
+      "disabled": false,
+      "visible": true,
+      "value": ""
+    }
+  ],
+  "input_count": 22,
   "notes": [
-    "no date boxes found on filing_date form",
-    "no date boxes found on document form"
+    "searchCriteriaRecordDate: no visible inputs (17 in DOM)",
+    "searchCriteriaFilingDate: no visible inputs (17 in DOM)",
+    "searchCriteriaDateRange: no visible inputs (17 in DOM)",
+    "searchCriteriaDocument: no visible inputs (17 in DOM)",
+    "searchCriteriaName: no visible inputs (17 in DOM)",
+    "icon filing_date: no date fields after click"
   ]
 }

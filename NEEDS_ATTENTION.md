@@ -1,6 +1,6 @@
 # The clerk's website changed
 
-**When:** August 26, 2026 at 13:28 UTC
+**When:** August 26, 2026 at 14:05 UTC
 
 **What happened:** The search form could not be operated.
 

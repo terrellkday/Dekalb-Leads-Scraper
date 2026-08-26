@@ -58,7 +58,7 @@
 
 
 
-<body oncontextmenu="return false;" =html.raw(webcontext)="">
+<body oncontextmenu="return false;" =html.raw(webcontext)="" class="modal-open">
 
 <div id="autocollapse" class="navbar navbar-fixed-top" role="navigation">
     <div class="navbar-inner">
@@ -118,7 +118,7 @@
         </div>
     </div>
 </div>
-    <div id="idCorrelationId" hidden="hidden">-b60161c7-6c7e-40e6-ae67-3e1b535deb92</div>
+    <div id="idCorrelationId" hidden="hidden">-5f14b8c0-01ee-4e31-90b1-49d40d1bff7f</div>
     <div id="idTrieDataURL" hidden="hidden"></div>
     <div id="idCorrelationLink" hidden="hidden">/LandmarkWeb/Cart/GetCorrelationId</div>
     <div id="idTrieDataCart" hidden="">False</div>
@@ -128,7 +128,7 @@
 
 
 
-<div class="modal hide" id="disclaimer" role="dialog">
+<div class="modal hide in" id="disclaimer" role="dialog" style="display: block;">
   <div class="modal-header" style="background-color: #74767a">
     <button type="button" style="opacity: 1" class="close" data-dismiss="modal">×</button>
     <h3>Disclaimer</h3>
@@ -617,7 +617,7 @@
     }
 </style>
 
-<input type="hidden" id="goToSection" value="searchCriteriaName" style="">
+<input type="hidden" id="goToSection" value="searchCriteriaRecordDate" style="">
 <div id="logoDiv">
         <div class="divOutside">
             <a href="javascript:void(0);" aria-label="Go to Clerk of Superior Court, DeKalb County Website" title="Go to Clerk of Superior Court, DeKalb County Website.">
@@ -657,7 +657,7 @@
 
         <div class="divInside">
             <a href="javascript:void(0);" onclick="LaunchDisclaimer('searchCriteriaRecordDate');" title="Filing Date Search" aria-label="Filing Date Search">
-                <img src="/LandmarkWeb/Images/Icons/recordDate.png" alt="Record Date Range Search Icon" class="icon_home" data-content="Use a Date Range to locate documents." data-title="Record Date Search" data-original-title="">
+                <img src="/LandmarkWeb/Images/Icons/recordDate.png" alt="Record Date Range Search Icon" class="icon_home" data-content="Use a Date Range to locate documents." data-title="Record Date Search" data-original-title="" style="height: 100px; width: 100px;">
             </a>
             <span class="searchName">filing date</span>
         </div>
@@ -921,4 +921,4 @@
     </script>
 
 
-</body></html>
+<div class="modal-backdrop in"></div></body></html>
