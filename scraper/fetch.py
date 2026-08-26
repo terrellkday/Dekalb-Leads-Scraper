@@ -1128,7 +1128,9 @@ FIELD_HINTS: Dict[str, List[str]] = {
     "doc_num": ["docnumber", "documentnumber", "docnum", "instrumentnumber",
                 "instrument", "cfn", "clerkfilenumber", "recordid", "documentid"],
     "doc_type": ["doctype", "documenttype", "instrumenttype", "type", "kind",
-                 "doctypedescription", "documenttypedesc"],
+                 "doctypedescription", "documenttypedesc", "doctypedesc",
+                 "instrument", "instrumentdesc", "documentdescription",
+                 "typedescription", "docdesc", "description"],
     "filed": ["recorddate", "recordeddate", "filedate", "fileddate", "filingdate",
               "daterecorded", "datefiled", "recdate"],
     "grantor": ["grantor", "directname", "firstparty", "party1", "from", "grantorname"],
@@ -1144,15 +1146,31 @@ FIELD_HINTS: Dict[str, List[str]] = {
 
 
 def _hint_lookup(key: str) -> Optional[str]:
+    """
+    Map a source field name onto ours.
+
+    Exact matches win outright; only then do substring matches apply, longest
+    first. Without that ordering "instrument" (a doc_num hint) swallows
+    "InstrumentType" before the doc_type hints get a look in, and the record
+    ends up with no type at all -- which silently drops it later.
+    """
     flat = re.sub(r"[^a-z]", "", str(key).lower())
     if not flat:
         return None
+
+    for target, hints in FIELD_HINTS.items():
+        for hint in hints:
+            if flat == re.sub(r"[^a-z]", "", hint.lower()):
+                return target
+
+    best: Optional[Tuple[int, str]] = None
     for target, hints in FIELD_HINTS.items():
         for hint in hints:
             h = re.sub(r"[^a-z]", "", hint.lower())
-            if flat == h or (len(h) >= 5 and h in flat):
-                return target
-    return None
+            if len(h) >= 5 and h in flat:
+                if best is None or len(h) > best[0]:
+                    best = (len(h), target)
+    return best[1] if best else None
 
 
 def map_landmark_row(raw: Any) -> Optional[Dict[str, Any]]:
@@ -1161,8 +1179,17 @@ def map_landmark_row(raw: Any) -> Optional[Dict[str, Any]]:
 
     if isinstance(raw, dict):
         for key, value in raw.items():
-            if isinstance(value, (dict, list)):
-                continue
+            # Grantor/grantee often arrive as a list of parties or a nested
+            # object. Skipping those threw away the two most important fields.
+            if isinstance(value, list):
+                parts = [clean_text(v) if not isinstance(v, dict)
+                         else " ".join(clean_text(x) for x in v.values()
+                                       if isinstance(x, (str, int, float)))
+                         for v in value]
+                value = "; ".join(x for x in parts if x)
+            elif isinstance(value, dict):
+                value = " ".join(clean_text(x) for x in value.values()
+                                 if isinstance(x, (str, int, float)))
             target = _hint_lookup(key)
             if target and not row.get(target):
                 row[target] = clean_text(value)
@@ -1997,19 +2024,67 @@ class LandmarkScraper:
         origin = "xhr" if self.captured else "dom"
         log.info("LandmarkWeb raw rows: %d (via %s)", len(source_rows), origin)
 
+        # Record what the portal actually returns. Getting 5,000 rows and
+        # mapping none of them means the field names are not what was guessed,
+        # and the only way to fix that is to see them.
+        if source_rows:
+            first = source_rows[0]
+            if isinstance(first, dict):
+                log.info("  row fields: %s", ", ".join(list(first.keys())[:25]))
+            else:
+                log.info("  row is a %s of %d values", type(first).__name__, len(first))
+            try:
+                safe_write_json(DATA_DIR / "landmark_raw_sample.json", {
+                    "captured_at": utcnow().isoformat(),
+                    "row_count": len(source_rows),
+                    "sample_rows": source_rows[:3],
+                })
+                log.info("  wrote data/landmark_raw_sample.json")
+            except Exception as exc:  # noqa: BLE001
+                log.debug("  could not save the sample: %s", exc)
+
         records: List[Dict[str, Any]] = []
+        dropped = defaultdict(int)
+        seen_types: Dict[str, int] = defaultdict(int)
+
         for raw in source_rows:
             try:
                 mapped = raw if (isinstance(raw, dict) and "doc_num" in raw) else map_landmark_row(raw)
-                if not mapped or not looks_like_record(mapped):
+                if not mapped:
+                    dropped["could not map any fields"] += 1
                     continue
+                if not looks_like_record(mapped):
+                    dropped["no document number or date"] += 1
+                    continue
+
+                dt = clean_text(mapped.get("doc_type"))
+                seen_types[dt or "(blank)"] += 1
+
                 rec = self._to_lead(mapped)
                 if rec:
                     records.append(rec)
+                else:
+                    cat, _ = categorize(dt)
+                    filed = parse_date(mapped.get("filed"))
+                    if cat == "UNK":
+                        dropped["document type not a distress signal"] += 1
+                    elif filed and not (self.start.date() <= filed.date() <= self.end.date()):
+                        dropped["filed outside the date window"] += 1
+                    else:
+                        dropped["other"] += 1
             except Exception as exc:  # noqa: BLE001
+                dropped["error while parsing"] += 1
                 log.debug("Skipping bad LandmarkWeb row: %s", exc)
 
         log.info("LandmarkWeb usable records: %d", len(records))
+        if dropped:
+            log.info("  rows dropped, and why:")
+            for reason, n in sorted(dropped.items(), key=lambda kv: -kv[1]):
+                log.info("    %-38s %d", reason, n)
+        if seen_types:
+            top = sorted(seen_types.items(), key=lambda kv: -kv[1])[:12]
+            log.info("  document types returned: %s",
+                     "; ".join(f"{t} ({n})" for t, n in top))
         return records
 
     def _to_lead(self, row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
@@ -2410,46 +2485,58 @@ class LegalNoticeScraper:
             return False
 
     # --------------------------------------------------------------- parsing
+    NOTICE_MARKERS = re.compile(
+        r"NOTICE OF (?:FORECLOSURE )?SALE UNDER POWER|SALE UNDER POWER|"
+        r"SECURITY DEED|TAX SALE|ESTATE OF|PETITION|NOTICE TO DEBTORS", re.I)
+
     @staticmethod
     def _parse_results(html: str, cat: str) -> List[Dict[str, Any]]:
         """
-        Read the results list. Each entry carries a publication, a date and a
-        snippet, and the snippet reliably contains the grantor (borrower) name,
-        which is the field the parcel match needs.
+        Read the results list.
+
+        The VIEW control is an ASP.NET postback rather than a link, so there is
+        no Details.aspx href to key on -- that assumption is what returned zero
+        notices. Instead each result block is found by its own content: a chunk
+        of text long enough to be a notice and carrying a recognizable legal
+        phrase. The snippet reliably contains the grantor (borrower) name, which
+        is the only field the parcel match actually needs.
         """
         soup = BeautifulSoup(html, "lxml")
+        for tag in soup(["script", "style", "nav", "header"]):
+            tag.decompose()
+
         out: List[Dict[str, Any]] = []
-        seen = set()
+        seen: set = set()
 
-        for link in soup.find_all("a", href=True):
-            href = link["href"]
-            if "Details.aspx" not in href and "ID=" not in href:
-                continue
-            block = link.find_parent(["tr", "div", "table"])
-            if not block:
-                continue
-            # Walk out until the block holds a real chunk of notice text.
+        # Prefer tight containers so two notices never merge into one block.
+        candidates = soup.select("tr, li, div")
+        for block in candidates:
             text = clean_text(block.get_text(" "))
-            hops = 0
-            while len(text) < 200 and block.parent is not None and hops < 4:
-                block = block.parent
-                text = clean_text(block.get_text(" "))
-                hops += 1
-            if len(text) < 120:
+            if not (150 <= len(text) <= 6000):
+                continue
+            if not LegalNoticeScraper.NOTICE_MARKERS.search(text):
+                continue
+            # Skip a container that merely wraps other candidate blocks.
+            inner = block.find_all(["tr", "li"])
+            if len(inner) > 2:
                 continue
 
-            # Anchor on [?&]ID= : a bare "ID=" also matches inside the SID
-            # session token (SID=0cvv...), which would give every notice the
-            # same id and collapse them all into one record.
-            m = re.search(r"[?&]ID=(\d+)", href)
-            notice_id = m.group(1) if m else sha_key(text[:200])
-            if notice_id in seen:
+            sig = sha_key(text[:260])
+            if sig in seen:
                 continue
-            seen.add(notice_id)
+            seen.add(sig)
 
-            url = href if href.startswith("http") else \
-                "https://www.georgiapublicnotice.com/" + href.lstrip("/")
-            out.append({"notice_id": notice_id, "url": url, "text": text, "cat": cat})
+            notice_id = ""
+            m = re.search(r"[?&]ID=(\d+)", str(block))
+            if m:
+                notice_id = m.group(1)
+            if not notice_id:
+                m = re.search(r"\b(GA\d{10,}|\d{2}-\d{3,5})\b", text)
+                notice_id = m.group(1) if m else sig
+
+            out.append({"notice_id": notice_id,
+                        "url": LEGAL_NOTICE_SEARCH_URL,
+                        "text": text, "cat": cat})
         return out
 
     GRANTOR_RE = re.compile(
