@@ -1,12 +1,43 @@
 {
-  "fetched_at": "",
+  "fetched_at": "2026-08-26T13:42:00.715153+00:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
-    "start": "",
-    "end": ""
+    "start": "2026-07-27",
+    "end": "2026-08-26"
   },
   "total": 0,
   "with_address": 0,
-  "sources_report": {},
+  "sources_report": {
+    "arcgis_parcels": {
+      "ok": true,
+      "count": 245816,
+      "error": ""
+    },
+    "browser": {
+      "ok": true,
+      "count": 0,
+      "error": ""
+    },
+    "landmarkweb": {
+      "ok": true,
+      "count": 0,
+      "error": ""
+    },
+    "legal_notices": {
+      "ok": true,
+      "count": 0,
+      "error": ""
+    },
+    "champion_pdfs": {
+      "ok": true,
+      "count": 0,
+      "error": "no pdfs linked"
+    },
+    "tax_sales": {
+      "ok": false,
+      "count": 0,
+      "error": "no rows parsed"
+    }
+  },
   "records": []
 }

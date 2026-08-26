@@ -1,0 +1,178 @@
+{
+  "captured_at": "2026-08-26T13:28:39.576703+00:00",
+  "url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+  "reason": "The search form could not be operated.",
+  "xhr_urls_seen": [
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2009%3A27%3A14%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2009%3A27%3A44%20GMT-0400%20(Eastern%20Daylight%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Wed%20Aug%2026%202026%2009%3A28%3A13%20GMT-0400%20(Eastern%20Daylight%20Time)"
+  ],
+  "visible_controls": [
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": "brand",
+      "text": "Clerk of Superior Court, DeKalb County\nOfficial Records Sear"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "Home"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "Search"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "Support"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "Clerk of Superior Court, DeKalb County"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "Historical Index Book Search"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "Fee Calculator"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "Log On"
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "Go to Clerk of Superior Court, DeKalb County Website.",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "Name Search",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "Document Search",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "Book Page Search",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "Parcel Id Search",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "Filing Date Search",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "CFN Search",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "A",
+      "id": null,
+      "name": null,
+      "type": null,
+      "title": "Legal Search",
+      "cls": null,
+      "text": ""
+    },
+    {
+      "tag": "SELECT",
+      "id": "quickFind",
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": null,
+      "text": "- Select an option -\nI want to see all documents with my nam"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "footerButton",
+      "name": null,
+      "type": null,
+      "title": null,
+      "cls": "btn btn-info",
+      "text": "»"
+    }
+  ],
+  "notes": [
+    "no date boxes found on filing_date form",
+    "no date boxes found on document form"
+  ]
+}
