@@ -1173,11 +1173,113 @@ def _hint_lookup(key: str) -> Optional[str]:
     return best[1] if best else None
 
 
+DOC_TYPE_VOCAB = [
+    "DEED", "LIEN", "LIS PENDENS", "JUDGMENT", "FI FA", "FIFA", "AFFIDAVIT",
+    "MORTGAGE", "ASSIGNMENT", "CANCELLATION", "RELEASE", "POWER OF ATTORNEY",
+    "PLAT", "COVENANT", "EASEMENT", "MODIFICATION", "SATISFACTION", "NOTICE",
+    "ORDER", "AGREEMENT", "TRANSFER", "EXECUTION", "SECURITY", "WARRANTY",
+    "QUIT CLAIM", "QUITCLAIM", "FORECLOSURE", "COMMENCEMENT", "SUPPORT",
+]
+
+_DOCNUM_RE = re.compile(r"^\s*\d{4}[-/]?\d{3,}\s*$|^\s*\d{6,}\s*$")
+_NAMEISH_RE = re.compile(r"^[A-Z][A-Za-z'\.\-]+(?:[ ,]+[A-Za-z'\.\-&]+){0,5}$")
+
+
+def _numeric_key_dict(raw: Any) -> bool:
+    """True for {"0": ..., "1": ...} -- an array serialized as an object."""
+    return (isinstance(raw, dict) and bool(raw)
+            and all(str(k).strip().isdigit() for k in raw.keys()))
+
+
+def _as_row_list(raw: Any) -> Optional[List[Any]]:
+    if isinstance(raw, (list, tuple)):
+        return list(raw)
+    if _numeric_key_dict(raw):
+        return [raw[k] for k in sorted(raw.keys(), key=lambda x: int(x))]
+    return None
+
+
+def infer_column_map(rows: List[Any], sample: int = 300) -> Dict[int, str]:
+    """
+    Work out what each column holds by looking at the values.
+
+    The portal returns rows keyed "0".."24" with no field names anywhere, so
+    there is nothing to match on. Rather than hard-code a column order that
+    would break the first time the county reorders its grid, each column is
+    scored on what its values actually look like -- dates parse as dates,
+    document types come from a known vocabulary, document numbers have a
+    recognizable shape, names look like names -- and the best-scoring column
+    wins each field.
+    """
+    lists = [r for r in (_as_row_list(x) for x in rows[:sample]) if r]
+    if not lists:
+        return {}
+    width = max(len(r) for r in lists)
+    scores: Dict[str, Dict[int, float]] = defaultdict(dict)
+
+    for col in range(width):
+        vals = [clean_text(r[col]) for r in lists if col < len(r)]
+        vals = [v for v in vals if v]
+        if not vals:
+            continue
+        n = len(vals)
+        upper = [v.upper() for v in vals]
+
+        scores["filed"][col] = sum(1 for v in vals if parse_date(v)) / n
+        scores["doc_type"][col] = sum(
+            1 for v in upper if any(w in v for w in DOC_TYPE_VOCAB)) / n
+        scores["doc_num"][col] = sum(1 for v in vals if _DOCNUM_RE.match(v)) / n
+        scores["amount"][col] = sum(
+            1 for v in vals if parse_money(v) is not None) / n
+        name_hits = sum(1 for v in vals
+                        if _NAMEISH_RE.match(v) and 3 <= len(v) <= 70
+                        and not parse_date(v))
+        scores["_name"][col] = name_hits / n
+        scores["legal"][col] = sum(
+            1 for v in upper if ("LOT" in v or "BLOCK" in v or "DISTRICT" in v
+                                 or "LAND LOT" in v)) / n
+
+    mapping: Dict[int, str] = {}
+    used: set = set()
+
+    def take(field: str, key: str, floor: float = 0.5) -> None:
+        best, best_score = None, floor
+        for col, sc in scores.get(key, {}).items():
+            if col in used:
+                continue
+            if sc > best_score:
+                best, best_score = col, sc
+        if best is not None:
+            mapping[best] = field
+            used.add(best)
+
+    # Most distinctive first so a strong signal claims its column.
+    take("doc_type", "doc_type", 0.4)
+    take("filed", "filed", 0.6)
+    take("doc_num", "doc_num", 0.5)
+    take("legal", "legal", 0.3)
+    take("amount", "amount", 0.7)
+    # The two best remaining name-like columns are grantor then grantee,
+    # in the order the grid presents them.
+    name_cols = sorted(
+        (c for c, sc in scores.get("_name", {}).items()
+         if c not in used and sc >= 0.5),
+        key=lambda c: -scores["_name"][c])[:2]
+    for field, col in zip(("grantor", "grantee"), sorted(name_cols)):
+        mapping[col] = field
+        used.add(col)
+
+    return mapping
+
+
+LANDMARK_COLUMN_MAP: Dict[int, str] = {}
+
+
 def map_landmark_row(raw: Any) -> Optional[Dict[str, Any]]:
     """Turn one JSON object (or one array row) from LandmarkWeb into our shape."""
     row: Dict[str, Any] = {"_raw": raw}
 
-    if isinstance(raw, dict):
+    if isinstance(raw, dict) and not _numeric_key_dict(raw):
         for key, value in raw.items():
             # Grantor/grantee often arrive as a list of parties or a nested
             # object. Skipping those threw away the two most important fields.
@@ -1193,15 +1295,17 @@ def map_landmark_row(raw: Any) -> Optional[Dict[str, Any]]:
             target = _hint_lookup(key)
             if target and not row.get(target):
                 row[target] = clean_text(value)
-    elif isinstance(raw, (list, tuple)):
-        # Positional fallback for DataTables array rows. Order below reflects the
-        # column order LandmarkWeb renders by default; adjust from the recon dump
-        # if DeKalb reorders its grid.
-        order = ["doc_num", "doc_type", "filed", "grantor", "grantee", "book", "page", "legal"]
-        for i, value in enumerate(raw[:len(order)]):
-            row[order[i]] = clean_text(value)
     else:
-        return None
+        cells = _as_row_list(raw)
+        if cells is None:
+            return None
+        # Columns arrive unnamed, so use the map inferred from the data.
+        colmap = LANDMARK_COLUMN_MAP or {
+            0: "doc_num", 1: "doc_type", 2: "filed", 3: "grantor", 4: "grantee"}
+        for i, value in enumerate(cells):
+            field = colmap.get(i)
+            if field and not row.get(field):
+                row[field] = clean_text(value)
 
     if not (row.get("doc_num") or row.get("filed")):
         return None
@@ -2043,6 +2147,18 @@ class LandmarkScraper:
             except Exception as exc:  # noqa: BLE001
                 log.debug("  could not save the sample: %s", exc)
 
+        global LANDMARK_COLUMN_MAP
+        if source_rows and (_as_row_list(source_rows[0]) is not None):
+            LANDMARK_COLUMN_MAP = infer_column_map(source_rows)
+            if LANDMARK_COLUMN_MAP:
+                log.info("  columns identified from the data: %s",
+                         ", ".join(f"{i}={f}" for i, f
+                                   in sorted(LANDMARK_COLUMN_MAP.items())))
+                self.learned["column_map"] = {str(k): v for k, v
+                                              in LANDMARK_COLUMN_MAP.items()}
+            else:
+                log.warning("  could not work out what the columns hold")
+
         records: List[Dict[str, Any]] = []
         dropped = defaultdict(int)
         seen_types: Dict[str, int] = defaultdict(int)
@@ -2640,6 +2756,23 @@ class LegalNoticeScraper:
             items = self._parse_results(html, cat)
             log.info("  page %d: %d notices", page_no, len(items))
             if not items:
+                # Capture what the page actually contained. Guessing at this
+                # blind has cost enough rounds already.
+                if page_no == 1:
+                    try:
+                        body = clean_text(
+                            BeautifulSoup(html, "lxml").get_text(" "))[:4000]
+                        safe_write_json(DATA_DIR / "notice_page_sample.json", {
+                            "captured_at": utcnow().isoformat(),
+                            "category": label, "url": page.url,
+                            "html_length": len(html),
+                            "visible_text": body,
+                        })
+                        log.info("  no notices parsed -- page text starts: %s",
+                                 body[:220])
+                        log.info("  wrote data/notice_page_sample.json")
+                    except Exception as exc:  # noqa: BLE001
+                        log.debug("  notice sample failed: %s", exc)
                 break
             for item in items:
                 try:
