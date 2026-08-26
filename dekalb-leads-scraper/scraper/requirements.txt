@@ -1,0 +1,49 @@
+# =============================================================================
+# DeKalb County GA motivated seller scraper -- Python dependencies
+# =============================================================================
+# Install with:   pip install -r scraper/requirements.txt
+# Then once:      python -m playwright install --with-deps chromium
+#
+# Version ranges are pinned to a major version. Patch and minor updates flow
+# through automatically (so security fixes land without any action), but a
+# breaking major release can never silently break the nightly run.
+# Tested against Python 3.11 and 3.12 on ubuntu-22.04.
+# =============================================================================
+
+# --- HTTP -------------------------------------------------------------------
+# Used for the DeKalb ArcGIS parcel API and every static page. The ArcGIS layer
+# caps responses at 2,000 records, so the parcel roll is paged through with
+# requests.Session to reuse the connection.
+requests>=2.32,<3.0
+
+# --- HTML parsing -----------------------------------------------------------
+# BeautifulSoup reads the Tax Commissioner's tax-sale table and the legal-notice
+# result pages. lxml is its parser backend -- the code calls
+# BeautifulSoup(html, "lxml") explicitly, so lxml is required, not optional.
+beautifulsoup4>=4.12,<5.0
+lxml>=5.2,<7.0
+
+# --- Browser automation -----------------------------------------------------
+# The Clerk's LandmarkWeb portal and the Georgia Public Notice site are both
+# JavaScript applications that cannot be read with plain HTTP requests.
+# Playwright drives a real Chromium browser against them.
+#
+# IMPORTANT: installing this package does NOT install the browser itself.
+# The GitHub Actions workflow runs `python -m playwright install --with-deps
+# chromium` as a separate step. Skipping that step is the single most common
+# cause of "Executable doesn't exist" errors.
+playwright>=1.47,<2.0
+
+# --- Date handling ----------------------------------------------------------
+# Public records print dates every way imaginable: 06/02/2026, 10-APR-26,
+# "the first Tuesday in October 2026". dateutil is the fuzzy-parsing fallback
+# after the fixed formats are tried.
+python-dateutil>=2.9,<3.0
+
+# --- PDF text extraction ----------------------------------------------------
+# Only used by the backup foreclosure source. The Champion (DeKalb's official
+# legal organ) publishes its weekly legal section as a PDF; if the Georgia
+# Public Notice site is down, the scraper falls back to reading those PDFs.
+# The code degrades gracefully if this is missing, but including it means the
+# backup actually works when it is needed.
+pypdf>=5.0,<7.0
