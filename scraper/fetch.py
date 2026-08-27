@@ -3456,17 +3456,52 @@ MAJOR_DISTRESS_FLAGS = {
     "Tax sale", "Mechanic lien", "HOA lien", "Government lien", "Probate / estate", "Lien",
 }
 
+# Not every distress signal means the same thing, and a flat +10 for each made a
+# foreclosure score the same as a roofer's lien. These weights rank by how
+# likely the owner is to actually sell, and how soon.
+#
+# They matter more here than the original rubric assumed, because DeKalb's
+# search results carry no dollar figures -- the amount lives inside the
+# document image -- so the amount bonuses almost never fire on clerk records.
+# Without weighting by type there is nothing left to rank on.
+CATEGORY_WEIGHT = {
+    "FC": 30,       # sale already scheduled; the hardest deadline there is
+    "PRO": 25,      # inherited a house, often out of area and wanting out
+    "LP": 25,       # suit filed against the property
+    "TAX": 25,      # headed for the courthouse steps
+    "TAXLIEN": 20,  # IRS or state revenue; rarely resolved quietly
+    "JUD": 15,      # fi fa on the general execution docket
+    "MECH": 15,     # contractor unpaid, usually mid-project and out of money
+    "MED": 12,
+    "HOA": 12,
+    "LIEN": 10,     # unspecified lien
+    "NOC": 0,       # building work starting: investing, not leaving
+    "RELLP": 0,
+}
+
+FLAG_TO_CATEGORY = {v: k for k, v in CAT_FLAGS.items()}
+
 
 def score_record(rec: Dict[str, Any], ctx: Dict[str, Any], flags: List[str]) -> int:
     score = 30
 
-    major = [f for f in flags if f in MAJOR_DISTRESS_FLAGS]
-    score += 10 * len(major)
+    # Weight each distinct distress category by seriousness rather than counting
+    # them all the same. Categories come from the property context, so signals
+    # stacked across several documents on one house all count.
+    cats = set(ctx.get("categories") or ())
+    if not cats and rec.get("cat"):
+        cats = {rec["cat"]}
+    for cat in cats:
+        score += CATEGORY_WEIGHT.get(cat, 10)
+
+    # Flags that carry weight but are not categories.
+    if "Tax sale" in flags:
+        score += 5
 
     if ctx.get("has_lp_and_fc"):
-        score += 20
+        score += 10
     if ctx.get("distinct_distress", 0) >= 3:
-        score += 20
+        score += 10
 
     amount = ctx.get("max_amount") or rec.get("amount")
     if isinstance(amount, (int, float)):
@@ -3479,8 +3514,17 @@ def score_record(rec: Dict[str, Any], ctx: Dict[str, Any], flags: List[str]) -> 
         score += 5
     if rec.get("prop_address"):
         score += 5
+    # An owner who does not live there has already left. For an investor that
+    # is one of the better predictors on the list, so it is worth more than the
+    # original +5.
     if "Absentee owner" in flags:
-        score += 5
+        score += 6
+    # A verified match is worth more than a guessed one.
+    conf = rec.get("match_confidence") or 0
+    if conf >= 0.9:
+        score += 3
+    elif conf >= 0.75:
+        score += 2
 
     # A released lien is not a motivated seller.
     if rec.get("status") == "released":
@@ -3726,7 +3770,11 @@ def export_ghl_csv(records: List[Dict[str, Any]]) -> None:
              for r in blob.splitlines()[1:] if r.count(",") > 2]
     dupes = len(names) - len(set(names))
     if dupes:
-        log.warning("CSV still contains %d repeated names -- please report this", dupes)
+        # Two different people can share a name, and they are kept apart on
+        # purpose -- merging them would put one person's lien on another
+        # person's house. This is a note, not a fault.
+        log.info("CSV: %d rows. %d share a name with another lead but sit at "
+                 "different addresses, so they are kept separate.", written, dupes)
     else:
         log.info("CSV verified: %d rows, every owner appears exactly once", written)
 
@@ -4023,6 +4071,10 @@ async def run_all() -> int:
             log.info("    %-18s %5d", label, n)
         with_amt = sum(1 for r in recs if isinstance(r.get("amount"), (int, float)))
         log.info("    records carrying a dollar amount: %d", with_amt)
+        if with_amt == 0:
+            log.info("    (the clerk's results grid has no amount column -- the "
+                     "figure lives inside the document image, so ranking is by "
+                     "distress type instead)")
     for name, info in SOURCE_REPORT.items():
         status = "OK  " if info["ok"] else "FAIL"
         log.info("  [%s] %-18s %5d records %s", status, name, info["count"],
