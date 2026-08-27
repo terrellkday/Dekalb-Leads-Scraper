@@ -181,6 +181,7 @@ DOCUMENT_TYPE_MAP: Dict[str, List[str]] = {
         "STATE TAX EXECUTION", "WITHHOLDING TAX LIEN", "SALES TAX LIEN",
         # GDOR is how DeKalb indexes a Georgia Department of Revenue lien.
         "GDOR LIEN", "GDOR",
+        "CERTIFICATE OF FEDERAL TAX RELEASE", "RELEASE OF FEDERAL TAX LIEN",
     ],
     "JUD": [
         # In Georgia a money judgment is recorded on the General Execution
@@ -218,6 +219,12 @@ DOCUMENT_TYPE_MAP: Dict[str, List[str]] = {
         "AFFIDAVIT OF HEIRSHIP", "HEIRSHIP", "ESTATE OF", "LETTERS TESTAMENTARY",
         "LETTERS OF ADMINISTRATION", "PROBATE", "DECEASED", "DEATH CERTIFICATE",
         "PETITION FOR LETTERS", "GUARDIAN", "CONSERVATOR", "TESTAMENTARY",
+        # Taken from DeKalb's own index. An heir who has just been handed a
+        # house through year's support or an estate deed is about the most
+        # motivated seller on any list.
+        "ORDER OF YEAR'S SUPPORT", "DEED - FROM ESTATE", "DEED FROM ESTATE",
+        "ESTATE DOCUMENTATION", "CERTIFICATE OF DEATH RECORD",
+        "DEATH RECORD", "TRUSTEE DEED", "ESTATE",
     ],
     "NOC": [
         "NOTICE OF COMMENCEMENT",
@@ -266,6 +273,11 @@ DISTRESS_CATEGORIES = {"LP", "FC", "TAX", "JUD", "TAXLIEN", "LIEN", "MECH", "HOA
 RELEASE_TERMS = [
     "RELEASE OF LIEN", "RELEASE OF LIS PENDENS", "CANCELLATION", "CANCEL",
     "SATISFACTION", "WITHDRAWAL", "RELEASE OF JUDGMENT", "RELEASE OF FIFA",
+    # DeKalb's own wording for a debt that has been cleared. A released lien
+    # must not keep scoring as live distress.
+    "PARTIAL RELEASE", "BLANKET CANCELLATION", "QUIT CLAIM DEED RELEASING",
+    "CERTIFICATE OF FEDERAL TAX RELEASE", "UCC TERMINATION", "TERMINATION",
+    "VOID", "LIEN CANCELLATION",
 ]
 
 ENTITY_TOKENS = {
@@ -425,12 +437,24 @@ def fmt_date(dt: Optional[datetime]) -> str:
 MONEY_RE = re.compile(r"\$\s*([\d]{1,3}(?:,\d{3})*(?:\.\d{1,2})?|\d+(?:\.\d{1,2})?)")
 
 
+# Nothing in a county index is worth more than this. A "$20,260,040,001" is a
+# document number that slipped through, not a debt.
+MAX_SANE_AMOUNT = 50_000_000.0
+
+
 def parse_money(value: Any) -> Optional[float]:
     if value is None or value == "":
         return None
     if isinstance(value, (int, float)):
-        return float(value) if float(value) > 0 else None
+        v = float(value)
+        return v if 0 < v <= MAX_SANE_AMOUNT else None
     text = str(value)
+    # A bare run of digits with no currency symbol, comma or decimal point is
+    # an identifier, not money. Reading document numbers as debts inflated
+    # every score by +15 and made the whole ranking meaningless.
+    bare = text.strip()
+    if bare.isdigit() and len(bare) >= 7:
+        return None
     m = MONEY_RE.search(text)
     if not m:
         text2 = re.sub(r"[^\d.]", "", text)
@@ -441,7 +465,7 @@ def parse_money(value: Any) -> Optional[float]:
             return None
     try:
         v = float(m.group(1).replace(",", ""))
-        return v if v > 0 else None
+        return v if 0 < v <= MAX_SANE_AMOUNT else None
     except ValueError:
         return None
 
@@ -463,6 +487,10 @@ def clean_text(value: Any) -> str:
     # The portal prefixes cell values with a CSS class name, e.g.
     # "nobreak_WARRANTY DEED". That is presentation, not data.
     text = _DISPLAY_PREFIX_RE.sub("", text)
+    # DeKalb types "ORDER OF YEAR`S SUPPORT" with a backtick. Curly quotes turn
+    # up too. All of them mean apostrophe, and a mismatch here silently loses
+    # an entire lead category.
+    text = re.sub(r"[`\u2018\u2019\u02BC\u00B4]", "'", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -1306,8 +1334,10 @@ def infer_column_map(rows: List[Any], sample: int = 300) -> Dict[int, str]:
         scores["doc_type"][col] = sum(
             1 for v in upper if any(w in v for w in DOC_TYPE_VOCAB)) / n
         scores["doc_num"][col] = sum(1 for v in vals if _DOCNUM_RE.match(v)) / n
+        # Require currency formatting so an identifier column cannot claim it.
         scores["amount"][col] = sum(
-            1 for v in vals if parse_money(v) is not None) / n
+            1 for v in vals
+            if ("$" in v or "," in v or "." in v) and parse_money(v) is not None) / n
         name_hits = sum(1 for v in vals
                         if _NAMEISH_RE.match(v) and 3 <= len(v) <= 70
                         and not parse_date(v))
@@ -2916,9 +2946,12 @@ class LegalNoticeScraper:
         return out
 
 
-@retry(label="champion-pdf-index")
+@retry(times=1, label="champion-pdf-index")
 def _fetch_champion_pdf_index(session: requests.Session) -> List[str]:
-    resp = session.get(LEGAL_NOTICE_FALLBACK_URL, timeout=HTTP_TIMEOUT)
+    # This host has been refusing connections from GitHub's runners. A 45
+    # second timeout retried three times burned over two minutes of every run
+    # for nothing, so fail fast and move on.
+    resp = session.get(LEGAL_NOTICE_FALLBACK_URL, timeout=10)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "lxml")
     pdfs = []
@@ -3977,10 +4010,19 @@ async def run_all() -> int:
                  len(UNMAPPED_DOC_TYPES), UNKNOWN_DOCTYPES_PATH.name)
 
     # --- 7. Report ----------------------------------------------------------
-    scored = [r for r in payload["records"] if r.get("score", 0) >= 60]
+    recs = payload.get("records", [])
+    scored = [r for r in recs if r.get("score", 0) >= 60]
     log.info("=" * 74)
     log.info("FINAL: %d leads | %d with property address | %d scoring 60+",
              payload["total"], payload["with_address"], len(scored))
+    if recs:
+        bands = [("80-100 very high", 80, 101), ("60-79  high", 60, 80),
+                 ("40-59  moderate", 40, 60), ("under 40 lower", 0, 40)]
+        for label, lo, hi in bands:
+            n = sum(1 for r in recs if lo <= (r.get("score") or 0) < hi)
+            log.info("    %-18s %5d", label, n)
+        with_amt = sum(1 for r in recs if isinstance(r.get("amount"), (int, float)))
+        log.info("    records carrying a dollar amount: %d", with_amt)
     for name, info in SOURCE_REPORT.items():
         status = "OK  " if info["ok"] else "FAIL"
         log.info("  [%s] %-18s %5d records %s", status, name, info["count"],
