@@ -190,9 +190,22 @@ jobs:
               lines.append("")
 
           if hot:
+              # One row per property. The records list is document-level, so the
+              # same house can appear several times (co-owners, or one owner
+              # indexed two ways) and that reads like duplicates in a top-ten.
+              seen_props, top = set(), []
+              for r in hot:
+                  key = (r.get("parcel_id") or r.get("prop_address")
+                         or r.get("doc_num") or "").strip().upper()
+                  if key in seen_props:
+                      continue
+                  seen_props.add(key)
+                  top.append(r)
+                  if len(top) >= 10:
+                      break
               lines += ["## Top leads today", "",
                         "| Score | Owner | Property | Signals |", "|---|---|---|---|"]
-              for r in hot[:10]:
+              for r in top:
                   flags = ", ".join((r.get("flags") or [])[:4])
                   lines.append(
                       f"| {r.get('score')} | {r.get('owner', '')[:32]} | "

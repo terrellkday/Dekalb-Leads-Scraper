@@ -2682,33 +2682,94 @@ class LegalNoticeScraper:
 
     @staticmethod
     async def _submit(page) -> bool:
-        """Press the magnifying-glass search button beside RESET."""
-        for sel in ("input[type=image]", "#btnSearch",
-                    "input[type=submit][value='']", "a[id*='Search' i]",
-                    "input[id*='btnSearch' i]", "input[type=submit]"):
+        """
+        Press the search button.
+
+        Guessing at this has failed repeatedly, so the page is asked what it
+        actually has: every clickable control is listed, logged, and then tried
+        in order of how much it looks like a search button. Pressing Enter in
+        the search box is tried first, because a form that submits on Enter
+        needs no button at all.
+        """
+        # 1. Enter in the keyword box.
+        for sel in ("input[id*='txtSearch' i]", "input[type='search']",
+                    "input[id*='Keyword' i]", "input[name*='search' i]"):
             try:
-                loc = page.locator(sel).first
-                if await loc.count() and await loc.is_visible():
-                    await loc.click(timeout=6000)
+                box = page.locator(sel).first
+                if await box.count() and await box.is_visible():
+                    await box.press("Enter")
+                    await page.wait_for_timeout(2500)
+                    log.info("    submitted by pressing Enter in the search box")
                     return True
             except Exception:  # noqa: BLE001
                 continue
+
+        # 2. Inventory what is clickable and rank it.
         try:
-            return bool(await page.evaluate(
-                """() => {
-                    const els = Array.from(document.querySelectorAll(
-                        'a,input[type=image],input[type=submit],button'));
-                    for (const e of els) {
-                        const s = ((e.id||'') + (e.className||'') + (e.getAttribute('src')||'')
-                                   ).toLowerCase();
-                        if (s.includes('search') || s.includes('magnif') || s.includes('glass')) {
-                            e.click(); return true;
-                        }
-                    }
-                    return false;
-                }"""))
-        except Exception:  # noqa: BLE001
+            controls = await page.evaluate(
+                """() => Array.from(document.querySelectorAll(
+                        'a,button,input[type=image],input[type=submit],input[type=button]'))
+                    .filter(e => e.offsetParent !== null)
+                    .slice(0, 120)
+                    .map((e, i) => {
+                        if (!e.id) e.setAttribute('data-sub-id', 'sub' + i);
+                        return {
+                            sel: e.id ? '#' + CSS.escape(e.id)
+                                      : '[data-sub-id="sub' + i + '"]',
+                            tag: e.tagName,
+                            type: e.getAttribute('type') || '',
+                            id: e.id || '',
+                            cls: e.className || '',
+                            src: e.getAttribute('src') || '',
+                            alt: e.getAttribute('alt') || '',
+                            title: e.getAttribute('title') || '',
+                            text: (e.innerText || e.value || '').trim().slice(0, 40)
+                        };
+                    })"""
+            )
+        except Exception as exc:  # noqa: BLE001
+            log.warning("    could not inspect the page: %s", exc)
             return False
+
+        def rank(c: Dict[str, Any]) -> int:
+            blob = " ".join(str(c.get(k, "")) for k in
+                            ("id", "cls", "src", "alt", "title", "text")).lower()
+            score = 0
+            for word, pts in (("search", 40), ("magnif", 30), ("glass", 30),
+                              ("submit", 25), ("go", 5), ("find", 15)):
+                if word in blob:
+                    score += pts
+            for word in ("reset", "clear", "cancel", "help", "sign", "login",
+                         "home", "about", "advanced"):
+                if word in blob:
+                    score -= 30
+            if c.get("type") in ("image", "submit"):
+                score += 20
+            return score
+
+        ranked = sorted(controls, key=rank, reverse=True)
+        log.info("    %d clickable controls; best candidates: %s",
+                 len(controls),
+                 " | ".join(f"{c['tag']}{'#'+c['id'] if c['id'] else ''}"
+                            f"{'/'+c['type'] if c['type'] else ''}"
+                            f"{' '+c['text'][:18] if c['text'] else ''}"
+                            f"{' src='+c['src'][-18:] if c['src'] else ''}"
+                            for c in ranked[:6]))
+
+        for c in ranked[:8]:
+            if rank(c) <= 0:
+                break
+            try:
+                await page.locator(c["sel"]).first.click(timeout=4000)
+                log.info("    clicked %s (%s)", c["sel"],
+                         c["text"] or c["alt"] or c["src"][-24:] or c["cls"][:24])
+                await page.wait_for_timeout(2500)
+                return True
+            except Exception:  # noqa: BLE001
+                continue
+
+        log.warning("    nothing on the page looked like a search button")
+        return False
 
     # --------------------------------------------------------------- parsing
     _last_page_text: str = ""
