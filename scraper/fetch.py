@@ -179,6 +179,8 @@ DOCUMENT_TYPE_MAP: Dict[str, List[str]] = {
         "STATE TAX LIEN", "CORPORATE TAX LIEN", "CORP TAX LIEN", "FEDERAL LIEN",
         "GA DEPARTMENT OF REVENUE", "DEPARTMENT OF REVENUE LIEN",
         "STATE TAX EXECUTION", "WITHHOLDING TAX LIEN", "SALES TAX LIEN",
+        # GDOR is how DeKalb indexes a Georgia Department of Revenue lien.
+        "GDOR LIEN", "GDOR",
     ],
     "JUD": [
         # In Georgia a money judgment is recorded on the General Execution
@@ -186,13 +188,17 @@ DOCUMENT_TYPE_MAP: Dict[str, List[str]] = {
         # actually appear in the index, far more often than the word judgment.
         "JUDGMENT", "CERTIFIED JUDGMENT", "DOMESTIC JUDGMENT", "FOREIGN JUDGMENT",
         "DEFAULT JUDGMENT", "CONSENT JUDGMENT", "SUMMARY JUDGMENT",
+        # DeKalb's index spells it "FIERA FACIAS" -- their typo, but it is the
+        # string that comes back, so it has to be matched as written.
         "FI FA", "FIFA", "FI. FA.", "FIERI FACIAS", "WRIT OF FIERI FACIAS",
+        "FIERA FACIAS", "WRIT OF FIERA FACIAS",
         "GENERAL EXECUTION", "GENERAL EXECUTION DOCKET", "GED",
         "WRIT OF EXECUTION", "GARNISHMENT", "ATTACHMENT", "LEVY",
     ],
     "MECH": [
         "MECHANIC LIEN", "MECHANICS LIEN", "MECHANIC'S LIEN",
         "MATERIALMAN", "MATERIALMEN", "CLAIM OF LIEN", "LABORER'S LIEN",
+        "LIENS FILES ON REAL ESTATE RECORD", "LIENS FILED ON REAL ESTATE",
         "CONTRACTOR LIEN", "NOTICE OF LIEN RIGHTS", "PRELIMINARY NOTICE",
     ],
     "HOA": [
@@ -445,12 +451,18 @@ def sha_key(*parts: Any) -> str:
     return hashlib.sha1(raw.encode("utf-8", "ignore")).hexdigest()[:16]
 
 
+_DISPLAY_PREFIX_RE = re.compile(r"^\s*(?:nobreak|nowrap|ellipsis)[_\-]", re.I)
+
+
 def clean_text(value: Any) -> str:
     if value is None:
         return ""
     text = unicodedata.normalize("NFKD", str(value))
     text = text.replace("\xa0", " ")
     text = re.sub(r"<[^>]+>", " ", text)
+    # The portal prefixes cell values with a CSS class name, e.g.
+    # "nobreak_WARRANTY DEED". That is presentation, not data.
+    text = _DISPLAY_PREFIX_RE.sub("", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -1220,6 +1232,13 @@ DOC_TYPE_VOCAB = [
 ]
 
 _DOCNUM_RE = re.compile(r"^\s*\d{4}[-/]?\d{3,}\s*$|^\s*\d{6,}\s*$")
+
+# A real date carries separators or a month name. A bare run of digits does not
+# count, however willing dateutil is to interpret it.
+_LOOKS_LIKE_DATE_RE = re.compile(
+    r"^\s*(?:\d{1,4}[/\-.]\d{1,2}[/\-.]\d{1,4}"
+    r"|\d{1,2}[\s\-][A-Za-z]{3,9}[\s\-]\d{2,4}"
+    r"|[A-Za-z]{3,9}\s+\d{1,2},?\s+\d{4})\s*$")
 _NAMEISH_RE = re.compile(r"^[A-Z][A-Za-z'\.\-]+(?:[ ,]+[A-Za-z'\.\-&]+){0,5}$")
 
 
@@ -1278,7 +1297,12 @@ def infer_column_map(rows: List[Any], sample: int = 300) -> Dict[int, str]:
         n = len(vals)
         upper = [v.upper() for v in vals]
 
-        scores["filed"][col] = sum(1 for v in vals if parse_date(v)) / n
+        # Only count values that are formatted like a date. parse_date is
+        # deliberately permissive and will happily turn a document number such
+        # as 20260815001 into a date, which is exactly how column 0 got
+        # mistaken for the filing date and threw out 1,300 real records.
+        scores["filed"][col] = sum(
+            1 for v in vals if _LOOKS_LIKE_DATE_RE.match(v) and parse_date(v)) / n
         scores["doc_type"][col] = sum(
             1 for v in upper if any(w in v for w in DOC_TYPE_VOCAB)) / n
         scores["doc_num"][col] = sum(1 for v in vals if _DOCNUM_RE.match(v)) / n
@@ -1309,7 +1333,7 @@ def infer_column_map(rows: List[Any], sample: int = 300) -> Dict[int, str]:
     # Most distinctive first so a strong signal claims its column.
     take("doc_type", "doc_type", 0.4)
     take("filed", "filed", 0.6)
-    take("doc_num", "doc_num", 0.5)
+    take("doc_num", "doc_num", 0.4)
     take("legal", "legal", 0.3)
     take("amount", "amount", 0.7)
     # The two best remaining name-like columns are grantor then grantee,
