@@ -144,46 +144,74 @@ PARCEL_CACHE_PATH = CACHE_DIR / "parcels.json"
 DOCUMENT_TYPE_MAP: Dict[str, List[str]] = {
     "RELLP": [
         "RELEASE OF LIS PENDENS", "RELEASE LIS PENDENS", "CANCELLATION OF LIS PENDENS",
-        "CANCEL LIS PENDENS", "RELLP",
+        "CANCEL LIS PENDENS", "DISMISSAL OF LIS PENDENS", "RELLP",
     ],
     "LP": [
         "LIS PENDENS", "NOTICE OF LIS PENDENS", "NOTICE LIS PENDENS",
+        "NOTICE OF PENDING ACTION", "PENDING LITIGATION",
     ],
     "FC": [
-        "NOTICE OF SALE UNDER POWER", "SALE UNDER POWER", "FORECLOSURE",
-        "DEED UNDER POWER", "FORECLOSURE DEED", "NOTICE OF FORECLOSURE",
+        # Georgia is a non-judicial foreclosure state. The operative phrase is
+        # "sale under power" -- there is no such filing as a "pre-foreclosure",
+        # that is an industry term, not one that appears in any record.
+        "NOTICE OF SALE UNDER POWER", "NOTICE OF FORECLOSURE SALE UNDER POWER",
+        "SALE UNDER POWER", "POWER OF SALE", "FORECLOSURE",
+        "DEED UNDER POWER", "DEED UNDER POWER OF SALE", "FORECLOSURE DEED",
+        "NOTICE OF FORECLOSURE", "FORECLOSURE SALE", "ATTORNEY IN FACT",
+        "NOTICE OF DEFAULT", "ACCELERATION", "NOTICE OF INTENT TO FORECLOSE",
+        "CONFIRMATION OF SALE", "REPORT OF SALE",
+        # A deed in lieu is the owner handing the property over to avoid the
+        # sale. The house itself is gone by then, but the person is a proven
+        # distressed owner and often holds others -- worth catching.
+        "DEED IN LIEU", "DEED IN LIEU OF FORECLOSURE", "IN LIEU OF FORECLOSURE",
+        "VOLUNTARY CONVEYANCE", "SHORT SALE", "LOSS MITIGATION",
+        "FORBEARANCE", "NOTICE OF ACCELERATION", "BANKRUPTCY",
+        "AUTOMATIC STAY", "RELIEF FROM STAY", "MOTION FOR RELIEF",
     ],
     "TAX": [
-        "TAX SALE", "TAX DEED", "TAX FI FA", "TAX FIFA", "TAX EXECUTION",
-        "TAX COMMISSIONER EXECUTION",
+        "TAX SALE", "TAX DEED", "TAX FI FA", "TAX FIFA", "TAX FI. FA.",
+        "TAX EXECUTION", "TAX COMMISSIONER EXECUTION", "DELINQUENT TAX",
+        "TAX LEVY", "LEVY AND SALE", "EXCESS FUNDS", "REDEMPTION",
+        "BARMENT OF REDEMPTION", "NOTICE OF FORECLOSURE OF RIGHT TO REDEEM",
     ],
     "TAXLIEN": [
         "FEDERAL TAX LIEN", "NOTICE OF FEDERAL TAX LIEN", "IRS LIEN", "IRS TAX LIEN",
         "STATE TAX LIEN", "CORPORATE TAX LIEN", "CORP TAX LIEN", "FEDERAL LIEN",
         "GA DEPARTMENT OF REVENUE", "DEPARTMENT OF REVENUE LIEN",
+        "STATE TAX EXECUTION", "WITHHOLDING TAX LIEN", "SALES TAX LIEN",
     ],
     "JUD": [
+        # In Georgia a money judgment is recorded on the General Execution
+        # Docket as a fi fa (writ of fieri facias). "GED" and "fi fa" are what
+        # actually appear in the index, far more often than the word judgment.
         "JUDGMENT", "CERTIFIED JUDGMENT", "DOMESTIC JUDGMENT", "FOREIGN JUDGMENT",
-        "FI FA", "FIFA", "FI. FA.", "WRIT OF FIERI FACIAS", "FIERI FACIAS",
-        "GENERAL EXECUTION", "GENERAL EXECUTION DOCKET",
+        "DEFAULT JUDGMENT", "CONSENT JUDGMENT", "SUMMARY JUDGMENT",
+        "FI FA", "FIFA", "FI. FA.", "FIERI FACIAS", "WRIT OF FIERI FACIAS",
+        "GENERAL EXECUTION", "GENERAL EXECUTION DOCKET", "GED",
+        "WRIT OF EXECUTION", "GARNISHMENT", "ATTACHMENT", "LEVY",
     ],
     "MECH": [
         "MECHANIC LIEN", "MECHANICS LIEN", "MECHANIC'S LIEN",
-        "MATERIALMAN", "MATERIALMEN", "CLAIM OF LIEN",
+        "MATERIALMAN", "MATERIALMEN", "CLAIM OF LIEN", "LABORER'S LIEN",
+        "CONTRACTOR LIEN", "NOTICE OF LIEN RIGHTS", "PRELIMINARY NOTICE",
     ],
     "HOA": [
         "HOA LIEN", "HOMEOWNER", "HOMEOWNERS ASSOCIATION LIEN",
         "CONDOMINIUM ASSOCIATION LIEN", "CONDO LIEN", "ASSOCIATION LIEN",
-        "PROPERTY OWNERS ASSOCIATION",
+        "PROPERTY OWNERS ASSOCIATION", "ASSESSMENT LIEN", "DECLARATION OF LIEN",
     ],
     "MED": [
         "MEDICAID LIEN", "MEDICAID", "DEPARTMENT OF COMMUNITY HEALTH",
-        "HOSPITAL LIEN", "GOVERNMENT LIEN",
+        "HOSPITAL LIEN", "GOVERNMENT LIEN", "MEDICAL LIEN", "CHILD SUPPORT LIEN",
     ],
     "PRO": [
+        # Estate property changes hands through these instruments, and an heir
+        # who has just inherited a house is one of the strongest sellers there is.
         "EXECUTOR", "EXECUTRIX", "ADMINISTRATOR", "ADMINISTRATRIX",
-        "YEAR'S SUPPORT", "YEARS SUPPORT", "ASSENT TO DEVISE", "AFFIDAVIT OF HEIRSHIP",
-        "HEIRSHIP", "ESTATE OF", "LETTERS TESTAMENTARY", "PROBATE",
+        "YEAR'S SUPPORT", "YEARS SUPPORT", "ASSENT TO DEVISE",
+        "AFFIDAVIT OF HEIRSHIP", "HEIRSHIP", "ESTATE OF", "LETTERS TESTAMENTARY",
+        "LETTERS OF ADMINISTRATION", "PROBATE", "DECEASED", "DEATH CERTIFICATE",
+        "PETITION FOR LETTERS", "GUARDIAN", "CONSERVATOR", "TESTAMENTARY",
     ],
     "NOC": [
         "NOTICE OF COMMENCEMENT",
@@ -1100,10 +1128,20 @@ def categorize(doc_type: str) -> Tuple[str, bool]:
 
     is_release = any(term in text for term in RELEASE_TERMS)
 
-    for cat in CATEGORY_ORDER:
+    # The most specific phrase wins, not the first category checked. Otherwise
+    # "NOTICE OF FORECLOSURE OF RIGHT TO REDEEM" -- a tax-deed barment -- gets
+    # filed as a mortgage foreclosure because the word FORECLOSURE appears in
+    # it. Ties fall back to CATEGORY_ORDER.
+    best_cat, best_len, best_rank = None, 0, 999
+    for rank, cat in enumerate(CATEGORY_ORDER):
         for alias in DOCUMENT_TYPE_MAP.get(cat, []):
             if alias in text:
-                return cat, is_release
+                n = len(alias)
+                if n > best_len or (n == best_len and rank < best_rank):
+                    best_cat, best_len, best_rank = cat, n, rank
+    if best_cat:
+        return best_cat, is_release
+
     UNMAPPED_DOC_TYPES.add(text[:120])
     return "UNK", is_release
 
@@ -1186,16 +1224,31 @@ _NAMEISH_RE = re.compile(r"^[A-Z][A-Za-z'\.\-]+(?:[ ,]+[A-Za-z'\.\-&]+){0,5}$")
 
 
 def _numeric_key_dict(raw: Any) -> bool:
-    """True for {"0": ..., "1": ...} -- an array serialized as an object."""
-    return (isinstance(raw, dict) and bool(raw)
-            and all(str(k).strip().isdigit() for k in raw.keys()))
+    """
+    True when a dict is really an array in disguise: {"0": ..., "1": ...}.
+
+    Requiring *every* key to be numeric was too strict -- the portal returns
+    columns 0..24 plus a few named extras, and one named key was enough to make
+    the whole row fall through as unmappable. A run of numeric keys starting at
+    zero is the actual signal.
+    """
+    if not isinstance(raw, dict) or not raw:
+        return False
+    numeric = [k for k in raw.keys() if str(k).strip().isdigit()]
+    return len(numeric) >= 3 and any(str(k).strip() == "0" for k in numeric)
 
 
 def _as_row_list(raw: Any) -> Optional[List[Any]]:
+    """Return the positional cells of a row, ignoring any named extras."""
     if isinstance(raw, (list, tuple)):
         return list(raw)
     if _numeric_key_dict(raw):
-        return [raw[k] for k in sorted(raw.keys(), key=lambda x: int(x))]
+        idx = sorted((int(str(k).strip()) for k in raw.keys()
+                      if str(k).strip().isdigit()))
+        out: List[Any] = [""] * (idx[-1] + 1)
+        for i in idx:
+            out[i] = raw.get(str(i), raw.get(i, ""))
+        return out
     return None
 
 
@@ -1279,8 +1332,10 @@ def map_landmark_row(raw: Any) -> Optional[Dict[str, Any]]:
     """Turn one JSON object (or one array row) from LandmarkWeb into our shape."""
     row: Dict[str, Any] = {"_raw": raw}
 
-    if isinstance(raw, dict) and not _numeric_key_dict(raw):
+    if isinstance(raw, dict):
         for key, value in raw.items():
+            if str(key).strip().isdigit():
+                continue        # positional cells are handled below
             # Grantor/grantee often arrive as a list of parties or a nested
             # object. Skipping those threw away the two most important fields.
             if isinstance(value, list):
@@ -1295,10 +1350,8 @@ def map_landmark_row(raw: Any) -> Optional[Dict[str, Any]]:
             target = _hint_lookup(key)
             if target and not row.get(target):
                 row[target] = clean_text(value)
-    else:
-        cells = _as_row_list(raw)
-        if cells is None:
-            return None
+    cells = _as_row_list(raw)
+    if cells is not None:
         # Columns arrive unnamed, so use the map inferred from the data.
         colmap = LANDMARK_COLUMN_MAP or {
             0: "doc_num", 1: "doc_type", 2: "filed", 3: "grantor", 4: "grantee"}
@@ -2134,7 +2187,8 @@ class LandmarkScraper:
         if source_rows:
             first = source_rows[0]
             if isinstance(first, dict):
-                log.info("  row fields: %s", ", ".join(list(first.keys())[:25]))
+                keys = [str(k) for k in first.keys()]
+                log.info("  row has %d fields: %s", len(keys), ", ".join(keys))
             else:
                 log.info("  row is a %s of %d values", type(first).__name__, len(first))
             try:
@@ -2293,7 +2347,9 @@ CATEGORY_TO_CAT = {
 
 FORECLOSURE_MARKERS = [
     "SALE UNDER POWER", "NOTICE OF SALE UNDER POWER", "FORECLOSURE",
-    "SECURITY DEED", "ATTORNEY IN FACT", "POWER OF SALE",
+    "SECURITY DEED", "ATTORNEY IN FACT", "POWER OF SALE", "DEED UNDER POWER",
+    "PUBLIC OUTCRY", "COURTHOUSE DOOR", "HIGHEST BIDDER", "DEBT SECURED",
+    "DEFAULT", "INDEBTEDNESS", "REMAINING IN DEFAULT",
 ]
 
 # Georgia foreclosure sales happen on the first Tuesday of the month, and the
@@ -2601,9 +2657,19 @@ class LegalNoticeScraper:
             return False
 
     # --------------------------------------------------------------- parsing
+    _last_page_text: str = ""
+
+    # Cast wide: a legal advertisement is recognisable by any of these, and a
+    # missed notice costs far more than an extra block to filter out later.
     NOTICE_MARKERS = re.compile(
-        r"NOTICE OF (?:FORECLOSURE )?SALE UNDER POWER|SALE UNDER POWER|"
-        r"SECURITY DEED|TAX SALE|ESTATE OF|PETITION|NOTICE TO DEBTORS", re.I)
+        r"SALE UNDER POWER|POWER OF SALE|DEED UNDER POWER|FORECLOS|"
+        r"SECURITY DEED|ATTORNEY IN FACT|PUBLIC OUTCRY|COURTHOUSE DOOR|"
+        r"HIGHEST BIDDER|DEBT SECURED|INDEBTEDNESS|"
+        r"TAX SALE|TAX EXECUTION|FI\.? ?FA|FIERI FACIAS|LEVY AND SALE|"
+        r"EXCESS FUNDS|RIGHT TO REDEEM|"
+        r"LIS PENDENS|"
+        r"ESTATE OF|EXECUT(?:OR|RIX)|ADMINISTRAT(?:OR|RIX)|YEAR'?S SUPPORT|"
+        r"LETTERS TESTAMENTARY|NOTICE TO DEBTORS|PETITION", re.I)
 
     @staticmethod
     def _parse_results(html: str, cat: str) -> List[Dict[str, Any]]:
@@ -2623,18 +2689,24 @@ class LegalNoticeScraper:
 
         out: List[Dict[str, Any]] = []
         seen: set = set()
+        stage = defaultdict(int)
 
         # Prefer tight containers so two notices never merge into one block.
         candidates = soup.select("tr, li, div")
+        stage["candidate blocks"] = len(candidates)
         for block in candidates:
             text = clean_text(block.get_text(" "))
             if not (150 <= len(text) <= 6000):
+                stage["wrong length"] += 1
                 continue
             if not LegalNoticeScraper.NOTICE_MARKERS.search(text):
+                stage["no legal phrase"] += 1
                 continue
+            stage["matched a legal phrase"] += 1
             # Skip a container that merely wraps other candidate blocks.
             inner = block.find_all(["tr", "li"])
             if len(inner) > 2:
+                stage["wrapper, not a single notice"] += 1
                 continue
 
             sig = sha_key(text[:260])
@@ -2653,6 +2725,27 @@ class LegalNoticeScraper:
             out.append({"notice_id": notice_id,
                         "url": LEGAL_NOTICE_SEARCH_URL,
                         "text": text, "cat": cat})
+
+        if not out:
+            # Say plainly whether the notices are on the page at all. "The page
+            # text starts with the nav menu" was never going to answer that.
+            whole = clean_text(soup.get_text(" "))
+            LegalNoticeScraper._last_page_text = whole
+            log.info("    page holds %d characters of text", len(whole))
+            for probe in ("SALE UNDER POWER", "FORECLOSURE", "SECURITY DEED",
+                          "Search Results", "No records", "no notices found"):
+                if re.search(probe, whole, re.I):
+                    log.info("    page contains %r", probe)
+            hit = re.search(r"SALE UNDER POWER|FORECLOSURE", whole, re.I)
+            if hit:
+                lo = max(0, hit.start() - 150)
+                log.info("    text around the first hit: ...%s...",
+                         whole[lo:hit.start() + 350])
+            else:
+                log.info("    no foreclosure wording anywhere -- the search "
+                         "results did not load")
+            log.info("    block filter: %s",
+                     "; ".join(f"{k}={v}" for k, v in stage.items()))
         return out
 
     GRANTOR_RE = re.compile(
@@ -2768,8 +2861,6 @@ class LegalNoticeScraper:
                             "html_length": len(html),
                             "visible_text": body,
                         })
-                        log.info("  no notices parsed -- page text starts: %s",
-                                 body[:220])
                         log.info("  wrote data/notice_page_sample.json")
                     except Exception as exc:  # noqa: BLE001
                         log.debug("  notice sample failed: %s", exc)
@@ -3666,6 +3757,118 @@ def save_seen(records: List[Dict[str, Any]], prior: Dict[str, str]) -> None:
 
 
 # =============================================================================
+# MANUAL NAME IMPORT
+# =============================================================================
+# A bridge for when a source site is uncooperative. You copy owner names off
+# Georgia Public Notice by hand -- something that takes a few minutes and that
+# you already know how to do -- and everything downstream still runs: parcel
+# matching, mailing addresses, absentee detection, scoring, dashboard, CSV.
+#
+# One name per line in a text file. Anything after a pipe is optional:
+#
+#     ALICIA NICOLE KENNON | FC | 90000
+#     TATE TYRONE          | FC
+#     WESLEY CHAPEL VENTURES LLC
+#
+# Field 2 is the lead type (FC, LP, TAX, JUD, PRO, LIEN...) and defaults to FC.
+# Field 3 is the amount owed, if the notice states one.
+
+def load_manual_names(path: Path) -> List[Dict[str, Any]]:
+    if not path.exists():
+        log.error("No such file: %s", path)
+        return []
+
+    out: List[Dict[str, Any]] = []
+    today = utcnow().replace(tzinfo=None)
+    for lineno, raw in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = [p.strip() for p in line.split("|")]
+        owner = parts[0]
+        if not owner:
+            continue
+        cat = (parts[1].upper() if len(parts) > 1 and parts[1] else "FC")
+        if cat not in CAT_LABELS:
+            log.warning("  line %d: unknown lead type %r, using FC", lineno, cat)
+            cat = "FC"
+        amount = parse_money(parts[2]) if len(parts) > 2 else None
+
+        out.append({
+            "doc_num": f"MANUAL-{sha_key(owner, cat)}",
+            "doc_type": "Notice of Sale Under Power" if cat == "FC"
+                        else CAT_LABELS.get(cat, cat),
+            "filed": fmt_date(today),
+            "cat": cat,
+            "cat_label": CAT_LABELS.get(cat, cat),
+            "owner": owner,
+            "grantee": "",
+            "amount": amount,
+            "legal": "",
+            "parcel_id": "",
+            "prop_address": "",
+            "clerk_url": LEGAL_NOTICE_SEARCH_URL,
+            "source": "Manually collected from Georgia Public Notice",
+            "foreclosure_sale_date": None,
+            "notice_number": "",
+            "status": "active",
+            "is_release": False,
+        })
+    log.info("Read %d names from %s", len(out), path.name)
+    return out
+
+
+def run_from_names(path: Path) -> int:
+    """Turn a list of owner names into a finished, scored lead file."""
+    t0 = time.time()
+    end = utcnow().replace(tzinfo=None)
+    start = end - timedelta(days=LOOKBACK_DAYS)
+
+    log.info("=" * 74)
+    log.info("Building leads from names in %s", path)
+    log.info("=" * 74)
+
+    records = load_manual_names(path)
+    if not records:
+        log.error("Nothing to do -- the file had no usable names.")
+        return 1
+
+    parcels = ParcelIndex()
+    parcels.load(build_session())
+    if not parcels.parcels:
+        log.error("No parcel data, so no addresses can be found.")
+        return 1
+
+    matched, unmatched = enrich_with_parcels(records, parcels)
+    log.info("Matched to a property: %d of %d", matched, len(records))
+
+    context = consolidate_flags(records)
+    for rec in records:
+        ctx = context.get(property_key(rec), {})
+        rec["flags"] = build_flags(rec, ctx, start, end)
+        rec["score"] = score_record(rec, ctx, rec["flags"])
+
+    payload = write_outputs(records, start, end)
+    export_ghl_csv([shape_record(r) for r in records])
+
+    log.info("=" * 74)
+    log.info("%d leads | %d with a mailing address", payload["total"],
+             sum(1 for r in payload["records"] if r.get("mail_address")))
+    for rec in sorted(records, key=lambda r: -(r.get("score") or 0))[:10]:
+        log.info("  %3d  %-28s %-26s %s", rec.get("score", 0),
+                 (rec.get("owner") or "")[:28],
+                 (rec.get("prop_address") or "no match")[:26],
+                 ", ".join(rec.get("flags", [])[:3]))
+    log.info("Wrote data/ghl_leads.csv -- ready to import")
+    log.info("Done in %.1fs", time.time() - t0)
+    log.info("=" * 74)
+    if unmatched:
+        log.info("%d name(s) did not match a DeKalb parcel. Usually a spelling "
+                 "difference, a trust, or a property outside the county.", unmatched)
+    return 0
+
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
@@ -3774,6 +3977,9 @@ def main() -> int:
     ap.add_argument("--headful", action="store_true", help="run browsers visibly")
     ap.add_argument("--discover", action="store_true", help="dump LandmarkWeb selector recon")
     ap.add_argument("--skip", default="", help="comma list: LANDMARK,NOTICES,TAX")
+    ap.add_argument("--from-names", metavar="FILE",
+                    help="build leads from a text file of owner names instead "
+                         "of scraping (one name per line)")
     args = ap.parse_args()
 
     global LOOKBACK_DAYS, HEADLESS, LANDMARK_DISCOVERY, SKIP_SOURCES
@@ -3785,6 +3991,13 @@ def main() -> int:
         LANDMARK_DISCOVERY = True
     if args.skip:
         SKIP_SOURCES |= {s.strip().upper() for s in args.skip.split(",") if s.strip()}
+
+    if args.from_names:
+        try:
+            return run_from_names(Path(args.from_names))
+        except Exception as exc:  # noqa: BLE001
+            log.exception("Failed: %s", exc)
+            return 1
 
     try:
         return asyncio.run(run_all())
