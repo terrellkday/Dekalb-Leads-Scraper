@@ -2461,7 +2461,97 @@ PRINCIPAL_RE = re.compile(
 BORROWER_RE = re.compile(
     r"(?:executed\s+by|given\s+by|granted\s+by|from)\s+([A-Z][A-Za-z'\.\- ]{3,60}?)"
     r"\s+to\s+", re.I)
-NOTICE_NUM_RE = re.compile(r"\b(?:notice|ad|legal)\s*(?:no\.?|number|#)\s*[:\-]?\s*([\w\-]{4,20})", re.I)
+
+# Each kind of legal notice names the owner in its own way. Foreclosure ads say
+# "executed by"; a tax sale says the property was "levied on as the property
+# of"; a probate notice names the estate. Only knowing the foreclosure phrasing
+# meant every tax sale and probate notice was found and then thrown away.
+OWNER_PATTERNS = [
+    # --- foreclosure ----------------------------------------------------
+    r"(?:security\s+deed\s+)?(?:executed|given|granted|made)\s+by\s+"
+    r"([A-Z][A-Za-z'\.\-]*(?:[\s,]+(?:AND|&)?\s*[A-Z][A-Za-z'\.\-]*){0,4})",
+    r"\bgrantor(?:s)?\s*(?:is|are|:)?\s*"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    r"\bborrower(?:s)?\s*(?:is|are|:)?\s*"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    # --- tax sale / levy -------------------------------------------------
+    r"levied\s+on\s+as\s+the\s+property\s+of\s+"
+    r"([A-Z][A-Za-z'\.\-]*(?:[\s,]+(?:AND|&)?\s*[A-Z][A-Za-z'\.\-]*){0,4})",
+    r"(?:as\s+)?the\s+property\s+of\s+"
+    r"([A-Z][A-Za-z'\.\-]*(?:[\s,]+(?:AND|&)?\s*[A-Z][A-Za-z'\.\-]*){0,4})",
+    r"\bdefendant(?:s)?\s*(?:in\s+fi\.?\s*fa\.?)?\s*(?:is|are|:)?\s*"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    r"in\s+the\s+name\s+of\s+"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    r"assessed\s+(?:to|against)\s+"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    # --- probate / estate ------------------------------------------------
+    r"[Ee]state\s+of\s+"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})\s*,?\s+deceased",
+    r"[Ll]ate\s+of\s+\w+\s+County.{0,40}?"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    r"petition\s+of\s+"
+    r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+]
+# Note: name tokens allow a single character so middle initials survive.
+OWNER_RES = [re.compile(pat, re.I) for pat in OWNER_PATTERNS]
+
+# Words that mean the capture ran past the name into the lender, the law firm,
+# or boilerplate. The candidate is trimmed at these rather than discarded --
+# "MARCUS T DUNCAN to Mortgage Electronic" is a good name plus junk, not junk.
+_OWNER_STOP = re.compile(
+    r"\s+(?:to|as|of|in|and\s+recorded|hereinafter|dated|recorded|will|shall|"
+    r"pursuant|whose|by|for|a\s+single|an\s+unmarried|conveying|securing)\s",
+    re.I)
+_NOT_AN_OWNER = re.compile(
+    r"\b(BANK|MORTGAGE|SERVICING|TRUSTEE|ELECTRONIC|REGISTRATION|SYSTEMS|"
+    r"ASSOCIATION|CLERK|SUPERIOR|COURT|ATTORNEY|LAW|LLP|FEDERAL|NATIONAL|"
+    r"NOTICE|SALE|POWER|DEED|SECURITY|PURSUANT|VIRTUE|UNDERSIGNED|CREDITOR|"
+    r"HEREINAFTER|WHEREAS|DEFAULT|INDEBTEDNESS|DESCRIBED|COMMISSIONER)\b", re.I)
+
+_TITLE_NOISE = re.compile(
+    r"^(?:the|a|an|said|certain|his|her|its|their)\s+", re.I)
+
+
+def _clean_owner_candidate(raw: str) -> str:
+    """Trim a capture back to just the name."""
+    cand = clean_text(raw)
+    # A full stop ends the name. "TERENCE B BELL. Levy date" is a name plus the
+    # next sentence. A trailing initial keeps its period ("ANITA M.").
+    cut = re.search(r"(?<=[a-z])\.\s|\.\s+[A-Z][a-z]", cand)
+    if cut:
+        cand = cand[:cut.start() + 1]
+    cand = cand.rstrip(". ")
+    cut = _OWNER_STOP.search(" " + cand + " ")
+    if cut:
+        cand = (" " + cand + " ")[:cut.start()].strip()
+    cand = _TITLE_NOISE.sub("", cand).strip(" ,.;:&-")
+    # Drop a trailing fragment that is clearly not part of a name.
+    parts = cand.split()
+    while parts and _NOT_AN_OWNER.fullmatch(parts[-1] or ""):
+        parts.pop()
+    return " ".join(parts).strip(" ,.;:&-")
+
+
+def extract_owner_from_notice(body: str) -> str:
+    """
+    Pull the owner's name out of a legal advertisement, whatever kind it is.
+    Returns the first candidate that reads like a person or a real entity
+    rather than a lender, a law firm, or a stray piece of boilerplate.
+    """
+    for rx in OWNER_RES:
+        for m in rx.finditer(body):
+            cand = _clean_owner_candidate(m.group(1))
+            if not (4 <= len(cand) <= 70):
+                continue
+            if _NOT_AN_OWNER.search(cand) and not is_entity(cand):
+                continue
+            toks = [t for t in re.split(r"[\s,]+", cand) if t]
+            if len(toks) < 2 and not is_entity(cand):
+                continue          # a single word is rarely a full name
+            return cand
+    return ""
 
 
 def parse_notice_body(text: str, category_hint: str = "") -> Dict[str, Any]:
@@ -2483,14 +2573,7 @@ def parse_notice_body(text: str, category_hint: str = "") -> Dict[str, Any]:
 
     sale_dt = resolve_sale_date(body)
 
-    borrower = ""
-    bm = BORROWER_RE.search(body)
-    if bm:
-        borrower = clean_text(bm.group(1))
-    if not borrower:
-        em = re.search(r"ESTATE OF\s+([A-Z][A-Za-z'\.\- ]{3,60})", body, re.I)
-        if em:
-            borrower = clean_text(em.group(1))
+    borrower = extract_owner_from_notice(body)
 
     amount = None
     pm = PRINCIPAL_RE.search(body)
@@ -3017,13 +3100,18 @@ class LegalNoticeScraper:
                     except Exception as exc:  # noqa: BLE001
                         log.debug("  notice sample failed: %s", exc)
                 break
+            no_owner = 0
             for item in items:
                 try:
                     lead = self._to_lead(item)
                     if lead:
                         out.append(lead)
+                    else:
+                        no_owner += 1
                 except Exception as exc:  # noqa: BLE001
                     log.debug("  bad notice skipped: %s", exc)
+            if no_owner:
+                log.info("    %d notice(s) had no owner name we could read", no_owner)
 
             advanced = False
             for sel in ("a[title*='Next' i]", "a:has-text('>')",
