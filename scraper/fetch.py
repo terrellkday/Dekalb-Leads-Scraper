@@ -2771,6 +2771,35 @@ class LegalNoticeScraper:
         log.warning("    nothing on the page looked like a search button")
         return False
 
+    @staticmethod
+    async def _settled_content(page, tries: int = 5) -> str:
+        """
+        Return the page HTML, waiting out any navigation first.
+
+        Pressing Enter submits this form by starting a postback, and asking for
+        content mid-flight fails with "the page is navigating and changing the
+        content". That is not a failed search -- it is reading too early.
+        """
+        last = ""
+        for attempt in range(tries):
+            for state in ("domcontentloaded", "networkidle"):
+                try:
+                    await page.wait_for_load_state(state, timeout=15000)
+                except Exception:  # noqa: BLE001
+                    pass
+            try:
+                html = await page.content()
+                # A results page is substantially bigger than the empty form.
+                if len(html) > len(last):
+                    last = html
+                if len(html) > 20000:
+                    return html
+            except Exception as exc:  # noqa: BLE001
+                if "navigat" not in str(exc).lower():
+                    log.debug("    content read failed: %s", exc)
+            await page.wait_for_timeout(2500 * (attempt + 1))
+        return last
+
     # --------------------------------------------------------------- parsing
     _last_page_text: str = ""
 
@@ -2926,8 +2955,13 @@ class LegalNoticeScraper:
                         rows = await self._run_category(page, label, cat)
                         results.extend(rows)
                     except Exception as exc:  # noqa: BLE001
-                        log.warning("  %s search failed: %s", label, exc)
-                        self.notes.append(f"{label}: {exc}")
+                        log.warning("  %s search failed: %s", label, str(exc)[:160])
+                        self.notes.append(f"{label}: {str(exc)[:160]}")
+                        try:    # leave a clean page for the next category
+                            await page.goto(LEGAL_NOTICE_SEARCH_URL,
+                                            wait_until="domcontentloaded")
+                        except Exception:  # noqa: BLE001
+                            pass
                     await page.wait_for_timeout(int(POLITE_DELAY * 1000))
             finally:
                 await ctx.close()
@@ -2953,6 +2987,8 @@ class LegalNoticeScraper:
             log.warning("  could not press the search button")
             return []
 
+        # The postback can fire more than one navigation; let it finish.
+        await page.wait_for_timeout(3000)
         try:
             await page.wait_for_load_state("networkidle", timeout=25000)
         except Exception:  # noqa: BLE001
@@ -2960,7 +2996,8 @@ class LegalNoticeScraper:
 
         out: List[Dict[str, Any]] = []
         for page_no in range(1, 11):        # up to 10 result pages per category
-            html = await page.content()
+            html = await self._settled_content(page)
+            log.info("    results page is %d characters", len(html))
             items = self._parse_results(html, cat)
             log.info("  page %d: %d notices", page_no, len(items))
             if not items:
@@ -4110,7 +4147,15 @@ async def run_all() -> int:
     export_ghl_csv([shape_record(r) for r in all_records])
     push_to_gohighlevel([shape_record(r) for r in all_records])
 
-    save_seen(all_records, load_seen())
+    prior_seen = load_seen()
+    new_today = sum(
+        1 for r in all_records
+        if (r.get("_notice_dedupe")
+            or f"{r.get('source','')}|{r.get('doc_num','')}") not in prior_seen)
+    if prior_seen:
+        log.info("New since the last run: %d of %d documents", new_today,
+                 len(all_records))
+    save_seen(all_records, prior_seen)
     if UNMAPPED_DOC_TYPES:
         prior = set(safe_read_json(UNKNOWN_DOCTYPES_PATH, []) or [])
         combined = sorted(prior | UNMAPPED_DOC_TYPES)
