@@ -2899,6 +2899,29 @@ class LegalNoticeScraper:
     # --------------------------------------------------------------- parsing
     _last_page_text: str = ""
 
+    # The site's own category menu lists "Foreclosures", "Tax Sales" and
+    # "Probate Notices" one after another, so the navigation panel matched the
+    # notice markers and was parsed as if it were an advertisement.
+    NAV_WORDS = ("popular searches", "advanced search", "alcoholic beverage",
+                 "forfeiture/seizure", "name changes", "election notices",
+                 "annual reports", "construction/service bids", "condemnations",
+                 "public hearings", "smart search", "legal organ list")
+
+    # A real legal advertisement always carries at least one of these. A menu
+    # never does.
+    REAL_NOTICE = re.compile(
+        r"\bpursuant\b|under and by virtue|\bwhereas\b|deed book|"
+        r"security deed|public outcry|courthouse door|highest bidder|"
+        r"\bhereby\b|\blevied\b|\bexecut(?:ed|or|rix)\b|"
+        r"\$\s?[\d,]{3,}|\b20\d{2}\b.{0,40}\b(?:deed|book|page|parcel|fi\.? ?fa)\b",
+        re.I)
+
+    @classmethod
+    def _is_navigation(cls, text: str) -> bool:
+        low = text.lower()
+        hits = sum(1 for w in cls.NAV_WORDS if w in low)
+        return hits >= 3
+
     # Cast wide: a legal advertisement is recognisable by any of these, and a
     # missed notice costs far more than an extra block to filter out later.
     NOTICE_MARKERS = re.compile(
@@ -2941,6 +2964,12 @@ class LegalNoticeScraper:
                 continue
             if not LegalNoticeScraper.NOTICE_MARKERS.search(text):
                 stage["no legal phrase"] += 1
+                continue
+            if LegalNoticeScraper._is_navigation(text):
+                stage["site menu, not a notice"] += 1
+                continue
+            if not LegalNoticeScraper.REAL_NOTICE.search(text):
+                stage["no advertisement wording"] += 1
                 continue
             stage["matched a legal phrase"] += 1
             # Skip a container that merely wraps other candidate blocks.
@@ -2991,6 +3020,12 @@ class LegalNoticeScraper:
     GRANTOR_RE = re.compile(
         r"(?:executed|given|granted)\s+by\s+([A-Z][A-Za-z'\.\-]+(?:\s+[A-Z][A-Za-z'\.\-]+){0,3})",
         re.I)
+
+    def _to_lead_safe(self, item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        try:
+            return self._to_lead(item)
+        except Exception:  # noqa: BLE001
+            return None
 
     def _to_lead(self, item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         text, cat = item["text"], item["cat"]
@@ -3133,8 +3168,13 @@ class LegalNoticeScraper:
                 log.warning("    %d notice(s) raised an error -- first was %s",
                             errored, first_err[:300])
             if (no_owner or errored) and items:
-                sample = clean_text(items[0].get("text", ""))[:400]
-                log.info("    first notice text: %s", sample)
+                # Show a notice that genuinely failed, so the sample is the
+                # wording that needs handling rather than whatever came first.
+                failing = next(
+                    (it for it in items
+                     if not self._to_lead_safe(it)), items[0])
+                log.info("    example of one we could not read: %s",
+                         clean_text(failing.get("text", ""))[:400])
 
             advanced = False
             for sel in ("a[title*='Next' i]", "a:has-text('>')",
