@@ -2510,6 +2510,11 @@ _NOT_AN_OWNER = re.compile(
     r"NOTICE|SALE|POWER|DEED|SECURITY|PURSUANT|VIRTUE|UNDERSIGNED|CREDITOR|"
     r"HEREINAFTER|WHEREAS|DEFAULT|INDEBTEDNESS|DESCRIBED|COMMISSIONER)\b", re.I)
 
+# Restored: this was deleted by accident when the owner patterns were rewritten,
+# which crashed every notice before it could be parsed.
+NOTICE_NUM_RE = re.compile(
+    r"\b(?:notice|ad|legal)\s*(?:no\.?|number|#)\s*[:\-]?\s*([\w\-]{4,20})", re.I)
+
 _TITLE_NOISE = re.compile(
     r"^(?:the|a|an|said|certain|his|her|its|their)\s+", re.I)
 
@@ -2557,6 +2562,10 @@ def extract_owner_from_notice(body: str) -> str:
 def parse_notice_body(text: str, category_hint: str = "") -> Dict[str, Any]:
     """Pull structured fields out of a legal-advertisement body."""
     body = clean_text(text)
+    # Notice bodies can be very long, and several owner patterns allow optional
+    # repeats -- more than a few thousand characters risks the regex engine
+    # backtracking for a long time. The name sits near the top regardless.
+    probe = body[:4000]
     upper = body.upper()
 
     cat = CATEGORY_TO_CAT.get(category_hint.strip().lower(), "")
@@ -2573,7 +2582,11 @@ def parse_notice_body(text: str, category_hint: str = "") -> Dict[str, Any]:
 
     sale_dt = resolve_sale_date(body)
 
-    borrower = extract_owner_from_notice(body)
+    try:
+        borrower = extract_owner_from_notice(probe)
+    except Exception as exc:  # noqa: BLE001
+        log.warning("    owner extraction failed: %s", exc)
+        borrower = ""
 
     amount = None
     pm = PRINCIPAL_RE.search(body)
@@ -3100,7 +3113,7 @@ class LegalNoticeScraper:
                     except Exception as exc:  # noqa: BLE001
                         log.debug("  notice sample failed: %s", exc)
                 break
-            no_owner = 0
+            no_owner, errored, first_err = 0, 0, ""
             for item in items:
                 try:
                     lead = self._to_lead(item)
@@ -3109,9 +3122,19 @@ class LegalNoticeScraper:
                     else:
                         no_owner += 1
                 except Exception as exc:  # noqa: BLE001
-                    log.debug("  bad notice skipped: %s", exc)
+                    errored += 1
+                    if not first_err:
+                        first_err = f"{type(exc).__name__}: {exc}"
             if no_owner:
                 log.info("    %d notice(s) had no owner name we could read", no_owner)
+            if errored:
+                # Never hide this again. A crash here looks exactly like "found
+                # nothing", and that cost a full round of debugging.
+                log.warning("    %d notice(s) raised an error -- first was %s",
+                            errored, first_err[:300])
+            if (no_owner or errored) and items:
+                sample = clean_text(items[0].get("text", ""))[:400]
+                log.info("    first notice text: %s", sample)
 
             advanced = False
             for sel in ("a[title*='Next' i]", "a:has-text('>')",
