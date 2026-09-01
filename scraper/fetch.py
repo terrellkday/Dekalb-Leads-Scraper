@@ -294,6 +294,9 @@ RELEASE_TERMS = [
     "PARTIAL RELEASE", "BLANKET CANCELLATION", "QUIT CLAIM DEED RELEASING",
     "CERTIFICATE OF FEDERAL TAX RELEASE", "UCC TERMINATION", "TERMINATION",
     "VOID", "LIEN CANCELLATION",
+    # DeKalb abbreviates it: "TAX COMM FIFA CANC" means the delinquent tax was
+    # paid. Without this the county's own cancellations scored as live distress.
+    "FIFA CANC", "FI FA CANC", "TAX COMM FIFA CANC", " CANC",
 ]
 
 ENTITY_TOKENS = {
