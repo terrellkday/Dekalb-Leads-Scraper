@@ -36,15 +36,20 @@ on:
   workflow_dispatch:
     inputs:
       lookback_days:
-        description: "How many days back to search (use 30 for the first run)"
+        description: "How many days back to search (3 is the daily default)"
         required: false
-        default: "7"
+        default: "3"
         type: string
       skip_sources:
         description: "Sources to skip, comma separated: LANDMARK,NOTICES,TAX"
         required: false
         default: ""
         type: string
+      everything:
+        description: "Include records already seen before (use for a one-time bulk export)"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write      # save records.json and the CSV back to the repo
@@ -122,8 +127,11 @@ jobs:
         # published; the job is marked failed at the very end instead.
         continue-on-error: true
         env:
-          LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '7' }}
+          LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '3' }}
           SKIP_SOURCES: ${{ github.event.inputs.skip_sources || '' }}
+          # Normally only new documents are exported, so each morning's file is
+          # genuinely fresh. Tick "everything" to include ones seen before.
+          NEW_ONLY: ${{ github.event.inputs.everything == 'true' && '0' || '1' }}
           HEADLESS: "true"
           LOG_LEVEL: INFO
           # Optional. Leave these unset and the scraper simply writes the CSV.

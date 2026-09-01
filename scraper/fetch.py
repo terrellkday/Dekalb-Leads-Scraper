@@ -76,7 +76,15 @@ COUNTY = "DeKalb"
 STATE = "Georgia"
 STATE_ABBR = "GA"
 
-LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
+# Three days, not one. The scraper looks back a little further than a day so a
+# single failed morning cannot leave a permanent hole in the record, and
+# NEW_ONLY below strips the overlap back out so exports still read as "today".
+LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "3"))
+
+# Keep only documents never seen on a previous run. This is what makes each
+# daily export genuinely fresh: filed dates are what the county recorded, but
+# what matters for outreach is what you have not already mailed.
+NEW_ONLY = os.getenv("NEW_ONLY", "1").strip().lower() not in ("0", "false", "no")
 
 CLERK_URL = "https://deeds.dekalbcountyga.gov/LandmarkWeb"
 PARCEL_LAYER = "https://dcgis.dekalbcountyga.gov/hosted/rest/services/Tax_Parcels/FeatureServer/0"
@@ -3580,11 +3588,128 @@ async def scrape_tax_sales(session: requests.Session) -> List[Dict[str, Any]]:
 
 
 # =============================================================================
+# SUPPLEMENTAL ADDRESS FILE (e.g. a PropStream export)
+# =============================================================================
+# PropStream has no public API, and driving its interface with a script would
+# breach its terms the same way GSCCCA's would. What is fine is using data you
+# already licensed: export from PropStream, drop the CSV at
+# data/supplemental.csv, and it fills gaps the county parcel roll could not.
+#
+# Column names are matched loosely, so most exports work without editing.
+
+SUPPLEMENTAL_PATH = DATA_DIR / "supplemental.csv"
+
+SUPP_HINTS = {
+    "owner":        ["owner", "owner name", "owner 1", "owner1", "ownername",
+                     "first name", "owner first name"],
+    "owner_last":   ["owner last name", "last name", "owner 1 last name"],
+    "prop_address": ["property address", "address", "site address", "situs",
+                     "propertyaddress"],
+    "prop_city":    ["property city", "city", "site city"],
+    "prop_state":   ["property state", "state"],
+    "prop_zip":     ["property zip", "zip", "zip code", "postal"],
+    "mail_address": ["mailing address", "mail address", "owner address",
+                     "mailingaddress"],
+    "mail_city":    ["mailing city", "mail city", "owner city"],
+    "mail_state":   ["mailing state", "mail state", "owner state"],
+    "mail_zip":     ["mailing zip", "mail zip", "owner zip"],
+    "parcel_id":    ["apn", "parcel", "parcel id", "parcel number", "pin"],
+}
+
+
+def _supp_column(header: str) -> Optional[str]:
+    h = clean_text(header).lower().strip()
+    for field, hints in SUPP_HINTS.items():
+        for hint in hints:
+            if h == hint:
+                return field
+    for field, hints in SUPP_HINTS.items():
+        for hint in hints:
+            if len(hint) >= 4 and hint in h:
+                return field
+    return None
+
+
+class SupplementalIndex:
+    """Optional second source of addresses, keyed by owner name and address."""
+
+    def __init__(self) -> None:
+        self.rows: List[Dict[str, Any]] = []
+        self.by_name: Dict[str, Dict[str, Any]] = {}
+        self.by_address: Dict[str, Dict[str, Any]] = {}
+        self.by_parcel: Dict[str, Dict[str, Any]] = {}
+
+    def load(self, path: Path = SUPPLEMENTAL_PATH) -> None:
+        if not path.exists():
+            return
+        try:
+            text = path.read_text(encoding="utf-8-sig", errors="replace")
+            reader = csv.DictReader(io.StringIO(text))
+            colmap = {c: _supp_column(c) for c in (reader.fieldnames or [])}
+            mapped = {v for v in colmap.values() if v}
+            if not mapped:
+                log.warning("Supplemental file has no columns I recognise: %s",
+                            ", ".join((reader.fieldnames or [])[:8]))
+                return
+
+            for raw in reader:
+                rec: Dict[str, Any] = {}
+                for col, field in colmap.items():
+                    if not field:
+                        continue
+                    val = clean_text(raw.get(col))
+                    if val and not rec.get(field):
+                        rec[field] = val
+                if rec.get("owner_last") and rec.get("owner"):
+                    rec["owner"] = f"{rec['owner_last']} {rec['owner']}"
+                if not (rec.get("owner") or rec.get("prop_address")):
+                    continue
+                self.rows.append(rec)
+
+                pk = normalize_parcel_id(rec.get("parcel_id"))
+                if pk:
+                    self.by_parcel.setdefault(pk, rec)
+                ak = address_key(rec.get("prop_address"), rec.get("prop_zip"))
+                if ak:
+                    self.by_address.setdefault(ak, rec)
+                    bare = normalize_address(rec.get("prop_address"))
+                    if bare:
+                        self.by_address.setdefault(bare, rec)
+                for key in name_variants(rec.get("owner", "")):
+                    self.by_name.setdefault(key, rec)
+                sig = token_signature(rec.get("owner", ""))
+                if sig:
+                    self.by_name.setdefault(sig, rec)
+
+            log.info("Supplemental file loaded: %s rows from %s",
+                     f"{len(self.rows):,}", path.name)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Could not read %s: %s", path.name, exc)
+
+    def match(self, parcel_id: str = "", prop_address: str = "",
+              owner: str = "") -> Optional[Dict[str, Any]]:
+        pk = normalize_parcel_id(parcel_id)
+        if pk and pk in self.by_parcel:
+            return self.by_parcel[pk]
+        for key in (address_key(prop_address), normalize_address(prop_address)):
+            if key and key in self.by_address:
+                return self.by_address[key]
+        if owner:
+            for key in (normalize_name(owner), token_signature(owner)):
+                if key and key in self.by_name:
+                    return self.by_name[key]
+        return None
+
+
+# =============================================================================
 # ENRICHMENT: attach parcel data
 # =============================================================================
 
-def enrich_with_parcels(records: List[Dict[str, Any]], parcels: ParcelIndex) -> Tuple[int, int]:
+def enrich_with_parcels(records: List[Dict[str, Any]], parcels: ParcelIndex,
+                        supplemental: Optional["SupplementalIndex"] = None
+                        ) -> Tuple[int, int]:
     matched = unmatched = 0
+    from_supp = 0
     for rec in records:
         try:
             parcel, confidence, method = parcels.match(
@@ -3595,6 +3720,25 @@ def enrich_with_parcels(records: List[Dict[str, Any]], parcels: ParcelIndex) -> 
             )
             rec["match_confidence"] = round(confidence, 2)
             rec["match_method"] = method
+
+            if not parcel and supplemental is not None:
+                # The county roll did not know this one; try the file you
+                # exported from PropStream before giving up on it.
+                alt = supplemental.match(parcel_id=rec.get("parcel_id", ""),
+                                         prop_address=rec.get("prop_address", ""),
+                                         owner=rec.get("owner", ""))
+                if alt:
+                    from_supp += 1
+                    matched += 1
+                    for field in ("prop_address", "prop_city", "prop_state",
+                                  "prop_zip", "mail_address", "mail_city",
+                                  "mail_state", "mail_zip", "parcel_id"):
+                        if alt.get(field) and not rec.get(field):
+                            rec[field] = alt[field]
+                    rec["match_confidence"] = max(rec.get("match_confidence") or 0, 0.7)
+                    rec["match_method"] = "supplemental file"
+                    rec["owner_occupied"] = determine_owner_occupancy(rec)
+                    continue
 
             if not parcel:
                 unmatched += 1
@@ -3631,6 +3775,8 @@ def enrich_with_parcels(records: List[Dict[str, Any]], parcels: ParcelIndex) -> 
         except Exception as exc:  # noqa: BLE001
             unmatched += 1
             log.debug("Enrichment failed for %s: %s", rec.get("doc_num"), exc)
+    if from_supp:
+        log.info("  %d of those came from the supplemental file", from_supp)
     return matched, unmatched
 
 
@@ -3757,6 +3903,24 @@ def consolidate_flags(records: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]
 # =============================================================================
 # FLAGS + SELLER SCORE
 # =============================================================================
+
+# Property already held by a government body is not a lead. The city cannot
+# sell it to you, and a tax-commissioner grantee on a fifa is normal and should
+# not be confused with the owner.
+GOVERNMENT_OWNER_RE = re.compile(
+    r"\b(?:CITY\s+OF|COUNTY\s+OF|STATE\s+OF\s+GEORGIA|DEKALB\s+COUNTY|"
+    r"FULTON\s+COUNTY|GWINNETT\s+COUNTY|CLAYTON\s+COUNTY|COBB\s+COUNTY|"
+    r"HOUSING\s+AUTHORITY|BOARD\s+OF\s+EDUCATION|SCHOOL\s+DISTRICT|"
+    r"DEPARTMENT\s+OF\s+TRANSPORTATION|DEPT\s+OF\s+TRANSPORTATION|"
+    r"UNITED\s+STATES|U\.?S\.?A\.?\b|SECRETARY\s+OF\s+HOUSING|"
+    r"URBAN\s+DEVELOPMENT|\bMARTA\b|WATER\s+AUTHORITY|"
+    r"DEVELOPMENT\s+AUTHORITY|LAND\s+BANK|TAX\s+COMMISSIONER|"
+    r"MUNICIPAL|GEORGIA\s+POWER|REGIONAL\s+COMMISSION)\b", re.I)
+
+
+def is_government_owner(name: Any) -> bool:
+    return bool(GOVERNMENT_OWNER_RE.search(clean_text(name).upper()))
+
 
 CORP_TOKENS = {"LLC", "INC", "CORP", "CORPORATION", "LP", "LLP", "COMPANY",
                "HOLDINGS", "PROPERTIES", "INVESTMENTS"}
@@ -4372,13 +4536,33 @@ async def run_all() -> int:
         log.warning("No records collected from any source this run. "
                     "Existing output files are left untouched.")
 
+    # --- 3a. Drop anything a government body already owns --------------------
+    before = len(all_records)
+    all_records = [r for r in all_records if not is_government_owner(r.get("owner"))]
+    gov_dropped = before - len(all_records)
+    if gov_dropped:
+        log.info("Dropped %d record(s) owned by a city, county or agency -- "
+                 "nothing to buy there", gov_dropped)
+
     # --- 3. Dedupe ----------------------------------------------------------
     all_records, dupes = dedupe_records(all_records)
     log.info("Duplicates collapsed: %d  |  unique documents: %d", dupes, len(all_records))
 
     # --- 4. Enrich ----------------------------------------------------------
-    matched, unmatched = enrich_with_parcels(all_records, parcels)
+    supplemental = SupplementalIndex()
+    supplemental.load()
+
+    matched, unmatched = enrich_with_parcels(all_records, parcels, supplemental)
     log.info("Parcel matches: %d matched, %d unmatched", matched, unmatched)
+
+    # A parcel can change hands to the county between filings, so check again
+    # now that every record carries the roll's own idea of who owns it.
+    before = len(all_records)
+    all_records = [r for r in all_records
+                   if not is_government_owner(r.get("parcel_owner"))]
+    if before - len(all_records):
+        log.info("Dropped %d more now the parcel roll shows a government owner",
+                 before - len(all_records))
 
     # --- 5. Releases, consolidation, flags, score ---------------------------
     released = apply_release_handling(all_records)
@@ -4398,19 +4582,33 @@ async def run_all() -> int:
             rec.setdefault("flags", [])
             rec.setdefault("score", 30)
 
+    # --- 5b. Keep only what has not been seen before -------------------------
+    prior_seen = load_seen()
+    if NEW_ONLY and prior_seen:
+        def _key(r: Dict[str, Any]) -> str:
+            return (r.get("_notice_dedupe")
+                    or f"{r.get('source','')}|{r.get('doc_num','')}")
+        fresh = [r for r in all_records if _key(r) not in prior_seen]
+        log.info("New since the last run: %d of %d documents",
+                 len(fresh), len(all_records))
+        if fresh:
+            all_records = fresh
+        else:
+            log.info("Nothing new today -- keeping yesterday's file untouched")
+            all_records = []
+    elif prior_seen:
+        new_today = sum(1 for r in all_records
+                        if (r.get("_notice_dedupe")
+                            or f"{r.get('source','')}|{r.get('doc_num','')}")
+                        not in prior_seen)
+        log.info("New since the last run: %d of %d documents",
+                 new_today, len(all_records))
+
     # --- 6. Output ----------------------------------------------------------
     payload = write_outputs(all_records, start, end)
     export_ghl_csv([shape_record(r) for r in all_records])
     push_to_gohighlevel([shape_record(r) for r in all_records])
 
-    prior_seen = load_seen()
-    new_today = sum(
-        1 for r in all_records
-        if (r.get("_notice_dedupe")
-            or f"{r.get('source','')}|{r.get('doc_num','')}") not in prior_seen)
-    if prior_seen:
-        log.info("New since the last run: %d of %d documents", new_today,
-                 len(all_records))
     save_seen(all_records, prior_seen)
     if UNMAPPED_DOC_TYPES:
         prior = set(safe_read_json(UNKNOWN_DOCTYPES_PATH, []) or [])
