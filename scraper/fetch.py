@@ -683,6 +683,33 @@ def normalize_address(raw: Any) -> str:
     return re.sub(r"\s+", " ", " ".join(merged)).strip()
 
 
+def street_only(address: Any, city: Any = "", state: Any = "",
+                zip_code: Any = "") -> str:
+    """
+    Return just the street line: number, name, suffix, direction.
+
+    The export has separate City / State / Zip columns, so anything left on the
+    end of the street line gets duplicated -- "123 Main St SE Atlanta GA 30324,
+    Atlanta, GA, 30324". Only strips a trailing piece it can actually identify,
+    so a street genuinely named after a town survives.
+    """
+    text = clean_text(address)
+    if not text:
+        return ""
+    # Anything after the first comma is city/state/zip by convention.
+    if "," in text:
+        text = text.split(",", 1)[0]
+    text = re.sub(r"\s+\d{5}(?:-\d{4})?\s*$", "", text)          # trailing ZIP
+    text = re.sub(r"\s+(?:GA|GEORGIA)\s*$", "", text, flags=re.I)  # trailing state
+    st = clean_text(state)
+    if st:
+        text = re.sub(rf"\s+{re.escape(st)}\s*$", "", text, flags=re.I)
+    ct = clean_text(city)
+    if ct:
+        text = re.sub(rf"\s+{re.escape(ct)}\s*$", "", text, flags=re.I)
+    return text.strip(" ,")
+
+
 def address_key(street: Any, zip_code: Any = "") -> str:
     """Match key: normalized street line, optionally salted with the 5-digit ZIP."""
     s = normalize_address(street)
@@ -4297,7 +4324,10 @@ def export_ghl_csv(records: List[Dict[str, Any]]) -> None:
                 "Mailing City": rec.get("mail_city", ""),
                 "Mailing State": rec.get("mail_state", ""),
                 "Mailing Zip": rec.get("mail_zip", ""),
-                "Property Address": rec.get("prop_address", ""),
+                "Property Address": street_only(rec.get("prop_address"),
+                                               rec.get("prop_city"),
+                                               rec.get("prop_state"),
+                                               rec.get("prop_zip")),
                 "Property City": rec.get("prop_city", ""),
                 "Property State": rec.get("prop_state", STATE_ABBR),
                 "Property Zip": rec.get("prop_zip", ""),
@@ -4384,7 +4414,8 @@ def write_skiptrace_import(records: List[Dict[str, Any]]) -> None:
         tag = clean_text(rec.get("cat_label")) or "Motivated Seller"
         tags[tag] += 1
         writer.writerow([
-            clean_text(rec.get("prop_address")),
+            street_only(rec.get("prop_address"), rec.get("prop_city"),
+                        rec.get("prop_state"), rec.get("prop_zip")),
             clean_text(rec.get("prop_city")),
             clean_text(rec.get("prop_state")) or STATE_ABBR,
             clean_text(rec.get("prop_zip"))[:5],
