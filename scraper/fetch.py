@@ -85,7 +85,13 @@ LEGAL_NOTICE_SEARCH_URL = "https://www.georgiapublicnotice.com/search.aspx"
 LEGAL_NOTICE_FALLBACK_URL = "https://www.dekalblegalnotices.com/"
 TAX_SALE_URL = "https://dekalbtaxga.gov/property-tax/delinquent-taxes/"
 TAX_SALE_LISTING_URLS = [
+    # The public-access app, then the Tax Commissioner's own pages. The deep
+    # link into the app has never returned a table, so the plainer pages are
+    # worth trying as well.
     "https://publicaccess.dekalbtaxga.gov/forms/htmlframe.aspx?mode=content%2Fsearch%2Ftax_sale_listing.html",
+    "https://publicaccess.dekalbtaxga.gov/search/commonsearch.aspx?mode=taxsale",
+    "https://dekalbtaxga.gov/property-tax/delinquent-taxes/",
+    "https://dekalbtax.org/tax-sale-listing",
     "https://publicaccess.dekalbtax.org/forms/htmlframe.aspx?mode=content%2Fsearch%2Ftax_sale_listing.html",
 ]
 
@@ -3480,6 +3486,7 @@ async def _fetch_tax_listing_browser(url: str) -> str:
                 pass
             # The listing is often rendered inside an iframe.
             html = await page.content()
+            frames_used = 0
             for frame in page.frames:
                 if frame is page.main_frame:
                     continue
@@ -3487,8 +3494,44 @@ async def _fetch_tax_listing_browser(url: str) -> str:
                     fhtml = await frame.content()
                     if "parcel" in fhtml.lower():
                         html += fhtml
+                        frames_used += 1
                 except Exception:  # noqa: BLE001
                     continue
+
+            # Say what this page actually is. "Empty table" has been the only
+            # clue for days and it explains nothing.
+            try:
+                info = await page.evaluate(
+                    r"""() => {
+                        const txt = document.body ? document.body.innerText : '';
+                        return {
+                            title: document.title || '',
+                            url: location.href,
+                            textLen: txt.length,
+                            tables: document.querySelectorAll('table').length,
+                            rows: document.querySelectorAll('tr').length,
+                            frames: window.frames.length,
+                            hasParcel: /parcel/i.test(txt),
+                            hasTaxSale: /tax sale/i.test(txt),
+                            hasLogin: /log ?in|sign ?in|password/i.test(txt),
+                            head: txt.replace(/\s+/g, ' ').trim().slice(0, 500)
+                        };
+                    }""")
+                log.info("  tax page: %r", info.get("title"))
+                log.info("  landed on: %s", info.get("url"))
+                log.info("  %d chars of text, %d tables, %d rows, %d frames "
+                         "(%d frames had parcel data)",
+                         info.get("textLen", 0), info.get("tables", 0),
+                         info.get("rows", 0), info.get("frames", 0), frames_used)
+                log.info("  mentions parcel=%s taxsale=%s login=%s",
+                         info.get("hasParcel"), info.get("hasTaxSale"),
+                         info.get("hasLogin"))
+                log.info("  page begins: %s", info.get("head", "")[:300])
+                safe_write_json(DATA_DIR / "tax_page_sample.json", {
+                    "captured_at": utcnow().isoformat(),
+                    "requested_url": url, **info})
+            except Exception as exc:  # noqa: BLE001
+                log.debug("  tax page inspection failed: %s", exc)
             return html
         finally:
             await ctx.close()
@@ -3529,7 +3572,9 @@ async def scrape_tax_sales(session: requests.Session) -> List[Dict[str, Any]]:
     if rows:
         record_source_result("tax_sales", True, len(rows))
     else:
-        log.warning("Tax sale listing produced no rows (%s)", last_error or "empty table")
+        log.warning("Tax sale listing produced no rows after trying %d address(es). "
+                    "See data/tax_page_sample.json for what the pages contained. (%s)",
+                    len(TAX_SALE_LISTING_URLS), last_error or "empty table")
         record_source_result("tax_sales", False, 0, last_error or "no rows parsed")
     return rows
 
