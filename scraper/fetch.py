@@ -173,6 +173,8 @@ DOCUMENT_TYPE_MAP: Dict[str, List[str]] = {
         "TAX EXECUTION", "TAX COMMISSIONER EXECUTION", "DELINQUENT TAX",
         "TAX LEVY", "LEVY AND SALE", "EXCESS FUNDS", "REDEMPTION",
         "BARMENT OF REDEMPTION", "NOTICE OF FORECLOSURE OF RIGHT TO REDEEM",
+        "FORECLOSURE OF RIGHT TO REDEEM", "RIGHT TO REDEEM", "BARMENT",
+        "48-4-5", "48-4-45", "48-4-46",
     ],
     "TAXLIEN": [
         "FEDERAL TAX LIEN", "NOTICE OF FEDERAL TAX LIEN", "IRS LIEN", "IRS TAX LIEN",
@@ -2499,6 +2501,12 @@ OWNER_PATTERNS = [
     r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
     r"assessed\s+(?:to|against)\s+"
     r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
+    # --- barment of redemption -------------------------------------------
+    # A tax-deed purchaser barring the right to redeem addresses the owner
+    # directly: "TO: RUSSELL J. PARKER SR OR ANY UNKNOWN ESTATE
+    # REPRESENTATIVE OR UNKNOWN HEIRS AT LAW; CURVIN L. PARKER OR ANY..."
+    r"\bTO:\s*([A-Z][A-Za-z'.\-]*(?:\s+[A-Z][A-Za-z'.\-]*){0,4})",
+    r"notice\s+is\s+hereby\s+given\s+to\s+([A-Z][A-Za-z'.\-]*(?:\s+[A-Z][A-Za-z'.\-]*){0,4})",
     # --- probate / estate ------------------------------------------------
     r"[Ee]state\s+of\s+"
     r"([A-Z][A-Za-z'\.\-]*(?:\s+[A-Z][A-Za-z'\.\-]*){0,3})",
@@ -2516,7 +2524,9 @@ OWNER_RES = [re.compile(pat, re.I) for pat in OWNER_PATTERNS]
 # "MARCUS T DUNCAN to Mortgage Electronic" is a good name plus junk, not junk.
 _OWNER_STOP = re.compile(
     r"\s+(?:to|as|of|in|and\s+recorded|hereinafter|dated|recorded|will|shall|"
-    r"pursuant|whose|by|for|a\s+single|an\s+unmarried|conveying|securing)\s",
+    r"pursuant|whose|by|for|a\s+single|an\s+unmarried|conveying|securing|"
+    # Barment notices repeat this boilerplate after every name.
+    r"or\s+any\s+unknown|or\s+unknown|heirs\s+at\s+law|estate\s+representative|\bor\b)\s",
     re.I)
 _NOT_AN_OWNER = re.compile(
     r"\b(BANK|MORTGAGE|SERVICING|TRUSTEE|ELECTRONIC|REGISTRATION|SYSTEMS|"
@@ -2625,8 +2635,14 @@ def parse_notice_body(text: str, category_hint: str = "") -> Dict[str, Any]:
     if lm:
         lender = clean_text(lm.group(1))
 
+    # "Unknown heirs" means nobody has settled the estate -- a probate signal
+    # sitting on top of a tax one, and worth surfacing on the lead.
+    heirs_unknown = bool(re.search(
+        r"unknown\s+heirs|estate\s+representative|unknown\s+estate", body, re.I))
+
     return {
         "cat": cat,
+        "heirs_unknown": heirs_unknown,
         "owner": borrower,
         "prop_address": extract_address_from_text(body),
         "prop_zip": extract_zip_from_text(body),
@@ -3095,6 +3111,7 @@ class LegalNoticeScraper:
             "source": "Georgia Public Notice (legal organ advertisement)",
             "foreclosure_sale_date": fmt_date(parsed["sale_date"]) or None,
             "notice_number": item["notice_id"],
+            "heirs_unknown": parsed.get("heirs_unknown", False),
             "status": "active",
             "is_release": False,
             "_notice_dedupe": item["notice_id"],
@@ -3727,6 +3744,9 @@ def build_flags(rec: Dict[str, Any], ctx: Dict[str, Any],
     filed = parse_date(rec.get("filed"))
     if filed and start.date() <= filed.date() <= end.date():
         flags.append("New this week")
+
+    if rec.get("heirs_unknown"):
+        flags.append("Unknown heirs / unsettled estate")
 
     if rec.get("status") == "released":
         flags.append("Released / resolved")
