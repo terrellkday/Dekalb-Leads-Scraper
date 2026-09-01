@@ -678,11 +678,25 @@ def is_po_box(raw: Any) -> bool:
 
 
 ADDRESS_IN_TEXT_RE = re.compile(
-    r"\b(\d{1,6}[A-Z]?\s+(?:[A-Z0-9'.\-]+\s+){0,5}?"
+    # Greedy, not lazy. Lazy matching stopped at the first street type it saw,
+    # so "2860 Parkway Close" came back as "2860 Parkway" and then failed to
+    # match the parcel. Greedy takes the longest run and backtracks.
+    r"\b(\d{1,6}[A-Z]?\s+(?:[A-Z0-9'.\-]+\s+){0,5}"
     r"(?:ST|STREET|RD|ROAD|DR|DRIVE|AVE|AVENUE|LN|LANE|CT|COURT|CIR|CIRCLE|"
     r"BLVD|BOULEVARD|PL|PLACE|TER|TERRACE|TRL|TRAIL|PKWY|PARKWAY|HWY|HIGHWAY|"
     r"WAY|RUN|XING|CROSSING|SQ|SQUARE|PT|POINT|PATH|BEND|RIDGE|CHASE|WALK|"
-    r"CV|COVE|GLN|GLEN|LOOP|MNR|MANOR|OVERLOOK|PASS|VIEW|VLG|VILLAGE)"
+    r"CV|COVE|GLN|GLEN|LOOP|MNR|MANOR|OVERLOOK|PASS|VIEW|VLG|VILLAGE|"
+    # Metro Atlanta subdivisions use a lot of street types the postal
+    # abbreviation list leaves out. Missing one truncates the address and
+    # the parcel match then fails on a name that was actually complete.
+    r"CLOSE|LANDING|LNDG|GATE|MILL|FARM|HOLLOW|HOLW|KNOLL|KNL|SPUR|TRACE|TRCE|"
+    r"VALLEY|VLY|VISTA|VIS|DOWNS|GREEN|GRN|PARK|PLACE|STATION|STA|SUMMIT|SMT|"
+    r"CREEK|CRK|WOODS|WOOD|SHOALS|FERRY|BRIDGE|BRG|SPRINGS|SPGS|SPRING|"
+    r"HEIGHTS|HTS|HILL|HILLS|LAKE|OAKS|PINES|POINTE|RESERVE|RIDGE|RDG|"
+    r"CIRCLE|CROSSING|CORNERS|COMMONS|ARBOR|BLUFF|BROOK|CHAPEL|CLUB|"
+    r"COURSE|CREST|DALE|FALLS|FOREST|GARDEN|GLADE|GROVE|HARBOR|"
+    r"HAVEN|ISLE|JUNCTION|MEADOW|MEWS|ORCHARD|PLAZA|PRESERVE|"
+    r"RIVER|SHORE|TRAIL|VILLAS|WALKWAY|WAY)"
     r"(?:\s+(?:NE|NW|SE|SW|N|S|E|W))?)\b",
     re.I,
 )
@@ -2910,11 +2924,21 @@ class LegalNoticeScraper:
     # A real legal advertisement always carries at least one of these. A menu
     # never does.
     REAL_NOTICE = re.compile(
+        # Every advertisement on this site carries a header like
+        # "City: Decatur County: DeKalb 430-186868 8/6, 8/13, 8/20, 8/27".
+        # That header is the most dependable marker there is -- far better
+        # than hoping for particular legal phrasing.
+        r"County:\s*[A-Z][a-z]+|City:\s*[A-Z][a-z]+|\b\d{3}-\d{5,7}\b|"
         r"\bpursuant\b|under and by virtue|\bwhereas\b|deed book|"
         r"security deed|public outcry|courthouse door|highest bidder|"
         r"\bhereby\b|\blevied\b|\bexecut(?:ed|or|rix)\b|"
         r"\$\s?[\d,]{3,}|\b20\d{2}\b.{0,40}\b(?:deed|book|page|parcel|fi\.? ?fa)\b",
         re.I)
+
+    # "City: Decatur County: DeKalb 430-186868"
+    HEADER_RE = re.compile(
+        r"City:\s*([A-Za-z .'-]{3,30}?)\s+County:\s*([A-Za-z]{3,20})"
+        r"(?:\s+(\d{3}-\d{5,7}))?", re.I)
 
     @classmethod
     def _is_navigation(cls, text: str) -> bool:
@@ -2983,15 +3007,20 @@ class LegalNoticeScraper:
                 continue
             seen.add(sig)
 
-            notice_id = ""
-            m = re.search(r"[?&]ID=(\d+)", str(block))
-            if m:
-                notice_id = m.group(1)
+            notice_id, notice_city = "", ""
+            hdr = LegalNoticeScraper.HEADER_RE.search(text)
+            if hdr:
+                notice_city = clean_text(hdr.group(1)).title()
+                notice_id = clean_text(hdr.group(3) or "")
             if not notice_id:
-                m = re.search(r"\b(GA\d{10,}|\d{2}-\d{3,5})\b", text)
+                m = re.search(r"[?&]ID=(\d+)", str(block))
+                if m:
+                    notice_id = m.group(1)
+            if not notice_id:
+                m = re.search(r"\b(\d{3}-\d{5,7}|GA\d{10,}|\d{2}-\d{3,5})\b", text)
                 notice_id = m.group(1) if m else sig
 
-            out.append({"notice_id": notice_id,
+            out.append({"notice_id": notice_id, "city": notice_city,
                         "url": LEGAL_NOTICE_SEARCH_URL,
                         "text": text, "cat": cat})
 
@@ -3035,7 +3064,11 @@ class LegalNoticeScraper:
             m = self.GRANTOR_RE.search(text)
             if m:
                 owner = clean_text(m.group(1))
-        if not owner:
+        # These snippets are truncated, and the borrower's name is often cut
+        # off. When the property address survives instead, that is just as
+        # good: the parcel roll turns an address into an owner and a mailing
+        # address, which is the direction that actually matters.
+        if not owner and not parsed.get("prop_address"):
             return None
 
         pub_date = None
@@ -3056,6 +3089,7 @@ class LegalNoticeScraper:
             "legal": text[:600],
             "parcel_id": "",
             "prop_address": parsed["prop_address"],
+            "prop_city": item.get("city", ""),
             "prop_zip": parsed["prop_zip"],
             "clerk_url": item["url"],
             "source": "Georgia Public Notice (legal organ advertisement)",
@@ -3161,7 +3195,13 @@ class LegalNoticeScraper:
                     if not first_err:
                         first_err = f"{type(exc).__name__}: {exc}"
             if no_owner:
-                log.info("    %d notice(s) had no owner name we could read", no_owner)
+                log.info("    %d notice(s) had neither a name nor an address in "
+                         "the snippet (the full text is behind the site's captcha)",
+                         no_owner)
+            by_addr = sum(1 for r in out if not r.get("owner") and r.get("prop_address"))
+            if by_addr:
+                log.info("    %d notice(s) matched by property address instead "
+                         "of name", by_addr)
             if errored:
                 # Never hide this again. A crash here looks exactly like "found
                 # nothing", and that cost a full round of debugging.
