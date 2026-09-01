@@ -3601,6 +3601,9 @@ async def scrape_tax_sales(session: requests.Session) -> List[Dict[str, Any]]:
 # Column names are matched loosely, so most exports work without editing.
 
 SUPPLEMENTAL_PATH = DATA_DIR / "supplemental.csv"
+SUPPLEMENTAL_XLSX = DATA_DIR / "supplemental.xlsx"
+SKIPTRACE_IMPORT_PATHS = [DATA_DIR / "skiptrace_import.csv",
+                          DASH_DIR / "skiptrace_import.csv"]
 
 SUPP_HINTS = {
     "owner":        ["owner", "owner name", "owner 1", "owner1", "ownername",
@@ -3642,17 +3645,45 @@ class SupplementalIndex:
         self.by_address: Dict[str, Dict[str, Any]] = {}
         self.by_parcel: Dict[str, Dict[str, Any]] = {}
 
+    @staticmethod
+    def _rows_from_xlsx(path: Path) -> Tuple[List[str], List[Dict[str, Any]]]:
+        """Read a spreadsheet export. PropStream hands out .xlsx, not .csv."""
+        try:
+            import openpyxl  # noqa: PLC0415
+        except ImportError:
+            log.warning("Found %s but openpyxl is not installed, so it cannot be "
+                        "read. Either add openpyxl to requirements.txt or save "
+                        "the file as CSV instead.", path.name)
+            return [], []
+        wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+        ws = wb.active
+        it = ws.iter_rows(values_only=True)
+        header = [clean_text(h) for h in next(it, ()) if h is not None]
+        out = []
+        for row in it:
+            out.append({header[i]: row[i] for i in range(min(len(header), len(row)))})
+        return header, out
+
     def load(self, path: Path = SUPPLEMENTAL_PATH) -> None:
+        if not path.exists() and SUPPLEMENTAL_XLSX.exists():
+            path = SUPPLEMENTAL_XLSX
         if not path.exists():
             return
         try:
-            text = path.read_text(encoding="utf-8-sig", errors="replace")
-            reader = csv.DictReader(io.StringIO(text))
-            colmap = {c: _supp_column(c) for c in (reader.fieldnames or [])}
+            if path.suffix.lower() in (".xlsx", ".xlsm"):
+                fieldnames, raw_rows = self._rows_from_xlsx(path)
+                reader: Any = raw_rows
+                reader_fieldnames = fieldnames
+            else:
+                text = path.read_text(encoding="utf-8-sig", errors="replace")
+                dr = csv.DictReader(io.StringIO(text))
+                reader = dr
+                reader_fieldnames = dr.fieldnames or []
+            colmap = {c: _supp_column(c) for c in reader_fieldnames}
             mapped = {v for v in colmap.values() if v}
             if not mapped:
                 log.warning("Supplemental file has no columns I recognise: %s",
-                            ", ".join((reader.fieldnames or [])[:8]))
+                            ", ".join(reader_fieldnames[:8]))
                 return
 
             for raw in reader:
@@ -4307,6 +4338,71 @@ def export_ghl_csv(records: List[Dict[str, Any]]) -> None:
         log.info("Wrote %s (%d rows)", path.relative_to(REPO_ROOT), written)
 
 
+def write_skiptrace_import(records: List[Dict[str, Any]]) -> None:
+    """
+    Write every lead with a property address in the skip tracer's template:
+
+        Address,City,State,Zip,Tag
+        989 Montreal Road E,Clarkston,GA,30021,Pre-Foreclosure
+
+    The Tag carries the lead type, so once a deal closes you can see what
+    brought it in without going back to look up which list it came from.
+
+    One row per property. Where several distress signals sit on the same house,
+    the tag names the strongest of them -- a foreclosure with a lien on it
+    should read as a foreclosure, not as whichever document was filed last.
+    """
+    best: Dict[str, Dict[str, Any]] = {}
+    for rec in records:
+        street = clean_text(rec.get("prop_address"))
+        if not street:
+            continue
+        key = address_key(street, rec.get("prop_zip")) or normalize_address(street)
+        if not key:
+            continue
+        cur = best.get(key)
+        if cur is None:
+            best[key] = rec
+            continue
+        # Prefer the more serious category; fall back to the better score.
+        w_new = CATEGORY_WEIGHT.get(rec.get("cat", ""), 0)
+        w_cur = CATEGORY_WEIGHT.get(cur.get("cat", ""), 0)
+        if w_new > w_cur or (w_new == w_cur and
+                             (rec.get("score") or 0) > (cur.get("score") or 0)):
+            best[key] = rec
+
+    rows = sorted(best.values(), key=lambda r: -(r.get("score") or 0))
+    if not rows:
+        log.info("No addresses to skip trace this run")
+        return
+
+    buf = io.StringIO()
+    writer = csv.writer(buf)
+    writer.writerow(["Address", "City", "State", "Zip", "Tag"])
+    tags: Dict[str, int] = defaultdict(int)
+    for rec in rows:
+        tag = clean_text(rec.get("cat_label")) or "Motivated Seller"
+        tags[tag] += 1
+        writer.writerow([
+            clean_text(rec.get("prop_address")),
+            clean_text(rec.get("prop_city")),
+            clean_text(rec.get("prop_state")) or STATE_ABBR,
+            clean_text(rec.get("prop_zip"))[:5],
+            tag,
+        ])
+
+    blob = buf.getvalue()
+    for path in SKIPTRACE_IMPORT_PATHS:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_suffix(".csv.tmp")
+        tmp.write_text(blob, encoding="utf-8")
+        os.replace(tmp, path)
+        log.info("Wrote %s (%d addresses ready to skip trace)",
+                 path.relative_to(REPO_ROOT), len(rows))
+    for tag, n in sorted(tags.items(), key=lambda kv: -kv[1]):
+        log.info("    %-32s %d", tag, n)
+
+
 def push_to_gohighlevel(records: List[Dict[str, Any]]) -> None:
     """
     Optional. Runs only when both env vars are set; the CSV export never depends
@@ -4610,6 +4706,7 @@ async def run_all() -> int:
     # --- 6. Output ----------------------------------------------------------
     payload = write_outputs(all_records, start, end)
     export_ghl_csv([shape_record(r) for r in all_records])
+    write_skiptrace_import([shape_record(r) for r in all_records])
     push_to_gohighlevel([shape_record(r) for r in all_records])
 
     save_seen(all_records, prior_seen)

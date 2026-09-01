@@ -213,6 +213,10 @@ input[type=range]{ width:100%; accent-color:var(--survey); height:22px; cursor:p
 .btn:hover{ border-color:var(--ink-faint); }
 .btn-go{ background:var(--survey); border-color:var(--survey); color:#fff; }
 .btn-go:hover{ background:#265949; border-color:#265949; }
+/* Second export: same weight, different job, so it reads as an alternative
+   rather than a lesser option. */
+.btn-alt{ background:var(--brass); border-color:var(--brass); color:#fff; }
+.btn-alt:hover{ background:var(--brass-dark); border-color:var(--brass-dark); }
 .spacer{ flex:1 1 auto; }
 .actions{ display:flex; gap:10px; flex:0 0 auto; }
 .count{
@@ -378,7 +382,11 @@ footer{
       <div class="spacer"></div>
       <div class="actions">
         <button class="btn" id="reset" type="button">Clear filters</button>
-        <a class="btn btn-go" id="csv" href="ghl_leads.csv" download>Download CRM file</a>
+        <a class="btn btn-go" id="csv" href="ghl_leads.csv" download
+           title="Owner names, mailing addresses, scores and flags">Full export</a>
+        <a class="btn btn-alt" id="skip" href="skiptrace_import.csv" download
+           title="Address, City, State, Zip and lead type -- ready for the skip tracer"
+           >Skip trace list</a>
       </div>
     </div>
   </div>
