@@ -1,12 +1,27 @@
 {
-  "fetched_at": "2026-09-08T11:33:52.753653+00:00",
+  "fetched_at": "2026-09-08T19:14:53.227677-04:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
     "start": "2026-09-05",
     "end": "2026-09-08"
   },
-  "total": 263,
-  "with_address": 259,
+  "run_window": {
+    "start": "2026-09-05",
+    "end": "2026-09-08"
+  },
+  "archive_range": {
+    "start": "2026-09-08",
+    "end": "2026-09-08"
+  },
+  "filed_range": {
+    "start": "2026-08-14",
+    "end": "2026-09-08"
+  },
+  "new_this_run": 56,
+  "archive_total": 319,
+  "dashboard_days": 120,
+  "total": 319,
+  "with_address": 279,
   "sources_report": {
     "arcgis_parcels": {
       "ok": true,
@@ -19,9 +34,9 @@
       "error": ""
     },
     "landmarkweb": {
-      "ok": false,
-      "count": 0,
-      "error": "ran but found no records"
+      "ok": true,
+      "count": 56,
+      "error": ""
     },
     "legal_notices": {
       "ok": true,
@@ -35,6 +50,44 @@
     }
   },
   "records": [
+    {
+      "doc_num": "2026091773",
+      "doc_type": "FORECLOSURE",
+      "filed": "2026-09-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "IDEAL PROPERTY LLC",
+      "grantee": "TRIDENT REALTY INVESTMENTS ATLAS SPV LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:190 LOT:16 SUB:BURGESS HILLS Parcel: 15 190 01 044 Tax District: 04 STREETNUM:1753 STREET:LEE SUFF:ST CITY:DECATUR STATE:GA ZIP:30035",
+      "parcel_id": "15 190 01 044",
+      "prop_address": "1753 Lee Street Decatur, GA 30035",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30035",
+      "mail_address": "190 GRAYLAND CREEK DR",
+      "mail_city": "LAWRENCEVILLE",
+      "mail_state": "GA",
+      "mail_zip": "30046",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Pre-foreclosure",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 79,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
     {
       "doc_num": "26-R30266301-OCT",
       "doc_type": "Tax Sale / FiFa (DEK)",
@@ -68,7 +121,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22452187-OCT",
@@ -103,7 +158,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30266586-OCT",
@@ -139,7 +196,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30266624-OCT",
@@ -174,7 +233,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30266638-OCT",
@@ -209,7 +270,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30266701-OCT",
@@ -245,7 +308,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30266828-OCT",
@@ -280,7 +345,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30108789-OCT",
@@ -315,7 +382,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30266882-OCT",
@@ -350,7 +419,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30035779-OCT",
@@ -386,7 +457,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22453185-OCT",
@@ -422,7 +495,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22453186-OCT",
@@ -458,7 +533,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30015871-OCT",
@@ -494,7 +571,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30213716-OCT",
@@ -530,7 +609,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30213717-OCT",
@@ -566,7 +647,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30213718-OCT",
@@ -602,7 +685,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267166-OCT",
@@ -637,7 +722,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267308-OCT",
@@ -672,7 +759,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267320-OCT",
@@ -707,7 +796,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267334-OCT",
@@ -743,7 +834,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267422-OCT",
@@ -779,7 +872,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267427-OCT",
@@ -815,7 +910,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267428-OCT",
@@ -851,7 +948,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267429-OCT",
@@ -887,7 +986,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267430-OCT",
@@ -923,7 +1024,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267769-OCT",
@@ -958,7 +1061,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267772-OCT",
@@ -993,7 +1098,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30188807-OCT",
@@ -1029,7 +1136,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30214436-OCT",
@@ -1065,7 +1174,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22455892-OCT",
@@ -1100,7 +1211,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30268316-OCT",
@@ -1135,7 +1248,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30268328-OCT",
@@ -1171,7 +1286,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30268489-OCT",
@@ -1207,7 +1324,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30268597-OCT",
@@ -1242,7 +1361,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30214972-OCT",
@@ -1278,7 +1399,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30214973-OCT",
@@ -1314,7 +1437,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30268945-OCT",
@@ -1350,7 +1475,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269247-OCT",
@@ -1385,7 +1512,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30215505-OCT",
@@ -1421,7 +1550,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269479-OCT",
@@ -1457,7 +1588,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269482-OCT",
@@ -1493,7 +1626,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283753-OCT",
@@ -1529,7 +1664,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283754-OCT",
@@ -1565,7 +1702,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283758-OCT",
@@ -1601,7 +1740,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269643-OCT",
@@ -1637,7 +1778,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269679-OCT",
@@ -1673,7 +1816,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269851-OCT",
@@ -1708,7 +1853,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30195460-OCT",
@@ -1743,7 +1890,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269963-OCT",
@@ -1779,7 +1928,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269965-OCT",
@@ -1815,7 +1966,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30231703-OCT",
@@ -1850,7 +2003,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270207-OCT",
@@ -1885,7 +2040,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283845-OCT",
@@ -1921,7 +2078,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283846-OCT",
@@ -1957,7 +2116,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270371-OCT",
@@ -1992,7 +2153,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270396-OCT",
@@ -2027,7 +2190,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30032482-OCT",
@@ -2062,7 +2227,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270431-OCT",
@@ -2097,7 +2264,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270457-OCT",
@@ -2132,7 +2301,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270482-OCT",
@@ -2167,7 +2338,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283936-OCT",
@@ -2203,7 +2376,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283961-OCT",
@@ -2239,7 +2414,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283979-OCT",
@@ -2274,7 +2451,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283995-OCT",
@@ -2310,7 +2489,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284009-OCT",
@@ -2346,7 +2527,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284014-OCT",
@@ -2381,7 +2564,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284015-OCT",
@@ -2416,7 +2601,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284019-OCT",
@@ -2451,7 +2638,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284020-OCT",
@@ -2487,7 +2676,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284006-OCT",
@@ -2523,7 +2714,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284031-OCT",
@@ -2558,7 +2751,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284032-OCT",
@@ -2593,7 +2788,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284033-OCT",
@@ -2628,7 +2825,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284038-OCT",
@@ -2663,7 +2862,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284117-OCT",
@@ -2699,7 +2900,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284118-OCT",
@@ -2735,7 +2938,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270700-OCT",
@@ -2771,7 +2976,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270835-OCT",
@@ -2806,7 +3013,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270934-OCT",
@@ -2841,7 +3050,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271089-OCT",
@@ -2876,7 +3087,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271109-OCT",
@@ -2912,7 +3125,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30217078-OCT",
@@ -2947,7 +3162,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271340-OCT",
@@ -2982,7 +3199,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271343-OCT",
@@ -3017,7 +3236,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284183-OCT",
@@ -3052,7 +3273,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284214-OCT",
@@ -3087,7 +3310,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284226-OCT",
@@ -3122,7 +3347,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284317-OCT",
@@ -3157,7 +3384,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271829-OCT",
@@ -3192,7 +3421,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271885-OCT",
@@ -3228,7 +3459,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30039772-OCT",
@@ -3264,7 +3497,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30039773-OCT",
@@ -3300,7 +3535,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284709-OCT",
@@ -3336,7 +3573,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30272397-OCT",
@@ -3372,7 +3611,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30272485-OCT",
@@ -3407,7 +3648,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22463436-OCT",
@@ -3443,7 +3686,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22463438-OCT",
@@ -3479,7 +3724,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30272539-OCT",
@@ -3515,7 +3762,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30272697-OCT",
@@ -3551,7 +3800,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30272756-OCT",
@@ -3586,7 +3837,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30218446-OCT",
@@ -3622,7 +3875,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30273040-OCT",
@@ -3658,7 +3913,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30273129-OCT",
@@ -3694,7 +3951,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30273617-OCT",
@@ -3729,7 +3988,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30253526-OCT",
@@ -3764,7 +4025,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30273713-OCT",
@@ -3799,7 +4062,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30273821-OCT",
@@ -3835,7 +4100,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274067-OCT",
@@ -3871,7 +4138,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274156-OCT",
@@ -3907,7 +4176,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274515-OCT",
@@ -3942,7 +4213,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30254437-OCT",
@@ -3978,7 +4251,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30254413-OCT",
@@ -4014,7 +4289,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30254438-OCT",
@@ -4050,7 +4327,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274622-OCT",
@@ -4086,7 +4365,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274624-OCT",
@@ -4122,7 +4403,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274626-OCT",
@@ -4158,7 +4441,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30069291-OCT",
@@ -4193,7 +4478,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30069292-OCT",
@@ -4228,7 +4515,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22466746-OCT",
@@ -4264,7 +4553,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22466747-OCT",
@@ -4300,7 +4591,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274937-OCT",
@@ -4336,7 +4629,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041416-OCT",
@@ -4372,7 +4667,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041417-OCT",
@@ -4408,7 +4705,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041418-OCT",
@@ -4444,7 +4743,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041419-OCT",
@@ -4480,7 +4781,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041420-OCT",
@@ -4516,7 +4819,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041421-OCT",
@@ -4552,7 +4857,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041424-OCT",
@@ -4588,7 +4895,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041425-OCT",
@@ -4624,7 +4933,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041426-OCT",
@@ -4660,7 +4971,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041427-OCT",
@@ -4696,7 +5009,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041428-OCT",
@@ -4732,7 +5047,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041429-OCT",
@@ -4768,7 +5085,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041725-OCT",
@@ -4804,7 +5123,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041726-OCT",
@@ -4840,7 +5161,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041727-OCT",
@@ -4876,7 +5199,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041728-OCT",
@@ -4912,7 +5237,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041729-OCT",
@@ -4948,7 +5275,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041730-OCT",
@@ -4984,7 +5313,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041732-OCT",
@@ -5020,7 +5351,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30236324-OCT",
@@ -5056,7 +5389,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041734-OCT",
@@ -5092,7 +5427,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041735-OCT",
@@ -5128,7 +5465,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041736-OCT",
@@ -5164,7 +5503,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041737-OCT",
@@ -5200,7 +5541,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041738-OCT",
@@ -5236,7 +5579,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275006-OCT",
@@ -5271,7 +5616,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275024-OCT",
@@ -5306,7 +5653,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275180-OCT",
@@ -5342,7 +5691,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30041276-OCT",
@@ -5378,7 +5729,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30237068-OCT",
@@ -5414,7 +5767,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30237069-OCT",
@@ -5450,7 +5805,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275694-OCT",
@@ -5486,7 +5843,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30255588-OCT",
@@ -5522,7 +5881,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30075137-OCT",
@@ -5557,7 +5918,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30064153-OCT",
@@ -5592,7 +5955,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275847-OCT",
@@ -5627,7 +5992,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30098714-OCT",
@@ -5662,7 +6029,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30098715-OCT",
@@ -5697,7 +6066,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275864-OCT",
@@ -5733,7 +6104,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276216-OCT",
@@ -5768,7 +6141,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276269-OCT",
@@ -5804,7 +6179,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30256350-OCT",
@@ -5839,7 +6216,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276552-OCT",
@@ -5875,7 +6254,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276749-OCT",
@@ -5910,7 +6291,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276762-OCT",
@@ -5945,7 +6328,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276768-OCT",
@@ -5980,7 +6365,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276786-OCT",
@@ -6016,7 +6403,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30179852-OCT",
@@ -6051,7 +6440,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277017-OCT",
@@ -6086,7 +6477,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30179855-OCT",
@@ -6121,7 +6514,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277021-OCT",
@@ -6156,7 +6551,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30179863-OCT",
@@ -6191,7 +6588,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277036-OCT",
@@ -6226,7 +6625,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277039-OCT",
@@ -6261,7 +6662,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30195065-OCT",
@@ -6296,7 +6699,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277075-OCT",
@@ -6331,7 +6736,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277076-OCT",
@@ -6366,7 +6773,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277077-OCT",
@@ -6401,7 +6810,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22470928-OCT",
@@ -6436,7 +6847,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22470929-OCT",
@@ -6471,7 +6884,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277124-OCT",
@@ -6506,7 +6921,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277167-OCT",
@@ -6541,7 +6958,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277171-OCT",
@@ -6576,7 +6995,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277450-OCT",
@@ -6612,7 +7033,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277476-OCT",
@@ -6647,7 +7070,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277547-OCT",
@@ -6682,7 +7107,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277623-OCT",
@@ -6717,7 +7144,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30257535-OCT",
@@ -6752,7 +7181,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30257536-OCT",
@@ -6787,7 +7218,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277788-OCT",
@@ -6822,7 +7255,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30079757-OCT",
@@ -6857,7 +7292,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30080436-OCT",
@@ -6892,7 +7329,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277866-OCT",
@@ -6928,7 +7367,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30207553-OCT",
@@ -6963,7 +7404,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278010-OCT",
@@ -6998,7 +7441,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30205656-OCT",
@@ -7033,7 +7478,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278038-OCT",
@@ -7069,7 +7516,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278093-OCT",
@@ -7104,7 +7553,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30181342-OCT",
@@ -7139,7 +7590,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278747-OCT",
@@ -7174,7 +7627,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278875-OCT",
@@ -7210,7 +7665,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30007261-OCT",
@@ -7245,7 +7702,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278885-OCT",
@@ -7281,7 +7740,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278890-OCT",
@@ -7316,7 +7777,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278900-OCT",
@@ -7351,7 +7814,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30279020-OCT",
@@ -7386,7 +7851,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30279534-OCT",
@@ -7422,7 +7889,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30034762-OCT",
@@ -7458,7 +7927,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30184297-OCT",
@@ -7493,7 +7964,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30280895-OCT",
@@ -7528,7 +8001,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30280980-OCT",
@@ -7564,7 +8039,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30280981-OCT",
@@ -7600,7 +8077,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30143925-OCT",
@@ -7636,7 +8115,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30143927-OCT",
@@ -7672,7 +8153,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30260795-OCT",
@@ -7707,7 +8190,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30281548-OCT",
@@ -7742,7 +8227,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R22476421-OCT",
@@ -7777,7 +8264,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30281647-OCT",
@@ -7813,7 +8302,9 @@
         "LLC / corp owner",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30282046-OCT",
@@ -7848,7 +8339,9 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30282605-OCT",
@@ -7883,7 +8376,189 @@
         "Tax sale",
         "Absentee owner"
       ],
-      "score": 74
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091802",
+      "doc_type": "FORECLOSURE",
+      "filed": "2026-09-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "ALI SHAFIK KHAN AYUB",
+      "grantee": "CARPENTER DRIVE CAPITAL LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:225 LOT:16 BLK:B SUB:GRANITE SPRINGS Parcel: 15 225 01 026 Tax District: 04 STREETNUM:932 STREET:GRANITE SPRINGS SUFF:LN CITY:STYONE MOUNTAIN STATE:GA ZIP:30083",
+      "parcel_id": "15 225 01 026",
+      "prop_address": "932 Granite Springs Lane Stone Mountain, GA 30083",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30083",
+      "mail_address": "932 GRANITE SPRINGS LN",
+      "mail_city": "STONE MOUNTAIN",
+      "mail_state": "GA",
+      "mail_zip": "30083",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 73,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091661",
+      "doc_type": "FORECLOSURE",
+      "filed": "2026-09-06",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "WALKER DAVID MONTEZ",
+      "grantee": "ROCKET MORTGAGE LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:71 LOT:167 SUB:WALDROP STATION COM:PHASE II Parcel: 15 071 04 022 Tax District: 04 STREETNUM:3332 STREET:WALDROP SUFF:TRL CITY:DECATUR STATE:GA ZIP:30034",
+      "parcel_id": "15 071 04 022",
+      "prop_address": "3332 Waldrop Trail Decatur, GA 30034",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30034",
+      "mail_address": "3332 WALDROP TRL",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30034",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 73,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091664",
+      "doc_type": "FORECLOSURE",
+      "filed": "2026-09-06",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "GRAY WANDA R",
+      "grantee": "DIYA CAPITAL LLC",
+      "amount": null,
+      "legal": "DIS:16 LAND:188 LOT:119 SUB:CREEKSIDE VILLAGE TOWNHOMES COM:PHASE 1A Parcel: 16 188 02 170 Tax District:04",
+      "parcel_id": "16 188 02 170",
+      "prop_address": "7635 Gray Pointe Drive Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "7635 GRAY POINTE DR",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 73,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091738",
+      "doc_type": "DEED - FROM ESTATE",
+      "filed": "2026-09-08",
+      "cat": "PRO",
+      "cat_label": "Probate / Estate",
+      "owner": "LEATHERS HOWARD FRANKLIN JR LEATHERS ELLEN ELIZABETH ...",
+      "grantee": "DOWNTON JENNY LEATHERS",
+      "amount": null,
+      "legal": "DIS:15 LAND:67 LOT:5 BLK:B UNI:1 SUB:WICKLOW ACRES Parcel: 15 067 03 005 Tax District: 04 STREETNUM:4170 STREET:DUNMORE SUFF:RD STATE:GA DIS:15 LAND:67 LOT:6 BLK:B UNI:1 SUB:WICKLOW ACRES Parcel: 15 067 03 005 Tax District: 04 STREETNUM:4170 STREET:DUNMORE SUFF:RD STATE:GA DIS:15 LAND:94 LOT:5 BLK:B UNI:1 SUB:WICKLOW ACRES Tax District: 04 STREETNUM:4170 STREET:DUNMORE SUFF:RD STATE:GA DIS:15 LAND:94 LOT:6 BLK:B UNI:1 SUB:WICKLOW ACRES Tax District: 04 STREETNUM:4170 STREET:DUNMORE SUFF:RD STATE:GA",
+      "parcel_id": "15 067 03 005",
+      "prop_address": "4170 Dunmore Road Decatur, GA 30034",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30034",
+      "mail_address": "4170 DUNMORE RD",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30034",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Probate / estate",
+        "New this week"
+      ],
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091873",
+      "doc_type": "DEED - FROM ESTATE",
+      "filed": "2026-09-08",
+      "cat": "PRO",
+      "cat_label": "Probate / Estate",
+      "owner": "TANG DUC",
+      "grantee": "THICH MUOI",
+      "amount": null,
+      "legal": "DIS:18 LAND:43 LOT:10 BLK:A UNI:II SUB:FLINTRIDGE FORREST Parcel: 18 043 02 052 Tax District: 04 STREETNUM:4019 STREET:FLINTRIDGE SUFF:DR CITY:STONE MOUNTAIN STATE:GA ZIP:30083",
+      "parcel_id": "18 043 02 052",
+      "prop_address": "4019 Flintridge Drive Stone Mountain, GA 30083",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30083",
+      "mail_address": "4019 FLINTRIDGE DR",
+      "mail_city": "STONE MOUNTAIN",
+      "mail_state": "GA",
+      "mail_zip": "30083",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Probate / estate",
+        "New this week"
+      ],
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267027-OCT",
@@ -7917,7 +8592,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267157-OCT",
@@ -7951,7 +8628,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30267306-OCT",
@@ -7985,7 +8664,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30268465-OCT",
@@ -8019,7 +8700,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30268746-OCT",
@@ -8053,7 +8736,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30230484-OCT",
@@ -8087,7 +8772,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30269727-OCT",
@@ -8121,7 +8808,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270084-OCT",
@@ -8155,7 +8844,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270367-OCT",
@@ -8189,7 +8880,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283899-OCT",
@@ -8223,7 +8916,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30283911-OCT",
@@ -8257,7 +8952,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30250616-OCT",
@@ -8291,7 +8988,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270824-OCT",
@@ -8325,7 +9024,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30270925-OCT",
@@ -8359,7 +9060,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271183-OCT",
@@ -8393,7 +9096,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284360-OCT",
@@ -8427,7 +9132,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30284641-OCT",
@@ -8461,7 +9168,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30271675-OCT",
@@ -8495,7 +9204,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30272640-OCT",
@@ -8529,7 +9240,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30272871-OCT",
@@ -8563,7 +9276,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30273119-OCT",
@@ -8597,7 +9312,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30273179-OCT",
@@ -8631,7 +9348,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30274496-OCT",
@@ -8665,7 +9384,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275271-OCT",
@@ -8699,7 +9420,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30195041-OCT",
@@ -8733,7 +9456,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275402-OCT",
@@ -8767,7 +9492,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30275646-OCT",
@@ -8801,7 +9528,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30256150-OCT",
@@ -8835,7 +9564,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276562-OCT",
@@ -8869,7 +9600,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30276647-OCT",
@@ -8903,7 +9636,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277026-OCT",
@@ -8938,7 +9673,9 @@
         "Tax sale",
         "LLC / corp owner"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30277959-OCT",
@@ -8972,7 +9709,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30278971-OCT",
@@ -9006,7 +9745,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30279114-OCT",
@@ -9040,7 +9781,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "26-R30279623-OCT",
@@ -9074,7 +9817,9 @@
         "Tax delinquent",
         "Tax sale"
       ],
-      "score": 68
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "GPN-420-188016",
@@ -9107,7 +9852,9 @@
       "flags": [
         "Pre-foreclosure"
       ],
-      "score": 65
+      "score": 65,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "GPN-420-187994",
@@ -9140,7 +9887,45 @@
       "flags": [
         "Pre-foreclosure"
       ],
-      "score": 65
+      "score": 65,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091659",
+      "doc_type": "ESTATE DOCUMENTATION",
+      "filed": "2026-09-05",
+      "cat": "PRO",
+      "cat_label": "Probate / Estate",
+      "owner": "FUNK MELANIE M",
+      "grantee": "DECATUR CITY",
+      "amount": null,
+      "legal": "DIS:18 LAND:6 LOT:187 SEC:16 2 SUB:CEMETERY PROPERTY OF CITY OF DECATUR Parcel: __ ___ __ ___ DIS:18 LAND:6 LOT:188 SEC:16 2 SUB:CEMETERY PROPERTY OF CITY OF DECATUR Parcel: __ ___ __ ___",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Probate / estate",
+        "New this week"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "GPN-420-187908",
@@ -9174,7 +9959,9 @@
         "Pre-foreclosure",
         "LLC / corp owner"
       ],
-      "score": 60
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "GPN-420-187909",
@@ -9208,7 +9995,9 @@
         "Pre-foreclosure",
         "LLC / corp owner"
       ],
-      "score": 60
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "GPN-350-187910",
@@ -9242,7 +10031,9 @@
         "Pre-foreclosure",
         "Unknown heirs / unsettled estate"
       ],
-      "score": 60
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "GPN-350-187800",
@@ -9276,7 +10067,375 @@
         "Tax delinquent",
         "Unknown heirs / unsettled estate"
       ],
-      "score": 60
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091831",
+      "doc_type": "ASSIGNMENT OF LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "GUICE SERVICES INC ROOTER PROXPRESS ...",
+      "grantee": "HARRIS PAULETTE HARRIS RICHARD ...",
+      "amount": null,
+      "legal": "Parcel: 16 019 01 006 Tax District: 80 STREETNUM:4077 STREET:PANOLA SUFF:RD CITY:STONECREST STATE:GA ZIP:30038",
+      "parcel_id": "16 019 01 006",
+      "prop_address": "4077 Panola Road Lithonia, GA 30038",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30038",
+      "mail_address": "1658 BENHAM DR",
+      "mail_city": "SNELLVILLE",
+      "mail_state": "GA",
+      "mail_zip": "30078",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 59,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091846",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "LAWN DART LLC JOHNSON KEITH ...",
+      "grantee": "LAWN DART LLC JOHNSON KEITH ...",
+      "amount": null,
+      "legal": "DIS:18 LAND:68 LOT:6511 BLK:651B SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6511 BLK:657 SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6511 BLK:671 SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6573 BLK:651B SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6573 BLK:657 SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6573 BLK:671 SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6719 BLK:651B SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6719 BLK:657 SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104 DIS:18 LAND:68 LOT:6719 BLK:671 SUB:BRANNON HILL Parcel: 18 068 11 091 Tax District:T104",
+      "parcel_id": "18 068 11 091",
+      "prop_address": "6719 Hesters Court Clarkston, GA 30021",
+      "prop_city": "Clarkston",
+      "prop_state": "GA",
+      "prop_zip": "30021",
+      "mail_address": "951 EDGEWOOD AVE NE",
+      "mail_city": "ATLANTA",
+      "mail_state": "GA",
+      "mail_zip": "30307",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 59,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091744",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-09-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "REYNOLDS LASHAUN P",
+      "grantee": "CROSS RIVER BANK",
+      "amount": null,
+      "legal": "Parcel: 15 041 01 156 Tax District: 04 STREETNUM:2922 STREET:CEDAR TRACE SUFF:DR CITY:ELLENWOOD STATE:GA ZIP:30294",
+      "parcel_id": "15 041 01 156",
+      "prop_address": "2922 Cedar Trace Drive Ellenwood, GA 30294",
+      "prop_city": "Ellenwood",
+      "prop_state": "GA",
+      "prop_zip": "30294",
+      "mail_address": "2922 CEDAR TRACE DR",
+      "mail_city": "ELLENWOOD",
+      "mail_state": "GA",
+      "mail_zip": "30294",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Mechanic lien",
+        "New this week"
+      ],
+      "score": 58,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091796",
+      "doc_type": "MECHANIC'S AND MATERIALMANS LIEN",
+      "filed": "2026-09-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "DION SPENCER",
+      "grantee": "COUNTERTOP CENTRAL INC",
+      "amount": null,
+      "legal": "Parcel: 16 187 02 028 Tax District: 04 STREETNUM:7400 STREET:IVORY OAK SUFF:LN CITY:LITHONIA STATE:GA ZIP:30058",
+      "parcel_id": "16 187 02 028",
+      "prop_address": "7400 Ivory Oak Lane Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "7400 IVORY OAK LN",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Mechanic lien",
+        "New this week"
+      ],
+      "score": 58,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091867",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-09-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "BLUMEIER CHARLES",
+      "grantee": "RHA LLC",
+      "amount": null,
+      "legal": "Parcel: 15 010 01 024 Tax District: 04 STREETNUM:2430 STREET:YOLANDA SUFF:TRL CITY:ELLENWOOD STATE:GA ZIP:30294",
+      "parcel_id": "15 010 01 024",
+      "prop_address": "2430 Yolanda Trail Ellenwood, GA 30294",
+      "prop_city": "Ellenwood",
+      "prop_state": "GA",
+      "prop_zip": "30294",
+      "mail_address": "2430 YOLANDA TRL",
+      "mail_city": "ELLENWOOD",
+      "mail_state": "GA",
+      "mail_zip": "30294",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Mechanic lien",
+        "New this week"
+      ],
+      "score": 58,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091710",
+      "doc_type": "GDOR RELEASE",
+      "filed": "2026-09-08",
+      "cat": "TAXLIEN",
+      "cat_label": "Tax Lien",
+      "owner": "BIMAN INC CAFE INSTANBUL",
+      "grantee": "GEORGIA STATE DEPT OF REVENUE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Tax lien",
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091711",
+      "doc_type": "GDOR RELEASE",
+      "filed": "2026-09-08",
+      "cat": "TAXLIEN",
+      "cat_label": "Tax Lien",
+      "owner": "WOODS HAROLD",
+      "grantee": "GEORGIA STATE DEPT OF REVENUE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Tax lien",
+        "New this week"
+      ],
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091712",
+      "doc_type": "GDOR RELEASE",
+      "filed": "2026-09-08",
+      "cat": "TAXLIEN",
+      "cat_label": "Tax Lien",
+      "owner": "BURKS ROGER O PORTER KELLIE M",
+      "grantee": "GEORGIA STATE DEPT OF REVENUE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Tax lien",
+        "New this week"
+      ],
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091713",
+      "doc_type": "GDOR RELEASE",
+      "filed": "2026-09-08",
+      "cat": "TAXLIEN",
+      "cat_label": "Tax Lien",
+      "owner": "OLIVER ANDREA D",
+      "grantee": "GEORGIA STATE DEPT OF REVENUE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Tax lien",
+        "New this week"
+      ],
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091717",
+      "doc_type": "GDOR RELEASE",
+      "filed": "2026-09-08",
+      "cat": "TAXLIEN",
+      "cat_label": "Tax Lien",
+      "owner": "CARE FOR ALL HOMECARE LLC CARE FOR ALL",
+      "grantee": "GEORGIA STATE DEPT OF REVENUE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Tax lien",
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     },
     {
       "doc_num": "GPN-350-187619",
@@ -9309,7 +10468,1419 @@
       "flags": [
         "Tax delinquent"
       ],
-      "score": 55
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091792",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "CALLENDER ROCHELLE",
+      "grantee": "COUNTERTOP CENTRAL INC",
+      "amount": null,
+      "legal": "Parcel: 15 093 11 060 Tax District: 04 STREETNUM:3839 STREET:TAWNY BIRCH SUFF:CT CITY:DECATUR STATE:GA ZIP:30034",
+      "parcel_id": "15 093 11 060",
+      "prop_address": "3839 Tawny Birch Court Decatur, GA 30034",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30034",
+      "mail_address": "3839 TAWNY BIRCH CT",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30034",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 53,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091650",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "BARKSDALE EDWARD",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "16 052 01 045",
+      "prop_address": "5552 Wildwood Trail Lithonia, GA 30038",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30038",
+      "mail_address": "5552 WILDWOOD TRL",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30038",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.85,
+      "match_method": "owner_exact",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 52,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091872",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "BROWN LISA ABRAHAM PARRISH GARREN MARLON ...",
+      "grantee": "BRIMER CONSTRUCTION INC R4 RESTORATION",
+      "amount": null,
+      "legal": "DIS:18 LAND:148 LOT:5 SUB:TYLER MANOR Parcel: __ ___ __ ___ STREETNUM:2628 STREET:TYLER MANOR SUFF:CT CITY:DECATUR STATE:GA ZIP:30033",
+      "parcel_id": "",
+      "prop_address": "2628 STREET",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091879",
+      "doc_type": "FIFA (WRIT OF FIERA FACIAS)",
+      "filed": "2026-09-08",
+      "cat": "JUD",
+      "cat_label": "Judgment",
+      "owner": "NICELY RUBY N",
+      "grantee": "LVNV FUNDING LLC SEARS ROEBUCK",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Judgment lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091880",
+      "doc_type": "FIFA (WRIT OF FIERA FACIAS)",
+      "filed": "2026-09-08",
+      "cat": "JUD",
+      "cat_label": "Judgment",
+      "owner": "KYE KENNETH B JR",
+      "grantee": "CAVALRY SPV I LLC",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Judgment lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091881",
+      "doc_type": "FIFA (WRIT OF FIERA FACIAS)",
+      "filed": "2026-09-08",
+      "cat": "JUD",
+      "cat_label": "Judgment",
+      "owner": "CULP KIMBERLY Y",
+      "grantee": "CAVALRY SPV I LLC CITIBANK NA",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Judgment lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091882",
+      "doc_type": "FIFA (WRIT OF FIERA FACIAS)",
+      "filed": "2026-09-08",
+      "cat": "JUD",
+      "cat_label": "Judgment",
+      "owner": "CUNNINGHAM CORY",
+      "grantee": "NATIONAL AUTO SALES INC",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Judgment lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091883",
+      "doc_type": "FIFA (WRIT OF FIERA FACIAS)",
+      "filed": "2026-09-08",
+      "cat": "JUD",
+      "cat_label": "Judgment",
+      "owner": "CALLIS SCOTT D",
+      "grantee": "CAVALRY SPV I LLC CITIBANK NA",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Judgment lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091648",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "WALKER SHEILA",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "15 108 14 053",
+      "prop_address": "2102 Shoals Way Decatur, GA 30034",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30034",
+      "mail_address": "2102 SHOALS WAY",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30034",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.6,
+      "match_method": "owner_exact_multi",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091655",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "AUSTIN LAUREN",
+      "grantee": "TRAUMATIC AFTERCARE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "16 089 01 104",
+      "prop_address": "2522 Meadow Brooke Court Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "2522 MEADOW BROOKE CT",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.6,
+      "match_method": "owner_exact_multi",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091708",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "WHITE WILMA JACKSON",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091761",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SMITTICK OCTAVIA",
+      "grantee": "STAT TBI & CONCUSSION DIAGNOSTICS",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091789",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SCHULTE STEPHANIE OLIVO OLIVO SCHULTE STEPHANIE",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091814",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "WIGGINS JOI",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091815",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "WILLIAMS MARKESHIA",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091816",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "RANDOLPH JAYLEN",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091817",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "STROMAN KAMAUNI",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091818",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "THOMPSON RASHAD",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091819",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "CRALL ELISSA",
+      "grantee": "EMORY SAINT JOSEPHS HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091820",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ISON TWANA",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091821",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ODOMS RONISHA",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091863",
+      "doc_type": "ALL NOTICES INCLUDING NOTICE OF COMMENCEMENT",
+      "filed": "2026-09-08",
+      "cat": "NOC",
+      "cat_label": "Notice of Commencement",
+      "owner": "STONEY RIVER CONSTRUCTION SE INC",
+      "grantee": "STONEY RIVER CONSTRUCTION SE INC",
+      "amount": null,
+      "legal": "DIS:18 LAND:46 LOT:14 BLK:3 SUB:ESKIMO HEIGHTS Parcel: 18 046 01 142 Tax District: 04 STREETNUM:636 STREET:WARREN SUFF:AVE CITY:SCOTTDALE STATE:GA ZIP:30079",
+      "parcel_id": "18 046 01 142",
+      "prop_address": "636 Warren Avenue Scottdale, GA 30079",
+      "prop_city": "Scottdale",
+      "prop_state": "GA",
+      "prop_zip": "30079",
+      "mail_address": "4102 CLAIRMONT RD",
+      "mail_city": "ATLANTA",
+      "mail_state": "GA",
+      "mail_zip": "30341",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091868",
+      "doc_type": "LIEN",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ADMIN",
+      "grantee": "GREENLINK SOLUTIONS LLC",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091666",
+      "doc_type": "LIEN",
+      "filed": "2026-09-07",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "MORTON BRUCE",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091660",
+      "doc_type": "LIEN",
+      "filed": "2026-09-06",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "HOWARD ARTECIA",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091646",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "LOCKETT LARIKA",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091647",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SMITH JENAFECA",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091649",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "FRANCIS KINO",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091651",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "KHAI MARIA",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091652",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "YOUNG THERESA",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091653",
+      "doc_type": "LIEN",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "CLOUD DARRELL",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091800",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "CAPITAL MATERIALS INC",
+      "grantee": "EMORY UNIVERSITY",
+      "amount": null,
+      "legal": "DIS:15 LAND:51 STREETNUM:1380 STREET:OXFORD SUFF:RD CITY:ATLANTA STATE:GA ZIP:30332 DIS:15 LAND:52 STREETNUM:1380 STREET:OXFORD SUFF:RD CITY:ATLANTA STATE:GA ZIP:30332 DIS:15 LAND:53 Parcel: 18 053 01 001 Tax District: 61E STREETNUM:1380 STREET:OXFORD SUFF:RD CITY:ATLANTA STATE:GA ZIP:30332 DIS:15 LAND:56 STREETNUM:1380 STREET:OXFORD SUFF:RD CITY:ATLANTA STATE:GA ZIP:30332 DIS:15 LAND:57 STREETNUM:1380 STREET:OXFORD SUFF:RD CITY:ATLANTA STATE:GA ZIP:30332 DIS:15 LAND:58 STREETNUM:1380 STREET:OXFORD SUFF:RD CITY:ATLANTA STATE:GA ZIP:30332 DIS:15 LAND:59 STREETNUM:1380 STREET:OXFORD SUFF:RD CITY:ATLANTA STATE:GA ZIP:30332",
+      "parcel_id": "18 053 01 001",
+      "prop_address": "1380 Oxford Road Atlanta, GA 30322",
+      "prop_city": "Atlanta",
+      "prop_state": "GA",
+      "prop_zip": "30322",
+      "mail_address": "1599 CLIFTON RD NE",
+      "mail_city": "ATLANTA",
+      "mail_state": "GA",
+      "mail_zip": "30322",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 23,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091804",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "CAPITOL MATERIALS INC CAPITAL MATERIALS INC",
+      "grantee": "HS MASTER DEVELOPMENT LLC",
+      "amount": null,
+      "legal": "DIS:18 LAND:348 Parcel: 18 348 04 032 Tax District:S2",
+      "parcel_id": "18 348 04 032",
+      "prop_address": "120 High Street Dunwoody, GA 30346",
+      "prop_city": "Dunwoody",
+      "prop_state": "GA",
+      "prop_zip": "30346",
+      "mail_address": "215 HIGH ST",
+      "mail_city": "BOSTON",
+      "mail_state": "MA",
+      "mail_zip": "2110",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 23,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091767",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "DEWOSKIN CHARLOTTE DEWOSKIN DANIEL E",
+      "grantee": "MAHERALI RWSHMA A 2005 PDL AVE NE LLC",
+      "amount": null,
+      "legal": "Parcel: 15 238 02 023 Tax District:04 Parcel: 15 238 02 024 Tax District:04",
+      "parcel_id": "15 238 02 023",
+      "prop_address": "2005 Ponce De Leon Avenue Atlanta, GA 30307",
+      "prop_city": "Atlanta",
+      "prop_state": "GA",
+      "prop_zip": "30307",
+      "mail_address": "2005 PONCE DE LEON AVE NE",
+      "mail_city": "ATLANTA",
+      "mail_state": "GA",
+      "mail_zip": "30307",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091813",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "EMORY UNIVERSITY HOSPITAL",
+      "grantee": "SCHUBER ISABELLA",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091850",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ALLEGIANCE DECATUR",
+      "grantee": "ROBERTS KENNETH",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091851",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ALLEGIANCE DECATUR",
+      "grantee": "SINGLETON MORGAN",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091864",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SECURITY CREDIT SERVICES LLC",
+      "grantee": "PARKER CLAUDETTE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "LLC / corp owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
+    },
+    {
+      "doc_num": "2026091654",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-09-05",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SUMMIT SURGERY CENTER",
+      "grantee": "ECKELS STEPHANIE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-09-08",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-09-08"
     }
   ]
 }
