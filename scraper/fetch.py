@@ -54,6 +54,7 @@ import time
 import unicodedata
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
@@ -137,6 +138,12 @@ SEEN_STATE_PATH = DATA_DIR / "seen_documents.json"
 UNKNOWN_DOCTYPES_PATH = DATA_DIR / "unmapped_doc_types.json"
 DISCOVERY_PATH = DATA_DIR / "landmark_discovery.json"
 PARCEL_CACHE_PATH = CACHE_DIR / "parcels.json"
+ARCHIVE_PATH = DATA_DIR / "archive.json"
+
+# The dashboard reads a rolling window; the archive keeps everything so an
+# older lead can still be pulled back up. Both are committed by the workflow.
+DASHBOARD_DAYS = int(os.getenv("DASHBOARD_DAYS", "120"))
+ARCHIVE_DAYS = int(os.getenv("ARCHIVE_DAYS", "730"))
 
 # =============================================================================
 # LANDMARKWEB SELECTOR CONFIG
@@ -343,8 +350,22 @@ def record_source_result(name: str, ok: bool, count: int = 0, error: str = "") -
 # GENERIC UTILITIES
 # =============================================================================
 
+EASTERN = ZoneInfo("America/New_York")
+
+
 def utcnow() -> datetime:
     return datetime.now(timezone.utc)
+
+
+def now_et() -> datetime:
+    """Wall-clock time in DeKalb. Every date the pipeline stamps or compares
+    comes from here -- the Action fires on a UTC cron, so UTC dates roll over
+    while it is still yesterday in Georgia."""
+    return datetime.now(EASTERN)
+
+
+def today_et() -> str:
+    return now_et().strftime("%Y-%m-%d")
 
 
 def build_session() -> requests.Session:
@@ -4132,7 +4153,7 @@ OUTPUT_FIELDS = [
     "prop_zip", "mail_address", "mail_city", "mail_state", "mail_zip",
     "owner_occupied", "clerk_url", "source", "foreclosure_sale_date",
     "notice_number", "status", "match_confidence", "match_method",
-    "last_verified", "flags", "score",
+    "last_verified", "flags", "score", "county", "first_seen",
 ]
 
 
@@ -4142,6 +4163,8 @@ def shape_record(rec: Dict[str, Any]) -> Dict[str, Any]:
         value = rec.get(field)
         if field == "prop_state":
             value = value or STATE_ABBR
+        if field == "county":
+            value = value or COUNTY
         if field in ("amount", "score", "owner_occupied", "match_confidence"):
             out[field] = value
         elif field == "flags":
@@ -4161,42 +4184,130 @@ def existing_lead_count() -> int:
     return 0
 
 
-def write_outputs(records: List[Dict[str, Any]], start: datetime, end: datetime) -> Dict[str, Any]:
-    # Never let a bad morning erase a good list. If every source failed but a
-    # previous run published leads, keep those on the dashboard and only stamp
-    # them as stale. Overwriting with an empty file would destroy the CSV the
-    # user is actually calling from.
-    if not records:
+def archive_key(rec: Dict[str, Any]) -> str:
+    """Stable identity for a document across runs and across counties."""
+    county = rec.get("county") or COUNTY
+    doc = clean_text(rec.get("doc_num"))
+    if doc:
+        return f"{county}|{rec.get('source','')}|{doc}"
+    # A few notice sources publish no document number; fall back to content.
+    return f"{county}|" + sha_key(rec.get("source"), rec.get("owner"),
+                                  rec.get("filed"), rec.get("doc_type"),
+                                  rec.get("prop_address"))
+
+
+def merge_archive(shaped: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Fold this run into the running archive and hand back everything we hold.
+
+    Each run only scrapes a few days back, so a file that is overwritten every
+    morning can never answer "show me the last 30 days". The archive is the
+    memory: first sighting of a document sets first_seen and that date never
+    moves, while the rest of the row is refreshed so a later run's better
+    address or score wins.
+    """
+    prior = safe_read_json(ARCHIVE_PATH, []) or []
+    if not isinstance(prior, list):
+        log.warning("Archive at %s was not a list -- starting a fresh one.", ARCHIVE_PATH.name)
+        prior = []
+
+    merged: Dict[str, Dict[str, Any]] = {}
+    for rec in prior:
+        if isinstance(rec, dict):
+            merged[archive_key(rec)] = rec
+
+    today = today_et()
+    added = updated = 0
+    for rec in shaped:
+        key = archive_key(rec)
+        existing = merged.get(key)
+        if existing:
+            rec["first_seen"] = existing.get("first_seen") or rec.get("filed") or today
+            updated += 1
+        else:
+            rec["first_seen"] = rec.get("first_seen") or today
+            added += 1
+        merged[key] = rec
+
+    cutoff = (now_et() - timedelta(days=ARCHIVE_DAYS)).strftime("%Y-%m-%d")
+
+    def keep(rec: Dict[str, Any]) -> bool:
+        stamp = rec.get("first_seen") or rec.get("filed") or ""
+        return not stamp or stamp >= cutoff
+
+    out = [r for r in merged.values() if keep(r)]
+    dropped = len(merged) - len(out)
+    out.sort(key=lambda r: (-(r.get("score") or 0), _filed_sort_key(r.get("filed"))))
+
+    safe_write_json(ARCHIVE_PATH, out)
+    log.info("Archive: %d new, %d refreshed, %d retired, %d held in total",
+             added, updated, dropped, len(out))
+    return out
+
+
+def write_outputs(records: List[Dict[str, Any]], start: datetime, end: datetime,
+                  archive_input: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
+    """
+    Publish the dashboard file.
+
+    `records` is what the CSV exports care about (today's fresh finds when
+    NEW_ONLY is on). `archive_input` is everything this run saw, fresh or not,
+    which is what gets folded into the archive so history survives.
+    """
+    shaped_all = [shape_record(r) for r in (archive_input
+                                           if archive_input is not None else records)]
+    for rec in shaped_all:
+        rec.setdefault("first_seen", "")
+
+    # Never let a bad morning erase a good list. If every source failed, the
+    # archive still holds yesterday's leads, so publish those rather than an
+    # empty page.
+    archive = merge_archive(shaped_all) if shaped_all else (
+        safe_read_json(ARCHIVE_PATH, []) or [])
+
+    if not archive:
         prior = existing_lead_count()
         if prior:
-            log.warning("No records collected this run -- keeping the %d leads already "
-                        "published rather than overwriting them with an empty file.", prior)
+            log.warning("No records collected this run and no archive yet -- keeping "
+                        "the %d leads already published.", prior)
             for path in RECORDS_JSON_PATHS:
                 blob = safe_read_json(path)
                 if isinstance(blob, dict):
-                    blob["last_attempt_at"] = utcnow().isoformat()
+                    blob["last_attempt_at"] = now_et().isoformat()
                     blob["last_attempt_status"] = "no records collected; showing previous run"
                     blob["sources_report"] = SOURCE_REPORT
                     safe_write_json(path, blob)
             return safe_read_json(RECORDS_JSON_PATHS[0], {}) or {}
 
-    shaped = [shape_record(r) for r in records]
-    # score DESC, then filed DESC (blank dates sink to the bottom of their score tier)
-    shaped.sort(key=lambda r: (-(r.get("score") or 0), _filed_sort_key(r.get("filed"))))
+    cutoff = (now_et() - timedelta(days=DASHBOARD_DAYS)).strftime("%Y-%m-%d")
+    published = [r for r in archive
+                 if (r.get("first_seen") or r.get("filed") or "") >= cutoff] or archive
+
+    stamps = [r.get("first_seen") for r in archive if r.get("first_seen")]
+    filed_dates = [r.get("filed") for r in archive if r.get("filed")]
 
     payload = {
-        "fetched_at": utcnow().isoformat(),
+        "fetched_at": now_et().isoformat(),
         "source": f"{COUNTY} County {STATE_ABBR} Public Records",
         "date_range": {"start": fmt_date(start), "end": fmt_date(end)},
-        "total": len(shaped),
-        "with_address": sum(1 for r in shaped if r.get("prop_address")),
+        "run_window": {"start": fmt_date(start), "end": fmt_date(end)},
+        "archive_range": {"start": min(stamps) if stamps else "",
+                          "end": max(stamps) if stamps else ""},
+        "filed_range": {"start": min(filed_dates) if filed_dates else "",
+                        "end": max(filed_dates) if filed_dates else ""},
+        "new_this_run": len(records),
+        "archive_total": len(archive),
+        "dashboard_days": DASHBOARD_DAYS,
+        "total": len(published),
+        "with_address": sum(1 for r in published if r.get("prop_address")),
         "sources_report": SOURCE_REPORT,
-        "records": shaped,
+        "records": published,
     }
 
     for path in RECORDS_JSON_PATHS:
         safe_write_json(path, payload)
-        log.info("Wrote %s (%d records)", path.relative_to(REPO_ROOT), len(shaped))
+        log.info("Wrote %s (%d records on the dashboard, %d in the archive)",
+                 path.relative_to(REPO_ROOT), len(published), len(archive))
     return payload
 
 
@@ -4499,12 +4610,12 @@ def load_seen() -> Dict[str, str]:
 
 
 def save_seen(records: List[Dict[str, Any]], prior: Dict[str, str]) -> None:
-    today = fmt_date(utcnow().replace(tzinfo=None))
+    today = today_et()
     for rec in records:
         key = rec.get("_notice_dedupe") or f"{rec.get('source','')}|{rec.get('doc_num','')}"
         prior.setdefault(key, rec.get("filed") or today)
     # Trim anything older than a year so the state file cannot grow forever.
-    cutoff = (utcnow() - timedelta(days=365)).strftime("%Y-%m-%d")
+    cutoff = (now_et() - timedelta(days=365)).strftime("%Y-%m-%d")
     trimmed = {k: v for k, v in prior.items() if (v or "9999") >= cutoff}
     safe_write_json(SEEN_STATE_PATH, trimmed)
 
@@ -4574,7 +4685,7 @@ def load_manual_names(path: Path) -> List[Dict[str, Any]]:
 def run_from_names(path: Path) -> int:
     """Turn a list of owner names into a finished, scored lead file."""
     t0 = time.time()
-    end = utcnow().replace(tzinfo=None)
+    end = now_et().replace(tzinfo=None)
     start = end - timedelta(days=LOOKBACK_DAYS)
 
     log.info("=" * 74)
@@ -4627,12 +4738,14 @@ def run_from_names(path: Path) -> int:
 
 async def run_all() -> int:
     t0 = time.time()
-    end = utcnow().replace(tzinfo=None)
+    # Eastern, not UTC: the cron fires at 11:17 UTC, and a UTC clock has already
+    # rolled into tomorrow on any run after 8pm in Georgia.
+    end = now_et().replace(tzinfo=None)
     start = end - timedelta(days=LOOKBACK_DAYS)
 
     log.info("=" * 74)
     log.info("%s County %s motivated seller scraper", COUNTY, STATE_ABBR)
-    log.info("Started %s UTC | window %s .. %s (%d days)",
+    log.info("Started %s ET | window %s .. %s (%d days)",
              end.strftime("%Y-%m-%d %H:%M"), fmt_date(start), fmt_date(end), LOOKBACK_DAYS)
     log.info("Headless=%s  Discovery=%s", HEADLESS, LANDMARK_DISCOVERY)
     log.info("=" * 74)
@@ -4713,6 +4826,10 @@ async def run_all() -> int:
             rec.setdefault("score", 30)
 
     # --- 5b. Keep only what has not been seen before -------------------------
+    # Everything this run saw, before the NEW_ONLY filter. The CSVs want only
+    # what is fresh; the archive wants the lot, or history develops holes on any
+    # day a document is re-seen rather than newly found.
+    everything_seen = list(all_records)
     prior_seen = load_seen()
     if NEW_ONLY and prior_seen:
         def _key(r: Dict[str, Any]) -> str:
@@ -4735,12 +4852,12 @@ async def run_all() -> int:
                  new_today, len(all_records))
 
     # --- 6. Output ----------------------------------------------------------
-    payload = write_outputs(all_records, start, end)
+    payload = write_outputs(all_records, start, end, archive_input=everything_seen)
     export_ghl_csv([shape_record(r) for r in all_records])
     write_skiptrace_import([shape_record(r) for r in all_records])
     push_to_gohighlevel([shape_record(r) for r in all_records])
 
-    save_seen(all_records, prior_seen)
+    save_seen(everything_seen, prior_seen)
     if UNMAPPED_DOC_TYPES:
         prior = set(safe_read_json(UNKNOWN_DOCTYPES_PATH, []) or [])
         combined = sorted(prior | UNMAPPED_DOC_TYPES)

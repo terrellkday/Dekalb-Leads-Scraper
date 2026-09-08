@@ -161,7 +161,41 @@ h1 em{ font-style:italic; color:var(--survey); }
   background:var(--rule); border:1px solid var(--rule);
   border-radius:var(--radius); overflow:hidden;
 }
-.stat{ background:var(--card); padding:13px 15px; }
+.stat{
+  background:var(--card); padding:13px 15px; text-align:left; width:100%;
+  border:0; font:inherit; color:inherit; cursor:pointer;
+  transition:background .12s ease;
+}
+.stat:hover{ background:var(--paper); }
+.stat:focus-visible{ outline:2px solid var(--ink); outline-offset:-2px; }
+.stat[aria-pressed="true"]{ background:var(--ink); }
+.stat[aria-pressed="true"] .stat-n,
+.stat[aria-pressed="true"] .stat-k{ color:var(--paper); }
+.stat[data-role="plain"]{ cursor:default; }
+.stat[data-role="plain"]:hover{ background:var(--card); }
+
+/* ---------- Date chips ------------------------------------ */
+.chips{
+  display:flex; flex-wrap:wrap; gap:6px; align-items:center;
+  margin:18px 0 0;
+}
+.chips-label{
+  font-family:var(--mono); font-size:9.5px; font-weight:500;
+  letter-spacing:.13em; text-transform:uppercase;
+  color:var(--ink-faint); margin-right:4px;
+}
+.chip{
+  font-family:var(--mono); font-size:11px; letter-spacing:.04em;
+  padding:7px 12px; border:1px solid var(--rule); border-radius:999px;
+  background:var(--card); color:var(--ink); cursor:pointer;
+  transition:background .12s ease, border-color .12s ease;
+}
+.chip:hover{ border-color:var(--ink-faint); }
+.chip[aria-pressed="true"]{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
+.chip-note{
+  font-family:var(--mono); font-size:10px; color:var(--ink-faint);
+  margin-left:auto;
+}
 .stat-n{
   font-family:var(--mono); font-size:22px; font-weight:600;
   line-height:1.1; letter-spacing:-.02em;
@@ -339,6 +373,17 @@ footer{
   <div id="hero"></div>
   <div class="strip" id="strip" hidden></div>
 
+  <div class="chips" id="dateChips" hidden>
+    <span class="chips-label">Pulled</span>
+    <button class="chip" type="button" data-since="0">Today</button>
+    <button class="chip" type="button" data-since="1">Yesterday</button>
+    <button class="chip" type="button" data-since="7">7 days</button>
+    <button class="chip" type="button" data-since="14">14 days</button>
+    <button class="chip" type="button" data-since="30">30 days</button>
+    <button class="chip" type="button" data-since="">All time</button>
+    <span class="chip-note" id="chipNote"></span>
+  </div>
+
   <div class="controls" id="controls" hidden>
     <div class="controls-row">
       <div class="field field-search">
@@ -443,11 +488,24 @@ function niceDate(s){
   const d = new Date(+m[1], +m[2]-1, +m[3]);
   return d.toLocaleDateString("en-US",{ month:"short", day:"numeric", year:"numeric" });
 }
-function daysAgo(s){
+/* Dates are counted in Eastern, not in whatever zone the laptop is set to.
+   "Today" has to mean today in DeKalb, or a lead pulled this morning
+   disappears from the Today chip the moment you open this on a trip. */
+const ET_TODAY = new Intl.DateTimeFormat("en-CA", {
+  timeZone:"America/New_York", year:"numeric", month:"2-digit", day:"2-digit"
+}).format(new Date());
+
+function dayNumber(s){
   const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s || "");
-  if(!m) return Infinity;
-  return (Date.now() - new Date(+m[1], +m[2]-1, +m[3]).getTime()) / 86400000;
+  return m ? Date.UTC(+m[1], +m[2]-1, +m[3]) / 86400000 : null;
 }
+function daysAgo(s){
+  const d = dayNumber(s);
+  return d === null ? Infinity : dayNumber(ET_TODAY) - d;
+}
+/* When the lead landed in the archive, falling back to the filing date for
+   rows written before the archive existed. */
+const pulledOn = r => r.first_seen || r.filed || "";
 const isEntity = n => /\b(LLC|INC|CORP|CORPORATION|LP|LLP|COMPANY|HOLDINGS|PROPERTIES|INVESTMENTS|TRUST|ESTATE)\b/i.test(n || "");
 
 const HOT = /pre-foreclosure|lis pendens|tax sale|tax delinquent|multiple distress/i;
@@ -456,6 +514,18 @@ const HOT = /pre-foreclosure|lis pendens|tax sale|tax delinquent|multiple distre
 let DATA = { records: [] };
 let VIEW = [];
 let sortKey = "score", sortDir = -1;
+let SINCE = "";        // "" = all time, otherwise days back from today (ET)
+let CATS = null;       // null = every lead type, otherwise a Set of cat codes
+let FLAG = null;       // an extra flag test from a clickable stat card
+
+/* Which cat codes sit behind each clickable stat card. */
+const CAT_GROUPS = {
+  FC:   ["FC"],
+  LIEN: ["LIEN","MECH","HOA","TAXLIEN","MED","JUD"],
+  PRO:  ["PRO"],
+  TAX:  ["TAX"],
+  LP:   ["LP","RELLP"]
+};
 
 /* ---------- benchmark disc (the signature) ---------------- */
 function disc(score, size){
@@ -545,14 +615,21 @@ function build(){
   }
 
   hero(recs);
-  strip(recs);
+  dateChips();
+  strip();
   fillFilters(recs);
 
   ["q","minScore","fType","fCity","fOcc","fDate"].forEach(id =>
-    $(id).addEventListener("input", apply));
+    $(id).addEventListener("input", () => {
+      if(id === "fType" && $("fType").value){ CATS = null; }  // dropdown wins
+      apply();
+    }));
   $("reset").addEventListener("click", () => {
     $("q").value = ""; $("minScore").value = 0; $("minScoreVal").textContent = "0";
     ["fType","fCity","fOcc","fDate"].forEach(id => $(id).value = "");
+    SINCE = ""; CATS = null; FLAG = null;
+    dateChips();
+    strip();
     apply();
   });
   document.querySelectorAll("th[data-sort]").forEach(th => {
@@ -625,23 +702,81 @@ function hero(recs){
     </section>`;
 }
 
-function strip(recs){
+/* The strip doubles as the lead-type filter: the counts are scoped to whatever
+   date window is active, and clicking one narrows the table to that type. */
+function strip(){
+  const recs = inWindow();
   const n = recs.length;
   const avg = n ? Math.round(recs.reduce((s,r) => s + (r.score||0), 0) / n) : 0;
-  const has = k => recs.filter(r => (r.flags||[]).some(f => k.test(f))).length;
+  const inCats = g => recs.filter(r => CAT_GROUPS[g].includes(r.cat)).length;
+  const flagged = k => recs.filter(r => (r.flags||[]).some(f => k.test(f))).length;
+
   const cells = [
-    ["Leads", n],
-    ["With address", recs.filter(r => r.prop_address).length],
-    ["Average score", avg],
-    ["New this week", has(/new this week/i)],
-    ["Pre-foreclosure", recs.filter(r => r.cat === "FC").length],
-    ["Liens", recs.filter(r => ["LIEN","MECH","HOA","TAXLIEN","MED","JUD"].includes(r.cat)).length],
-    ["Probate", recs.filter(r => r.cat === "PRO").length],
-    ["Tax distress", recs.filter(r => r.cat === "TAX").length]
+    { k:"Leads",           v:n,     role:"clear" },
+    { k:"With address",    v:recs.filter(r => r.prop_address).length, flag:"address" },
+    { k:"Average score",   v:avg,   role:"plain" },
+    { k:"New this week",   v:flagged(/new this week/i), flag:"newweek" },
+    { k:"Pre-foreclosure", v:inCats("FC"),   group:"FC" },
+    { k:"Lis pendens",     v:inCats("LP"),   group:"LP" },
+    { k:"Liens",           v:inCats("LIEN"), group:"LIEN" },
+    { k:"Probate",         v:inCats("PRO"),  group:"PRO" },
+    { k:"Tax distress",    v:inCats("TAX"),  group:"TAX" }
   ];
-  $("strip").innerHTML = cells.map(([k,v]) =>
-    `<div class="stat"><div class="stat-n">${v}</div><div class="stat-k">${k}</div></div>`).join("");
+
+  $("strip").innerHTML = cells.map(c => {
+    const on = (c.group && CATS && CATS.has(c.group)) || (c.flag && FLAG === c.flag);
+    const role = c.role || (c.group ? "group" : "flag");
+    const attr = c.group ? ` data-group="${c.group}"` : c.flag ? ` data-flag="${c.flag}"` : "";
+    const press = role === "plain" ? "" : ` aria-pressed="${on ? "true" : "false"}"`;
+    const dis = role === "plain" ? " disabled" : "";
+    return `<button class="stat" type="button" data-role="${role}"${attr}${press}${dis}>
+      <div class="stat-n">${c.v}</div><div class="stat-k">${esc(c.k)}</div></button>`;
+  }).join("");
   $("strip").hidden = false;
+
+  $("strip").querySelectorAll(".stat").forEach(btn => {
+    const role = btn.dataset.role;
+    if(role === "plain") return;
+    btn.addEventListener("click", () => {
+      if(role === "clear"){ CATS = null; FLAG = null; $("fType").value = ""; }
+      else if(role === "group"){
+        const g = btn.dataset.group;
+        CATS = (CATS && CATS.has(g)) ? null : new Set([g]);
+        $("fType").value = "";           // the dropdown would fight this filter
+      } else {
+        FLAG = FLAG === btn.dataset.flag ? null : btn.dataset.flag;
+      }
+      apply();
+    });
+  });
+}
+
+/* Everything inside the active date window, before any other filter. The stat
+   counts and the chips both read from this so the numbers agree. */
+function inWindow(){
+  return DATA.records.filter(r =>
+    SINCE === "" || daysAgo(pulledOn(r)) <= +SINCE);
+}
+
+function dateChips(){
+  const box = $("dateChips");
+  box.hidden = false;
+  box.querySelectorAll(".chip").forEach(chip => {
+    const val = chip.dataset.since;
+    chip.setAttribute("aria-pressed", val === SINCE ? "true" : "false");
+    chip.onclick = () => {
+      SINCE = val;
+      box.querySelectorAll(".chip").forEach(c =>
+        c.setAttribute("aria-pressed", c.dataset.since === SINCE ? "true" : "false"));
+      strip();
+      apply();
+    };
+  });
+
+  const stamps = DATA.records.map(pulledOn).filter(Boolean).sort();
+  $("chipNote").textContent = stamps.length
+    ? `archive runs ${niceDate(stamps[0])} to ${niceDate(stamps[stamps.length-1])}`
+    : "";
 }
 
 function fillFilters(recs){
@@ -662,6 +797,10 @@ function apply(){
   $("minScoreVal").textContent = min;
 
   VIEW = DATA.records.filter(r => {
+    if(SINCE !== "" && daysAgo(pulledOn(r)) > +SINCE) return false;
+    if(CATS && !CAT_GROUPS[[...CATS][0]].includes(r.cat)) return false;
+    if(FLAG === "address" && !r.prop_address) return false;
+    if(FLAG === "newweek" && !(r.flags||[]).some(f => /new this week/i.test(f))) return false;
     if((r.score||0) < min) return false;
     if(type && r.cat_label !== type) return false;
     if(city && r.prop_city !== city) return false;
@@ -694,9 +833,16 @@ function apply(){
   });
 
   const total = DATA.records.length;
-  $("count").innerHTML = VIEW.length === total
+  const label = { "0":"pulled today", "1":"pulled since yesterday", "7":"pulled in 7 days",
+                  "14":"pulled in 14 days", "30":"pulled in 30 days" }[SINCE] || "";
+  $("count").innerHTML = (VIEW.length === total
     ? `<b>${total}</b> leads`
-    : `<b>${VIEW.length}</b> of ${total} leads`;
+    : `<b>${VIEW.length}</b> of ${total} leads`) + (label ? ` &middot; ${label}` : "");
+  $("strip").querySelectorAll(".stat[data-group], .stat[data-flag]").forEach(btn => {
+    const on = (btn.dataset.group && CATS && CATS.has(btn.dataset.group))
+            || (btn.dataset.flag && FLAG === btn.dataset.flag);
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+  });
 
   render();
 }
