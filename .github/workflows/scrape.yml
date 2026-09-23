@@ -252,7 +252,23 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # Only the published outputs. data/.cache is excluded by .gitignore.
-          git add -A dashboard/ data/ NEEDS_ATTENTION.md 2>/dev/null || true
+          #
+          # These are two separate commands on purpose. git add treats a
+          # missing pathspec as fatal and stages NOTHING AT ALL -- so listing
+          # NEEDS_ATTENTION.md here, a file that only exists when a source
+          # breaks, silently staged nothing on every healthy run. The step then
+          # reported "No changes to save" and exited green while two weeks of
+          # leads were thrown away.
+          git add -A dashboard/ data/
+          if [ -f NEEDS_ATTENTION.md ]; then
+            git add NEEDS_ATTENTION.md
+          else
+            # It exists in the index only if a previous run was broken.
+            git rm --cached --ignore-unmatch -q NEEDS_ATTENTION.md || true
+          fi
+
+          echo "Staged for commit:"
+          git diff --cached --name-status | sed 's/^/  /' || true
 
           if git diff --cached --quiet; then
             echo "No changes to save - the lead list is identical to last run."
