@@ -1,21 +1,625 @@
 Address,City,State,Zip,Tag
-1753 Lee Street,Decatur,GA,30035,Pre-Foreclosure
-3332 Waldrop Trail,Decatur,GA,30034,Pre-Foreclosure
-7635 Gray Pointe Drive,Lithonia,GA,30058,Pre-Foreclosure
-932 Granite Springs Lane,Stone Mountain,GA,30083,Pre-Foreclosure
-4170 Dunmore Road,Decatur,GA,30034,Probate / Estate
-4019 Flintridge Drive,Stone Mountain,GA,30083,Probate / Estate
-4077 Panola Road,Lithonia,GA,30038,Lien
-6719 Hesters Court,Clarkston,GA,30021,Lien
-2922 Cedar Trace Drive,Ellenwood,GA,30294,Mechanic / Materialman Lien
-7400 Ivory Oak Lane,Lithonia,GA,30058,Mechanic / Materialman Lien
-2430 Yolanda Trail,Ellenwood,GA,30294,Mechanic / Materialman Lien
-3839 Tawny Birch Court,Decatur,GA,30034,Lien
+2608 Evans Mill Drive,Lithonia,GA,30058,Pre-Foreclosure
+2570 Evans Mill Drive,Lithonia,GA,30058,Pre-Foreclosure
+2578 Evans Mill Drive,Lithonia,GA,30058,Pre-Foreclosure
+5312 Tracey Drive,Stone Mountain,GA,30088,Pre-Foreclosure
+1910 Skyfall Circle,Atlanta,GA,30319,Probate / Estate
+2616 Hawthorne Drive,Atlanta,GA,30345,Pre-Foreclosure
+5960 Ancestors Drive,Lithonia,GA,30038,Pre-Foreclosure
+2121 Silva Court,Conley,GA,30288,Pre-Foreclosure
+1102 Carriage Trace Circle,Stone Mountain,GA,30087,Pre-Foreclosure
+4422 Northeast Expressway,Doraville,GA,30340,Pre-Foreclosure
+3333 Thornewood Drive,Doraville,GA,30340,Pre-Foreclosure
+3034 Weslock Circle,Decatur,GA,30034,Tax Lien
+2700 Summit Creek Drive 1501,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+2539 Bradford Square,Atlanta,GA,30345,Probate / Estate
+1010 Sexton Drive Unit 10,Stone Mountain,GA,30083,Probate / Estate
+1958 4th Street,Chamblee,GA,30341,Probate / Estate
+2527 Kelly Lake Road,Decatur,GA,30032,Probate / Estate
+1470 Briaroaks Trail,Atlanta,GA,30329,Probate / Estate
+4082 Depauw Way,Decatur,GA,30034,Probate / Estate
+4276 Peachtree Road,Atlanta,GA,30319,Probate / Estate
+8748 Pleasant Hill Road,Lithonia,GA,30058,Probate / Estate
+1319 Bermuda Road,Stone Mountain,GA,30087,Probate / Estate
+1730 Norris Lake Drive,Snellville,GA,30039,Probate / Estate
+4451 Sentry Drive,Tucker,GA,30084,Probate / Estate
+1400 Lake Hearn Drive,Atlanta,GA,30319,Mechanic / Materialman Lien
+3159 Altacrest Drive,Scottdale,GA,30079,Lis Pendens
+1322 Euclid Avenue Unit 205,Atlanta,GA,30307,Probate / Estate
+5288 Biffle Downs Road,Stone Mountain,GA,30088,Probate / Estate
+3166 Blanton Drive,Scottdale,GA,30079,Lis Pendens
+4543 Tulip Court,Lithonia,GA,30038,Pre-Foreclosure
+875 Timbervale Lane,Lithonia,GA,30058,Pre-Foreclosure
+2002 Variations Drive,Atlanta,GA,30345,Pre-Foreclosure
+3879 Leisure Springs Drive,Decatur,GA,30034,Pre-Foreclosure
+5074 Miller Woods Trail,Decatur,GA,30035,Pre-Foreclosure
+2399 Deer Ridge Drive,Stone Mountain,GA,30087,Probate / Estate
+3543 Cherokee Road,Doraville,GA,30340,Probate / Estate
+840 Regal Path Lane,Decatur,GA,30030,Tax Lien
+2473 Corner Shoals Drive,Decatur,GA,30034,Lis Pendens
+4036 Carver Drive,Doraville,GA,30360,Probate / Estate
+3610 Embry Circle,Chamblee,GA,30341,Probate / Estate
+4665 Big Valley Court,Stone Mountain,GA,30083,Probate / Estate
+7366 Vista Pointe Trail,Stone Mountain,GA,30087,Mechanic / Materialman Lien
+2549 Rainbow Creek Drive,Decatur,GA,30034,Probate / Estate
+3522 Cherokee Road,Doraville,GA,30340,Probate / Estate
+6455 Lester Lane,Stone Mountain,GA,30087,Lis Pendens
+430 Allendale Drive,Atlanta,GA,30317,Probate / Estate
+1569 Bubbling Creek Road,Atlanta,GA,30319,Probate / Estate
+3156 Meadowood Lane,Chamblee,GA,30341,Probate / Estate
+3305 Herrenhut Road,Lithonia,GA,30038,Probate / Estate
+1502 Kings Crossing,Stone Mountain,GA,30087,Lis Pendens
+1357 Vista Leaf Drive,Decatur,GA,30033,Probate / Estate
+2206 Stratmor Drive,Stone Mountain,GA,30087,Probate / Estate
+1487 Briaroaks Trail,Atlanta,GA,30329,Tax Lien
+214 Kirkwood Road,Atlanta,GA,30317,Probate / Estate
+2223 Cody Court,Lithonia,GA,30058,Tax Lien
+6638 Spring Glen Court,Stone Mountain,GA,30087,Tax Lien
+3673 Canadian Way,Tucker,GA,30084,Probate / Estate
+7497 South Goddard Road,Lithonia,GA,30038,Tax Lien
+2781 Rollingwood Lane,Atlanta,GA,30316,Tax Lien
+4842 Claymore Court,Stone Mountain,GA,30088,Tax Lien
+1812 Morning Star Lane,Tucker,GA,30084,Tax Lien
+1146 Demere Drive,Stone Mountain,GA,30083,Lis Pendens
+4757 Hairston Crossing Road,Stone Mountain,GA,30083,Lis Pendens
+525 South Rays Road,Stone Mountain,GA,30083,Probate / Estate
+5199 Meadowlake Drive,Dunwoody,GA,30338,Probate / Estate
+940 Willivee Drive,Decatur,GA,30033,Probate / Estate
+1078 Village Road,Stone Mountain,GA,30088,Tax Lien
+4449 Lincoln Jones Road,Ellenwood,GA,30294,Probate / Estate
+1661 Durrett Way,Dunwoody,GA,30338,Probate / Estate
+10 Perimeter Summit Boulevard Unit 4309,Atlanta,GA,30319,Probate / Estate
+2771 Chicopee Drive,Doraville,GA,30360,Probate / Estate
+3201 Parkridge Crescent,Chamblee,GA,30341,Probate / Estate
+4202 Wesley Hall Lane,Decatur,GA,30035,Lis Pendens
+4482 Redwood Street,Doraville,GA,30360,Probate / Estate
+218 Forkner Drive Unit B,Decatur,GA,30030,Probate / Estate
+2020 Gainsborough Drive,Chamblee,GA,30341,Probate / Estate
+3774 Kingswood Drive,Decatur,GA,30032,Probate / Estate
+1920 Regency Cove Court,Chamblee,GA,30341,Lis Pendens
+989 Timbervale Lane,Lithonia,GA,30058,Probate / Estate
+6809 Yorkdale Court,Lithonia,GA,30058,Probate / Estate
+906 Post Road Circle,Stone Mountain,GA,30088,Lis Pendens
+7326 Wood Hollow Way,Stone Mountain,GA,30087,Probate / Estate
+2448 Oostanaula Drive,Atlanta,GA,30319,Probate / Estate
+4860 Forestglade Court,Stone Mountain,GA,30087,Probate / Estate
+3168 Stonewyck Place,DECATUR,GA,30033,Tax Lien
+5155 Madeline Place,Stone Mountain,GA,30083,Lis Pendens
+1764 Meadowdale Avenue,Atlanta,GA,30306,Probate / Estate
+5979 King Way Walk,Lithonia,GA,30058,Tax Lien
+4562 Central Drive,Stone Mountain,GA,30083,Tax Lien
+2086 Manhattan Parkway,Decatur,GA,30035,Tax Lien
+1236 Woodland Avenue,Atlanta,GA,30324,Tax Lien
+3434 Blazing Pine Path,Decatur,GA,30034,Tax Lien
+2385 Hillvale Circle,Lithonia,GA,30058,Tax Lien
+1057 Autumn Crest Drive,Stone Mountain,GA,30083,Tax Lien
+2647 Field Spring Drive,Lithonia,GA,30058,Tax Lien
+5058 North Redan Circle,Stone Mountain,GA,30088,Probate / Estate
+3444 Lehigh Way,Decatur,GA,30034,Tax Lien
+1412 La Chona Court,Atlanta,GA,30329,Tax Lien
+10 Perimeter Summit Boulevard Unit 3403,Atlanta,GA,30319,Tax Lien
+1391 Sheffield Drive,Atlanta,GA,30329,Tax Lien
+711 Kenilworth Circle,Stone Mountain,GA,30083,Tax Lien
+6379 Leverett Drive,Lithonia,GA,30038,Tax Lien
+3036 Del Monico Drive,Decatur,GA,30032,Tax Lien
+1412 Columbia Drive,Decatur,GA,30032,Tax Lien
+2301 Miriam Lane,Decatur,GA,30032,Tax Lien
+968 Nimblewood Way,Stone Mountain,GA,30088,Probate / Estate
+1807 W AUSTIN RD,Decatur,GA,,Tax Delinquent / Tax Sale
+760 Avondale Creek Drive,Decatur,GA,30032,Mechanic / Materialman Lien
+965 Houston Mill Road,Atlanta,GA,30329,Mechanic / Materialman Lien
+120 Superior Avenue,Decatur,GA,30030,Mechanic / Materialman Lien
+1420 Edenfield Court,Lithonia,GA,30058,Mechanic / Materialman Lien
+4969 Central Drive,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+2981 Fields Drive,Lithonia,GA,30038,Mechanic / Materialman Lien
+2140 American Way,Chamblee,GA,30341,Mechanic / Materialman Lien
+8732 STREET,,GA,,Mechanic / Materialman Lien
+5503 Memorial Drive,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+3859 Flat Shoals Parkway,Decatur,GA,30034,Mechanic / Materialman Lien
+285 Mayson Avenue,Atlanta,GA,30307,Mechanic / Materialman Lien
+2465 EAST CLUB DRIVE,Atlanta,GA,30319,Mechanic / Materialman Lien
+3123 Fairington Drive,Lithonia,GA,30038,Mechanic / Materialman Lien
+2124 Gables Drive,Atlanta,GA,30319,Mechanic / Materialman Lien
+2036 Charter Lane,Lithonia,GA,30058,Judgment
+300 Hatton Drive,Scottdale,GA,30079,Mechanic / Materialman Lien
+3505 Durden Drive,Atlanta,GA,30319,Mechanic / Materialman Lien
+2537 Candler Road,Decatur,GA,30032,Mechanic / Materialman Lien
+11204 Waldrop Place,Decatur,GA,30034,Judgment
+1022 Hillcrest Drive,Atlanta,GA,30316,Mechanic / Materialman Lien
+5341 Snapfinger Park Drive,Decatur,GA,30035,Mechanic / Materialman Lien
+1096 Chantilly Crescent,Atlanta,GA,30324,Tax Lien
+3451 Kingsbrooke Way,Decatur,GA,30034,Tax Lien
+5268 Marston Road,Doraville,GA,30360,Tax Lien
+2446 Hanover Woods Road,Lithonia,GA,30058,Tax Lien
+2331 Oxbow Circle,Stone Mountain,GA,30087,Tax Lien
+272 Forkner Drive,Decatur,GA,30030,Tax Lien
+1836 Memorial Drive UNIT 301,Atlanta,GA,30317,Tax Lien
+111 Cottonwood Place,Decatur,GA,30030,Tax Lien
+3619 Raymond Drive,Doraville,GA,30340,Tax Lien
+1438 Conway Road,Decatur,GA,30030,Tax Lien
+1873 Meadow Lane,Decatur,GA,30032,Tax Lien
+2533 Haberfield Court,Atlanta,GA,30319,Tax Lien
+1908 Woodsdale Road,Atlanta,GA,30324,Tax Lien
+3660 Glen Mora Drive,Decatur,GA,30032,Tax Lien
+3229 Chaparral Way,Lithonia,GA,30038,Tax Lien
+2548 Lakebrook Court,Doraville,GA,30360,Tax Lien
+3393 Embry Circle,Chamblee,GA,30341,Tax Lien
+1330 Adcox Square,Stone Mountain,GA,30088,Tax Lien
+5207 Round Table Drive,Ellenwood,GA,30294,Tax Lien
+479 Carillon Lane,Stone Mountain,GA,30083,Tax Lien
+2407 Waters Run,Decatur,GA,30035,Tax Lien
+1486 Smokehouse Lane,Stone Mountain,GA,30088,Tax Lien
+1167 Alford Road,Lithonia,GA,30058,Tax Lien
+2816 Toney Drive,Decatur,GA,30032,Tax Lien
+2022 Brian Way,Decatur,GA,30033,Tax Lien
+1546 Van Epps Street,Atlanta,GA,30316,Tax Lien
+6393 Laurel Post Drive,Lithonia,GA,30058,Tax Lien
+4102 Yuma Drive,Clarkston,GA,30021,Tax Lien
+5436 Fieldgreen Drive,Stone Mountain,GA,30088,Tax Lien
+627 Kingsgate Ridge,Stone Mountain,GA,30088,Tax Lien
+4986 Galbraith Circle,Stone Mountain,GA,30088,Tax Lien
+2515 Tolliver Drive,Ellenwood,GA,30294,Tax Lien
+7610 Summer Berry Lane,Lithonia,GA,30038,Tax Lien
+2939 Clifton Church Road,Atlanta,GA,30316,Tax Lien
+3798 Ashford Knoll,Atlanta,GA,30319,Tax Lien
+4151 Idlewood Parc Court,Stone Mountain,GA,30084,Tax Lien
+5313 Redfield Road,Dunwoody,GA,30338,Tax Lien
+4869 Plymouth Trace,Decatur,GA,30035,Tax Lien
+947 Baltic Way,Lithonia,GA,30058,Tax Lien
+4745 Eagles Ridge Loop,Lithonia,GA,30038,Tax Lien
+2980 McGlynn Court,Decatur,GA,30034,Tax Lien
+4407 Carrollwood Drive,Stone Mountain,GA,30083,Tax Lien
+2175 Mulberry Lane,Lithonia,GA,30058,Tax Lien
+3631 Platina Park Court,Decatur,GA,30034,Tax Lien
+4276 Abram Drive,Conley,GA,30288,Tax Lien
+5606 Mountain View Point,Stone Mountain,GA,30087,Tax Lien
+7917 White Oak Loop,Lithonia,GA,30038,Tax Lien
+2844 Shady Valley Drive,Atlanta,GA,30324,Tax Lien
+3577 Linecrest Trail,Ellenwood,GA,30294,Tax Lien
+4149 Windermere Drive,Lithonia,GA,30038,Tax Lien
+6282 Southland Trace,Stone Mountain,GA,30087,Tax Lien
+1144 Wehunt Court,Lithonia,GA,30058,Tax Lien
+3297 Wyndham Park Lane,Decatur,GA,30034,Tax Lien
+2922 Lavista Way,Decatur,GA,30033,Tax Lien
+3204 Rockbridge Road,Scottdale,GA,30079,Tax Lien
+4126 Still Water Point,Ellenwood,GA,30294,Tax Lien
+7491 Knoll Hollow Road,Lithonia,GA,30058,Tax Lien
+566 Martin Road,Stone Mountain,GA,30088,Tax Lien
+1660 Van Epps Street,Atlanta,GA,30316,Tax Lien
+3037 Laguna Drive,Decatur,GA,30032,Tax Lien
+2105 Phillips Road,Lithonia,GA,30058,Tax Lien
+5537 Strathmoor Manor Circle,Lithonia,GA,30058,Tax Lien
+6336 Laurel Post Drive,Lithonia,GA,30058,Tax Lien
+4096 Waldrop Hills Drive,Decatur,GA,30034,Tax Lien
+4473 River Vista Road,Ellenwood,GA,30294,Tax Lien
+3225 Cherry Valley Drive,Atlanta,GA,30316,Tax Lien
+3730 Elkridge Drive,Decatur,GA,30032,Tax Lien
+5994 Fairfield Estates Drive,Lithonia,GA,30058,Tax Lien
+5758 Calle Vista Drive,Lithonia,GA,30058,Tax Lien
+2204 Creek Park Road,Decatur,GA,30033,Tax Lien
+1642 South Hidden Hills Parkway,Stone Mountain,GA,30088,Tax Lien
+3534 Mortons Landing Drive,Ellenwood,GA,30294,Tax Lien
+4071 Canby Lane,Decatur,GA,30035,Tax Lien
+3634 Serenity Lane,Lithonia,GA,30038,Tax Lien
+1590 Anita Place,Atlanta,GA,30306,Tax Lien
+501 Allana Drive,Stone Mountain,GA,30087,Tax Lien
+3901 Creek Shoals Court,Ellenwood,GA,30294,Tax Lien
+6731 Stonehedge Way,Stone Mountain,GA,30087,Tax Lien
+7162 Sweetwater Valley,Stone Mountain,GA,30087,Tax Lien
+4541 Garden City Drive,Lithonia,GA,30038,Tax Lien
+1102 Francis Street,Atlanta,GA,30319,Tax Lien
+839 Timbervale Lane,Lithonia,GA,30058,Tax Lien
+3046 Jett Drive,Doraville,GA,30340,Tax Lien
+7452 Edenberry Way,Lithonia,GA,30058,Tax Lien
+3688 Micah Court,Ellenwood,GA,30294,Tax Lien
+256 Vannoy Park Lane,Atlanta,GA,30316,Tax Lien
+1392 Cedar Green,Stone Mountain,GA,30088,Tax Lien
+5562 Claridge Circle,Lithonia,GA,30038,Tax Lien
+4300 Grant Forest Circle,Ellenwood,GA,30294,Tax Lien
+1449 Oakridge Circle,Decatur,GA,30033,Tax Lien
+2344 Wineleas Road,Decatur,GA,30033,Tax Lien
+560 Safari Circle,Stone Mountain,GA,30083,Tax Lien
+4828 Pine Shadows Drive,Stone Mountain,GA,30088,Tax Lien
+4165 Archer Trail,Decatur,GA,30034,Tax Lien
+998 Mainstreet Lake Drive,Stone Mountain,GA,30088,Tax Lien
+775 Edenberry Lane,Lithonia,GA,30058,Tax Lien
+119 Flora Avenue,Atlanta,GA,30307,Tax Lien
+3143 Kensington Road,Avondale Estates,GA,30002,Tax Lien
+2661 Fleur De Lis Place,Doraville,GA,30360,Tax Lien
+1872 Young Road,Lithonia,GA,30058,Tax Lien
+2791 Hillvale Cove Drive,Lithonia,GA,30058,Tax Lien
+3970 Roman Court,Tucker,GA,30084,Tax Lien
+1681 Foxhall Drive,Dunwoody,GA,30338,Tax Lien
+169 Forest Glen Circle,Avondale Estates,GA,30002,Tax Lien
+4466 McCart Cove,Stone Mountain,GA,30083,Tax Lien
+4034 Preston Oaks Place,Lithonia,GA,30038,Tax Lien
+1709 Cedar Walk Lane,Conley,GA,30288,Tax Lien
+2968 Aberdeen Way,Lithonia,GA,30038,Tax Lien
+1147 Reilly Lane,Clarkston,GA,30021,Tax Lien
+1388 Briers Drive,Stone Mountain,GA,30083,Tax Lien
+1906 Sarah Cove Court,Conley,GA,30288,Tax Lien
+3573 Warbler Drive,Decatur,GA,30034,Tax Lien
+3345 Laurel Oak Court,Doraville,GA,30340,Tax Lien
+2473 Glenrock Drive,Decatur,GA,30032,Tax Lien
+2299 Carrington Drive,Ellenwood,GA,30294,Tax Lien
+4731 Andalusia Trail,Doraville,GA,30360,Tax Lien
+5973 Idlewood Place,Lithonia,GA,30038,Tax Lien
+3220 La Venture Drive,Chamblee,GA,30341,Tax Lien
+7940 White Oak Loop,Lithonia,GA,30038,Tax Lien
+5699 Winchester Place,Lithonia,GA,30038,Tax Lien
+5645 Stonington Trace Parkway,Stone Mountain,GA,30087,Tax Lien
+4045 Lake Erin Court,Tucker,GA,30084,Tax Lien
+7495 Waters Edge Drive,Stone Mountain,GA,30087,Tax Lien
+4249 Parkview Court,Stone Mountain,GA,30083,Tax Lien
+6368 Leverett Drive,Lithonia,GA,30038,Tax Lien
+2926 Cedar Trace Drive,Ellenwood,GA,30294,Tax Lien
+2333 Titan Ridge Drive,Decatur,GA,30035,Tax Lien
+2453 Osceola Road,Lithonia,GA,30058,Tax Lien
+2606 Laurice Court,Decatur,GA,30034,Tax Lien
+745 Willivee Drive,Decatur,GA,30033,Tax Lien
+2482 Boulder Springs Point,Ellenwood,GA,30294,Tax Lien
+1796 Wedgewood Close,Stone Mountain,GA,30088,Tax Lien
+3556 Cragstone Road,Lithonia,GA,30038,Tax Lien
+2701 Pine Lake Road,Tucker,GA,30084,Tax Lien
+1921 Brockett Creek Court,Tucker,GA,30084,Tax Lien
+3766 Hollow Oak Lane,Lithonia,GA,30038,Tax Lien
+1458 Corn Crib Court,Stone Mountain,GA,30088,Tax Lien
+6387 Charter Way,Lithonia,GA,30058,Tax Lien
+1509 Ashbrooke Trace,Stone Mountain,GA,30083,Tax Lien
+1401 Bronze Leaf Court,Stone Mountain,GA,30083,Tax Lien
+4231 Pepperdine Drive,Decatur,GA,30034,Tax Lien
+7199 Bowie Drive,Lithonia,GA,30038,Tax Lien
+5306 Essex Farms Place,Stone Mountain,GA,30088,Tax Lien
+5394 Golfcrest Circle,Stone Mountain,GA,30088,Tax Lien
+3841 Wolverton Circle,Lithonia,GA,30038,Tax Lien
+1483 Inverness Drive,Stone Mountain,GA,30083,Tax Lien
+926 Olivia Drive,Snellville,GA,30039,Tax Lien
+3248 Borogrove Way,Decatur,GA,30032,Tax Lien
+1039 Redan Trace,Stone Mountain,GA,30088,Tax Lien
+6146 Magnolia Ridge,Stone Mountain,GA,30087,Tax Lien
+2665 Midway Road,Decatur,GA,30030,Tax Lien
+4436 Mercer Road,Decatur,GA,30035,Tax Lien
+744 Kilkenny Circle,Lithonia,GA,30058,Tax Lien
+4857 Rock Hill Spring Court,Ellenwood,GA,30294,Tax Lien
+1902 North Akin Drive,Atlanta,GA,30345,Tax Lien
+7602 Gray Pointe Drive,Lithonia,GA,30058,Tax Lien
+3210 Rockview Drive,Lithonia,GA,30038,Tax Lien
+3605 Tarragon Drive,Decatur,GA,30034,Tax Lien
+777 North Parkwood Road,Decatur,GA,30030,Tax Lien
+548 Ashburton Avenue,Decatur,GA,30032,Tax Lien
+421 Hardendorf Avenue,Atlanta,GA,30307,Tax Lien
+5670 Sawgrass Circle,Lithonia,GA,30038,Tax Lien
+5536 Silver Ridge Drive,Stone Mountain,GA,30087,Tax Lien
+631 Pepperwood Lane,Stone Mountain,GA,30087,Tax Lien
+4345 Ward Bluff Court,Ellenwood,GA,30294,Tax Lien
+7152 Brushwood Bend,Lithonia,GA,30058,Tax Lien
+2496 Meadow Spring Drive,Lithonia,GA,30058,Tax Lien
+4347 Tumbling Lane,Ellenwood,GA,30294,Tax Lien
+5029 Wind Point,Stone Mountain,GA,30088,Tax Lien
+1310 Wamsley Way,Stone Mountain,GA,30083,Tax Lien
+7204 Forest Lake Parkway,Lithonia,GA,30038,Mechanic / Materialman Lien
+1403 Mackenzie Court,Tucker,GA,30084,Judgment
+4003 Veracruz Drive,Decatur,GA,30034,Judgment
+1407 Dresden Drive,Atlanta,GA,30319,Mechanic / Materialman Lien
+638 Willivee Drive,Decatur,GA,30033,Tax Lien
+2814 Georgian Drive W,Chamblee,GA,30341,Tax Lien
+2830 Midway Road,Decatur,GA,30030,Tax Lien
+2290 Tarian Drive,Decatur,GA,30034,Tax Lien
+2936 Ridgelock Court,Doraville,GA,30360,Tax Lien
+2170 Rock Creek Park,Decatur,GA,30033,Tax Lien
+2870 Creole Path,Lithonia,GA,30038,Tax Lien
+2365 Boulder Road,Atlanta,GA,30316,Tax Lien
+1315 Oldfield Road,Decatur,GA,30030,Tax Lien
+3293 Royal Springs Court,Decatur,GA,30034,Tax Lien
+3800 Cumbrian Lane,Lithonia,GA,30038,Tax Lien
+730 3rd Avenue,Decatur,GA,30030,Tax Lien
+4626 Biffle Road,Stone Mountain,GA,30088,Tax Lien
+4284 Callum Court,Decatur,GA,30034,Tax Lien
+5350 Golfcrest Circle,Stone Mountain,GA,30088,Tax Lien
+853 Stonemill Manor,Lithonia,GA,30058,Tax Lien
+1040 Palmer Road,Lithonia,GA,30058,Tax Lien
+386 Haas Avenue,Atlanta,GA,30316,Tax Lien
+7568 Reginald Court,Lithonia,GA,30058,Tax Lien
+5923 Seam Street,Lithonia,GA,30058,Tax Lien
+2902 Mount Olive Drive,Decatur,GA,30033,Tax Lien
+2898 Briarglen Drive,Doraville,GA,30340,Tax Lien
+2758 Green Marsh Court,Decatur,GA,30034,Tax Lien
+1711 Briarlake Circle,Decatur,GA,30033,Tax Lien
+644 Appomattox Trace,Stone Mountain,GA,30087,Tax Lien
+6071 Lakeview Overlook,Lithonia,GA,30038,Tax Lien
+6739 Blantyre Boulevard,Stone Mountain,GA,30087,Tax Lien
+1640 Brookhaven Close,Atlanta,GA,30319,Tax Lien
+3117 Colonial Way Unit N,Chamblee,GA,30341,Tax Lien
+4586 Idlewood Park,Lithonia,GA,30038,Tax Lien
+1814 Queens Way,Chamblee,GA,30341,Tax Lien
+400 Ridgecrest Road,Atlanta,GA,30307,Tax Lien
+3459 Albatross Court,Decatur,GA,30034,Tax Lien
+2670 Stonekey Bend,Lithonia,GA,30058,Tax Lien
+4510 Dover Castle Court,Decatur,GA,30035,Tax Lien
+1425 Lanier Court,Atlanta,GA,30319,Tax Lien
+2550 Greenville Way,Decatur,GA,30034,Tax Lien
+442 McDaniel Road,Stone Mountain,GA,30087,Tax Lien
+3818 Addison Glen Way,Lithonia,GA,30038,Tax Lien
+698 Watson Cove,Stone Mountain,GA,30087,Tax Lien
+3567 Eagle Rise,Lithonia,GA,30038,Tax Lien
+2906 Leisure Woods Lane,Decatur,GA,30034,Tax Lien
+4634 Dellrose Drive,Dunwoody,GA,30338,Tax Lien
+5435 Marbut Road,Lithonia,GA,30058,Tax Lien
+701 Greenhedge Drive,Stone Mountain,GA,30088,Tax Lien
+2460 Parkland Drive,Decatur,GA,30032,Tax Lien
+4349 Autumn Hill Drive,Stone Mountain,GA,30083,Tax Lien
+6922 Deer Creek Trace,Stone Mountain,GA,30087,Tax Lien
+4084 Indian Manor Drive,Stone Mountain,GA,30083,Tax Lien
+1252 Trenton Street,Atlanta,GA,30316,Tax Lien
+377 Pennybrook Drive,Stone Mountain,GA,30087,Tax Lien
+1310 Taylor Way,Stone Mountain,GA,30083,Tax Lien
+8213 McKenzie Place,Lithonia,GA,30058,Tax Lien
+2539 Oakleaf Ridge,Lithonia,GA,30058,Tax Lien
+3958 River Road,Ellenwood,GA,30294,Tax Lien
+2246 Miriam Lane,Decatur,GA,30032,Tax Lien
+4886 Valley View Court,Dunwoody,GA,30338,Lien
+1689 Hosea L Williams Drive,Atlanta,GA,30317,Lien
+971 Brighton Crest Circle,Stone Mountain,GA,30087,Lien
+1414 Euclid Avenue,Atlanta,GA,30307,Lien
+751 North Indian Creek Drive,Clarkston,GA,30021,Lien
+4392 Meadow Vista Drive,Lithonia,GA,30038,Lien
+3058 South Rainbow Drive,Decatur,GA,30034,Lien
+2555 Henderson Mill Road,Atlanta,GA,30345,Lien
+6890 Glen Cove Lane,Stone Mountain,GA,30087,Lien
+1150 Rankin Street Unit 5E,Stone Mountain,GA,30083,Lien
+1960 Wellborn Road,Lithonia,GA,30058,Lien
+1501 Clairmont Road Unit 1731,Decatur,GA,30033,Lien
+3070 Kerr Drive,Decatur,GA,30034,Lien
+3324 Valley Brook Place,Decatur,GA,30033,Lien
+8410 Donald Road,Snellville,GA,30039,Lien
+3665 Lavista Road,Decatur,GA,30033,Lien
+2310 Strathmoor Manor Drive,Lithonia,GA,30058,Lien
+2175 Forest Ridge Road,Atlanta,GA,30316,Mechanic / Materialman Lien
+3211 Clifton Church Road,Atlanta,GA,30316,Lien
+871 Fox Valley Drive,Stone Mountain,GA,30088,Lien
+5666 Marbut Road,Lithonia,GA,30058,Lien
+3902 East Ponce De Leon Avenue,Clarkston,GA,30021,Mechanic / Materialman Lien
+4320 Harvest Hill Court,Decatur,GA,30034,Mechanic / Materialman Lien
+3263 Rockmill Drive,Ellenwood,GA,30294,Mechanic / Materialman Lien
+1050 Thorn Woode Lane,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+2009 Singer Way,Lithonia,GA,30058,Mechanic / Materialman Lien
+3655 Boulder Run Road,Ellenwood,GA,30294,Lien
+3692 Caseys Cove,Ellenwood,GA,30294,Mechanic / Materialman Lien
+2336 Bankside Circle,Decatur,GA,30035,Mechanic / Materialman Lien
+4078 Franks Drive,Tucker,GA,30084,Mechanic / Materialman Lien
+2069 Dunwoody Street,Atlanta,GA,30317,Mechanic / Materialman Lien
+712 Malvern Boulevard,Stone Mountain,GA,30087,Mechanic / Materialman Lien
+2540 Fontainebleau Drive,Doraville,GA,30360,Mechanic / Materialman Lien
+4940 Klondike Road,Lithonia,GA,30038,Mechanic / Materialman Lien
+1812 Glenhaven Circle,Decatur,GA,30035,Mechanic / Materialman Lien
+4323 John Wesley Drive,Decatur,GA,30035,Mechanic / Materialman Lien
+4327 Ivy Run,Ellenwood,GA,30294,Mechanic / Materialman Lien
+1634 San Gabriel Avenue,Decatur,GA,30032,Mechanic / Materialman Lien
+5230 Brasswood Trace,Stone Mountain,GA,30088,Mechanic / Materialman Lien
+3292 Kilarney Court,Decatur,GA,30032,Mechanic / Materialman Lien
+1813 Cedar Walk Lane,Conley,GA,30288,Mechanic / Materialman Lien
+2325 Green Forrest Drive,Decatur,GA,30032,Mechanic / Materialman Lien
+2082 Troutdale Drive,Decatur,GA,30032,Mechanic / Materialman Lien
+831 Chapman Circle,Stone Mountain,GA,30088,Mechanic / Materialman Lien
+6451 Berryside Drive,Lithonia,GA,30058,Mechanic / Materialman Lien
+3032 Oakvale Heights,Decatur,GA,30034,Mechanic / Materialman Lien
+4038 Kirksford Drive,Decatur,GA,30035,Mechanic / Materialman Lien
+3880 The Ascent,Atlanta,GA,30319,Mechanic / Materialman Lien
+1832 Dorman Avenue,Atlanta,GA,30319,Mechanic / Materialman Lien
+2141 Marbut Farms Court,Lithonia,GA,30058,Mechanic / Materialman Lien
+1065 Lancaster Road,Conley,GA,30288,Mechanic / Materialman Lien
+558 Stratford Green,Avondale Estates,GA,30002,Lien
+1133 Sharonton Drive,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+6893 Kerrie Way,Lithonia,GA,30058,Mechanic / Materialman Lien
+3629 River Edge Loop,Decatur,GA,30034,Mechanic / Materialman Lien
+4169 Rue Saint Germain,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+3546 High Grove Way,Atlanta,GA,30319,Mechanic / Materialman Lien
+78 Flora Avenue,Atlanta,GA,30307,Mechanic / Materialman Lien
+2265 Ponte Vedra Court,Decatur,GA,30032,Lien
+5703 Mountain Crescent,Stone Mountain,GA,30087,Mechanic / Materialman Lien
+5467 Winslow Crossing,Lithonia,GA,30038,Mechanic / Materialman Lien
+2594 Hawthorne Drive,Atlanta,GA,30345,Mechanic / Materialman Lien
+1491 Woodfern Drive,Decatur,GA,30030,Mechanic / Materialman Lien
+5524 Silver Ridge Drive,Stone Mountain,GA,30087,Mechanic / Materialman Lien
+2914 Silver Hill Terrace,Atlanta,GA,30316,Mechanic / Materialman Lien
+3604 Oakvale Falls Court,Decatur,GA,30034,Mechanic / Materialman Lien
+837 Carlingford Place,Lithonia,GA,30058,Mechanic / Materialman Lien
+4656 Hairston Crossing Place,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+4027 Kingsbrook Boulevard,Decatur,GA,30034,Mechanic / Materialman Lien
+3380 Glenrose Trail,Chamblee,GA,30341,Mechanic / Materialman Lien
+1472 Carnaby Court,Dunwoody,GA,30338,Mechanic / Materialman Lien
+2139 Green Forrest Drive,Decatur,GA,30032,Mechanic / Materialman Lien
+1891 Poplar Falls Avenue,Lithonia,GA,30058,Mechanic / Materialman Lien
+780 Deer Run Drive,Stone Mountain,GA,30087,Mechanic / Materialman Lien
+536 Rays Road,Stone Mountain,GA,30083,Mechanic / Materialman Lien
+1232 Wellhouse Walk,Stone Mountain,GA,30088,Mechanic / Materialman Lien
+4046 May Apple Court,Decatur,GA,30034,Mechanic / Materialman Lien
+2869 South Stone Mountain Lithonia Road,Lithonia,GA,30058,Mechanic / Materialman Lien
+4359 Conley Landing,Conley,GA,30288,Judgment
+1965 Copperfield Circle,Decatur,GA,30035,Judgment
+3909 South Creek Court,Stone Mountain,GA,30083,Judgment
+3638 Creekview Circle,Stone Mountain,GA,30083,Judgment
+4027 Park Place Circle,Ellenwood,GA,30294,Judgment
+5917 Cassie Drive,Lithonia,GA,30038,Judgment
+3333 Goldenchain Drive,Lithonia,GA,30038,Judgment
+3910 Glen Park Drive,Lithonia,GA,30038,Judgment
+1143 Woodmere Drive,Lithonia,GA,30058,Judgment
+2040 Scarbrough Trail E,Stone Mountain,GA,30088,Judgment
+4239 Ivy Run,Ellenwood,GA,30294,Judgment
+3252 Allison Circle,Decatur,GA,30034,Judgment
+2975 Phillips Way,Lithonia,GA,30038,Judgment
+525 Milligan Drive,Stone Mountain,GA,30083,Judgment
+2422 Oakleaf Circle,Lithonia,GA,30058,Judgment
+5642 Saint Thomas Drive,Lithonia,GA,30058,Judgment
+5152 Redan Court,Stone Mountain,GA,30088,Judgment
+3697 Riverchase Terrace,Decatur,GA,30034,Judgment
+5103 Par Four Way,Lithonia,GA,30038,Judgment
+4592 Post Ridge Lane,Lithonia,GA,30038,Judgment
+7211 Swift Street,Lithonia,GA,30058,Judgment
+1154 Justin Lane,Lithonia,GA,30058,Judgment
+4881 West Saddleridge Drive,Lithonia,GA,30038,Judgment
+540 Barbashela Drive,Stone Mountain,GA,30088,Judgment
+2492 Oakleaf Ridge,Lithonia,GA,30058,Judgment
+2635 Parrish Court,Lithonia,GA,30038,Judgment
+3273 Wesley Chapel Road,Decatur,GA,30034,Mechanic / Materialman Lien
+1272 Eastland Road,Atlanta,GA,30316,Judgment
+5885 Trent Walk Drive,Lithonia,GA,30038,Judgment
+2432 Tolliver Drive,Ellenwood,GA,30294,Judgment
+3203 Farm Land Court,Decatur,GA,30034,Judgment
+782 Masters Drive,Stone Mountain,GA,30087,Judgment
+5113 Rocky Run,Stone Mountain,GA,30088,Judgment
+3676 Waterford Place,Clarkston,GA,30021,Judgment
+6657 Shapiro Court,Stone Mountain,GA,30087,Judgment
+1953 Manhattan Parkway,Decatur,GA,30035,Judgment
+4888 Browns Mill Ferry Road,Lithonia,GA,30038,Judgment
+1327 STREET,,GA,,Mechanic / Materialman Lien
+6898 Magnolia Street,Lithonia,GA,30058,Judgment
+2100 STREET,,GA,,Mechanic / Materialman Lien
+5648 Southland Drive,Stone Mountain,GA,30087,Judgment
+3340 STREET,,GA,,Mechanic / Materialman Lien
+356 STREET,,GA,,Mechanic / Materialman Lien
+5852 Earlwane Drive,Lithonia,GA,30058,Judgment
+6028 Arbor Links Road,Lithonia,GA,30058,Judgment
+3854 Cedar Trace Court,Ellenwood,GA,30294,Judgment
+1968 Ethel Lane,Decatur,GA,30032,Judgment
+2516 Candler Woods Drive,Decatur,GA,30032,Judgment
+3136 Rockbridge Road,Avondale Estates,GA,30002,Judgment
+6721 STREET,,GA,,Mechanic / Materialman Lien
+5564 Parkfield Court,Lithonia,GA,30058,Tax Lien
+2012 Knight Court,Atlanta,GA,30316,Tax Lien
+1417 Cornwall Road,Decatur,GA,30032,Tax Lien
+260 Mathews Avenue,Atlanta,GA,30307,Tax Lien
+414 Fayetteville Road,Decatur,GA,30030,Tax Lien
+3814 Lehigh Court,Decatur,GA,30034,Tax Lien
+3362 Covington Drive,Decatur,GA,30032,Mechanic / Materialman Lien
+2059 Brian Way,Decatur,GA,30033,Judgment
+1168 STREET,,GA,,Mechanic / Materialman Lien
+6951 Stoneridge Court,Stone Mountain,GA,30087,Judgment
+1951 STREET,,GA,,Mechanic / Materialman Lien
+1621 STREET,,GA,,Mechanic / Materialman Lien
+4304 Cedar Ridge Trail,Stone Mountain,GA,30083,Tax Lien
+1391 Idlewood Parc Crossing,Tucker,GA,30084,Lien
+808 East Avenue,Scottdale,GA,30079,Lien
+2031 Brian Way,Decatur,GA,30033,Lien
+525 Mountain Oaks Parkway,Stone Mountain,GA,30087,Lien
+7 Hunt Valley Drive,Lithonia,GA,30058,Lien
+4388 Meadow Vista Drive,Lithonia,GA,30038,Lien
+5540 Mountain Springs Circle,Stone Mountain,GA,30088,Lien
+3665 Creekview Circle,Stone Mountain,GA,30083,Lien
+4488 Dover Castle Drive,Decatur,GA,30035,Lien
+7104 Moye Drive,Lithonia,GA,30038,Lien
+1321 Hidden Hills Parkway,Stone Mountain,GA,30088,Lien
+883 Bristol Way,Lithonia,GA,30058,Lien
+3945 Fireoak Drive,Decatur,GA,30032,Lien
+612 Watson Bay,Stone Mountain,GA,30087,Lien
+5115 Jack Drive,Decatur,GA,30035,Lien
+606 Watson Cove,Stone Mountain,GA,30087,Lien
+4238 Fontana Court,Tucker,GA,30084,Lien
+3351 Columbia Trace,Decatur,GA,30032,Lien
+3512 Sandy Woods Lane,Stone Mountain,GA,30083,Lien
+512 Stonemont Drive,Stone Mountain,GA,30087,Lien
+3520 Kensington Parc Circle,Avondale Estates,GA,30002,Lien
+2690 Buford Highway,Atlanta,GA,30324,Lien
+2072 Easterwood Terrace,Decatur,GA,30032,Lien
+4001 South River Lane,Ellenwood,GA,30294,Lien
+7679 Gray Pointe Drive,Lithonia,GA,30058,Lien
+3960 Redan Road,Stone Mountain,GA,30083,Lien
+443 Clearlake Place,Stone Mountain,GA,30087,Lien
+344 Osprey Point,Stone Mountain,GA,30087,Lien
+496 Mosswood Shoals,Stone Mountain,GA,30087,Lien
+2787 Da Vinci Boulevard,Decatur,GA,30034,Lien
+3338 Beautyberry Way,Lithonia,GA,30038,Lien
+6954 Harbor Town Way,Stone Mountain,GA,30087,Lien
+595 Mountain Harbor,Stone Mountain,GA,30087,Lien
+3182 Delancy Street,Decatur,GA,30035,Lien
+5824 Par Four Court,Lithonia,GA,30038,Lien
+2599 Brookline Circle,Atlanta,GA,30319,Lien
+2884 Vining Ridge Terrace,Decatur,GA,30034,Lien
+7512 Knoll Hollow Road,Lithonia,GA,30058,Lien
+5769 Dorian Court,Lithonia,GA,30058,Lien
+2444 Whites Ridge,Decatur,GA,30034,Lien
+5891 Strathmoor Manor Circle,Lithonia,GA,30058,Lien
+4486 Parmalee Path,Conley,GA,30288,Lien
+2874 Rockcliff Road,Atlanta,GA,30316,Lien
+553 Stonemill Manor,Lithonia,GA,30058,Lien
+3122 Leyland Court,Decatur,GA,30034,Lien
+5612 Summer Meadow Pass,Stone Mountain,GA,30087,Lien
+5349 Forest Springs Drive,Dunwoody,GA,30338,Lien
+626 Woodcrest Manor Drive,Stone Mountain,GA,30083,Lien
+1773 Derrill Drive,Decatur,GA,30032,Lien
+2984 Chapel Ridge Circle,Decatur,GA,30034,Lien
+6858 Almont Cove,Stone Mountain,GA,30087,Lien
+2319 River Road,Ellenwood,GA,30294,Lien
+5720 Cove Lane,Lithonia,GA,30058,Lien
 5552 Wildwood Trail,Lithonia,GA,30038,Lien
-2102 Shoals Way,Decatur,GA,30034,Lien
-2522 Meadow Brooke Court,Lithonia,GA,30058,Lien
-2628 STREET,,GA,,Lien
-636 Warren Avenue,Scottdale,GA,30079,Notice of Commencement
-1380 Oxford Road,Atlanta,GA,30322,Lien
-120 High Street,Dunwoody,GA,30346,Lien
+2667 Boulder Pointe Court,Ellenwood,GA,30294,Lien
+3562 Hidden Acres Drive,Doraville,GA,30340,Lien
+1812 Northumberland Way,Atlanta,GA,30316,Lien
+24 Fairpark Lane,Decatur,GA,30030,Lien
+5891 Trent Walk Drive,Lithonia,GA,30038,Lien
+2289 Starline Drive,Decatur,GA,30032,Lien
+1185 West Nancy Creek Drive,Atlanta,GA,30319,Lien
+2021 Cedar Grove Road,Conley,GA,30288,Lien
+200 Hillandale Park Way,Lithonia,GA,30058,Lien
+6342 Kinsland Court,Lithonia,GA,30058,Lien
+2524 Boulder Springs Point,Ellenwood,GA,30294,Lien
+1064 Deshon Trail,Lithonia,GA,30058,Lien
+1359 Muirfield Drive,Stone Mountain,GA,30088,Lien
+2699 Henderson Summit,Tucker,GA,30084,Lien
+1035 Chapman Lane,Stone Mountain,GA,30088,Lien
+2350 Cove Lake Way,Lithonia,GA,30058,Lien
+2883 Valaise Path,Lithonia,GA,30038,Lien
+4677 Garden Hills Drive,Stone Mountain,GA,30083,Lien
+5800 Strathmoor Manor Circle,Lithonia,GA,30058,Lien
+2769 Glenvalley Drive,Decatur,GA,30032,Lien
+3396 Framingham Drive,Lithonia,GA,30038,Lien
+4668 STREET,,GA,,Lien
+4993 Penscot Way,Stone Mountain,GA,30088,Lien
+3271 Sugar Creek Falls Avenue,Atlanta,GA,30316,Lien
+2877 Monticello Place,Decatur,GA,30030,Lien
+3372 Misty Valley Road,Decatur,GA,30032,Lien
+4061 Kingship Drive,Ellenwood,GA,30294,Lien
+4062 Windsor Castle Way,Decatur,GA,30034,Judgment
+1038 South Hairston Road,Stone Mountain,GA,30088,Notice of Commencement
+3954 Memorial College Avenue,Clarkston,GA,30021,Notice of Commencement
+40 Perimeter Center E,Atlanta,GA,30346,Notice of Commencement
+2933 North Druid Hills Road,Atlanta,GA,30329,Notice of Commencement
+5816 Covington Highway,Decatur,GA,30035,Notice of Commencement
+3078 Clairmont Road,Atlanta,GA,30329,Notice of Commencement
+1268 Wylie Street,Atlanta,GA,30317,Notice of Commencement
+4400 Ashford Dunwoody Road,Atlanta,GA,30346,Notice of Commencement
+3479 STREET,,GA,,Notice of Commencement
+1300 STREET,,GA,,Notice of Commencement
+2591 STREET,,GA,,Notice of Commencement
+1749 Clairmont Road,Decatur,GA,30033,Lien
+1443 Stone Mill Trace,Stone Mountain,GA,30083,Lien
+6661 Evans Trace,Lithonia,GA,30038,Lien
+255 Southerland Terrace Unit 108,Atlanta,GA,30307,Lien
+3824 Lavista Road,Tucker,GA,30084,Lien
+2519 Columbia Drive,Decatur,GA,30034,Lien
+1868 Broadway Street,Decatur,GA,30035,Lien
+3989 Fireoak Drive,Decatur,GA,30032,Lien
+6695 Poplar Grove Way,Stone Mountain,GA,30087,Lien
+4727 North Royal Atlanta Drive,Tucker,GA,30084,Lien
+4874 North Royal Atlanta Drive,Tucker,GA,30084,Lien
+301 STREET,,GA,,Lien
+6102 Waldrop Place,Decatur,GA,30034,Lien
+5000 Peachtree Boulevard,Chamblee,GA,30341,Lien
+4960 Flat Shoals Parkway,Decatur,GA,30034,Lien
+1671 Stone Meadow Road,Lithonia,GA,30058,Lien
+3947 Woodridge Way,Tucker,GA,30084,Lien
+1933 Variations Drive,Atlanta,GA,30345,Lien
+6299 Southland Ridge,Stone Mountain,GA,30087,Lien
+3279 Sheffield Circle,Decatur,GA,30032,Lien
+2427 Candler Road,Decatur,GA,30032,Lien
+6912 Rogers Point,Lithonia,GA,30058,Lien
+4071 Rue Antoinette,Stone Mountain,GA,30083,Lien
 2005 Ponce De Leon Avenue,Atlanta,GA,30307,Lien
+3708 Walnut Creek Way,Lithonia,GA,30038,Lien
+2997 Heritage Villas Drive,Lithonia,GA,30038,Lien
+4559 Ashbrooke Trace,Stone Mountain,GA,30083,Lien
+7045 Biltmore Trace,Lithonia,GA,30058,Lien
+7947 White Oak Loop,Lithonia,GA,30038,Lien
+3748 Walnut Creek Way,Lithonia,GA,30038,Lien
+3779 Norman Road,Clarkston,GA,30021,Lien
+4789 Creekside Place,Decatur,GA,30035,Lien
