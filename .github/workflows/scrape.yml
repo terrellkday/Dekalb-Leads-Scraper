@@ -21,17 +21,12 @@
 
 name: Daily DeKalb Lead Scrape
 
+# NOTE (2026-10-04): GitHub's built-in scheduler proved unreliable (missed the
+# 2026-10-04 run, same as the 8 county repos on 2026-10-03), so the schedule
+# block was removed. The 7:00 AM ET centralized trigger
+# (cron daily-county-scraper-trigger) fires this workflow via workflow_dispatch
+# instead. Manual runs still work from the Actions tab.
 on:
-  schedule:
-    # GitHub cron is ALWAYS in UTC. 11:17 UTC is 7:17am Eastern in summer
-    # (EDT) and 6:17am Eastern in winter (EST). GitHub does not adjust for
-    # daylight saving, so the local time shifts by an hour twice a year --
-    # harmless here, since the scraper looks back a full 7 days either way.
-    #
-    # The odd :17 is deliberate. Scheduled jobs queue heavily on the hour and
-    # GitHub may delay or drop them; an off-peak minute runs far more reliably.
-    - cron: "17 11 * * *"
-
   # Adds a "Run workflow" button on the Actions tab.
   workflow_dispatch:
     inputs:
