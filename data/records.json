@@ -1,27 +1,27 @@
 {
-  "fetched_at": "2026-10-08T07:18:08.631123-04:00",
+  "fetched_at": "2026-10-09T07:18:15.540556-04:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
-    "start": "2026-10-05",
-    "end": "2026-10-08"
+    "start": "2026-10-06",
+    "end": "2026-10-09"
   },
   "run_window": {
-    "start": "2026-10-05",
-    "end": "2026-10-08"
+    "start": "2026-10-06",
+    "end": "2026-10-09"
   },
   "archive_range": {
     "start": "2026-09-08",
-    "end": "2026-10-08"
+    "end": "2026-10-09"
   },
   "filed_range": {
     "start": "2026-08-14",
-    "end": "2026-10-07"
+    "end": "2026-10-08"
   },
-  "new_this_run": 202,
-  "archive_total": 5226,
+  "new_this_run": 69,
+  "archive_total": 5295,
   "dashboard_days": 120,
-  "total": 5226,
-  "with_address": 2010,
+  "total": 5295,
+  "with_address": 2044,
   "sources_report": {
     "arcgis_parcels": {
       "ok": true,
@@ -35,17 +35,17 @@
     },
     "landmarkweb": {
       "ok": true,
-      "count": 327,
+      "count": 550,
       "error": ""
     },
     "legal_notices": {
       "ok": true,
-      "count": 16,
+      "count": 23,
       "error": ""
     },
     "tax_sales": {
       "ok": true,
-      "count": 81,
+      "count": 72,
       "error": ""
     }
   },
@@ -466,7 +466,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax lien",
@@ -504,7 +504,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax lien",
@@ -542,7 +542,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax lien",
@@ -580,7 +580,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax lien",
@@ -1197,6 +1197,80 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102975",
+      "doc_type": "TRUSTEE DEED",
+      "filed": "2026-10-08",
+      "cat": "PRO",
+      "cat_label": "Probate / Estate",
+      "owner": "FAMILY TRUST OF KOLA ADE AKINADE DATED OCTOBER 30 2014 AKINADE KOLA ADE TRUST ...",
+      "grantee": "RUBIO LUIS ENRIQUE CORREA VASQUEZ MARIA L AQUINO",
+      "amount": null,
+      "legal": "DIS:18 LAND:37 LOT:10 SUB:STONEBUSH Parcel: 18 037 12 015 Tax District: 84 STREETNUM:5292 STREET:STONEBUSH SUFF:TERR CITY:STONE MOUNTAIN STATE:GA ZIP:30083 DIS:18 LAND:38 LOT:10 SUB:STONEBUSH STREETNUM:5292 STREET:STONEBUSH SUFF:TERR CITY:STONE MOUNTAIN STATE:GA ZIP:30083",
+      "parcel_id": "18 037 12 015",
+      "prop_address": "5292 Stonebush Terrace Stone Mountain, GA 30083",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30083",
+      "mail_address": "470 LEGGETT DR",
+      "mail_city": "LAWRENCEVILLE",
+      "mail_state": "GA",
+      "mail_zip": "30043",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Probate / estate",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102976",
+      "doc_type": "DEED - FROM ESTATE",
+      "filed": "2026-10-08",
+      "cat": "PRO",
+      "cat_label": "Probate / Estate",
+      "owner": "AKINADE KOLA",
+      "grantee": "RUBIO LUIS ENRIQUE CORREA VASQUEZ MARIA L AQUINO",
+      "amount": null,
+      "legal": "DIS:18 LAND:37 LOT:10 SUB:STONEBUSH Parcel: 18 037 12 015 Tax District: 84 STREETNUM:5292 STREET:STONEBUSH SUFF:TERR CITY:STONE MOUNTAIN STATE:GA ZIP:30083 DIS:18 LAND:38 LOT:10 SUB:STONEBUSH STREETNUM:5292 STREET:STONEBUSH SUFF:TERR CITY:STONE MOUNTAIN STATE:GA ZIP:30083",
+      "parcel_id": "18 037 12 015",
+      "prop_address": "5292 Stonebush Terrace Stone Mountain, GA 30083",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30083",
+      "mail_address": "470 LEGGETT DR",
+      "mail_city": "LAWRENCEVILLE",
+      "mail_state": "GA",
+      "mail_zip": "30043",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Probate / estate",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 74,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102624",
       "doc_type": "DEED - FROM ESTATE",
       "filed": "2026-10-07",
@@ -1223,7 +1297,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "Absentee owner",
@@ -1260,7 +1334,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "Absentee owner",
@@ -1297,7 +1371,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "Absentee owner",
@@ -1334,7 +1408,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lis pendens",
         "Absentee owner",
@@ -2225,7 +2299,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2262,7 +2336,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2300,7 +2374,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2374,7 +2448,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2411,7 +2485,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2449,7 +2523,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2486,7 +2560,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2524,7 +2598,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2600,7 +2674,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2638,7 +2712,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2675,7 +2749,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2713,7 +2787,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2750,7 +2824,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2787,7 +2861,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2824,7 +2898,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2900,7 +2974,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -2938,7 +3012,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3012,7 +3086,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3050,7 +3124,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3088,7 +3162,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3125,7 +3199,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3162,7 +3236,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3199,7 +3273,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3236,7 +3310,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3273,7 +3347,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3311,7 +3385,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3348,7 +3422,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3385,7 +3459,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3422,7 +3496,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3459,7 +3533,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3496,7 +3570,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3534,7 +3608,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3572,7 +3646,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3610,7 +3684,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3684,7 +3758,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -12780,6 +12854,114 @@
       "first_seen": "2026-09-08"
     },
     {
+      "doc_num": "2026102958",
+      "doc_type": "FORECLOSURE",
+      "filed": "2026-10-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "GARNER SEDRICK W",
+      "grantee": "GARCIA PROPERTY GROUP LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:60 LOT:3514 BLK:2 UNI:B SUB:CHAPEL PARK COM:PHASE II Parcel: 15 060 06 028 Tax District:04 DIS:15 LAND:69 LOT:3514 BLK:2 UNI:B SUB:CHAPEL PARK COM:PHASE II",
+      "parcel_id": "15 060 06 028",
+      "prop_address": "3514 Shepherds Path Decatur, GA 30034",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30034",
+      "mail_address": "3514 SHEPHERDS PATH",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30034",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 73,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102821",
+      "doc_type": "FORECLOSURE",
+      "filed": "2026-10-07",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "SIDDIQ HAFSAH AHMED",
+      "grantee": "ROYAL PACIFIC FUNDING CORP",
+      "amount": null,
+      "legal": "DIS:15 LAND:144 LOT:1 BLK:A SUB:MASONS FLATS Parcel: 15 144 09 073 Tax District: 04 STREETNUM:2328 STREET:MASON SUFF:DR CITY:ATLANTA STATE:GA ZIP:30316",
+      "parcel_id": "15 144 09 073",
+      "prop_address": "2328 Mason Drive Atlanta, GA 30316",
+      "prop_city": "Atlanta",
+      "prop_state": "GA",
+      "prop_zip": "30316",
+      "mail_address": "2328 MASON DR",
+      "mail_city": "ATLANTA",
+      "mail_state": "GA",
+      "mail_zip": "30316",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 73,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102832",
+      "doc_type": "FORECLOSURE",
+      "filed": "2026-10-07",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "ARANDA ALFREDO GARCIA GARCIA ARANDA ALFREDO",
+      "grantee": "INVESTO LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:195 LOT:15 BLK:A UNI:II SUB:COLONY EAST Parcel: 15 195 06 100 Tax District:04",
+      "parcel_id": "15 195 06 100",
+      "prop_address": "4246 Colony East Drive Stone Mountain, GA 30083",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30083",
+      "mail_address": "4246 COLONY EAST DR",
+      "mail_city": "STONE MOUNTAIN",
+      "mail_state": "GA",
+      "mail_zip": "30083",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 73,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102156",
       "doc_type": "FORECLOSURE",
       "filed": "2026-10-06",
@@ -12806,7 +12988,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Pre-foreclosure",
         "New this week"
@@ -13393,6 +13575,150 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "GPN-420-189552",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-10-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Sidrick Morrison",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 420-189552 10/8,10/15,10/22,10/29NOTICE OF SALE UNDER POWER, DEKALB COUNTYPursuant to the Power of Sale contained in a Security Deed given by Sidrick Morrison to Mortgage Electronic Registration Systems, Inc., as grantee, as nominee for Primary Residential Mortgage Inc., its successors and assigns d ... click 'view' to open the full text.",
+      "parcel_id": "16 186 01 019",
+      "prop_address": "7532 Poplar Falls Trail Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "7532 POPLAR TRL",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-189552",
+      "status": "active",
+      "match_confidence": 0.85,
+      "match_method": "owner_exact",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 72,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "GPN-420-189550",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-10-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Sidrick Morrison",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 420-189550 10/8,10/15,10/22,10/29 NOTICE OF SALE UNDER POWER, DEKALB COUNTYPursuant to the Power of Sale contained in a Security Deed given by Sidrick Morrison to Mortgage Electronic Registration Systems, Inc., as grantee, as nominee for Primary Residential Mortgage Inc., its successors and assigns ... click 'view' to open the full text.",
+      "parcel_id": "16 186 01 019",
+      "prop_address": "7532 Poplar Falls Trail Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "7532 POPLAR TRL",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-189550",
+      "status": "active",
+      "match_confidence": 0.85,
+      "match_method": "owner_exact",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 72,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "GPN-420-189076",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-10-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Bruce Strozier",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 420-189076 9/24,10/1,10/8,10/15,10/22,10/29NOTICE OF SALE UNDER POWER, DEKALB COUNTYPursuant to the Power of Sale contained in a Security Deed given by Bruce Strozier to Mortgage Electronic Registration Systems, Inc., as grantee, as nominee for American Financial Resources, LLC, its successors and a ... click 'view' to open the full text.",
+      "parcel_id": "18 027 01 129",
+      "prop_address": "7390 Vista Pointe Trail Stone Mountain, GA 30087",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30087",
+      "mail_address": "7390 VISTA POINTE TRL",
+      "mail_city": "STONE MOUNTAIN",
+      "mail_state": "GA",
+      "mail_zip": "30087",
+      "owner_occupied": true,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-189076",
+      "status": "active",
+      "match_confidence": 0.6,
+      "match_method": "owner_exact_multi",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 70,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "GPN-420-189639",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-10-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Legacy Development Investment",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 420-189639 10/8,10/15,10/22,10/29TAKE NOTICE THAT:NOTICE OF FORECLOSURE OF RIGHT TO REDEEM To: 1. All Resident (s), Tenant (s), and/or Occupant (s) of: 6032 Regent Manor, Lithonia, GA 30058. Tax Defendant in Fi Fa: Legacy Development Investment. All persons, Known and Unknown, having of record in F ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "6032 REGENT MANOR",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-189639",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 70,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026089526",
       "doc_type": "GDOR LIEN",
       "filed": "2026-09-03",
@@ -13495,7 +13821,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lis pendens",
         "LLC / corp owner",
@@ -13532,7 +13858,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -13568,7 +13894,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -13604,7 +13930,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lis pendens",
         "LLC / corp owner",
@@ -13613,6 +13939,42 @@
       "score": 68,
       "county": "DeKalb",
       "first_seen": "2026-10-08"
+    },
+    {
+      "doc_num": "2026102823",
+      "doc_type": "TRUSTEE DEED",
+      "filed": "2026-10-07",
+      "cat": "PRO",
+      "cat_label": "Probate / Estate",
+      "owner": "MARTINEZ JESSICA MARIE TRUSTEE ADELIA MARTINEZ TRUST DATED MAY 25 2023 ...",
+      "grantee": "SMALL TOWN LIVING LLC",
+      "amount": null,
+      "legal": "DIS:18 LAND:146 LOT:11 BLK:B SUB:WINDFIELD Parcel: 18 146 16 011 Tax District: 04 STREETNUM:3079 STREET:WINDFIELD SUFF:CIR CITY:TUCKER STATE:GA ZIP:30084",
+      "parcel_id": "18 146 16 011",
+      "prop_address": "3079 Windfield Circle Tucker, GA 30084",
+      "prop_city": "Tucker",
+      "prop_state": "GA",
+      "prop_zip": "30084",
+      "mail_address": "3079 WINDFIELD CIR",
+      "mail_city": "TUCKER",
+      "mail_state": "GA",
+      "mail_zip": "30084",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Probate / estate",
+        "New this week"
+      ],
+      "score": 68,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
     },
     {
       "doc_num": "2026102354",
@@ -13641,7 +14003,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lis pendens",
         "New this week"
@@ -13677,7 +14039,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -13713,7 +14075,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -13749,7 +14111,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -15985,7 +16347,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16057,7 +16419,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16093,7 +16455,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16129,7 +16491,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16165,7 +16527,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16201,7 +16563,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16237,7 +16599,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16273,7 +16635,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16309,7 +16671,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -16346,7 +16708,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16382,7 +16744,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16418,7 +16780,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16490,7 +16852,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16526,7 +16888,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16562,7 +16924,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16598,7 +16960,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16634,7 +16996,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16706,7 +17068,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16742,7 +17104,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16778,7 +17140,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16814,7 +17176,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16850,7 +17212,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16886,7 +17248,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16922,7 +17284,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16958,7 +17320,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -16994,7 +17356,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -17031,7 +17393,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17067,7 +17429,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17103,7 +17465,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17139,7 +17501,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17175,7 +17537,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17211,7 +17573,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17247,7 +17609,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17283,7 +17645,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -17355,7 +17717,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -20983,7 +21345,7 @@
       "status": "active",
       "match_confidence": 0.75,
       "match_method": "owner_signature",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -21126,7 +21488,7 @@
       "status": "active",
       "match_confidence": 0.6,
       "match_method": "owner_exact_multi",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "Absentee owner",
@@ -21163,7 +21525,7 @@
       "status": "active",
       "match_confidence": 0.6,
       "match_method": "owner_exact_multi",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "Absentee owner",
@@ -21542,6 +21904,78 @@
       "score": 66,
       "county": "DeKalb",
       "first_seen": "2026-09-22"
+    },
+    {
+      "doc_num": "GPN-420-189701",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-10-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Henri Bowers And Sharon Bowers",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 420-189701 10/8,10/15,10/22,10/29 Notice Of Sale Under PowerState Of Georgia, County Of DeKalbUnder And By Virtue Of The Power Of Sale Contained In A Deed To Secure Debt Given By Henri Bowers And Sharon Bowers To Mortgage Electronic Registration Systems, Inc. (''MERS'') As Nominee For Michigan Mutua ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-189701",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 65,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "GPN-420-189649",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-10-08",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Stephanie D",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 420-189649 10/8, 10/15,10/22,10/29NOTICE OF FORECLOSURE SALE UNDER POWER DEKALB COUNTY, GEORGIAUnder and by virtue of the Power of Sale contained in a Security Deed given by Stephanie D. Banks to Countrywide Home Loans, Inc., dated 12/21/2004 and recorded 4/28/2005 in Instrument 2005-0088427, DEED B ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-189649",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Pre-foreclosure",
+        "New this week"
+      ],
+      "score": 65,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
     },
     {
       "doc_num": "2026101452",
@@ -21940,6 +22374,155 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102908",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "DIVIDEND SOLAR FINANCE LLC",
+      "grantee": "CROWN ASSET MANAGEMENT LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:186 LOT:12 BLK:B SUB:BIRDSONG STREETNUM:1568 STREET:TANAGER SUFF:CIR CITY:DECATUR STATE:GA ZIP:30032 Parcel: 15 199 09 012 Tax District:04",
+      "parcel_id": "15 199 09 012",
+      "prop_address": "1568 Tanager Circle Decatur, GA 30032",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30032",
+      "mail_address": "3982 ROLLING PL",
+      "mail_city": "CONLEY",
+      "mail_state": "GA",
+      "mail_zip": "30288",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 64,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102924",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "WF HIL 2017 2 GRANTOR TRUST",
+      "grantee": "CH TLC PEAK LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:100 LOT:15 UNI:V SUB:LEISURE WOODS Parcel: 15 100 08 127 Tax District: 04 STREETNUM:3953 STREET:LEISURE WOODS SUFF:DR CITY:DECATUR STATE:GA ZIP:30034",
+      "parcel_id": "15 100 08 127",
+      "prop_address": "3953 Leisure Woods Drive Decatur, GA 30034",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30034",
+      "mail_address": "PO BOX 370159",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30037",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 64,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102925",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "CHAMPION SHARON L CHAMPION JAMES",
+      "grantee": "CH TLC PEAK LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:100 LOT:15 UNI:V SUB:LEISURE WOODS Parcel: 15 100 08 127 Tax District: 04 STREETNUM:3953 STREET:LEISURE WOODS SUFF:DR CITY:DECATUR STATE:GA ZIP:30034",
+      "parcel_id": "15 100 08 127",
+      "prop_address": "3953 Leisure Woods Drive Decatur, GA 30034",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30034",
+      "mail_address": "PO BOX 370159",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30037",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 64,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102966",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "THOMAS WILMA R",
+      "grantee": "FOUNDATION FINANCE CO LLC",
+      "amount": null,
+      "legal": "LOT:85 BLK:5 UNI:TWO SUB:LAUREL POST CLOSE Parcel: 16 102 05 073 Tax District:80",
+      "parcel_id": "16 102 05 073",
+      "prop_address": "6609 Eastbriar Drive Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "PO BOX 214",
+      "mail_city": "REDAN",
+      "mail_state": "GA",
+      "mail_zip": "30074",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 64,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102602",
       "doc_type": "MECHANIC'S AND MATERIALMANS LIEN",
       "filed": "2026-10-07",
@@ -21966,7 +22549,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -22004,7 +22587,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "Absentee owner",
@@ -22041,7 +22624,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "Absentee owner",
@@ -22078,7 +22661,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -22116,7 +22699,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -22154,7 +22737,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -25923,6 +26506,44 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102876",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "SOUTH ATLANTA RUTHERFORD GLEN LLC",
+      "grantee": "WILMINGTON TRUST NATIONAL ASSOCIATION TRUSTEE",
+      "amount": null,
+      "legal": "DIS:18 LAND:314 Parcel: __ ___ __ ___ DIS:18 LAND:315 Parcel: __ ___ __ ___ DIS:18 LAND:317 Parcel: __ ___ __ ___ DIS:18 LAND:318 Parcel: __ ___ __ ___",
+      "parcel_id": "18 317 02 002",
+      "prop_address": "7100 Dawson Boulevard Doraville, GA 30340",
+      "prop_city": "Doraville",
+      "prop_state": "GA",
+      "prop_zip": "30340",
+      "mail_address": "P O BOX 450233",
+      "mail_city": "ATLANTA",
+      "mail_state": "GA",
+      "mail_zip": "31145",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.85,
+      "match_method": "owner_exact",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 63,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102387",
       "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
       "filed": "2026-10-06",
@@ -25949,7 +26570,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -26888,7 +27509,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -26924,7 +27545,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -26960,7 +27581,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -26996,7 +27617,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -27032,7 +27653,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -27068,7 +27689,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -27104,7 +27725,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -33908,7 +34529,7 @@
       "status": "active",
       "match_confidence": 0.6,
       "match_method": "owner_exact_multi",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -34478,6 +35099,42 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "GPN-350-189635",
+      "doc_type": "Legal Notice (TAX)",
+      "filed": "2026-10-08",
+      "cat": "TAX",
+      "cat_label": "Tax Delinquent / Tax Sale",
+      "owner": "VALERIE ELLISON",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 350-189635 10/8,10/15,10/22,10/29NOTICE OF SERVICE BY PUBLICATIONIN THE SUPERIOR COURT OF DEKALB COUNTY STATE OF GEORGIADEKALB COUNTY TAX COMMISSIONER,NICOLE M. GOLDEN,Petitioner,v.ESTATE OF VALERIE ELLISON, ALL HEIRS KNOWN AND UNKNOWN, et al.,Respondents.CIVIL ACTION FILE NO. 26CV7551To: ESTATE OF ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "350-189635",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Tax delinquent",
+        "New this week"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102752",
       "doc_type": "FEDERAL TAX LIEN",
       "filed": "2026-10-07",
@@ -34504,7 +35161,7 @@
       "status": "active",
       "match_confidence": 0.6,
       "match_method": "owner_exact_multi",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -34666,7 +35323,7 @@
       "owner": "ALPA PROPERTY SERVICES LLCGROUNDFLOOR PROPERTIES",
       "grantee": "",
       "amount": null,
-      "legal": "The Champion Thursday, September 24, 2026 City: Decatur County: DeKalb 350-189047 9/17,9/24,10/1,10/8NOTICE OF FORECLOSURE OF RIGHT TO REDEEM[REF. O.C.G.A., Section 48-4-5 et seq.; 48-4-45 & 48-4-46]TO:ALPA PROPERTY SERVICES LLCGROUNDFLOOR PROPERTIES GA LLCGROUNDFLOOR CREDIT 1 LLCDEKALB COUNTY, GEORGIA, CEO Lorraine Cochran-JohnsonOccupant 1807 W AUSTIN RD, DeKalb Cou ... click 'view' to open the full text.",
+      "legal": "The Champion Thursday, October 08, 2026 City: Decatur County: DeKalb 350-189047 9/17,9/24,10/1,10/8NOTICE OF FORECLOSURE OF RIGHT TO REDEEM[REF. O.C.G.A., Section 48-4-5 et seq.; 48-4-45 & 48-4-46]TO:ALPA PROPERTY SERVICES LLCGROUNDFLOOR PROPERTIES GA LLCGROUNDFLOOR CREDIT 1 LLCDEKALB COUNTY, GEORGIA, CEO Lorraine Cochran-JohnsonOccupant 1807 W AUSTIN RD, DeKalb Cou ... click 'view' to open the full text.",
       "parcel_id": "",
       "prop_address": "1807 W AUSTIN RD",
       "prop_city": "Decatur",
@@ -34684,7 +35341,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "LLC / corp owner"
@@ -36996,6 +37653,120 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102882",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "3954 MEMORIAL OWNER LLC",
+      "grantee": "SHERWIN WILLIAMS CO",
+      "amount": null,
+      "legal": "DIS:18 LAND:68 Parcel: 18 068 01 145 Tax District:T104",
+      "parcel_id": "18 068 01 145",
+      "prop_address": "3954 Memorial College Avenue Clarkston, GA 30021",
+      "prop_city": "Clarkston",
+      "prop_state": "GA",
+      "prop_zip": "30021",
+      "mail_address": "1400 6TH ST NW STE 430",
+      "mail_city": "WASHINGTON",
+      "mail_state": "DC",
+      "mail_zip": "20036",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 59,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103020",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "KHARE LLC GRANT MICHAEL D",
+      "grantee": "GUICE SERVICES INC",
+      "amount": null,
+      "legal": "Parcel: 15 043 01 004 Tax District: 04 STREETNUM:2204 STREET:RIVER SUFF:RD CITY:ELLENWOOD STATE:GA ZIP:30294",
+      "parcel_id": "15 043 01 004",
+      "prop_address": "2204 River Road Ellenwood, GA 30294",
+      "prop_city": "Ellenwood",
+      "prop_state": "GA",
+      "prop_zip": "30294",
+      "mail_address": "4801 LANG AVE",
+      "mail_city": "ALBUQUERQUE",
+      "mail_state": "NM",
+      "mail_zip": "87109",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 59,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103021",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "KHARE LLC GRANT MICHAEL D",
+      "grantee": "GUICE SERVICES INC",
+      "amount": null,
+      "legal": "Parcel: 15 043 01 004 Tax District: 04 STREETNUM:2204 STREET:RIVER SUFF:RD CITY:ELLENWOOD STATE:GA ZIP:30294",
+      "parcel_id": "15 043 01 004",
+      "prop_address": "2204 River Road Ellenwood, GA 30294",
+      "prop_city": "Ellenwood",
+      "prop_state": "GA",
+      "prop_zip": "30294",
+      "mail_address": "4801 LANG AVE",
+      "mail_city": "ALBUQUERQUE",
+      "mail_state": "NM",
+      "mail_zip": "87109",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 59,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102790",
       "doc_type": "LIEN",
       "filed": "2026-10-07",
@@ -37022,7 +37793,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "LLC / corp owner",
@@ -37032,6 +37803,44 @@
       "score": 59,
       "county": "DeKalb",
       "first_seen": "2026-10-08"
+    },
+    {
+      "doc_num": "2026102817",
+      "doc_type": "LIEN",
+      "filed": "2026-10-07",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "EMAA LLC",
+      "grantee": "REYNOLDS RESTORATION GROUP INC",
+      "amount": null,
+      "legal": "Parcel: 15 250 01 067 Tax District: 04 STREETNUM:750 STREET:AVONDALE CREEK SUFF:DR CITY:DECATUR STATE:GA ZIP:30032",
+      "parcel_id": "15 250 01 067",
+      "prop_address": "3262 Mountain Drive Decatur, GA 30032",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30032",
+      "mail_address": "1355 TERRELL RD BLDG 1474/ 200",
+      "mail_city": "MARIETTA",
+      "mail_state": "GA",
+      "mail_zip": "30064",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "LLC / corp owner",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 59,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
     },
     {
       "doc_num": "2026102337",
@@ -37060,7 +37869,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "LLC / corp owner",
@@ -37098,7 +37907,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "LLC / corp owner",
@@ -37136,7 +37945,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "LLC / corp owner",
@@ -37174,7 +37983,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "Absentee owner",
@@ -38879,6 +39688,80 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102839",
+      "doc_type": "LIEN AMENDMENT",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "HARRINGTON KEIANA",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "15 085 11 018",
+      "prop_address": "3211 Clifton Church Road Atlanta, GA 30316",
+      "prop_city": "Atlanta",
+      "prop_state": "GA",
+      "prop_zip": "30316",
+      "mail_address": "3283 SHADOW PARK PL",
+      "mail_city": "SAN JOSE",
+      "mail_state": "CA",
+      "mail_zip": "95121",
+      "owner_occupied": false,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.85,
+      "match_method": "owner_exact",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "Absentee owner",
+        "New this week"
+      ],
+      "score": 58,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102877",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "DIVIDEND SOLAR FINANCE LLC",
+      "grantee": "CROWN ASSET MANAGEMENT LLC",
+      "amount": null,
+      "legal": "DIS:16 LAND:22 LOT:9 SUB:HILSON HEAD Parcel: 16 022 01 230 Tax District: 80 STREETNUM:3218 STREET:HILSON HEAD SUFF:LN CITY:STONECREST STATE:GA ZIP:30038",
+      "parcel_id": "16 022 01 230",
+      "prop_address": "3218 Hilson Head Lane Lithonia, GA 30038",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30038",
+      "mail_address": "3218 HILSON HEAD LN",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30038",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 58,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102651",
       "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
       "filed": "2026-10-07",
@@ -38905,7 +39788,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -38941,7 +39824,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -38977,7 +39860,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39013,7 +39896,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39049,7 +39932,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39085,7 +39968,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39121,7 +40004,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39157,7 +40040,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -39194,7 +40077,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39230,7 +40113,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39266,7 +40149,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39302,7 +40185,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39338,7 +40221,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -39374,7 +40257,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -47929,7 +48812,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -47965,7 +48848,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -48001,7 +48884,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -48037,7 +48920,7 @@
       "status": "active",
       "match_confidence": 0.75,
       "match_method": "owner_signature",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -48073,7 +48956,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -48109,7 +48992,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -57051,6 +57934,43 @@
       "first_seen": "2026-09-25"
     },
     {
+      "doc_num": "2026102982",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "GRAHAM ATLANTA HOMES LLC",
+      "grantee": "RBI PRIVATE LENDING LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:186 Parcel: __ ___ __ ___ STREETNUM:1463 STREET:COLUMBIA SUFF:DR CITY:DECATUR STATE:GA ZIP:30032",
+      "parcel_id": "",
+      "prop_address": "1463 STREET",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102540",
       "doc_type": "GDOR RELEASE",
       "filed": "2026-10-07",
@@ -57077,7 +57997,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57113,7 +58033,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57149,7 +58069,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57185,7 +58105,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57221,7 +58141,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57257,7 +58177,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57293,7 +58213,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -57330,7 +58250,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57366,7 +58286,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -57403,7 +58323,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57439,7 +58359,7 @@
       "status": "active",
       "match_confidence": 0.6,
       "match_method": "owner_exact_multi",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -57475,7 +58395,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57511,7 +58431,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57547,7 +58467,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57583,7 +58503,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57619,7 +58539,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57655,7 +58575,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57691,7 +58611,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57727,7 +58647,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -57764,7 +58684,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57800,7 +58720,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57836,7 +58756,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57872,7 +58792,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57908,7 +58828,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -57945,7 +58865,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -57981,7 +58901,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58017,7 +58937,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58053,7 +58973,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58089,7 +59009,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58125,7 +59045,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58161,7 +59081,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58197,7 +59117,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58233,7 +59153,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58269,7 +59189,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -58306,7 +59226,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58342,7 +59262,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -58379,7 +59299,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58415,7 +59335,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58451,7 +59371,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58487,7 +59407,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -58524,7 +59444,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax lien",
         "New this week"
@@ -58560,7 +59480,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -58596,7 +59516,7 @@
       "status": "active",
       "match_confidence": 0.65,
       "match_method": "owner_core",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -58632,7 +59552,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -58669,7 +59589,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -63328,7 +64248,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Tax delinquent",
         "Unknown heirs / unsettled estate"
@@ -97775,6 +98695,78 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102971",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "PASS TUWANNA",
+      "grantee": "STONE MILL CONDOMINIUM ASSOCIATION INC",
+      "amount": null,
+      "legal": "DIS:18 LAND:125 LOT:607 BLK:6 SUB:STONE MILL Parcel: 18 125 14 028 Tax District: 90 STREETNUM:5147 STREET:MADELINE SUFF:PL CITY:STONE MOUNTAIN STATE:GA ZIP:30083",
+      "parcel_id": "18 125 14 028",
+      "prop_address": "5147 Madeline Place Stone Mountain, GA 30083",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30083",
+      "mail_address": "5147 MADELINE PL",
+      "mail_city": "STONE MOUNTAIN",
+      "mail_state": "GA",
+      "mail_zip": "30083",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 53,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103033",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ALLEN JEANNE Y",
+      "grantee": "GUICE SERVICES INC",
+      "amount": null,
+      "legal": "Parcel: 16 163 03 005 Tax District: 04 STREETNUM:1615 STREET:RICE SUFF:SQ CITY:LITHONIA STATE:GA ZIP:30058",
+      "parcel_id": "16 163 03 005",
+      "prop_address": "1615 Rice Square Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "1615 RICE SQ",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 53,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102700",
       "doc_type": "LIEN",
       "filed": "2026-10-07",
@@ -97801,7 +98793,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -97837,7 +98829,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -97873,7 +98865,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -97909,7 +98901,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -97945,7 +98937,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -97981,7 +98973,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -98017,7 +99009,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -98053,7 +99045,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -101810,6 +102802,78 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102833",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SIYOUM AKILELUW",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "18 072 10 065",
+      "prop_address": "636 Garden Walk Drive Stone Mountain, GA 30083",
+      "prop_city": "Stone Mountain",
+      "prop_state": "GA",
+      "prop_zip": "30083",
+      "mail_address": "636 GARDEN WALK DR",
+      "mail_city": "STONE MOUNTAIN",
+      "mail_state": "GA",
+      "mail_zip": "30083",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.85,
+      "match_method": "owner_exact",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 52,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103057",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "LACKEY BRENDA",
+      "grantee": "GREENLINK SOLUTIONS LLC",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "16 022 03 022",
+      "prop_address": "4905 Panola Mill Drive Lithonia, GA 30038",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30038",
+      "mail_address": "4905 PANOLA MILL DR",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30038",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.85,
+      "match_method": "owner_exact",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 52,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102506",
       "doc_type": "LIEN",
       "filed": "2026-10-07",
@@ -101836,7 +102900,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -101872,7 +102936,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -101908,7 +102972,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -101944,7 +103008,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -101980,7 +103044,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -102016,7 +103080,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -102052,7 +103116,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -102088,7 +103152,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -104788,7 +105852,7 @@
       "status": "active",
       "match_confidence": 0.55,
       "match_method": "owner_signature_multi",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "Absentee owner",
@@ -104797,6 +105861,43 @@
       "score": 51,
       "county": "DeKalb",
       "first_seen": "2026-10-07"
+    },
+    {
+      "doc_num": "2026102923",
+      "doc_type": "LIENS FILES ON REAL ESTATE RECORD",
+      "filed": "2026-10-08",
+      "cat": "MECH",
+      "cat_label": "Mechanic / Materialman Lien",
+      "owner": "TWIN LAKES COMMUNITY CENTER INC",
+      "grantee": "GEORGIA BANKING CO TANDEM BANK",
+      "amount": null,
+      "legal": "DIS:18 LAND:207 Parcel: __ ___ __ ___",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Mechanic lien",
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
     },
     {
       "doc_num": "2026102591",
@@ -104825,7 +105926,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -104862,7 +105963,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -104898,7 +105999,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -104906,6 +106007,42 @@
       "score": 50,
       "county": "DeKalb",
       "first_seen": "2026-10-08"
+    },
+    {
+      "doc_num": "2026102811",
+      "doc_type": "LIEN",
+      "filed": "2026-10-07",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "HOLMES CHRISTOPHER",
+      "grantee": "NEURO SPINE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "16 066 02 025",
+      "prop_address": "5775 Lanny Lane Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "5775 LANNY LN",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.6,
+      "match_method": "owner_exact_multi",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 50,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
     },
     {
       "doc_num": "2026102282",
@@ -104934,7 +106071,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -104970,7 +106107,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -105006,7 +106143,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -105042,7 +106179,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -105078,7 +106215,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -105114,7 +106251,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -105150,7 +106287,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -105186,7 +106323,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -147599,6 +148736,618 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102829",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "REID MILDRED",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102834",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "TREADWELL KEYOSHIA",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102835",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "BRYANT ALESSANDRIA",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102836",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "LEWIS KEIVONTE",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102837",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "PLESSY KYNISHA",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102841",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "TOWNS DREVIOUNTE",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102845",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "JACKSON MEGAN",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102858",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "VILLANUEVA BALLESTEROS SANTOS BALLESTEROS SANTOS VILLANUEVA",
+      "grantee": "PIEDMONT ATHENS REGIONAL HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102872",
+      "doc_type": "LIEN AMENDMENT",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "FORD JANET",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102873",
+      "doc_type": "LIEN AMENDMENT",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "FRED JANET",
+      "grantee": "SUMMIT SURGERY CENTER",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102920",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "PULLEY DASHAWN",
+      "grantee": "PIEDMONT ATLANTA HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102921",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "GREEN BELINDA",
+      "grantee": "PIEDMONT ATHENS REGIONAL HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102987",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "BLAKE SHAUNITA",
+      "grantee": "EMORY HILLANDALE HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102988",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ANDREWS SHAYARTIC",
+      "grantee": "EMORY DECATUR HOSPITAL",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103018",
+      "doc_type": "LIEN AMENDMENT",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "RICHARDSON RYAN",
+      "grantee": "GRADY HEALTH SYSTEMS",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103047",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SYKES LINDA",
+      "grantee": "GRADY HEALTH SYSTEMS",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103056",
+      "doc_type": "LIEN AMENDMENT",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "HAYES TRINITY",
+      "grantee": "AICA ORTHOPEDICS PC FRANCIS ACQUAH MD ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102501",
       "doc_type": "LIEN",
       "filed": "2026-10-07",
@@ -147625,7 +149374,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147661,7 +149410,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147697,7 +149446,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147733,7 +149482,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147769,7 +149518,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147805,7 +149554,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147841,7 +149590,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147877,7 +149626,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147913,7 +149662,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147949,7 +149698,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -147985,7 +149734,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148021,7 +149770,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148057,7 +149806,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148093,7 +149842,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148129,7 +149878,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148165,7 +149914,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148201,7 +149950,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148237,7 +149986,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148273,7 +150022,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148309,7 +150058,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148345,7 +150094,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148381,7 +150130,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148417,7 +150166,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148453,7 +150202,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148489,7 +150238,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148525,7 +150274,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148561,7 +150310,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148597,7 +150346,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148633,7 +150382,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148669,7 +150418,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148705,7 +150454,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148713,6 +150462,115 @@
       "score": 45,
       "county": "DeKalb",
       "first_seen": "2026-10-08"
+    },
+    {
+      "doc_num": "2026102809",
+      "doc_type": "LIEN",
+      "filed": "2026-10-07",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "YARBROUGH HAKEEM",
+      "grantee": "RIVERBEND HEALTH SERVICES LLC",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102810",
+      "doc_type": "LIEN",
+      "filed": "2026-10-07",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ISMAIL YOANA",
+      "grantee": "NEURO SPINE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102818",
+      "doc_type": "LIEN",
+      "filed": "2026-10-07",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "FARMERS HEALTH AUTHORITY LLC ...",
+      "grantee": "FARMERS HEALTH AUTHORITY LLC ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "Lien",
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 45,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
     },
     {
       "doc_num": "2026102146",
@@ -148741,7 +150599,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148777,7 +150635,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148813,7 +150671,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "Absentee owner",
@@ -148850,7 +150708,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148886,7 +150744,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148922,7 +150780,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148958,7 +150816,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -148994,7 +150852,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -149030,7 +150888,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "Lien",
         "New this week"
@@ -168927,7 +170785,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week"
@@ -168963,7 +170821,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week"
       ],
@@ -169329,6 +171187,42 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102981",
+      "doc_type": "ALL NOTICES INCLUDING NOTICE OF COMMENCEMENT",
+      "filed": "2026-10-08",
+      "cat": "NOC",
+      "cat_label": "Notice of Commencement",
+      "owner": "GRAHAM ATLANTA HOMES LLC",
+      "grantee": "GRAHAM ATLANTA HOMES LLC",
+      "amount": null,
+      "legal": "DIS:15 LAND:186 Parcel: __ ___ __ ___",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 35,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102788",
       "doc_type": "ALL NOTICES INCLUDING NOTICE OF COMMENCEMENT",
       "filed": "2026-10-07",
@@ -169355,7 +171249,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week"
@@ -169466,7 +171360,7 @@
       "status": "released",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "Absentee owner",
@@ -169504,7 +171398,7 @@
       "status": "released",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "Absentee owner",
@@ -169542,7 +171436,7 @@
       "status": "released",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "Absentee owner",
@@ -169580,7 +171474,7 @@
       "status": "released",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "Absentee owner",
@@ -169618,7 +171512,7 @@
       "status": "released",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "Absentee owner",
@@ -171214,6 +173108,263 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102865",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "ALDEN PARK TOWNHOME COMMUNITY ASSOCIATION INC",
+      "grantee": "LEWIS ALETHEA DOREEN",
+      "amount": null,
+      "legal": "Parcel: 15 195 08 090 Tax District: 04 STREETNUM:4172 STREET:ALDEN PARK SUFF:DR CITY:DECATUR STATE:GA ZIP:30035",
+      "parcel_id": "15 195 08 090",
+      "prop_address": "4172 Alden Park Drive Decatur, GA 30035",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "30035",
+      "mail_address": "4172 ALDEN PARK DR",
+      "mail_city": "DECATUR",
+      "mail_state": "GA",
+      "mail_zip": "30035",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "LLC / corp owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102903",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "LAKEVIEW LOAN SERVICING LLC",
+      "grantee": "BELL TANYA JANE MICHELLE BELL TANYA J ...",
+      "amount": null,
+      "legal": "Parcel: 15 182 03 035 Tax District:61",
+      "parcel_id": "15 182 03 035",
+      "prop_address": "2769 Glenwood Avenue Atlanta, GA 30317",
+      "prop_city": "Atlanta",
+      "prop_state": "GA",
+      "prop_zip": "30317",
+      "mail_address": "2769 GLENWOOD AVE SE",
+      "mail_city": "ATLANTA",
+      "mail_state": "GA",
+      "mail_zip": "30317",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "LLC / corp owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102914",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "CREEKSIDE VILLAGE TOWNHOMES HOMEOWNERS ASSOCIATION",
+      "grantee": "HINES KORI",
+      "amount": null,
+      "legal": "Parcel: 16 188 02 188 Tax District: 04 STREETNUM:7624 STREET:GRAY POINTE SUFF:DR STATE:GA",
+      "parcel_id": "16 188 02 188",
+      "prop_address": "7624 Gray Pointe Drive Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "7624 GRAY POINTE DR",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102915",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "CREEKSIDE VILLAGE TOWNHOMES HOMEOWNERS ASSOCIATION",
+      "grantee": "HINES KORI",
+      "amount": null,
+      "legal": "Parcel: 16 188 02 188 Tax District: 04 STREETNUM:7624 STREET:GRAY POINTE SUFF:DR STATE:GA",
+      "parcel_id": "16 188 02 188",
+      "prop_address": "7624 Gray Pointe Drive Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "7624 GRAY POINTE DR",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102931",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "DRESDEN HEIGHTS II UNIT OWNERS ASSOCIATION INC",
+      "grantee": "SMITH CHIMAR",
+      "amount": null,
+      "legal": "Parcel: 18 282 19 026 Tax District: 24A STREETNUM:3106 STREET:QUANTUM SUFF:LN CITY:CHAMBLEE STATE:GA ZIP:30341",
+      "parcel_id": "18 282 19 026",
+      "prop_address": "3106 Quantum Lane Chamblee, GA 30341",
+      "prop_city": "Chamblee",
+      "prop_state": "GA",
+      "prop_zip": "30341",
+      "mail_address": "3106 QUANTUM LN UNIT 51",
+      "mail_city": "CHAMBLEE",
+      "mail_state": "GA",
+      "mail_zip": "30341",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "LLC / corp owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103002",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SWEET WATER RECREATION ASSOCIATION INC",
+      "grantee": "ABRAMS DOREEN ABRAMS LEELAND",
+      "amount": null,
+      "legal": "Parcel: 15 032 04 010 Tax District: 04 STREETNUM:4055 STREET:SWEET WATER SUFF:PKWY CITY:ELLENWOOD STATE:GA ZIP:30294",
+      "parcel_id": "15 032 04 010",
+      "prop_address": "4055 Sweet Water Parkway Ellenwood, GA 30294",
+      "prop_city": "Ellenwood",
+      "prop_state": "GA",
+      "prop_zip": "30294",
+      "mail_address": "4055 SWEETWATER PKWY",
+      "mail_city": "ELLENWOOD",
+      "mail_state": "GA",
+      "mail_zip": "30294",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "LLC / corp owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103014",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "POPLAR FALLS COMMUNITY ASSOCIATION INC",
+      "grantee": "HUGHLEY NICHOLAS",
+      "amount": null,
+      "legal": "Parcel: 16 187 02 120 Tax District: 04 STREETNUM:7688 STREET:OUTCROP PASS CITY:LITHONIA STATE:GA ZIP:30058",
+      "parcel_id": "16 187 02 120",
+      "prop_address": "7668 Outcrop Pass Lithonia, GA 30058",
+      "prop_city": "Lithonia",
+      "prop_state": "GA",
+      "prop_zip": "30058",
+      "mail_address": "7668 OUTCROP PASS",
+      "mail_city": "LITHONIA",
+      "mail_state": "GA",
+      "mail_zip": "30058",
+      "owner_occupied": true,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 1.0,
+      "match_method": "parcel_id",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "LLC / corp owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 21,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102643",
       "doc_type": "LIEN CANCELLATION",
       "filed": "2026-10-07",
@@ -171240,7 +173391,7 @@
       "status": "released",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -171277,7 +173428,7 @@
       "status": "released",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173576,6 +175727,330 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "2026102838",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "AICA ORTHOPEDICS PC",
+      "grantee": "SMITH CARLA",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102840",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "AICA ORTHOPEDICS PC",
+      "grantee": "BURT ARIANNA",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102843",
+      "doc_type": "LIEN",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "AICA ORTHOPEDICS PC",
+      "grantee": "PALACIOS INGRIS",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102844",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "SUMMIT SURGERY CENTER",
+      "grantee": "STARKES DWAYNE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102848",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "AICA ORTHOPEDICS PC",
+      "grantee": "STARKES DWAYNE",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026102999",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "PIEDMONT ROCKDALE HOSPITAL",
+      "grantee": "JAMES DECHANDRA",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103000",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "PIEDMONT ATLANTA HOSPITAL",
+      "grantee": "GUSTAFSON KAILEY",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103001",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "PIEDMONT HENRY HOSPITAL",
+      "grantee": "HARDEMAN SHANETHIA",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
+      "doc_num": "2026103064",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-08",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "GRADY HEALTH SYSTEMS",
+      "grantee": "BRAGGS JAMES",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
+    },
+    {
       "doc_num": "2026102518",
       "doc_type": "LIEN CANCELLATION",
       "filed": "2026-10-07",
@@ -173602,7 +176077,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173638,7 +176113,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173674,7 +176149,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173710,7 +176185,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173746,7 +176221,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173782,7 +176257,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173818,7 +176293,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173854,7 +176329,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173890,7 +176365,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -173926,7 +176401,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -173963,7 +176438,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -174000,7 +176475,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -174036,7 +176511,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -174072,7 +176547,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -174108,7 +176583,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -174144,7 +176619,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -174180,7 +176655,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -174216,7 +176691,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -174225,6 +176700,43 @@
       "score": 18,
       "county": "DeKalb",
       "first_seen": "2026-10-08"
+    },
+    {
+      "doc_num": "2026102813",
+      "doc_type": "LIEN CANCELLATION",
+      "filed": "2026-10-07",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "GEORGIA APPRECIATION PROPERTY INC",
+      "grantee": "RUTLEDGE STEVE RUTLEDGE ZOE ...",
+      "amount": null,
+      "legal": "",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+      "source": "LandmarkWeb (Clerk of Superior Court)",
+      "foreclosure_sale_date": "",
+      "notice_number": "",
+      "status": "released",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-10-09",
+      "flags": [
+        "LLC / corp owner",
+        "New this week",
+        "Released / resolved"
+      ],
+      "score": 18,
+      "county": "DeKalb",
+      "first_seen": "2026-10-09"
     },
     {
       "doc_num": "2026102062",
@@ -174253,7 +176765,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -174290,7 +176802,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -174327,7 +176839,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -174364,7 +176876,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -174401,7 +176913,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-10-09",
       "flags": [
         "New this week",
         "Released / resolved"
