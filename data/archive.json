@@ -644,7 +644,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Pre-foreclosure",
       "LLC / corp owner",
@@ -1664,51 +1664,11 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Probate / estate",
       "LLC / corp owner",
       "Absentee owner",
-      "New this week"
-    ],
-    "score": 74,
-    "county": "DeKalb",
-    "first_seen": "2026-10-17"
-  },
-  {
-    "doc_num": "2026105519",
-    "doc_type": "MECHANIC'S AND MATERIALMANS LIEN",
-    "filed": "2026-10-16",
-    "cat": "MECH",
-    "cat_label": "Mechanic / Materialman Lien",
-    "owner": "ACCENT CUSTOM HOMES 8080 LLC",
-    "grantee": "NORTH GEORGIA BRICK CO INC",
-    "amount": null,
-    "legal": "DIS:16 LAND:181 Parcel: 16 181 01 143 Tax District: 80 STREETNUM:8080 STREET:WHITE OAK LOOP STATE:GA",
-    "parcel_id": "16 181 01 143",
-    "prop_address": "8080 White Oak Loop Lithonia, GA 30038",
-    "prop_city": "Lithonia",
-    "prop_state": "GA",
-    "prop_zip": "30038",
-    "mail_address": "1579 MONROE DR NE STE F-211",
-    "mail_city": "ATLANTA",
-    "mail_state": "GA",
-    "mail_zip": "30324",
-    "owner_occupied": false,
-    "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
-    "source": "LandmarkWeb (Clerk of Superior Court)",
-    "foreclosure_sale_date": "",
-    "notice_number": "",
-    "status": "active",
-    "match_confidence": 1.0,
-    "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
-    "flags": [
-      "Lien",
-      "Mechanic lien",
-      "LLC / corp owner",
-      "Absentee owner",
-      "Multiple distress signals",
       "New this week"
     ],
     "score": 74,
@@ -1742,7 +1702,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Probate / estate",
       "Absentee owner",
@@ -3191,7 +3151,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3228,7 +3188,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3377,7 +3337,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3415,7 +3375,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3452,7 +3412,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3490,7 +3450,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3566,7 +3526,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3604,7 +3564,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3679,7 +3639,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3716,7 +3676,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3790,7 +3750,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3866,7 +3826,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -3978,7 +3938,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4016,7 +3976,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4128,7 +4088,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4165,7 +4125,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4202,7 +4162,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4239,7 +4199,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4277,7 +4237,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4314,7 +4274,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4351,7 +4311,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4388,7 +4348,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4425,7 +4385,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4538,7 +4498,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4576,7 +4536,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -4650,7 +4610,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -14857,7 +14817,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Probate / estate",
       "New this week"
@@ -14893,7 +14853,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "Absentee owner",
@@ -14930,7 +14890,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Probate / estate",
       "New this week"
@@ -14966,7 +14926,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Probate / estate",
       "New this week"
@@ -15002,7 +14962,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Probate / estate",
       "New this week"
@@ -18574,7 +18534,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -18754,7 +18714,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -18790,7 +18750,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -18826,7 +18786,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -18862,7 +18822,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -18898,7 +18858,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -18934,7 +18894,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -18971,7 +18931,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19007,7 +18967,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19043,7 +19003,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19151,7 +19111,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19223,7 +19183,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19259,7 +19219,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19331,7 +19291,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19367,7 +19327,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19403,7 +19363,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19439,7 +19399,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19475,7 +19435,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19511,7 +19471,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19619,7 +19579,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale",
@@ -19692,7 +19652,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19728,7 +19688,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19800,7 +19760,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19836,7 +19796,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19872,7 +19832,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -19980,7 +19940,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "Tax sale"
@@ -23608,7 +23568,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Pre-foreclosure"
     ],
@@ -23643,7 +23603,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Pre-foreclosure"
     ],
@@ -23821,7 +23781,7 @@
     "status": "active",
     "match_confidence": 0.65,
     "match_method": "owner_core",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "Absentee owner",
@@ -24566,7 +24526,7 @@
     "status": "active",
     "match_confidence": 0.6,
     "match_method": "owner_exact_multi",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Pre-foreclosure"
     ],
@@ -24601,7 +24561,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Pre-foreclosure"
     ],
@@ -25004,6 +24964,44 @@
     "score": 65,
     "county": "DeKalb",
     "first_seen": "2026-09-22"
+  },
+  {
+    "doc_num": "2026105519",
+    "doc_type": "MECHANIC'S AND MATERIALMANS LIEN",
+    "filed": "2026-10-16",
+    "cat": "MECH",
+    "cat_label": "Mechanic / Materialman Lien",
+    "owner": "ACCENT CUSTOM HOMES 8080 LLC",
+    "grantee": "NORTH GEORGIA BRICK CO INC",
+    "amount": null,
+    "legal": "DIS:16 LAND:181 Parcel: 16 181 01 143 Tax District: 80 STREETNUM:8080 STREET:WHITE OAK LOOP STATE:GA",
+    "parcel_id": "16 181 01 143",
+    "prop_address": "8080 White Oak Loop Lithonia, GA 30038",
+    "prop_city": "Lithonia",
+    "prop_state": "GA",
+    "prop_zip": "30038",
+    "mail_address": "1579 MONROE DR NE STE F-211",
+    "mail_city": "ATLANTA",
+    "mail_state": "GA",
+    "mail_zip": "30324",
+    "owner_occupied": false,
+    "clerk_url": "https://deeds.dekalbcountyga.gov/LandmarkWeb",
+    "source": "LandmarkWeb (Clerk of Superior Court)",
+    "foreclosure_sale_date": "",
+    "notice_number": "",
+    "status": "active",
+    "match_confidence": 1.0,
+    "match_method": "parcel_id",
+    "last_verified": "2026-10-19",
+    "flags": [
+      "Mechanic lien",
+      "LLC / corp owner",
+      "Absentee owner",
+      "New this week"
+    ],
+    "score": 64,
+    "county": "DeKalb",
+    "first_seen": "2026-10-17"
   },
   {
     "doc_num": "2026104954",
@@ -31199,7 +31197,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -31235,7 +31233,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -31271,7 +31269,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -31307,7 +31305,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -31343,7 +31341,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -31379,7 +31377,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -31415,7 +31413,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -39219,7 +39217,7 @@
     "status": "active",
     "match_confidence": 0.6,
     "match_method": "owner_exact_multi",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -39255,7 +39253,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Pre-foreclosure"
     ],
@@ -39290,7 +39288,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Pre-foreclosure"
     ],
@@ -39469,7 +39467,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent",
       "LLC / corp owner"
@@ -41843,7 +41841,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "LLC / corp owner",
@@ -44446,7 +44444,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Mechanic lien",
       "New this week"
@@ -64497,7 +64495,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -64534,7 +64532,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64570,7 +64568,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64606,7 +64604,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64642,7 +64640,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64678,7 +64676,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64714,7 +64712,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64750,7 +64748,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64786,7 +64784,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64822,7 +64820,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64858,7 +64856,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64894,7 +64892,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64930,7 +64928,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -64966,7 +64964,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65002,7 +65000,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65038,7 +65036,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65074,7 +65072,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65111,7 +65109,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65148,7 +65146,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65184,7 +65182,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65220,7 +65218,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65256,7 +65254,7 @@
     "status": "active",
     "match_confidence": 0.55,
     "match_method": "owner_signature_multi",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65292,7 +65290,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65328,7 +65326,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65365,7 +65363,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65402,7 +65400,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65439,7 +65437,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65476,7 +65474,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65513,7 +65511,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "LLC / corp owner",
@@ -65550,7 +65548,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65586,7 +65584,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65622,7 +65620,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65658,7 +65656,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65694,7 +65692,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65730,7 +65728,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65766,7 +65764,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -65802,7 +65800,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax lien",
       "New this week"
@@ -66346,7 +66344,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Tax delinquent"
     ],
@@ -107179,7 +107177,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -112258,7 +112256,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -112294,7 +112292,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -112330,7 +112328,7 @@
     "status": "active",
     "match_confidence": 0.75,
     "match_method": "owner_signature",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -112366,7 +112364,7 @@
     "status": "active",
     "match_confidence": 0.85,
     "match_method": "owner_exact",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -116220,7 +116218,7 @@
     "status": "active",
     "match_confidence": 0.6,
     "match_method": "owner_exact_multi",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -116256,7 +116254,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Mechanic lien",
       "New this week"
@@ -116292,7 +116290,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Mechanic lien",
       "LLC / corp owner",
@@ -116329,7 +116327,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Mechanic lien",
       "LLC / corp owner",
@@ -116366,7 +116364,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Mechanic lien",
       "LLC / corp owner",
@@ -116403,7 +116401,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -116439,7 +116437,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -116475,7 +116473,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -116511,7 +116509,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -116547,7 +116545,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -116583,7 +116581,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -116619,7 +116617,7 @@
     "status": "active",
     "match_confidence": 0.55,
     "match_method": "owner_signature_multi",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -116655,7 +116653,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "LLC / corp owner",
@@ -116692,7 +116690,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Judgment lien",
       "New this week"
@@ -162631,7 +162629,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162667,7 +162665,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162703,7 +162701,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162739,7 +162737,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162775,7 +162773,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162811,7 +162809,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162847,7 +162845,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162883,7 +162881,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162919,7 +162917,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162955,7 +162953,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -162991,7 +162989,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163027,7 +163025,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163063,7 +163061,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163099,7 +163097,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163135,7 +163133,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163171,7 +163169,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163207,7 +163205,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163243,7 +163241,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "Absentee owner",
@@ -163280,7 +163278,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "Absentee owner",
@@ -163317,7 +163315,7 @@
     "status": "active",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "Absentee owner",
@@ -163354,7 +163352,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163390,7 +163388,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163426,7 +163424,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163462,7 +163460,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -163498,7 +163496,7 @@
     "status": "active",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Lien",
       "New this week"
@@ -191284,7 +191282,7 @@
     "status": "released",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "Absentee owner",
@@ -191322,7 +191320,7 @@
     "status": "released",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "Absentee owner",
       "New this week",
@@ -191359,7 +191357,7 @@
     "status": "released",
     "match_confidence": 1.0,
     "match_method": "parcel_id",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "Absentee owner",
@@ -197274,7 +197272,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197310,7 +197308,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197346,7 +197344,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197382,7 +197380,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197418,7 +197416,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197454,7 +197452,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197490,7 +197488,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197526,7 +197524,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197562,7 +197560,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197598,7 +197596,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197634,7 +197632,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "New this week",
       "Released / resolved"
@@ -197670,7 +197668,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "New this week",
@@ -197707,7 +197705,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "New this week",
@@ -197744,7 +197742,7 @@
     "status": "released",
     "match_confidence": 0.0,
     "match_method": "none",
-    "last_verified": "2026-10-18",
+    "last_verified": "2026-10-19",
     "flags": [
       "LLC / corp owner",
       "New this week",
