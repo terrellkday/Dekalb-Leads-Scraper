@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-10-21T07:18:13.327364-04:00",
+  "fetched_at": "2026-10-22T07:18:24.988477-04:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
-    "start": "2026-10-18",
-    "end": "2026-10-21"
+    "start": "2026-10-19",
+    "end": "2026-10-22"
   },
   "run_window": {
-    "start": "2026-10-18",
-    "end": "2026-10-21"
+    "start": "2026-10-19",
+    "end": "2026-10-22"
   },
   "archive_range": {
     "start": "2026-09-08",
@@ -17,7 +17,7 @@
     "start": "2026-08-14",
     "end": "2026-10-20"
   },
-  "new_this_run": 124,
+  "new_this_run": 0,
   "archive_total": 6234,
   "dashboard_days": 120,
   "total": 6234,
@@ -34,9 +34,9 @@
       "error": ""
     },
     "landmarkweb": {
-      "ok": true,
-      "count": 235,
-      "error": ""
+      "ok": false,
+      "count": 0,
+      "error": "Page.goto: net::ERR_CERT_DATE_INVALID at https://deeds.dekalbcountyga.gov/LandmarkWeb\nCall log:\n  - navigating to \"https://deeds.dekalbcountyga.gov/LandmarkWeb\", waiting until \"domcontentloaded\"\n"
     },
     "legal_notices": {
       "ok": true,
@@ -45,7 +45,7 @@
     },
     "tax_sales": {
       "ok": true,
-      "count": 44,
+      "count": 42,
       "error": ""
     }
   },
@@ -3314,7 +3314,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3351,7 +3351,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3500,7 +3500,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3538,7 +3538,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3575,7 +3575,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3689,7 +3689,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3727,7 +3727,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3820,7 +3820,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "STEVENS FRANKIE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 10994.88,
+      "amount": 7694.88,
       "legal": "Delinquent tax years 2024-2025. Lien book 2920 page 0541",
       "parcel_id": "15 186 05 045",
       "prop_address": "1608 Columbia Drive Decatur, GA 30032",
@@ -3839,7 +3839,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3913,7 +3913,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -3989,7 +3989,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4101,7 +4101,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4139,7 +4139,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4288,7 +4288,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4325,7 +4325,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4362,7 +4362,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4400,7 +4400,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4437,7 +4437,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4474,7 +4474,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4548,7 +4548,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4661,7 +4661,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -4699,7 +4699,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -19166,7 +19166,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19346,7 +19346,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19382,7 +19382,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19418,7 +19418,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19454,7 +19454,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19490,7 +19490,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19526,7 +19526,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -19563,7 +19563,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19599,7 +19599,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19635,7 +19635,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19743,7 +19743,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19815,7 +19815,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19851,7 +19851,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -19923,7 +19923,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -20031,7 +20031,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -20067,7 +20067,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -20211,7 +20211,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -20284,7 +20284,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -20428,7 +20428,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -20572,7 +20572,7 @@
       "status": "active",
       "match_confidence": 1.0,
       "match_method": "parcel_id",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -24200,7 +24200,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -24235,7 +24235,7 @@
       "status": "active",
       "match_confidence": 0.85,
       "match_method": "owner_exact",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -25158,7 +25158,7 @@
       "status": "active",
       "match_confidence": 0.6,
       "match_method": "owner_exact_multi",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -25193,7 +25193,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -40225,7 +40225,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -40260,7 +40260,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -40439,7 +40439,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent",
         "LLC / corp owner"
@@ -69133,7 +69133,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-10-22",
       "flags": [
         "Tax delinquent"
       ],
