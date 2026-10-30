@@ -1,9 +1,9 @@
 {
   "accept_method": "javascript click",
-  "submit": "#submit-RecordDate",
+  "submit": "a[id$='-RecordDate']",
   "strategy": "searchCriteriaRecordDate",
   "url": "https://deeds.dekalbcountyga.gov/LandmarkWeb/search/index?theme=.blue&section=searchCriteriaRecordDate&quickSearchSelection=",
   "date_from": "#beginDate-RecordDate",
   "date_to": "#endDate-RecordDate",
-  "learned_at": "2026-10-29T11:16:13.377548+00:00"
+  "learned_at": "2026-10-30T11:16:15.417161+00:00"
 }

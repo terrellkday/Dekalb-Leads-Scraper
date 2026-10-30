@@ -1,53 +1,34 @@
 Address,City,State,Zip,Tag
-2781 Keystone Avenue,Lithonia,GA,30058,Probate / Estate
-1714 Danrich Drive,Decatur,GA,30032,Probate / Estate
-2861 Orion Drive,Decatur,GA,30033,Probate / Estate
-4918 Ozment Ridge Court,Lithonia,GA,30038,Pre-Foreclosure
-5418 Zachary Drive,Stone Mountain,GA,30083,Pre-Foreclosure
-2775 Hilson Commons,Decatur,GA,30034,Pre-Foreclosure
-2337 Melinda Drive,Atlanta,GA,30345,Probate / Estate
-2801 Eastwood Drive,Decatur,GA,30032,Tax Lien
-3437 Pinehill Drive,Decatur,GA,30032,Tax Lien
-2748 Riviera Court,Decatur,GA,30033,Probate / Estate
-895 Valley Place,Decatur,GA,30033,Probate / Estate
-5617 Longbow Drive,Stone Mountain,GA,30087,Mechanic / Materialman Lien
-2460 Wesley Chapel Road,Decatur,GA,30035,Mechanic / Materialman Lien
-981 Shadow Ridge Trail,Lithonia,GA,30058,Tax Lien
-3529 Waldrop Trail,Decatur,GA,30034,Tax Lien
-429 Pensdale Road REAR,Decatur,GA,30030,Tax Lien
-4173 Spring Valley Circle,Tucker,GA,30084,Lien
-3714 Valpariso Circle,Decatur,GA,30034,Mechanic / Materialman Lien
-3001 Rollingwood Lane,Atlanta,GA,30316,Mechanic / Materialman Lien
-2263 Carrington Drive,Ellenwood,GA,30294,Mechanic / Materialman Lien
-6128 Valley Green Road,Lithonia,GA,30058,Mechanic / Materialman Lien
-1523 Colony East Circle,Stone Mountain,GA,30083,Mechanic / Materialman Lien
-2968 Stonebridge Creek Drive,Lithonia,GA,30058,Mechanic / Materialman Lien
-2245 Sutton Street,Atlanta,GA,30317,Mechanic / Materialman Lien
-5733 Fieldstone Drive,Lithonia,GA,30038,Mechanic / Materialman Lien
-2689 Leafwood Way,Decatur,GA,30034,Mechanic / Materialman Lien
-4409 Barclay Way,Stone Mountain,GA,30083,Mechanic / Materialman Lien
-1916 Manhattan Parkway,Decatur,GA,30035,Judgment
-5609 Fox Den Trail,Lithonia,GA,30038,Judgment
-903 Masters Walk,Stone Mountain,GA,30087,Judgment
-4200 Sheppard Crossing Way,Stone Mountain,GA,30083,Judgment
-6200 STREET,,GA,,Mechanic / Materialman Lien
-918 STREET,,GA,,Mechanic / Materialman Lien
-5497 Mountain View Pass,Stone Mountain,GA,30087,Lien
-1273 English Manor Circle,Stone Mountain,GA,30087,Lien
-2442 Skyland Way,Atlanta,GA,30319,Lien
-1388 May Avenue,Atlanta,GA,30316,Lien
-6415 Greenock Drive,Stone Mountain,GA,30087,Lien
-1140 Michael Court,Lithonia,GA,30058,Lien
-1134 Moorestown Circle,Decatur,GA,30033,Lien
-4076 Green Oak Drive,Doraville,GA,30340,Lien
-636 Garden Walk Drive,Stone Mountain,GA,30083,Lien
-592 Lakewater Estates Lane,Stone Mountain,GA,30087,Lien
-230 East Ponce De Leon Avenue Unit 118,Decatur,GA,30030,Lien
-1672 Columbia Drive,Decatur,GA,30032,Lien
-1940 Moreland Avenue,Atlanta,GA,30316,Notice of Commencement
-4544 Investors Lane,Ellenwood,GA,30294,Lien
-4721 STREET,,GA,,Notice of Commencement
-3058 South Rainbow Drive,Decatur,GA,30034,Lien
-2836 Snapfinger Manor,Decatur,GA,30035,Lien
-5000 Peachtree Boulevard,Chamblee,GA,30341,Lien
-2795 Da Vinci Boulevard,Decatur,GA,30034,Lien
+2584 Chamblee Tucker Road,Chamblee,GA,30341,Probate / Estate
+2920 Vining Ridge Terrace,Decatur,GA,30034,Probate / Estate
+2571 Candler Road,Decatur,GA,30032,Lis Pendens
+1200 PARKER STREET,Decatur,GA,30316,Pre-Foreclosure
+3423 Finesse Drive,Decatur,GA,30032,Probate / Estate
+3554 Stewart Road,Doraville,GA,30340,Probate / Estate
+1034 Mell Avenue,Clarkston,GA,30021,Probate / Estate
+2588 Decatur Village Drive,Decatur,GA,30033,Mechanic / Materialman Lien
+4659 Dawson Boulevard,Doraville,GA,30340,Lien
+5201 Hugh Howell Road,Stone Mountain,GA,30087,Mechanic / Materialman Lien
+436 Orchards Walk,Stone Mountain,GA,30087,Mechanic / Materialman Lien
+4209 Welbron Drive,Decatur,GA,30035,Mechanic / Materialman Lien
+1790 Northumberland Way,Atlanta,GA,30316,Mechanic / Materialman Lien
+4114 Chapel Mill Way,Decatur,GA,30034,Mechanic / Materialman Lien
+1898 Rock Chapel Road,Lithonia,GA,30058,Mechanic / Materialman Lien
+188 Palatka Street,Atlanta,GA,30317,Mechanic / Materialman Lien
+3217 Edgemont Way,Decatur,GA,30032,Judgment
+586 Fortune Ridge Road,Stone Mountain,GA,30087,Judgment
+787 Arbor Hill Drive,Stone Mountain,GA,30088,Judgment
+6966 Breeze Drive,Stone Mountain,GA,30087,Judgment
+459 Hammett Drive,Decatur,GA,30032,Judgment
+7229 STREET,,GA,,Mechanic / Materialman Lien
+3525 STREET,,GA,,Mechanic / Materialman Lien
+6377 Dogwood Trail,Lithonia,GA,30058,Judgment
+2675 Homeland Drive,Doraville,GA,30360,Judgment
+4294 Rue Saint Michel,Stone Mountain,GA,30083,Judgment
+2783 Cosmos Drive,Atlanta,GA,30345,Lien
+3316 Northcrest Road Unit B,Doraville,GA,30340,Lien
+4689 Thompson Mill Road,Lithonia,GA,30038,Lien
+1816 STREET,,GA,,Notice of Commencement
+3708 Whirlaway Drive,Decatur,GA,30034,Lien
+4615 Grand Central Parkway,Decatur,GA,30035,Lien
+2757 Parkway Cove,Lithonia,GA,30058,Lien
