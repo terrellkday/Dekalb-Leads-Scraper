@@ -1,26 +1,26 @@
 {
-  "captured_at": "2026-11-08T12:20:53.940005+00:00",
+  "captured_at": "2026-11-09T12:20:40.304619+00:00",
   "url": "https://deeds.dekalbcountyga.gov/LandmarkWeb/search/index?theme=.blue&section=searchCriteriaRecordDate&quickSearchSelection=",
   "reason": "The search form was filled in but the site returned no results.",
   "xhr_urls_seen": [
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A14%3A46%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A15%3A02%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A15%3A04%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A15%3A10%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A15%3A57%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A15%3A59%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A16%3A56%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A17%3A53%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A18%3A50%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A19%3A47%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A19%3A50%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A19%3A55%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Sun%20Nov%2008%202026%2007%3A20%3A44%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A14%3A52%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A15%3A08%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A15%3A10%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A15%3A14%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A16%3A01%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A16%3A03%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A16%3A56%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A17%3A49%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A18%3A43%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A19%3A36%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A19%3A38%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A19%3A42%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/Cart/SetGetItemInCartAndReturnStatusList/?documentId=0&time=Mon%20Nov%2009%202026%2007%3A20%3A30%20GMT-0500%20(Eastern%20Standard%20Time)",
     "https://deeds.dekalbcountyga.gov/LandmarkWeb/Search/GetSearchResults",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Sun%20Nov%2008%202026%2007%3A15%3A10%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Sun%20Nov%2008%202026%2007%3A15%3A57%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Sun%20Nov%2008%202026%2007%3A19%3A55%20GMT-0500%20(Eastern%20Standard%20Time)",
-    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Sun%20Nov%2008%202026%2007%3A20%3A43%20GMT-0500%20(Eastern%20Standard%20Time)"
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Mon%20Nov%2009%202026%2007%3A15%3A14%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Mon%20Nov%2009%202026%2007%3A16%3A01%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Mon%20Nov%2009%202026%2007%3A19%3A42%20GMT-0500%20(Eastern%20Standard%20Time)",
+    "https://deeds.dekalbcountyga.gov/LandmarkWeb/cart/SetGetItemInCartAndReturnStatusList/?documentId=1&time=Mon%20Nov%2009%202026%2007%3A20%3A30%20GMT-0500%20(Eastern%20Standard%20Time)"
   ],
   "visible_controls": [
     {
@@ -165,7 +165,7 @@
       "type": "text",
       "title": "Begin Date",
       "cls": "hasDatepicker",
-      "text": "11/07/2026"
+      "text": "11/08/2026"
     },
     {
       "tag": "A",
@@ -201,7 +201,7 @@
       "type": "text",
       "title": "End Date",
       "cls": "hasDatepicker",
-      "text": "11/08/2026"
+      "text": "11/09/2026"
     },
     {
       "tag": "A",

@@ -1,6 +1,6 @@
 # The clerk's website changed
 
-**When:** November 08, 2026 at 12:20 UTC
+**When:** November 09, 2026 at 12:20 UTC
 
 **What happened:** The search form was filled in but the site returned no results.
 

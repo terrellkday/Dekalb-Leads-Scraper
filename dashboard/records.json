@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-11-08T07:23:03.360503-05:00",
+  "fetched_at": "2026-11-09T07:22:52.254868-05:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
-    "start": "2026-11-05",
-    "end": "2026-11-08"
+    "start": "2026-11-06",
+    "end": "2026-11-09"
   },
   "run_window": {
-    "start": "2026-11-05",
-    "end": "2026-11-08"
+    "start": "2026-11-06",
+    "end": "2026-11-09"
   },
   "archive_range": {
     "start": "2026-09-08",
@@ -45,7 +45,7 @@
     },
     "tax_sales": {
       "ok": true,
-      "count": 88,
+      "count": 86,
       "error": ""
     }
   },
@@ -26774,150 +26774,6 @@
       "first_seen": "2026-11-06"
     },
     {
-      "doc_num": "GPN-420-190505",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-05",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "Doris J Nixon and Nathaniel C",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190505 11/5,11/12,11/19,11/26NOTICE OF SALE UNDER POWER, DEKALB COUNTYPursuant to the Power of Sale contained in a Security Deed given by Doris J Nixon and Nathaniel C Gainer to Mortgage Electronic Registration Systems, Inc., as grantee, as nominee for Fay Servicing, LLC, its successors and assi ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190505",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-08",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "doc_num": "GPN-420-190900",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-05",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "VERONICA M YAYAH and ISSACHAR I",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190900 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWER OF SALE NOTICE OF SALE UNDER POWER CONTAINED IN SECURITY DEED STATE OF GEORGIA COUNTY OF DEKALBPursuant to a power of sale contained in a certain security deed executed by VERONICA M YAYAH and ISSACHAR I YAYAH, hereinafter refer ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190900",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-08",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "doc_num": "GPN-420-190880",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-05",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "Kevin Gayle-White",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190880 11/05,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY, GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE.Under and by virtue of the Power of Sale contained in a Security Deed given by Kevin Gayle-White to Mortgage Elec ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190880",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-08",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "doc_num": "GPN-420-190878",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-05",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "Hau Khan Kap and Go Do",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190878 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE. Under and by virtue of the Power of Sale contained in a Security Deed given by Hau Khan Kap and Go Do Cing to Mort ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190878",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-08",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
-    },
-    {
       "doc_num": "2026111309",
       "doc_type": "DEED - FROM ESTATE",
       "filed": "2026-11-05",
@@ -27813,7 +27669,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -28257,7 +28113,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28293,7 +28149,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28329,7 +28185,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28401,7 +28257,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -28438,7 +28294,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28474,7 +28330,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28546,7 +28402,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28582,7 +28438,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -28636,7 +28492,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SHIELDS DWIGHT SCOTT KUFUNYA L",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6168.08,
+      "amount": 9583.26,
       "legal": "Delinquent tax years 2025-2025. Lien book 2920 page 0273",
       "parcel_id": "15 147 05 055",
       "prop_address": "2107 GARDEN PL",
@@ -28655,7 +28511,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28691,7 +28547,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28727,7 +28583,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28763,7 +28619,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28835,7 +28691,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28871,7 +28727,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28924,7 +28780,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "EVANS WILLIE WATTS WANDA ELAINE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4959.05,
+      "amount": 6462.79,
       "legal": "Delinquent tax years 2024-2025. Lien book 2934 page 0519",
       "parcel_id": "15 175 01 040",
       "prop_address": "1685 GLENWOOD AVE SE",
@@ -28943,7 +28799,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28960,7 +28816,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "ROUSE HUDSON L",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4013.66,
+      "amount": 6389.5,
       "legal": "Delinquent tax years 2025-2025. Lien book 2934 page 0525",
       "parcel_id": "15 175 02 022",
       "prop_address": "670 ORA AVE SE",
@@ -28979,7 +28835,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -28996,7 +28852,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "JOHNSON GEORGE ADAMS",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4254.06,
+      "amount": 6857.34,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0042",
       "parcel_id": "15 177 01 110",
       "prop_address": "319 E SIDE AVE SE",
@@ -29015,7 +28871,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29032,7 +28888,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "HOWELL EDWARD L",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7186.94,
+      "amount": 7267.2,
       "legal": "Delinquent tax years 2005-2025. Lien book 300 page 0430",
       "parcel_id": "15 177 04 023",
       "prop_address": "1194 TRENTON ST SE",
@@ -29051,7 +28907,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29087,7 +28943,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29123,7 +28979,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29159,7 +29015,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29195,7 +29051,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29231,7 +29087,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29267,7 +29123,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29304,7 +29160,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29321,7 +29177,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SHEPARD RALPH BRANDON JR HIS EST PER REP AND HEIRS KNOWN AND UNKNOWN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6729.41,
+      "amount": 13181.35,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0338",
       "parcel_id": "15 204 04 121",
       "prop_address": "2557 TILSON DR SE",
@@ -29340,7 +29196,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29357,7 +29213,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "CLARKE ROLAND JAMES",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4622.89,
+      "amount": 8274.21,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0351",
       "parcel_id": "15 207 01 123",
       "prop_address": "18 WYMAN ST SE",
@@ -29376,7 +29232,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29393,7 +29249,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "KASPER MICHAEL P",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 3869.8,
+      "amount": 5295.14,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0439",
       "parcel_id": "15 211 04 166",
       "prop_address": "263 CASSON ST NE",
@@ -29412,7 +29268,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29448,7 +29304,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29485,7 +29341,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29522,7 +29378,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29539,7 +29395,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "DOMINY MICHAEL A",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 3813.77,
+      "amount": 4883.59,
       "legal": "Delinquent tax years 2025-2025. Lien book 2936 page 0129",
       "parcel_id": "15 242 05 032",
       "prop_address": "1634 PONCE DE LEON AVE 315",
@@ -29558,7 +29414,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29594,7 +29450,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29630,7 +29486,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29667,7 +29523,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29703,7 +29559,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29740,7 +29596,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29777,7 +29633,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29813,7 +29669,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29849,7 +29705,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29885,7 +29741,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29921,7 +29777,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29957,7 +29813,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29993,7 +29849,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30065,7 +29921,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30101,7 +29957,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30137,7 +29993,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30174,7 +30030,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30210,7 +30066,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30246,7 +30102,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30282,7 +30138,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30318,7 +30174,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30354,7 +30210,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30390,7 +30246,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30462,7 +30318,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30499,7 +30355,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30536,7 +30392,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30608,7 +30464,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30644,7 +30500,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30680,7 +30536,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30716,7 +30572,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30752,7 +30608,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30789,7 +30645,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30825,7 +30681,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30861,7 +30717,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30897,7 +30753,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30933,7 +30789,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30969,7 +30825,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31005,7 +30861,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31041,7 +30897,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31077,7 +30933,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31114,7 +30970,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31151,7 +31007,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31187,7 +31043,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31223,7 +31079,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31259,7 +31115,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31295,7 +31151,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31331,7 +31187,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31367,7 +31223,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31403,7 +31259,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31439,7 +31295,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31511,7 +31367,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31548,7 +31404,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31585,7 +31441,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31621,7 +31477,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31657,7 +31513,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -48061,6 +47917,146 @@
       "first_seen": "2026-09-22"
     },
     {
+      "doc_num": "GPN-420-190505",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-05",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Doris J Nixon and Nathaniel C",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190505 11/5,11/12,11/19,11/26NOTICE OF SALE UNDER POWER, DEKALB COUNTYPursuant to the Power of Sale contained in a Security Deed given by Doris J Nixon and Nathaniel C Gainer to Mortgage Electronic Registration Systems, Inc., as grantee, as nominee for Fay Servicing, LLC, its successors and assi ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190505",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-09",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
+    },
+    {
+      "doc_num": "GPN-420-190900",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-05",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "VERONICA M YAYAH and ISSACHAR I",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190900 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWER OF SALE NOTICE OF SALE UNDER POWER CONTAINED IN SECURITY DEED STATE OF GEORGIA COUNTY OF DEKALBPursuant to a power of sale contained in a certain security deed executed by VERONICA M YAYAH and ISSACHAR I YAYAH, hereinafter refer ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190900",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-09",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
+    },
+    {
+      "doc_num": "GPN-420-190880",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-05",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Kevin Gayle-White",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190880 11/05,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY, GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE.Under and by virtue of the Power of Sale contained in a Security Deed given by Kevin Gayle-White to Mortgage Elec ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190880",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-09",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
+    },
+    {
+      "doc_num": "GPN-420-190878",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-05",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Hau Khan Kap and Go Do",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 05, 2026 City: Decatur County: DeKalb 420-190878 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE. Under and by virtue of the Power of Sale contained in a Security Deed given by Hau Khan Kap and Go Do Cing to Mort ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190878",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-09",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
+    },
+    {
       "doc_num": "2026110690",
       "doc_type": "TRUSTEE DEED",
       "filed": "2026-11-05",
@@ -48845,7 +48841,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent"
       ],
@@ -49128,7 +49124,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent"
       ],
@@ -82753,7 +82749,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-08",
+      "last_verified": "2026-11-09",
       "flags": [
         "Tax delinquent"
       ],
