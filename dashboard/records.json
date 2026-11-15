@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-11-14T07:17:41.678306-05:00",
+  "fetched_at": "2026-11-15T07:17:57.570499-05:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
-    "start": "2026-11-11",
-    "end": "2026-11-14"
+    "start": "2026-11-12",
+    "end": "2026-11-15"
   },
   "run_window": {
-    "start": "2026-11-11",
-    "end": "2026-11-14"
+    "start": "2026-11-12",
+    "end": "2026-11-15"
   },
   "archive_range": {
     "start": "2026-09-08",
@@ -17,7 +17,7 @@
     "start": "2026-08-14",
     "end": "2026-11-13"
   },
-  "new_this_run": 93,
+  "new_this_run": 0,
   "archive_total": 9283,
   "dashboard_days": 120,
   "total": 9283,
@@ -35,7 +35,7 @@
     },
     "landmarkweb": {
       "ok": true,
-      "count": 245,
+      "count": 182,
       "error": ""
     },
     "legal_notices": {
@@ -45,7 +45,7 @@
     },
     "tax_sales": {
       "ok": true,
-      "count": 76,
+      "count": 72,
       "error": ""
     }
   },
@@ -15833,7 +15833,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Pre-foreclosure",
         "LLC / corp owner",
@@ -26946,7 +26946,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Pre-foreclosure",
         "New this week"
@@ -26982,7 +26982,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -27018,7 +27018,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -27054,7 +27054,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Pre-foreclosure",
         "New this week"
@@ -27090,7 +27090,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Pre-foreclosure",
         "New this week"
@@ -27126,7 +27126,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Pre-foreclosure",
         "New this week"
@@ -27162,7 +27162,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Pre-foreclosure",
         "New this week"
@@ -27198,7 +27198,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lis pendens",
         "LLC / corp owner",
@@ -27235,7 +27235,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -27271,7 +27271,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -28353,7 +28353,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -29611,7 +29611,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "NEW BEGINNING INVESTMENT PC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4751.69,
+      "amount": 4783.53,
       "legal": "Delinquent tax years 2025-2025. Lien book 2932 page 0057",
       "parcel_id": "15 055 01 006",
       "prop_address": "2640 RIVER RD",
@@ -29630,7 +29630,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29647,7 +29647,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "HUBBARD LIVING TRUST",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6364.66,
+      "amount": 6380.58,
       "legal": "Delinquent tax years 2025-2025. Lien book 2932 page 0181",
       "parcel_id": "15 067 04 034",
       "prop_address": "3386 WINDSOR CASTLE CT",
@@ -29666,7 +29666,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29719,7 +29719,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "DNK INVESTMENTS LLC JAL INVESTMENT GROUP LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7729.99,
+      "amount": 7785.71,
       "legal": "Delinquent tax years 2025-2025. Lien book 2932 page 0334",
       "parcel_id": "15 081 11 005",
       "prop_address": "3020 HAROLD AVE",
@@ -29738,7 +29738,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29756,7 +29756,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "JOHNSON LILLIE W",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5819.37,
+      "amount": 5835.29,
       "legal": "Delinquent tax years 2025-2025. Lien book 2932 page 0352",
       "parcel_id": "15 086 07 011",
       "prop_address": "2295 CLIFTON SPRINGS RD",
@@ -29775,7 +29775,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29792,7 +29792,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SMITH BENJAMIN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 2463.97,
+      "amount": 2479.89,
       "legal": "Delinquent tax years 2025-2025. Lien book 2932 page 0524",
       "parcel_id": "15 102 02 018",
       "prop_address": "2816 COLUMBIA DR",
@@ -29811,7 +29811,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29864,7 +29864,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "CARTER GARY L JR",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8543.9,
+      "amount": 8551.86,
       "legal": "Delinquent tax years 2025-2025. Lien book 2933 page 0478",
       "parcel_id": "15 142 03 033",
       "prop_address": "1424 BOULDERCREST RD SE",
@@ -29883,7 +29883,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29900,7 +29900,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "PARKWOOD LIVING LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6580.47,
+      "amount": 6644.15,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0005",
       "parcel_id": "15 146 07 018",
       "prop_address": "891 BOULDERCREST RD REAR",
@@ -29919,7 +29919,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29973,7 +29973,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SHIELDS DWIGHT SCOTT KUFUNYA L",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 9583.26,
+      "amount": 9562.21,
       "legal": "Delinquent tax years 2025-2025. Lien book 2920 page 0273",
       "parcel_id": "15 147 05 055",
       "prop_address": "2107 GARDEN PL",
@@ -29992,7 +29992,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30009,7 +30009,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "COPELIN SARA GREEN HER ESTATE PERS REP AND HEIRS KNOWN AND UNKNOWN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6788.62,
+      "amount": 6804.54,
       "legal": "Delinquent tax years 2024-2025. Lien book 2934 page 0278",
       "parcel_id": "15 149 04 114",
       "prop_address": "1970 MARK TRL",
@@ -30028,7 +30028,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30045,7 +30045,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "RINGFIELD ZARANESHA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 11060.4,
+      "amount": 11076.32,
       "legal": "Delinquent tax years 2024-2025. Lien book 2934 page 0368",
       "parcel_id": "15 151 02 002",
       "prop_address": "2202 GREYSTONE WAY",
@@ -30064,7 +30064,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30081,7 +30081,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BARNETTE WILLIE DUPREE III HIS EST PERS REP AND HEIRS KNOWN AND UNKNOWN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8444.26,
+      "amount": 8460.18,
       "legal": "Delinquent tax years 2025-2025. Lien book 2934 page 0130",
       "parcel_id": "15 152 05 031",
       "prop_address": "2081 DELLWOOD PL",
@@ -30100,7 +30100,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30153,7 +30153,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "M JOHNSON FAMILY REVOCABLE LIVING TRUST MELVIN JOHNSON JR AS TRUSTEE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8538.99,
+      "amount": 8562.87,
       "legal": "Delinquent tax years 2025-2025. Lien book 2934 page 0389",
       "parcel_id": "15 169 01 303",
       "prop_address": "2746 CLAIRE TER",
@@ -30172,7 +30172,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30189,7 +30189,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "AUSTIN VENETIA AUSTIN MONTEZ SR",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5495.25,
+      "amount": 5543.01,
       "legal": "Delinquent tax years 2025-2025. Lien book 2934 page 0442",
       "parcel_id": "15 171 09 019",
       "prop_address": "2239 DEKALB DR",
@@ -30208,7 +30208,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30261,7 +30261,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "EVANS WILLIE WATTS WANDA ELAINE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6462.79,
+      "amount": 6486.67,
       "legal": "Delinquent tax years 2024-2025. Lien book 2934 page 0519",
       "parcel_id": "15 175 01 040",
       "prop_address": "1685 GLENWOOD AVE SE",
@@ -30280,7 +30280,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30333,7 +30333,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "JOHNSON GEORGE ADAMS",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6857.34,
+      "amount": 6960.82,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0042",
       "parcel_id": "15 177 01 110",
       "prop_address": "319 E SIDE AVE SE",
@@ -30352,7 +30352,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30369,7 +30369,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "HOWELL EDWARD L",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7267.2,
+      "amount": 7275.16,
       "legal": "Delinquent tax years 2005-2025. Lien book 300 page 0430",
       "parcel_id": "15 177 04 023",
       "prop_address": "1194 TRENTON ST SE",
@@ -30388,7 +30388,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30441,7 +30441,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BELL EDWARD R",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8489.95,
+      "amount": 8505.87,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0102",
       "parcel_id": "15 188 08 007",
       "prop_address": "1684 HOLLYHOCK TER",
@@ -30460,7 +30460,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30477,7 +30477,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "COOPER MORRIS JR",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5821.92,
+      "amount": 5829.88,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0241",
       "parcel_id": "15 195 01 011",
       "prop_address": "4138 CHEDWORTH WAY",
@@ -30496,7 +30496,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30513,7 +30513,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BEYERSDORFF ANN GRENOVESE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7527.24,
+      "amount": 7551.12,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0190",
       "parcel_id": "15 195 06 027",
       "prop_address": "1468 S INDIAN CREEK DR",
@@ -30532,7 +30532,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30549,7 +30549,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "HARMON THAJURA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6215.06,
+      "amount": 6254.86,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0225",
       "parcel_id": "15 199 03 008",
       "prop_address": "3176 LEELAND RD",
@@ -30568,7 +30568,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30585,7 +30585,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "KREO BUILDING SOLUTION LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 13298.72,
+      "amount": 13346.48,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0272",
       "parcel_id": "15 200 11 006",
       "prop_address": "2945 CATALINA DR",
@@ -30604,7 +30604,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30658,7 +30658,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SHEPARD RALPH BRANDON JR HIS EST PER REP AND HEIRS KNOWN AND UNKNOWN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 13181.35,
+      "amount": 13205.23,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0338",
       "parcel_id": "15 204 04 121",
       "prop_address": "2557 TILSON DR SE",
@@ -30677,7 +30677,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30694,7 +30694,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "CLARKE ROLAND JAMES",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8274.21,
+      "amount": 8290.13,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0351",
       "parcel_id": "15 207 01 123",
       "prop_address": "18 WYMAN ST SE",
@@ -30713,7 +30713,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30730,7 +30730,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "KASPER MICHAEL P",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5295.14,
+      "amount": 5303.1,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0439",
       "parcel_id": "15 211 04 166",
       "prop_address": "263 CASSON ST NE",
@@ -30749,7 +30749,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30803,7 +30803,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SAGEHILL WALK PROP STNMT LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8492.24,
+      "amount": 8524.08,
       "legal": "Delinquent tax years 2024-2025. Lien book 2935 page 0524",
       "parcel_id": "15 221 08 010",
       "prop_address": "4015 REDAN RD",
@@ -30822,7 +30822,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30840,7 +30840,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "JUBER ABDULAZIZ TALORE WEYNISHET",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5300.82,
+      "amount": 5308.78,
       "legal": "Delinquent tax years 2025-2025. Lien book 2935 page 0541",
       "parcel_id": "15 222 04 003",
       "prop_address": "4171 CARROLLWOOD DR",
@@ -30859,7 +30859,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30912,7 +30912,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "MERCURIUS MARK C",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 10794.72,
+      "amount": 10810.64,
       "legal": "Delinquent tax years 2024-2025. Lien book 2936 page 0217",
       "parcel_id": "15 254 01 150",
       "prop_address": "4164 INDIAN MANOR DR",
@@ -30931,7 +30931,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30948,7 +30948,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "FKPC PROPERTIES LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 9335.97,
+      "amount": 9375.77,
       "legal": "Delinquent tax years 2025-2025. Lien book 2936 page 0263",
       "parcel_id": "15 256 02 010",
       "prop_address": "785 S HAIRSTON RD",
@@ -30967,7 +30967,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30985,7 +30985,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "DUDLEY JUDIE E",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7822.81,
+      "amount": 7846.69,
       "legal": "Delinquent tax years 2025-2025. Lien book 2936 page 0182",
       "parcel_id": "16 002 05 050",
       "prop_address": "1092 VILLAGE RD",
@@ -31004,7 +31004,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31058,7 +31058,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "CARTIR LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5770.43,
+      "amount": 5826.15,
       "legal": "Delinquent tax years 2024-2025. Lien book 2936 page 0321",
       "parcel_id": "16 008 06 015",
       "prop_address": "2481 TERRACE TRL",
@@ -31077,7 +31077,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31095,7 +31095,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "HAYNES JAMAL D",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 2958.44,
+      "amount": 2998.24,
       "legal": "Delinquent tax years 2010-2025. Lien book 2936 page 0388",
       "parcel_id": "16 009 03 068",
       "prop_address": "2838 SHELL BARK RD",
@@ -31114,7 +31114,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31167,7 +31167,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "RILEY ANTONIO ATKINS VALARIE T",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4367.22,
+      "amount": 4407.02,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0355",
       "parcel_id": "16 032 01 304",
       "prop_address": "5437 MARTINS CROSSING RD",
@@ -31186,7 +31186,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31203,7 +31203,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BROGAN MARGARET",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5105.79,
+      "amount": 5129.67,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0358",
       "parcel_id": "16 032 13 142",
       "prop_address": "737 MARTIN RD",
@@ -31222,7 +31222,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31239,7 +31239,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "JENKINS WILLIAM JENKINS LAKEISHA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8192.0,
+      "amount": 3398.48,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0498",
       "parcel_id": "16 053 01 178",
       "prop_address": "3418 HUNTERS CHASE WAY",
@@ -31258,7 +31258,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31275,7 +31275,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BROWN ROHAN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5287.14,
+      "amount": 5303.06,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0542",
       "parcel_id": "16 058 07 079",
       "prop_address": "2281 STRATHMOOR MANOR DR",
@@ -31294,7 +31294,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31311,7 +31311,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "VEREEN SHATARA THOMPSON WILLECA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8888.51,
+      "amount": 8912.39,
       "legal": "Delinquent tax years 2025-2025. Lien book 2937 page 0550",
       "parcel_id": "16 058 07 165",
       "prop_address": "5788 STRATHMOOR MANOR CIR",
@@ -31330,7 +31330,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31419,7 +31419,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "JONES EDDIE JONES MARY",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5275.58,
+      "amount": 5323.34,
       "legal": "Delinquent tax years 2025-2025. Lien book 2938 page 0105",
       "parcel_id": "16 069 04 023",
       "prop_address": "1688 YOUNG RD",
@@ -31438,7 +31438,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31455,7 +31455,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "MG CAPITAL HOME LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6192.76,
+      "amount": 6224.6,
       "legal": "Delinquent tax years 2025-2025. Lien book 2938 page 0201",
       "parcel_id": "16 074 04 041",
       "prop_address": "41 WILLOWICK CT",
@@ -31474,7 +31474,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31492,7 +31492,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "MANNS PAMELA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7078.43,
+      "amount": 7094.35,
       "legal": "Delinquent tax years 2024-2025. Lien book 2938 page 0174",
       "parcel_id": "16 074 05 034",
       "prop_address": "105 WILLOWICK DR",
@@ -31511,7 +31511,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31528,7 +31528,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SELMAN FAMILY REVOCABLE LIVING TRUST SELMAN DON H TRUSTEE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8532.89,
+      "amount": 8564.73,
       "legal": "Delinquent tax years 2025-2025. Lien book 2938 page 0416",
       "parcel_id": "16 088 02 005",
       "prop_address": "6029 HILLANDALE DR",
@@ -31547,7 +31547,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31564,7 +31564,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SCOTT CHARLES JR SCOTT CEDRIC D SR",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 12186.29,
+      "amount": 12210.17,
       "legal": "Delinquent tax years 2024-2025. Lien book 2938 page 0442",
       "parcel_id": "16 089 02 013",
       "prop_address": "6867 COVINGTON HWY",
@@ -31583,7 +31583,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31600,7 +31600,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "REED JONATHAN E",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8475.54,
+      "amount": 8483.5,
       "legal": "Delinquent tax years 2025-2025. Lien book 2938 page 0477",
       "parcel_id": "16 091 06 054",
       "prop_address": "5992 SPENCER OAKS CT",
@@ -31619,7 +31619,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31636,7 +31636,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BELL EDWARD R SR",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7885.11,
+      "amount": 7901.03,
       "legal": "Delinquent tax years 2024-2025. Lien book 2938 page 0500",
       "parcel_id": "16 092 02 068",
       "prop_address": "1643 WELLBORN RD",
@@ -31655,7 +31655,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31672,7 +31672,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "LAWRENCE CLEVE MALCOLM DENNISTON EST PERS REP AND HEIRS",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6805.8,
+      "amount": 6845.6,
       "legal": "Delinquent tax years 2025-2025. Lien book 2938 page 0506",
       "parcel_id": "16 092 08 006",
       "prop_address": "6070 WATERTON DR",
@@ -31691,7 +31691,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31708,7 +31708,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "TAYLOR KENNETH D TAYLOR DIANNE J",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7071.0,
+      "amount": 7118.76,
       "legal": "Delinquent tax years 2006-2025. Lien book 2938 page 0550",
       "parcel_id": "16 099 03 012",
       "prop_address": "6222 SILVER SPUR DR",
@@ -31727,7 +31727,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31780,7 +31780,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "ALLEN FAMILY INVESTMENTS LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6082.56,
+      "amount": 6114.4,
       "legal": "Delinquent tax years 2025-2025. Lien book 2939 page 0077",
       "parcel_id": "16 107 01 007",
       "prop_address": "3307 EVANS MILL RD",
@@ -31799,7 +31799,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31817,7 +31817,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "TAX SALE SOLUTIONS LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 13010.41,
+      "amount": 13066.13,
       "legal": "Delinquent tax years 2025-2025. Lien book 2939 page 0149",
       "parcel_id": "16 123 06 146",
       "prop_address": "6492 CHARTER WAY",
@@ -31836,7 +31836,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31926,7 +31926,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "REID JAMES REID IDA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4717.39,
+      "amount": 4725.35,
       "legal": "Delinquent tax years 2025-2025. Lien book 2939 page 0494",
       "parcel_id": "16 190 02 008",
       "prop_address": "1995 STEPHENSON RD",
@@ -31945,7 +31945,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31962,7 +31962,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SAVAGE REEDER C",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6866.89,
+      "amount": 6882.81,
       "legal": "Delinquent tax years 2025-2025. Lien book 2940 page 0094",
       "parcel_id": "18 001 08 009",
       "prop_address": "1169 BRIARCLIFF RD NE",
@@ -31981,7 +31981,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31998,7 +31998,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "STERLING VERNELL LOUIS",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6874.86,
+      "amount": 6922.62,
       "legal": "Delinquent tax years 2025-2025. Lien book 2940 page 0268",
       "parcel_id": "18 016 08 032",
       "prop_address": "458 PRINCE OF WALES",
@@ -32017,7 +32017,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32034,7 +32034,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "WISDOM BOBBY L",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4866.91,
+      "amount": 4906.71,
       "legal": "Delinquent tax years 2005-2025. Lien book 2940 page 0536",
       "parcel_id": "18 018 01 125",
       "prop_address": "607 R WATERVIEW CT",
@@ -32053,7 +32053,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32070,7 +32070,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "CREE CONTROL COMPANY OF GA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8516.52,
+      "amount": 8556.32,
       "legal": "Delinquent tax years 2024-2025. Lien book 2940 page 0469",
       "parcel_id": "18 020 09 031",
       "prop_address": "5626 WELLS CIR",
@@ -32089,7 +32089,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32107,7 +32107,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SHONE E D JR HIS ESTATE PERS REP AND HEIRS KNOWN AND UNKNOWN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 2992.9,
+      "amount": 3016.78,
       "legal": "Delinquent tax years 2005-2025. Lien book 2940 page 0510",
       "parcel_id": "18 043 02 083",
       "prop_address": "558 R DOYAL MILLS CT",
@@ -32126,7 +32126,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32143,7 +32143,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "CANNON MARK CHRISTOPHER",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6629.88,
+      "amount": 6717.44,
       "legal": "Delinquent tax years 2025-2025. Lien book 2940 page 0453",
       "parcel_id": "18 045 09 031",
       "prop_address": "3501 SANDY WOODS LN",
@@ -32162,7 +32162,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32215,7 +32215,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "LEE JAMES I HIS ESTATE PERS REP AND HEIRS KNOWN AND UNKNOWN",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4843.38,
+      "amount": 4875.22,
       "legal": "Delinquent tax years 2005-2025. Lien book 2940 page 0547",
       "parcel_id": "18 046 03 015",
       "prop_address": "3186 ROBINSON AVE",
@@ -32234,7 +32234,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32251,7 +32251,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "WILLIAMS HATTIE A",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8870.73,
+      "amount": 8902.57,
       "legal": "Delinquent tax years 2005-2025. Lien book 2941 page 0520",
       "parcel_id": "18 046 04 091",
       "prop_address": "507 WARREN AVE",
@@ -32270,7 +32270,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32287,7 +32287,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "PATTERSON RICHARD LEE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5818.51,
+      "amount": 5850.35,
       "legal": "Delinquent tax years 2025-2025. Lien book 2941 page 0147",
       "parcel_id": "18 066 01 009",
       "prop_address": "838 NORTHERN AVE",
@@ -32306,7 +32306,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32323,7 +32323,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "YASIN SOFIA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7882.44,
+      "amount": 7906.32,
       "legal": "Delinquent tax years 2025-2025. Lien book 2941 page 0155",
       "parcel_id": "18 066 13 033",
       "prop_address": "896 GLYNN OAKS DR",
@@ -32342,7 +32342,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32359,7 +32359,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "WILSON ANGELA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5294.51,
+      "amount": 5326.35,
       "legal": "Delinquent tax years 2025-2025. Lien book 2941 page 0423",
       "parcel_id": "18 092 09 029",
       "prop_address": "1052 PARK GATE PL",
@@ -32378,7 +32378,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32395,7 +32395,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "G AND K CONVENANT PROPERTIES LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7618.82,
+      "amount": 7658.62,
       "legal": "Delinquent tax years 2025-2025. Lien book 2941 page 0545",
       "parcel_id": "18 116 17 017",
       "prop_address": "2388 LAWRENCEVILLE HWY H",
@@ -32414,7 +32414,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32469,7 +32469,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "PASS TUWANNA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7101.0,
+      "amount": 7140.8,
       "legal": "Delinquent tax years 2025-2025. Lien book 2942 page 0040",
       "parcel_id": "18 125 14 028",
       "prop_address": "5147 MADELINE PL",
@@ -32488,7 +32488,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32505,7 +32505,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "ALVAREZ HECTOR ARMANDO",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6879.1,
+      "amount": 6910.94,
       "legal": "Delinquent tax years 2025-2025. Lien book 2942 page 0092",
       "parcel_id": "18 137 05 030",
       "prop_address": "1415 STONE MILL TRCE",
@@ -32524,7 +32524,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32541,7 +32541,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "MOURA KRISTINA MARIE CHAFFIN ANN MARIE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7916.39,
+      "amount": 7932.31,
       "legal": "Delinquent tax years 2024-2025. Lien book 2942 page 0066",
       "parcel_id": "18 140 05 060",
       "prop_address": "1367 KINGSGATE DR",
@@ -32560,7 +32560,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32577,7 +32577,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "CHAMBERS M L",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6890.49,
+      "amount": 6906.41,
       "legal": "Delinquent tax years 2016-2025. Lien book 2942 page 0509",
       "parcel_id": "18 238 06 063",
       "prop_address": "1400 SYLVAN CIR NE",
@@ -32596,7 +32596,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32613,7 +32613,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BROOK HOLLOW INVESTMENT TRUST PARRALES ORALIA TRUSTEE",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 8961.81,
+      "amount": 8993.65,
       "legal": "Delinquent tax years 2024-2025. Lien book 2943 page 0285",
       "parcel_id": "18 246 06 129",
       "prop_address": "3087 COLONIAL WAY J",
@@ -32632,7 +32632,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32685,7 +32685,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "FLEMING VICTORIA",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 5697.47,
+      "amount": 5721.35,
       "legal": "Delinquent tax years 2025-2025. Lien book 2943 page 0363",
       "parcel_id": "18 285 09 029",
       "prop_address": "3459 ASHWOOD LN",
@@ -32704,7 +32704,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32721,7 +32721,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "PUSLEY JAMES V",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 4713.45,
+      "amount": 4729.37,
       "legal": "Delinquent tax years 2011-2025. Lien book 2943 page 0542",
       "parcel_id": "18 287 02 077",
       "prop_address": "4033 GLADNEY DR",
@@ -32740,7 +32740,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32757,7 +32757,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "BEILLA TRUST",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7498.24,
+      "amount": 7506.2,
       "legal": "Delinquent tax years 2024-2025. Lien book 2943 page 0343",
       "parcel_id": "18 288 12 121",
       "prop_address": "3205 SHADOW WALK LN",
@@ -32776,7 +32776,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32829,7 +32829,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "SHALLOWFORD HOLDINGS LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 7736.83,
+      "amount": 7784.59,
       "legal": "Delinquent tax years 2025-2025. Lien book 2943 page 0429",
       "parcel_id": "18 297 21 006",
       "prop_address": "3536 4 SHALLOWFORD RD",
@@ -32848,7 +32848,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32866,7 +32866,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "FIRST GAME LLC",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 9489.54,
+      "amount": 9561.18,
       "legal": "Delinquent tax years 2025-2025. Lien book 2943 page 0455",
       "parcel_id": "18 298 13 019",
       "prop_address": "3245 PEARL LN 201",
@@ -32885,7 +32885,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32939,7 +32939,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "HERNANDEZ STEFFIE MAYER HERNANDEZ NOEL M",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6903.78,
+      "amount": 6911.74,
       "legal": "Delinquent tax years 2025-2025. Lien book 2944 page 0051",
       "parcel_id": "18 343 14 054",
       "prop_address": "2193 N FOREST TRL",
@@ -32958,7 +32958,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32975,7 +32975,7 @@
       "cat_label": "Tax Delinquent / Tax Sale",
       "owner": "PIERRE PAUL ANTOINETTE VERNET EMMANUEL",
       "grantee": "DeKalb County Tax Commissioner",
-      "amount": 6219.19,
+      "amount": 6243.07,
       "legal": "Delinquent tax years 2025-2025. Lien book 2944 page 0027",
       "parcel_id": "18 345 14 106",
       "prop_address": "1850 COTILLION DR 4110",
@@ -32994,7 +32994,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -49424,7 +49424,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -49460,7 +49460,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -49496,7 +49496,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -49532,7 +49532,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -49568,7 +49568,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax delinquent",
         "LLC / corp owner",
@@ -49605,7 +49605,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -81449,7 +81449,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -81485,7 +81485,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -81521,7 +81521,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -81557,7 +81557,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -81593,7 +81593,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -81629,7 +81629,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -81665,7 +81665,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -81702,7 +81702,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -81738,7 +81738,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -81774,7 +81774,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -81810,7 +81810,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -81847,7 +81847,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -81884,7 +81884,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -81921,7 +81921,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -81958,7 +81958,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -81995,7 +81995,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -82032,7 +82032,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82068,7 +82068,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -82105,7 +82105,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82141,7 +82141,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82177,7 +82177,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82213,7 +82213,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82249,7 +82249,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82285,7 +82285,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82321,7 +82321,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -82357,7 +82357,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82393,7 +82393,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82429,7 +82429,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82465,7 +82465,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82501,7 +82501,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82537,7 +82537,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -82574,7 +82574,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82610,7 +82610,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82646,7 +82646,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82682,7 +82682,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "LLC / corp owner",
@@ -82719,7 +82719,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82755,7 +82755,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Tax lien",
         "New this week"
@@ -82791,7 +82791,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -82828,7 +82828,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -82864,7 +82864,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -82900,7 +82900,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -144565,7 +144565,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -144602,7 +144602,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -144638,7 +144638,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144674,7 +144674,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144710,7 +144710,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144746,7 +144746,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144782,7 +144782,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144818,7 +144818,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144854,7 +144854,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144890,7 +144890,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144926,7 +144926,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144962,7 +144962,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144998,7 +144998,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145034,7 +145034,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145070,7 +145070,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145106,7 +145106,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145142,7 +145142,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145178,7 +145178,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "LLC / corp owner",
@@ -145215,7 +145215,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145251,7 +145251,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145287,7 +145287,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145323,7 +145323,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145359,7 +145359,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "LLC / corp owner",
@@ -145396,7 +145396,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "LLC / corp owner",
@@ -145433,7 +145433,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145469,7 +145469,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145505,7 +145505,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145541,7 +145541,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145577,7 +145577,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145613,7 +145613,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145649,7 +145649,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145685,7 +145685,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -145721,7 +145721,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -145757,7 +145757,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -145793,7 +145793,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -145829,7 +145829,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "LLC / corp owner",
@@ -145866,7 +145866,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Mechanic lien",
         "New this week"
@@ -145902,7 +145902,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "LLC / corp owner",
@@ -145939,7 +145939,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244226,7 +244226,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244262,7 +244262,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244298,7 +244298,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244334,7 +244334,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244370,7 +244370,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244406,7 +244406,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244442,7 +244442,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244478,7 +244478,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244514,7 +244514,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244550,7 +244550,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244586,7 +244586,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244622,7 +244622,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244658,7 +244658,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244694,7 +244694,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244730,7 +244730,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244766,7 +244766,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244802,7 +244802,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244838,7 +244838,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244874,7 +244874,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244910,7 +244910,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244946,7 +244946,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -244982,7 +244982,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245018,7 +245018,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245054,7 +245054,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245090,7 +245090,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245126,7 +245126,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245162,7 +245162,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245198,7 +245198,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245234,7 +245234,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245270,7 +245270,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245306,7 +245306,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245342,7 +245342,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245378,7 +245378,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245414,7 +245414,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245450,7 +245450,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245486,7 +245486,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245522,7 +245522,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245558,7 +245558,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245594,7 +245594,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245630,7 +245630,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245666,7 +245666,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245702,7 +245702,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245738,7 +245738,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245774,7 +245774,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245810,7 +245810,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245846,7 +245846,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245882,7 +245882,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245918,7 +245918,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245954,7 +245954,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -245990,7 +245990,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -246026,7 +246026,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -246062,7 +246062,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -246098,7 +246098,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -246134,7 +246134,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -246170,7 +246170,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -246206,7 +246206,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -246242,7 +246242,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "Lien",
         "New this week"
@@ -296545,7 +296545,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week"
@@ -296581,7 +296581,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week"
       ],
@@ -305131,7 +305131,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -305168,7 +305168,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -305205,7 +305205,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -305242,7 +305242,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -305279,7 +305279,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -307052,7 +307052,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307088,7 +307088,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307124,7 +307124,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307160,7 +307160,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307196,7 +307196,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307232,7 +307232,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307268,7 +307268,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -307305,7 +307305,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307341,7 +307341,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -307378,7 +307378,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -307415,7 +307415,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307451,7 +307451,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307487,7 +307487,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307523,7 +307523,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307559,7 +307559,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -307596,7 +307596,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -307633,7 +307633,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307669,7 +307669,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307705,7 +307705,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307741,7 +307741,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307777,7 +307777,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307813,7 +307813,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307849,7 +307849,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307885,7 +307885,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307921,7 +307921,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307957,7 +307957,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-14",
+      "last_verified": "2026-11-15",
       "flags": [
         "LLC / corp owner",
         "New this week",
