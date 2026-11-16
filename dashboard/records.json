@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-11-15T07:17:57.570499-05:00",
+  "fetched_at": "2026-11-16T07:18:14.585197-05:00",
   "source": "DeKalb County GA Public Records",
   "date_range": {
-    "start": "2026-11-12",
-    "end": "2026-11-15"
+    "start": "2026-11-13",
+    "end": "2026-11-16"
   },
   "run_window": {
-    "start": "2026-11-12",
-    "end": "2026-11-15"
+    "start": "2026-11-13",
+    "end": "2026-11-16"
   },
   "archive_range": {
     "start": "2026-09-08",
@@ -35,7 +35,7 @@
     },
     "landmarkweb": {
       "ok": true,
-      "count": 182,
+      "count": 70,
       "error": ""
     },
     "legal_notices": {
@@ -45,7 +45,7 @@
     },
     "tax_sales": {
       "ok": true,
-      "count": 72,
+      "count": 71,
       "error": ""
     }
   },
@@ -26946,7 +26946,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Pre-foreclosure",
         "New this week"
@@ -26982,7 +26982,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -27018,7 +27018,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -27026,150 +27026,6 @@
       "score": 65,
       "county": "DeKalb",
       "first_seen": "2026-11-14"
-    },
-    {
-      "doc_num": "GPN-420-190505",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-12",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "Doris J Nixon and Nathaniel C",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190505 11/5,11/12,11/19,11/26NOTICE OF SALE UNDER POWER, DEKALB COUNTYPursuant to the Power of Sale contained in a Security Deed given by Doris J Nixon and Nathaniel C Gainer to Mortgage Electronic Registration Systems, Inc., as grantee, as nominee for Fay Servicing, LLC, its successors and assi ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190505",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-15",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "doc_num": "GPN-420-190900",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-12",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "VERONICA M YAYAH and ISSACHAR I",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190900 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWER OF SALE NOTICE OF SALE UNDER POWER CONTAINED IN SECURITY DEED STATE OF GEORGIA, COUNTY OF DEKALBPursuant to a power of sale contained in a certain security deed executed by VERONICA M YAYAH and ISSACHAR I YAYAH, hereinafter refe ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190900",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-15",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "doc_num": "GPN-420-190880",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-12",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "Kevin Gayle-White",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190880 11/05,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY, GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE.Under and by virtue of the Power of Sale contained in a Security Deed given by Kevin Gayle-White to Mortgage Elec ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190880",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-15",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "doc_num": "GPN-420-190878",
-      "doc_type": "Notice of Sale Under Power",
-      "filed": "2026-11-12",
-      "cat": "FC",
-      "cat_label": "Pre-Foreclosure",
-      "owner": "Hau Khan Kap and Go Do",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190878 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE. Under and by virtue of the Power of Sale contained in a Security Deed given by Hau Khan Kap and Go Do Cing to Mort ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "420-190878",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-15",
-      "flags": [
-        "Pre-foreclosure",
-        "New this week"
-      ],
-      "score": 65,
-      "county": "DeKalb",
-      "first_seen": "2026-11-06"
     },
     {
       "doc_num": "2026114247",
@@ -28353,7 +28209,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Pre-foreclosure"
       ],
@@ -29630,7 +29486,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29666,7 +29522,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29738,7 +29594,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29775,7 +29631,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29811,7 +29667,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29883,7 +29739,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -29919,7 +29775,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -29992,7 +29848,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30028,7 +29884,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30064,7 +29920,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30100,7 +29956,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30172,7 +30028,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30208,7 +30064,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30280,7 +30136,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30352,7 +30208,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30388,7 +30244,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30460,7 +30316,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30496,7 +30352,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30532,7 +30388,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30568,7 +30424,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30604,7 +30460,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30677,7 +30533,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30713,7 +30569,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30749,7 +30605,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30822,7 +30678,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -30859,7 +30715,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30931,7 +30787,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -30967,7 +30823,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31004,7 +30860,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31077,7 +30933,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31114,7 +30970,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31186,7 +31042,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31222,7 +31078,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31294,7 +31150,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31330,7 +31186,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31438,7 +31294,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31474,7 +31330,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31511,7 +31367,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31547,7 +31403,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31583,7 +31439,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31619,7 +31475,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31655,7 +31511,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31691,7 +31547,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31727,7 +31583,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31799,7 +31655,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31836,7 +31692,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -31945,7 +31801,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -31981,7 +31837,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32017,7 +31873,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32053,7 +31909,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32089,7 +31945,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32126,7 +31982,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32162,7 +32018,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32234,7 +32090,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32270,7 +32126,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32306,7 +32162,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32342,7 +32198,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32378,7 +32234,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32414,7 +32270,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32488,7 +32344,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32524,7 +32380,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32560,7 +32416,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32596,7 +32452,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32632,7 +32488,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32704,7 +32560,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32740,7 +32596,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32776,7 +32632,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32848,7 +32704,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32885,7 +32741,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale",
@@ -32958,7 +32814,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -32994,7 +32850,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Tax delinquent",
         "Tax sale"
@@ -49424,7 +49280,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -49460,7 +49316,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Probate / estate",
         "New this week"
@@ -49468,6 +49324,146 @@
       "score": 60,
       "county": "DeKalb",
       "first_seen": "2026-11-14"
+    },
+    {
+      "doc_num": "GPN-420-190505",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-12",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Doris J Nixon and Nathaniel C",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190505 11/5,11/12,11/19,11/26NOTICE OF SALE UNDER POWER, DEKALB COUNTYPursuant to the Power of Sale contained in a Security Deed given by Doris J Nixon and Nathaniel C Gainer to Mortgage Electronic Registration Systems, Inc., as grantee, as nominee for Fay Servicing, LLC, its successors and assi ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190505",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-16",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
+    },
+    {
+      "doc_num": "GPN-420-190900",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-12",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "VERONICA M YAYAH and ISSACHAR I",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190900 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWER OF SALE NOTICE OF SALE UNDER POWER CONTAINED IN SECURITY DEED STATE OF GEORGIA, COUNTY OF DEKALBPursuant to a power of sale contained in a certain security deed executed by VERONICA M YAYAH and ISSACHAR I YAYAH, hereinafter refe ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190900",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-16",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
+    },
+    {
+      "doc_num": "GPN-420-190880",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-12",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Kevin Gayle-White",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190880 11/05,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY, GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE.Under and by virtue of the Power of Sale contained in a Security Deed given by Kevin Gayle-White to Mortgage Elec ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190880",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-16",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
+    },
+    {
+      "doc_num": "GPN-420-190878",
+      "doc_type": "Notice of Sale Under Power",
+      "filed": "2026-11-12",
+      "cat": "FC",
+      "cat_label": "Pre-Foreclosure",
+      "owner": "Hau Khan Kap and Go Do",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 420-190878 11/5,11/12,11/19,11/26NOTICE OF FORECLOSURE SALE UNDER POWERDEKALB COUNTY GEORGIATHIS IS AN ATTEMPT TO COLLECT A DEBT. ANY INFORMATION OBTAINED WILL BE USED FOR THAT PURPOSE. Under and by virtue of the Power of Sale contained in a Security Deed given by Hau Khan Kap and Go Do Cing to Mort ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "420-190878",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-16",
+      "flags": [
+        "Pre-foreclosure"
+      ],
+      "score": 60,
+      "county": "DeKalb",
+      "first_seen": "2026-11-06"
     },
     {
       "doc_num": "2026114135",
@@ -49535,43 +49531,6 @@
       "last_verified": "2026-11-15",
       "flags": [
         "Probate / estate",
-        "New this week"
-      ],
-      "score": 60,
-      "county": "DeKalb",
-      "first_seen": "2026-11-13"
-    },
-    {
-      "doc_num": "GPN-350-191166",
-      "doc_type": "Legal Notice (TAX)",
-      "filed": "2026-11-12",
-      "cat": "TAX",
-      "cat_label": "Tax Delinquent / Tax Sale",
-      "owner": "DAVISON DEVELOPMENT CORPORATION",
-      "grantee": "",
-      "amount": null,
-      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 350-191166 11/12,11/19,11/26,12/3NOTICE OF FORECLOSURE OF RIGHT TO REDEEM[REF. O.C.G.A., Section 48-4-5 et seq.; 48-4-45 & 48-4-46]TO:DAVISON DEVELOPMENT CORPORATION, INC.CARL MAYCONSECO FINANCE SERVICING CORP.GREEN TREE SERVICING LLCCARRIAGE CLUSTER NEIGHBORHOOD ASSOCIATION, INC.DEKALB COUNTY, GEO ... click 'view' to open the full text.",
-      "parcel_id": "",
-      "prop_address": "",
-      "prop_city": "Decatur",
-      "prop_state": "GA",
-      "prop_zip": "",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "",
-      "mail_zip": "",
-      "owner_occupied": null,
-      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
-      "source": "Georgia Public Notice (legal organ advertisement)",
-      "foreclosure_sale_date": "",
-      "notice_number": "350-191166",
-      "status": "active",
-      "match_confidence": 0.0,
-      "match_method": "none",
-      "last_verified": "2026-11-15",
-      "flags": [
-        "Tax delinquent",
-        "LLC / corp owner",
         "New this week"
       ],
       "score": 60,
@@ -81421,6 +81380,42 @@
       "score": 56,
       "county": "DeKalb",
       "first_seen": "2026-09-25"
+    },
+    {
+      "doc_num": "GPN-350-191166",
+      "doc_type": "Legal Notice (TAX)",
+      "filed": "2026-11-12",
+      "cat": "TAX",
+      "cat_label": "Tax Delinquent / Tax Sale",
+      "owner": "DAVISON DEVELOPMENT CORPORATION",
+      "grantee": "",
+      "amount": null,
+      "legal": "The Champion Thursday, November 12, 2026 City: Decatur County: DeKalb 350-191166 11/12,11/19,11/26,12/3NOTICE OF FORECLOSURE OF RIGHT TO REDEEM[REF. O.C.G.A., Section 48-4-5 et seq.; 48-4-45 & 48-4-46]TO:DAVISON DEVELOPMENT CORPORATION, INC.CARL MAYCONSECO FINANCE SERVICING CORP.GREEN TREE SERVICING LLCCARRIAGE CLUSTER NEIGHBORHOOD ASSOCIATION, INC.DEKALB COUNTY, GEO ... click 'view' to open the full text.",
+      "parcel_id": "",
+      "prop_address": "",
+      "prop_city": "Decatur",
+      "prop_state": "GA",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "",
+      "mail_zip": "",
+      "owner_occupied": null,
+      "clerk_url": "https://www.georgiapublicnotice.com/search.aspx",
+      "source": "Georgia Public Notice (legal organ advertisement)",
+      "foreclosure_sale_date": "",
+      "notice_number": "350-191166",
+      "status": "active",
+      "match_confidence": 0.0,
+      "match_method": "none",
+      "last_verified": "2026-11-16",
+      "flags": [
+        "Tax delinquent",
+        "LLC / corp owner"
+      ],
+      "score": 55,
+      "county": "DeKalb",
+      "first_seen": "2026-11-13"
     },
     {
       "doc_num": "2026114125",
@@ -144565,7 +144560,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Mechanic lien",
         "LLC / corp owner",
@@ -144602,7 +144597,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -144638,7 +144633,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144674,7 +144669,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144710,7 +144705,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144746,7 +144741,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144782,7 +144777,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144818,7 +144813,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144854,7 +144849,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144890,7 +144885,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144926,7 +144921,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144962,7 +144957,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -144998,7 +144993,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145034,7 +145029,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145070,7 +145065,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145106,7 +145101,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145142,7 +145137,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145178,7 +145173,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "LLC / corp owner",
@@ -145215,7 +145210,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145251,7 +145246,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145287,7 +145282,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -145323,7 +145318,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Judgment lien",
         "New this week"
@@ -244226,7 +244221,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244262,7 +244257,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244298,7 +244293,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244334,7 +244329,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244370,7 +244365,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244406,7 +244401,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244442,7 +244437,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244478,7 +244473,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244514,7 +244509,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244550,7 +244545,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244586,7 +244581,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244622,7 +244617,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244658,7 +244653,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244694,7 +244689,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244730,7 +244725,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244766,7 +244761,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244802,7 +244797,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244838,7 +244833,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244874,7 +244869,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244910,7 +244905,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244946,7 +244941,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -244982,7 +244977,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245018,7 +245013,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245054,7 +245049,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245090,7 +245085,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245126,7 +245121,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245162,7 +245157,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245198,7 +245193,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245234,7 +245229,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245270,7 +245265,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245306,7 +245301,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245342,7 +245337,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245378,7 +245373,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -245414,7 +245409,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "Lien",
         "New this week"
@@ -296545,7 +296540,7 @@
       "status": "active",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "LLC / corp owner",
         "New this week"
@@ -305131,7 +305126,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "LLC / corp owner",
         "New this week",
@@ -307052,7 +307047,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307088,7 +307083,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307124,7 +307119,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307160,7 +307155,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307196,7 +307191,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307232,7 +307227,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "New this week",
         "Released / resolved"
@@ -307268,7 +307263,7 @@
       "status": "released",
       "match_confidence": 0.0,
       "match_method": "none",
-      "last_verified": "2026-11-15",
+      "last_verified": "2026-11-16",
       "flags": [
         "LLC / corp owner",
         "New this week",
